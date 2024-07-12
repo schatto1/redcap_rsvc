@@ -47,8 +47,8 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
         Then I should see "Participant Consent"
 
-        When I enter "FirstName" in the field labeled "Name"
-        And I enter "LastName" in the field labeled "Name"
+        When I enter "FirstName" in the field labeled "First Name"
+        And I enter "LastName" in the field labeled "Last Name"
         And I enter "email@test.edu" in the field labeled "Email"
         And I enter "2000-01-01" in the field labeled "DOB"
         And I enter the "MyName" in the field labeled "Participant’s Name Typed"
@@ -82,8 +82,8 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
         Then I should see "Participant Consent"
 
-        When I enter "FirstName" in the field labeled "Name"
-        And I enter "LastName" in the field labeled "Name"
+        When I enter "FirstName" in the field labeled "First Name"
+        And I enter "LastName" in the field labeled "Last Name"
         And I enter "email@test.edu" in the field labeled "Email"
         And I enter "2000-01-01" in the field labeled "DOB"
         And I enter the "MyName" in the field labeled "Participant’s Name Typed"
