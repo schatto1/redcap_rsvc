@@ -30,12 +30,20 @@ Feature: User Interface: Longitudinal Project Settings: The system shall support
         And I enter "4" in the input field labeled "Days Offset"
         And I click on the button labeled "Add new event"
         Then I should see "Event 4"
+        Then I should see a table header and rows including the following values in the Define My Events table:
+            | Event # [event-number] | Days Offset | Offset Range Min / Max | Event Label [event-label] | Custom Event Label | Unique event name  (auto-generated) [event-name] |
+            | 1                      | 1           | -0/+0                  | Event 1                   |                    | event_1_arm_1                                    |
+            | 2                      | 2           | -0/+0                  | Event 2                   |                    | event_2_arm_1                                    |
+            | 3                      | 3           | -0/+0                  | Event Three               |                    | event_three_arm_1                                |
 
         When I click on the link labeled "Arm 2"
         And I enter "Event 2" into the input field labeled "Event Label"
         And I enter "2" in the input field labeled "Days Offset"
         And I click on the button labeled "Add new event"
         Then I should see "Event 2"
+        Then I should see a table header and rows including the following values in the Define My Events table:
+            | Event # [event-number] | Days Offset | Offset Range Min / Max | Event Label [event-label] | Custom Event Label | Unique event name  (auto-generated) [event-name] |
+            | 1                      | 1           | -0/+0                  | Event 1                   |                    | event_1_arm_2                                    |
 
         ##ACTION Designate Instruments
         When I click on the link labeled "Designate Instruments for My Events"
