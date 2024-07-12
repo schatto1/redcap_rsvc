@@ -3,11 +3,11 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
     As a REDCap end user
     I want to see that eConsent is functioning as expected
 
-    Scenario: C.3.24.205.100 e-Consent text validation
+    Scenario: C.3.24.0205.100 e-Consent text validation
 
         #SETUP
         Given I login to REDCap with the user "Test_Admin"
-        And I create a new project named "C.3.24.205.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24EConsentNoSetup.xml", and clicking the "Create Project" button
+        And I create a new project named "C.3.24.0205.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24EConsentNoSetup.xml", and clicking the "Create Project" button
 
         #SETUP_PRODUCTION
         When I click on the button labeled "Project Setup"
@@ -58,7 +58,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         Then I should see the e-consent framework for survey labeled "Coordinator Signature" is "Active"
 
     Scenario: Combine the PDFs to one combined PDF
-        #SETUP Trigger to combine the PDFs to one combined PDF
+    #SETUP Trigger to combine the PDFs to one combined PDF
         When I click on the button labeled "PDF Snapshots of Record"
         Then I should see a table header and rows including the following values in the PDF snapshot table:
             | Active | Edit settings         | Name | Type of trigger   | Save snapshot when...                   | Scope of the snapshot  | Location(s) to save the snapshot                     |
@@ -92,13 +92,14 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         And I click on the button labeled "Okay" in the dialog box
         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
         Then I should see "Participant Consent"
-        And I verify I see "FirstName" in the field labeled "Name"
-        And I verify I see "LastName" in the field labeled "Name"
-        And I verify I see "email@test.edu" in the field labeled "Email"
-        And I verify I see "01-01-2000" in the field labeled "DOB"
+       
+        When I enter "FirstName" in the field labeled "Name"
+        And I enter "LastName" in the field labeled "Name"
+        And I enter "email@test.edu" in the field labeled "Email"
+        And I enter "2000-01-01" in the field labeled "DOB"
         And I enter the "MyName" in the field labeled "Participant’s Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
-        And I click "Save signature"
+        And I click "Save signature
 
         When I click on the button labeled "Next Page"
         Then I should see "Displayed below is a read-only copy of your survey responses."
@@ -131,8 +132,9 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Coordinator Signature" for event "Event 1"
         And I should see an Incomplete Survey Response icon for the Data Collection Instrument labeled "PDF And Combined Signatures PDF" for event "Event 1"
 
-        When And I click on the bubble labeled " PDF And Combined Signatures PDF " for event "Event 1 Then I should see "Participant Consent file."
-        Then I should see a file uploaded to the field labeled "Coordinator Signature file."
+        When And I click on the bubble labeled "PDF And Combined Signatures PDF" for event "Event 1" 
+        Then I should see "Participant Consent file."
+        And I should see a file uploaded to the field labeled "Coordinator Signature file."
         And I should see a file uploaded to the field labeled "PDF And Combined Signatures PDF."
 
     Scenario: Verification e-Consent saved and logged correctly
