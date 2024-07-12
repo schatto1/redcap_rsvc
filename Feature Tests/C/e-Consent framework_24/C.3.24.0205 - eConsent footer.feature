@@ -99,7 +99,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         And I enter "2000-01-01" in the field labeled "DOB"
         And I enter the "MyName" in the field labeled "Participant’s Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
-        And I click "Save signature
+        And I click "Save signature"
 
         When I click on the button labeled "Next Page"
         Then I should see "Displayed below is a read-only copy of your survey responses."
