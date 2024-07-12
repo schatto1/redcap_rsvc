@@ -1,13 +1,12 @@
-Feature:  C.3.24.0405. User Interface: The system shall support the e-Consent Framework to automatically enable a read-only PDF Snapshot trigger that will save a PDF copy of the survey response into the project's File Repository. This functionality must include support for single forms, repeatable forms, and surveys across multiple arms in both classic and longitudinal projects.
+Feature: C.3.24.0505. User Interface: The system shall support the e-Consent Framework to download archived PDFs from the file repository.
 
     As a REDCap end user
     I want to see that eConsent is functioning as expected
 
-    Scenario: C.3.24.0305.100 Automatic PDF Governed by e-Consent
-
+    Scenario: C.3.24.0505.100 Download e-Consent from File Repository
         #SETUP
         Given I login to REDCap with the user "Test_Admin"
-        And I create a new project named "C.3.24.405.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24ConsentWithSetup.xml", and clicking the "Create Project" button
+        And I create a new project named "C.3.24.505.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24ConsentWithSetup.xml", and clicking the "Create Project" button
 
         #SETUP_PRODUCTION
         When I click on the button labeled "Project Setup"
@@ -88,3 +87,101 @@ Feature:  C.3.24.0405. User Interface: The system shall support the e-Consent Fr
             | Username            | Action                    | List of Data Changes OR Fields Exported                                                          |
             | [survey respondent] | e-Consent Certification 1 | e-Consent Certification record = "1"  event = "event_1_arm_1" instrument = "participant_consent" |
 #END
+
+
+
+
+
+
+
+
+
+
+C.3.24.505: The e-Consent framework shall support the download of archived PDFs from the file repository.
+
+#SETUP
+Given I login to REDCap with the user "Test_Admin"
+And I create a new project named " C.3.24.505.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24ConsentWithSetup.xml", and clicking the "Create Project" button 
+
+#SETUP_PRODUCTION
+When I click on the button labeled "Project Setup"
+And I click on the button labeled "Move project to production"
+And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
+And I click on the button labeled "YES, Move to Production Status" in the dialog box
+Then I should see "Project Status: Production"
+
+##ACTION: add record to get participant signature
+When I click on the link labeled "Add/Edit Records"
+And I click on the button labeled "Add new record for the arm selected above"
+And I click on the bubble labeled "Participant Consent" for event "Event 1" 
+Then I should see "Adding new Record ID 1."
+
+When I click on the button labeled "Save & Stay"
+And I click on the button labeled "Okay" in the dialog box
+And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options" 
+Then I should see "Participant Consent"
+And I verify I see "FirstName" in the field labeled "1) Name"
+And I verify I see "LastName" in the field labeled "2) Name"
+And I verify I see "email@test.edu" in the field labeled "3) Email"
+And I verify I see "2023-09-03" in the field labeled "4) DOB"
+And I enter the "MyName” in the field labeled "Participant’s Name Typed”
+And I enter a signature in the field labeled "Participant signature field"
+And I click "Save signature”
+
+When I click on the button labeled "Next Page" 
+Then I should see "Displayed below is a read-only copy of your survey responses."
+And I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
+
+When I check the checkbox labeled "I certify that all of my information in the document above is correct."
+And I click on the button labeled "Submit"
+Then I should see "Thank you for taking the survey."
+
+When I click on the button labeled "Close survey"
+And I click on the button labeled "Leave without saving changes" in the dialog box
+##VERIFY_RSD
+Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+
+##VERIFY_FiRe
+When I click on the link labeled "File Repository"
+Then I should see "1 File" for the field labeled "PDF Survey Archive"
+
+When I click on the link labeled "PDF Survey Archive"
+And I click on the link on the PDF link for record "1"
+Then I should have a pdf file with the following values in the header: "PID xxxx - LastName"
+And I should have a pdf file with the following values in the footer: "Type: Participant”
+#M: Close document
+
+
+
+##ACTION: add Coordinator Signature
+When I click on the link labeled "Record Status Dashboard"
+And I click on the bubble labeled "Coordinator Signature" for event "Event 1 and Record 1" 
+Then I should see "Coordinator Signature."
+
+And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options" 
+Then I should see " Coordinator Signature "
+And I enter the "Coordinator Name” in the field labeled "Coordinator Name Typed”
+And I enter a signature in the field labeled "Coordinator’sSignature"
+And I click "Save signature”
+
+When I click on the button labeled "Next Page" 
+Then I should see "Displayed below is a read-only copy of your survey responses."
+And I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct
+When I click on the button labeled "Close survey"
+
+
+And I click on the button labeled "Leave without saving changes" in the dialog box
+##VERIFY_RSD
+Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Coordinator Signature" for event "Event 1"
+And I should see an Incomplete Survey Response icon for the Data Collection Instrument labeled "PDF And Combined Signatures PDF" for event "Event 1"
+And I click on the bubble labeled " PDF And Combined Signatures PDF " for event "Event 1 Then I should see "Participant Consent file."
+And I should see "Coordinator Signature file."
+And I should see " PDF And Combined Signatures PDF."
+
+
+#FUNCTIONAL_REQUIREMENT
+##ACTION Export data automatically placed in file repo
+When I click on the link labeled "File Repository"
+And I click on the link labeled "Data Export Files"
+
+
