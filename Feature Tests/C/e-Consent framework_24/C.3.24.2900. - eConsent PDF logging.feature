@@ -1,0 +1,1 @@
+User Interface: The system shall support audit trails for e-Consent Certification and PDF Snapshot generation.
