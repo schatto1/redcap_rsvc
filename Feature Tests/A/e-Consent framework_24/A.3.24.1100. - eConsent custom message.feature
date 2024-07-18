@@ -3,7 +3,7 @@ Feature: Control Center: The system shall allow optional adding of a custom mess
     As a REDCap end user
     I want to see that eConsent is functioning as expected
 
-    Scenario: A.3.24.1100. Custom message on the e-Consent Framework setup page of every project.
+    Scenario: A.3.24.1100.100 Custom message on the e-Consent Framework setup page of every project
         #Create custom message
         When I click on the link labeled "Control Center"
         And I click on the link labeled "Modules/Services Configuration"
