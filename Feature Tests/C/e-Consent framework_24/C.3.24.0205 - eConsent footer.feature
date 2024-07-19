@@ -38,7 +38,6 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
         Then I should see a table header and rows including the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                          | Location(s) to save the signed consent snapshot    | Custom tag/category | Notes |
-            | Active            | "Coordinator Signature" (coordinator_signature) | File Repository Specified field:[coo_sign]         | Coordinator         |       |
             | Active            | "Participant Consent" (participant_consent)     | File Repository Specified field:[participant_file] | Participant         |       |
 
     Scenario: #SETUP_eConsent for coordinator signature (second signature) process
