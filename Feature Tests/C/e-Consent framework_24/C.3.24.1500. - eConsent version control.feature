@@ -218,7 +218,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         And I click on the button labeled "e-Consent and PDF Snapshots"
         Then I should see "Participant Consent"
 
-        # view all versions 
+        # view all versions
         When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
         Then I should see a table header and rows including the following values in the version table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |

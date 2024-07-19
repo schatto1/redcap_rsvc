@@ -3,7 +3,7 @@ Feature: User Interface: The system shall support the creation, modification, an
    As a REDCap end user
    I want to see that eConsent is functioning as expected
 
-   Scenario: C.3.24.2200.100 e-Consent text validation
+   Scenario: C.3.24.2200.100 creation, modification, and copying of custom triggers for PDF snapshots.
 
       #SETUP
       Given I login to REDCap with the user "Test_Admin"
