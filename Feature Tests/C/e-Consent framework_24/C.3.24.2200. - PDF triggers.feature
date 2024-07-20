@@ -16,6 +16,9 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I click on the button labeled "YES, Move to Production Status" in the dialog box
       Then I should see "Project Status: Production"
 
+      When I click on the button lanbeled "Designer"
+      And I click on the button labeled "e-Consent and PDF Snapshot"
+
    Scenario: Cancel New PDF Trigger
       ##ACTION: New PDF Trigger
       When I click on the button labeled "PDF Snapshots of Record"
