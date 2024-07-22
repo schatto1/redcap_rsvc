@@ -125,7 +125,7 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
          | Name     | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB)        |
          | Snapshot | YES                              | 2      | (Event 1 (Arm 1: Arm 1))                     |                               |  |  |
          | eConsent | YES                              | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |
-         | Snapshot | YES                              | 1      | (Event 1 (Arm 1: Arm 1))                     |                               |
+         | Snapshot | -                                | 1      | (Event 1 (Arm 1: Arm 1))                     |                               |
 
       ##VERIFY_Logging
       ##e-Consent Framework not used, and PDF Snapshot is used
@@ -135,7 +135,6 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
          | [survey respondent] | Save PDF Snapshot 2       | Save PDF Snapshot to File Repository    |
          | [survey respondent] | Save PDF Snapshot 2       | Save PDF Snapshot to File Upload Field  |
          | [survey respondent] | e-Consent Certification 2 | e-Consent Certification                 |
-         | test_admin | Save PDF Snapshot 1       | Save PDF Snapshot to File Repository    |
+         | test_admin          | Save PDF Snapshot 1       | Save PDF Snapshot to File Repository    |
 
-   #END
-
+#END
