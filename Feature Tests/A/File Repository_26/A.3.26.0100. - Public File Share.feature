@@ -46,7 +46,7 @@ Feature: Control Center: The system shall provide the ability to enable/disable 
     Then I should see "Your system configuration values have now been changed!"
     ##VERIFY Project settings share ability in File Repository
     When I click on the link labeled "My Projects"
-    And I click on the link labeled "A.3.26.100.100"
+    And I click on the link labeled "A.3.26.0100.100"
     When I click on the link labeled "File Repository"
 
     Given I click on the File Share icon for the File Repository file named "testusers_bulkupload.csv"
@@ -65,7 +65,7 @@ Feature: Control Center: The system shall provide the ability to enable/disable 
     Then I should see "Your system configuration values have now been changed!"
     ##VERIFY Project settings shareability in File Repository
     When I click on the link labeled "My Projects"
-    And I click on the link labeled "A.3.26.100.100"
+    And I click on the link labeled "A.3.26.0100.100"
     And I click on the link labeled "File Repository"
 
     Given I click on the File Share icon for the File Repository file named "testusers_bulkupload.csv"
