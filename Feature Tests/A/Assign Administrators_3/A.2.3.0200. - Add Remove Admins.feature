@@ -16,10 +16,12 @@ Feature: A.2.3.0200. Assign administrators and account managers
     ##TEST Add administrator account no privileges
     Given I enter "Test_User1" into the field with the placeholder text of "Search users to add as admin"
     And I click on the button labeled "Add"
+    ##This second add is required to ignore the autocomplete selection that shows up
+    And I click on the button labeled "Add"
     Then I should see a dialog containing the following text: "check one or more"
     And I close the popup
 
-    Given I enter "Test_User1" into the field with the placeholder text of "Search users to add as admin"
+    Given I clear field and enter "Test_User1" into the field with the placeholder text of "Search users to add as admin"
     And I enable the Administrator Privilege "Set administrator privileges" for a new administrator
     And I click on the button labeled "Add"
     Then I should see 'The user "Test_User1" has now been granted one or more administrator privileges'
@@ -27,7 +29,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
     Given  I click on the button labeled "OK"
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | Enable                       | Disable                                                      | Disable              | Disable                           | Disable                                          | Disable                 | Disable                             |
+      | Test_User1     | 1                            | 0                                                            | 0                    | 0                                 | 0                                                | 0                       | 0                                   |
 
     Given I logout
     When I login to REDCap with the user "Test_User1"
@@ -36,7 +38,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
     Then I should see "Set administrator privileges"
     And I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | Enable                       | Disable                                                      | Disable              | Disable                           | Disable                                          | Disable                 | Disable                             |
+      | Test_User1     | 1                            | 0                                                            | 0                    | 0                                 | 0                                                | 0                       | 0                                   |
 
     #TEST Modify by Enable Administrator Privileges
     When I enable the Administrator Privilege "Set administrator privileges" for the administrator "Test_User1"
@@ -49,7 +51,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | Enable                       | Enable                                                       | Enable               | Enable                            | Enable                                           | Enable                  | Enable                              |
+      | Test_User1     | 1                            | 1                                                            | 1                    | 1                                 | 1                                                | 1                       | 1                                   |
 
     #VERIFY
     When I click on the link labeled "Control Center"
@@ -71,7 +73,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | Enable                       | Disable                                                      | Disable              | Disable                           | Disable                                          | Disable                 | Disable                             |
+      | Test_User1     | 1                            | 0                                                            | 0                    | 0                                 | 0                                                | 0                       | 0                                   |
 
     #VERIFY
     When I click on the link labeled "Control Center"
