@@ -55,14 +55,16 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     #VERIFY
     When I click on the link labeled "Control Center"
-    Then I should see "Administrator privileges"
+    Then I should see "Administrator Privileges"
     And I should see "Browse Projects"
     And I should see "Edit Project Settings"
     And I should see "Add Users"
-    And I should see "General Configurations"
+    And I should see "General Configuration"
     And I should see "User Settings"
 
     #TEST Disable Administrator Privileges
+    When I click on the link labeled "Control Center"
+    When I click on the link labeled "Administrator Privileges"
     When I enable the Administrator Privilege "Set administrator privileges" for the administrator "Test_User1"
     And I disable the Administrator Privilege "Access to all projects and data with maximum user privileges" for the administrator "Test_User1"
     And I disable the Administrator Privilege "Manage user accounts" for the administrator "Test_User1"
@@ -77,14 +79,19 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     #VERIFY
     When I click on the link labeled "Control Center"
-    Then I should see "Administrator privileges"
+    Then I should see "Administrator Privileges"
     And I should see "Browse Projects"
     And I should NOT see "Edit Project Settings"
     And I should NOT see "Add Users"
-    And I should see "General Configurations"
-    And I should NOT see "User Settings"
+    And I should see "General Configuration"
+    And I should see "User Settings"
+    ##User Settings is still visible but read only
 
   Scenario: A.2.3.0200.100 Remove admin
+    ##Can't remove yourself as an admin, need to login as Test_Admin to remove Test_User1
+    Given I logout
+    When I login to REDCap with the user "Test_Admin"
+    When I click on the link labeled "Control Center"
     Given I click on the link labeled "Administrator Privileges"
     And I disable the Administrator Privilege "Set administrator privileges" for the administrator "Test_User1"
     Then I should see a dialog containing the following text: "Please be aware that you have unchecked ALL the administrator privileges for this user"
