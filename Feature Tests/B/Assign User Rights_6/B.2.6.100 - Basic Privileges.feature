@@ -56,14 +56,14 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
-            | test_admin | Add User | test_user1                              |
+            | test_admin | Add User | user = 'Test_User1'                     |
 
         ##ACTION #CROSS-FEATURE B.2.23.100: Verify Logging Filter by user name
         When I select the "test_admin" on the dropdown field labeled "Filter by username"
         ##VERIFY_LOG #CROSS-FEATURE: Verify Logging Filter by user name
         Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
-            | test_admin | Add User | test_user1                              |
+            | test_admin | Add User | user = 'Test_User1'                     |
         Given I logout
 
         ##VERIFY: Verify User with Basic custom rights
