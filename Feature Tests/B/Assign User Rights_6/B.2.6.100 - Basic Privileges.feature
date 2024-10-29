@@ -59,7 +59,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
             | test_admin | Add User | user = 'Test_User1'                     |
 
         ##ACTION #CROSS-FEATURE B.2.23.100: Verify Logging Filter by user name
-        When I select the "test_admin" on the dropdown field labeled "Filter by username"
+        When I select the "test_admin" option from the Filter by username dropdown field
         ##VERIFY_LOG #CROSS-FEATURE: Verify Logging Filter by user name
         Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
