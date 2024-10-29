@@ -27,7 +27,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         Then I should see a dialog containing the following text: "Adding new user"
 
         When I uncheck the User Right named "Project Setup & Design"
-        And I select the radio option "No Access" for the field labeled "User Rights"
+        And I select the radio option "No Access" for the field labeled "User Rights" in the dialog box
         And I uncheck the User Right named "Data Access Groups"
         And I uncheck the User Right named "Survey Distribution Tools"
         And I uncheck the User Right named "Alerts & Notifications"
@@ -43,25 +43,25 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I uncheck the User Right named "API Export"
         And I uncheck the User Right named "API Import/Update"
         And I uncheck the User Right named "REDCap Mobile App - Allow users to collect data offline in the mobile app"
-        And I uncheck the User Right named "Allow user to download data for all records to the app?"
+        And I uncheck the User Right named "REDCap Mobile App - Allow user to download data for all records to the app?"
         And I uncheck the User Right named "Create Records"
         And I uncheck the User Right named "Rename Records"
         And I uncheck the User Right named "Delete Records"
         And I uncheck the User Right named "Record Locking Customization"
         And I select the User Right named "Lock/Unlock Records" and choose "Disabled"
         And I uncheck the User Right named "Lock/Unlock *Entire* Records (record level)"
-        And I click on the link labeled "Add User" in the dialog box
+        And I click on the button labeled "Add user"
 
         ##VERIFY_LOG: Verify Update user rights
-        And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        And I click on the link labeled "Logging"
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
             | test_admin | Add User | test_user1                              |
 
         ##ACTION #CROSS-FEATURE B.2.23.100: Verify Logging Filter by user name
         When I select the "test_admin" on the dropdown field labeled "Filter by username"
         ##VERIFY_LOG #CROSS-FEATURE: Verify Logging Filter by user name
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
             | test_admin | Add User | test_user1                              |
         Given I logout
@@ -109,7 +109,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
 
         ##VERIFY_LOG: Verify Update user rights
         And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action      | List of Data Changes OR Fields Exported |
             | test_admin | Update user | test_user1                              |
         Given I logout
@@ -166,7 +166,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
 
         ##VERIFY_LOG: Verify Update user rights
         And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action      | List of Data Changes OR Fields Exported |
             | test_admin | Update user | test_user1                              |
         Given I logout
@@ -212,7 +212,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I assign an expired expiration date to user "Test User1" with username of "test_user1"
         ##VERIFY_LOG: Verify Expire User
         And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action                  | List of Data Changes OR Fields Exported |
             | test_admin | Updated User Expiration | test_user1                              |
         Given I logout
@@ -234,7 +234,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         #The Expiration column shows 'never' for "Test_User1"
         ##VERIFY_LOG: Verify Update user Expiration
         And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action                  | List of Data Changes OR Fields Exported |
             | test_admin | Updated User Expiration | test_user1                              |
         Given I logout
@@ -262,7 +262,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
 
         ##VERIFY_LOG: Verify Logging of Delete user
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action                  | List of Data Changes OR Fields Exported |
             | test_admin | Delete user             | test_user1                              |
             | test_admin | Updated User Expiration | test_user1                              |
