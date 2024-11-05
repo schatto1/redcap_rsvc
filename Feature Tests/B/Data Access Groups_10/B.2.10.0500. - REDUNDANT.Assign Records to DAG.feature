@@ -3,9 +3,7 @@ Feature: User Interface: The system shall provide the ability to assign records 
     I want to see that Data Access Groups is functioning as expected
     
     Scenario: B.2.10.0500.100 Assign DAG to record
-    #This feature test is REDUNDANT and can be viewed in B.2.10.0600.
-
-    Scenario: B.2.10.0500.100 Assign DAG to record
+        #This feature test is REDUNDANT and can be viewed in B.2.10.0600.
         #SETUP
         Given I login to REDCap with the user "Test_Admin"
         And I create a new project named "B.2.10.0500.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_1.xml", and clicking the "Create Project" button
