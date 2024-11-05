@@ -56,7 +56,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
     When I click on the link labeled "Control Center"
     Then I should see "Administrator Privileges"
     And I should see "Browse Projects"
-    And I should see "Edit a Project's Settings"
+    And I should see "Edit Project Settings"
     And I should see "Add Users"
     And I should see "General Configuration"
     # And I should see "User Settings"
