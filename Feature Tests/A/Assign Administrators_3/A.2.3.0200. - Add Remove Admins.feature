@@ -16,9 +16,9 @@ Feature: A.2.3.0200. Assign administrators and account managers
     ##TEST Add administrator account no privileges
     Given I enter "Test_User1" into the field with the placeholder text of "Search users to add as admin"
     And I click on the button labeled "Add"
-    # dialog not showing up in ATS
-    # Then I should see a dialog containing the following text: "check one or more"
-    # And I click on the button labeled "Close" in the dialog box
+    And I click on the button labeled "Add"
+    Then I should see a dialog containing the following text: "check one or more"
+    And I click on the button labeled "Close" in the dialog box
 
     Given I clear field and enter "Test_User1" into the field with the placeholder text of "Search users to add as admin"
     And I enable the Administrator Privilege "Set administrator privileges" for a new administrator
@@ -59,7 +59,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
     And I should see "Edit Project Settings"
     And I should see "Add Users"
     And I should see "General Configuration"
-    # And I should see "User Settings"
+    And I should see "User Settings"
 
     #TEST Disable Administrator Privileges
     When I click on the link labeled "Administrator Privileges"
@@ -83,8 +83,8 @@ Feature: A.2.3.0200. Assign administrators and account managers
     And I should NOT see "Edit Project Settings"
     And I should NOT see "Add Users"
     And I should see "General Configuration"
-    # # I can see the link User Settings
-    # And I should NOT see "User Settings"
+    And I click on the link labeled "User Settings"
+    And I should see "Because you have restricted admin privileges, this page is read-only, and no settings can be modified"
     And I logout
 
   Scenario: A.2.3.0200.100 Remove admin
