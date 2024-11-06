@@ -77,10 +77,9 @@ Feature: A.2.3.0200. Assign administrators and account managers
       | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  | [ ]                               | [ ]                                              | [ ]                     | [ ]                                 |
 
     Given I logout
-    And I login to REDCap with the user "Test_User1"
 
     #VERIFY
-    Given I login to REDCap with the user "Test_Admin"
+    Given I login to REDCap with the user "Test_User1"
     When I click on the link labeled "Control Center"
     Then I should see "Administrator Privileges"
     And I should see "Browse Projects"
