@@ -33,4 +33,6 @@ while read line; do
 
     echo "Issue created for: $file_name"
 
+    sleep 10
+
 done < "$filename"
