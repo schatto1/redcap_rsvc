@@ -33,14 +33,14 @@ Feature: User Interface: The system shall allow data to be changed only by a use
         Then I should see a dialog containing the following text: "Adding new user"
 
         When I uncheck the User Right named "Data Import Tool"
-        And I uheck the User Right named "Logging"
-        And I click on the link labeled "Add User" in the dialog box
+        And I uncheck the User Right named "Logging"
+        And I click on the button labeled "Add user"
 
         ##VERIFY_LOG: Verify Update user rights
         And I click on the button labeled "Logging"
         Then I should see a table header and rows including the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
-            | test_admin | Add User | test_user1                              |
+            | test_admin | Add User | Test_User1                              |
         Given I logout
 
         Given I login to REDCap with the user "Test_User1"
