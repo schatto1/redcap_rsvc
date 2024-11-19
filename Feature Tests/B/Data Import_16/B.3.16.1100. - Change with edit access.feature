@@ -37,10 +37,11 @@ Feature: User Interface: The system shall allow data to be changed only by a use
         And I click on the button labeled "Add user"
 
         ##VERIFY_LOG: Verify Update user rights
-        And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        And I click on the link labeled "Logging"
+         Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
             | test_admin | Add User | Test_User1                              |
+            
         Given I logout
 
         Given I login to REDCap with the user "Test_User1"
