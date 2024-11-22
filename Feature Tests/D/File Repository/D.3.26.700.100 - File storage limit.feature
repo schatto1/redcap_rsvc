@@ -38,7 +38,7 @@ Feature: File Repository: The system shall support file storage limit. Includes 
     Then I should see "Your changes have been saved!"
 
     #FUNCTIONAL REQUIREMENT
-    ##ACTION: Fail to upload file larger than 1 MB
+    ##ACTION: Successfully upload file larger than 1 MB
     Given I click on the link labeled "3.26.700.100"
     And I click on the link labeled "File Repository"
     And I upload a "txt" format file located at "import_files/LargeFileUpload.txt", by clicking the button near "Select files to upload" to browse for the file, and clicking the button labeled "Open" to upload the file
