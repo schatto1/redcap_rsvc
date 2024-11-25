@@ -47,7 +47,7 @@ Feature: Renaming a Record: The system shall allow users to rename a record.
         When I click on the link labeled "Record Status Dashboard"
         And I click on the link labeled exactly "1"
         ##ACTION Rename record
-        When I click on the span element labeled "Choose action for record"
+        When I click on the button labeled "Choose action for record"
         And I click on the link labeled "Rename record"
         Then I should see a dialog containing the following text: 'Rename record "1"'
 
