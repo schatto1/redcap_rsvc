@@ -19,7 +19,7 @@ Feature: A.3.14.1300. The system shall allow REDCap administrators to enable or 
         Then I should see Project status: "Production"
 
         When I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
+        Then I should see a button labeled "Bulk Record Delete"
 
         #FUNCTIONAL_REQUIREMENT
         ##ACTION: Disable Bulk Record Delete page
@@ -34,9 +34,9 @@ Feature: A.3.14.1300. The system shall allow REDCap administrators to enable or 
 
         ##VERIFY Bulk Record Delete is disabled
         When I click on the link labeled "My Projects"
-        And I click on the link labeled " A.3.14.1300.100"
+        And I click on the link labeled "A.3.14.1300.100"
 
         When I click on the link labeled "Other Functionality"
-        Then I should not see "Bulk Record Delete" in the tab labeled "Other Functionality"
-        And I log out
+        Then I should NOT see a button labeled "Bulk Record Delete"
+        Given I logout
 #END
