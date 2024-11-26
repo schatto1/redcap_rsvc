@@ -28,16 +28,14 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow the designati
     And I click on the link labeled "User Rights"
     And I enter "Test_User2" into the field with the placeholder text of "Add new user"
     And I click on the button labeled "Add with custom rights"
-    #User right below needs to be defined
-    And I click on the radio labeled "Person #1"
+    And I select the User Right named "Double Data Entry" and choose "Person #1" 
     And I click on the button labeled "Add user"
     Then I should see "Test User2"
 
     When I click on the link labeled "User Rights"
     And I enter "Test_User3" into the field with the placeholder text of "Add new user"
     And I click on the button labeled "Add with custom rights"
-    #User right below needs to be defined
-    And I click on the radio labeled "Person #2"
+    And I select the User Right named "Double Data Entry" and choose "Person #2" 
     And I click on the button labeled "Add user"
     Then I should see "Test User3"
     And I logout
