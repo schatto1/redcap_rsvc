@@ -22,6 +22,10 @@ branch='v14.7.0'
 # - We use 'tr -d "\r"' to remove carriage returns in case the file has been edited on Windows
 awk 1 features.csv | tr -d "\r" | while read line; do
     file=$(find . | grep "$line")
+    if [ -z "$file" ]; then
+      echo "File not found matching '$line'.  Stopping..."
+      exit
+    fi
 
     # Extract file name without extension
     file_name=$(basename "$file" .feature)
