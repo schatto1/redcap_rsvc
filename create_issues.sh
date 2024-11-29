@@ -16,9 +16,9 @@ function url_encode() {
 }
 
 branch='v14.7.0'
-filename='features.csv'
 
-while read line; do
+# We use this awk command to print the file because it will append a trailing newline if it is missing
+awk 1 features.csv | while read line; do
     file=$(find . | grep "$line")
 
     # Extract file name without extension
@@ -35,4 +35,4 @@ while read line; do
 
     sleep 10
 
-done < "$filename"
+done
