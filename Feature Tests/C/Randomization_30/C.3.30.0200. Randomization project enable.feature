@@ -2,9 +2,9 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
   As a REDCap end user
   I want to see that Randomization is functioning as expected
 
-  Scenario: #SETUP project with randomization enabled - "Project 3.30 randAM.xml"
+  Scenario: #SETUP project with randomization enabled
     Given I login to REDCap with the user "Test_User1"
-    And I create a new project named "C.3.30.0200.0100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project 3.30 norand.xml", and clicking the "Create Project" button
+    And I create a new project named "C.3.30.0200.0100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project 3.30 norand.REDCap.xml", and clicking the "Create Project" button
 
   Scenario: #FUNCTIONAL_REQUIREMENT C.3.30.0200.0100. Enabling adds randomization module to project setup
     When I click on the link labeled "Project Setup"
