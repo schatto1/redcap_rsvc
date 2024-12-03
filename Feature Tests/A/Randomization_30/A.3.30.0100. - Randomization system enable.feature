@@ -2,10 +2,10 @@ Feature: A.3.30.0100 Control Center: The system shall support enabling or disabl
   As a REDCap end user
   I want to see that Randomization is functioning as expected
 
-  Scenario: Setup project with randomization enabled - "Project 3.30 randAM.xml"
+  Scenario: Setup project with randomization enabled
 #SETUP
     Given I login to REDCap with the user "Test_Admin"
-    When I create a new project named "A.3.30.0100.0100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project 3.30 randAM.xml", and clicking the "Create Project" button
+    When I create a new project named "A.3.30.0100.0100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project 3.30 baserand.REDCap.xml", and clicking the "Create Project" button
 
   Scenario: A.3.30.0100.0200: Disabled at system level removes randomization module option at the project level.
 #FUNCTIONAL_REQUIREMENT
