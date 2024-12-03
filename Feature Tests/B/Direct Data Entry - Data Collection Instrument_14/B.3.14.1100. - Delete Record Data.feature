@@ -1,4 +1,4 @@
-Feature: Deleting Data: The system shall allow users to delete all data in an event for a given record.
+Feature: B.3.14.1100. The system shall allow users to delete all data in an event for a given record from the Record Home Page. 
 
   As a REDCap end user
   I want to see that delete all data is functioning as expected

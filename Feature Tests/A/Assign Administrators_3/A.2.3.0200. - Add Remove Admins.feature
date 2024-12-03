@@ -29,7 +29,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
     Given  I click on the button labeled "OK"
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  |     [ ]                           | [ ]                                              | [ ]                     | [ ]                                 |
+      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  | [ ]                               | [ ]                                              | [ ]                     | [ ]                                 |
 
     Given I logout
     When I login to REDCap with the user "Test_User1"
@@ -38,7 +38,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
     Then I should see "Set administrator privileges"
     And I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  |     [ ]                           | [ ]                                              | [ ]                     | [ ]                                 | 
+      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  | [ ]                               | [ ]                                              | [ ]                     | [ ]                                 |
 
     #TEST Modify by Enable Administrator Privileges
     When I enable the Administrator Privilege "Set administrator privileges" for the administrator "Test_User1"
@@ -51,7 +51,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | [✓]                          | [✓]                                                          | [✓]                  |     [✓]                           | [✓]                                              | [✓]                     | [✓]                                 | 
+      | Test_User1     | [✓]                          | [✓]                                                          | [✓]                  | [✓]                               | [✓]                                              | [✓]                     | [✓]                                 |
 
     #VERIFY
     When I click on the link labeled "Control Center"
@@ -75,9 +75,12 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  |     [ ]                           | [ ]                                              | [ ]                     | [ ]                                 |
+      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  | [ ]                               | [ ]                                              | [ ]                     | [ ]                                 |
+
+    Given I logout
 
     #VERIFY
+    Given I login to REDCap with the user "Test_User1"
     When I click on the link labeled "Control Center"
     Then I should see "Administrator Privileges"
     And I should see "Browse Projects"

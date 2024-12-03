@@ -16,7 +16,7 @@ Feature: User Interface: The system shall provide the ability to assign records 
 
         #FUNCTIONAL REQUIREMENT
         ##ACTION: Assign Record DAG
-        Given I click on the span element labeled "Choose action for record"
+        Given I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         Then I should see a dialog containing the following text: "Assign record to a Data Access Group?"
 
