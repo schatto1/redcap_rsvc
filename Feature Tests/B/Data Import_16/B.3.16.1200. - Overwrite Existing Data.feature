@@ -25,6 +25,7 @@ Feature: User Interface: The system shall provide the option to allow blank valu
     Then I should see a table header and rows containing the following values in the report data table:
       | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name | Email          |
       | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |      | email@test.edu |
+      | 4         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |      |                |
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Import new data, ignoring blank values
@@ -46,8 +47,9 @@ Feature: User Interface: The system shall provide the option to allow blank valu
 
     When I click on the button labeled "View Report"
     Then I should see a table header and rows containing the following values in the report data table:
-      | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name | Email          |
-      | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |      | email@test.edu |
+      | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name     | Email          |
+      | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |          | email@test.edu |
+      | 4         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   | New Name |                |
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Import new data, overwrite blank values
@@ -71,6 +73,7 @@ Feature: User Interface: The system shall provide the option to allow blank valu
 
     When I click on the button labeled "View Report"
     Then I should see a table header and rows containing the following values in the report data table:
-      | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name | Email |
-      | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |      |       |
+      | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name     | Email |
+      | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |          |       |
+      | 4         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   | New Name |       |
 #End
