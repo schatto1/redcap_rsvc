@@ -81,7 +81,7 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
         And I select "3" on the dropdown field labeled "Choose an existing Record ID"
         Then I should see "Record ID 3"
 
-        Given I click on the span element labeled "Choose action for record"
+        Given I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         Then I should see a dialog containing the following text: "Assign record to a Data Access Group?"
 
@@ -94,7 +94,7 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
         And I select "4" on the dropdown field labeled "Choose an existing Record ID"
         Then I should see "Record ID 4"
 
-        Given I click on the span element labeled "Choose action for record"
+        Given I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         Then I should see a dialog containing the following text: "Assign record to a Data Access Group?"
 

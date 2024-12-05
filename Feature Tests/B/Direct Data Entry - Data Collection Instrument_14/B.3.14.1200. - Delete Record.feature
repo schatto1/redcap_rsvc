@@ -49,7 +49,7 @@ Feature: B.3.14.1200. The system shall allow users to delete a record from the R
 
         ##FUNCTIONAL_REQUIREMENT
         ###ACTION Delete record
-        When I click on the span element labeled "Choose action for record"
+        When I click on the button labeled "Choose action for record"
         And I click on the link labeled "Delete record (all forms/events)"
         Then I should see a dialog containing the following text: 'DELETE RECORD "1"?'
 
