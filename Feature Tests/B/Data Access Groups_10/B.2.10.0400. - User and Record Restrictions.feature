@@ -1,20 +1,26 @@
 Feature: B.2.10.0400. User Interface: The system shall provide the ability to restrict a user who has been assigned to a DAG to: (data they entered | data entered by any member of the same DAG | files uploaded in the File Repository)
 
-
     As a REDCap end user
     I want to see that Data Access Groups is functioning as expected
 
     Scenario: B.2.10.0400.100 User restriction for records in DAGs
 
         #SETUP_NOTE: Will reference unique Group ID numbers located on DAG page. These numbers are specific the PID
-
-        #SETUP
         Given I login to REDCap with the user "Test_Admin"
         And I create a new project named "B.2.10.0400.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_1.xml", and clicking the "Create Project" button
 
-        When I click on the link labeled "My Projects"
-        And I click on the link labeled "B.2.10.0400.100"
-        And I click on the link labeled "User Rights"
+        When I click on the link labeled "Designer"
+        Then I should see "Data Collection Instruments"
+        And I click on the "Enable" button for the instrument row labeled "Consent"
+        And I click on the button labeled "Save Changes"
+        Then I should see the enabled survey icon link for the instrument row labeled "Consent"
+        When I click on the button labeled "e-Consent and  PDF Snapshots"
+        Then I should see "Settings for e-Consent & PDF Snapshots"
+        And I click on the button labeled "Enable the e-Consent Framework for a survey"
+        And I select the survey '"Consent" (consent)' on the dropdown field to enable it as e-Consent
+        Then I click on the button labeled "Save settings"
+        
+        When I click on the link labeled "User Rights"
         And I click on the button labeled "Upload or download users, roles, and assignments"
         Then I should see "Upload users (CSV)"
 
@@ -23,7 +29,7 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
 
         Given I upload a "csv" format file located at "import_files/user list for project 1.csv", by clicking the button near "Select your CSV" to browse for the file, and clicking the button labeled "Upload" to upload the file
         Then I should see a dialog containing the following text: "Upload users (CSV) - Confirm"
-        And I should see a table header and rows containing the following values in a table:
+        And I should see a table header and rows containing the following values in a table in the dialog box:
             | username   |
             | test_admin |
             | test_user1 |
@@ -181,12 +187,13 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"
-        #Then I should see "You may now close this tab/window"
-        And  click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should seen "Record Home Page"
+        Then I should see "You may now close this tab/window"
 
+
+        Given I return to the REDCap page I opened the survey from
         ##VERIFY_LOG:
         And I click on the link labeled "Logging"
+        Then I should see "Time / Date"
         Then I should see a table header and rows containing the following values in the logging table:
             | Time / Date      | Username   | Action        | List of Data Changes OR Fields Exported |
             | mm/dd/yyyy hh:mm | test_user3 | Create record | record_id = '1-1'                       |
@@ -195,14 +202,16 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
         When I click on the link labeled "Record Status Dashboard"
         Then I should see a table header and rows containing the following values in the record status dashboard table:
             | Record ID     |
+            | 1-1  TestGroup1 |
             | 3  TestGroup1 |
 
         ##VERIFY_FR:
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should see a table header and rows containing the following values in a table:
-            | Record | Survey                               | Survey Completion Time |
-            | 1-1    | Consent (Event Three (Arm 1: Arm 1)) | mm/dd/yyyy hh:mm       |
+            | Record         | Survey Completed                     | File Storage Time |
+            | 1-1 TestGroup1 | Consent (Event Three (Arm 1: Arm 1)) | mm/dd/yyyy hh:mm  |
+
         And I logout
 
         ##ACTION: Another user from same DAG has access to same DAG records
@@ -222,8 +231,9 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
         And I click on the link labeled "PDF Snapshot Archive"
 
         Then I should see a table header and rows containing the following values in a table:
-            | Record | Survey                               | Survey Completion Time |
-            | 1-1    | Consent (Event Three (Arm 1: Arm 1)) | mm/dd/yyyy hh:mm       |
+            | Record         | Survey Completed                     | File Storage Time |
+            | 1-1 TestGroup1 | Consent (Event Three (Arm 1: Arm 1)) | mm/dd/yyyy hh:mm  |
+
         And I logout
 
         ##ACTION: Separate User DAG
@@ -264,7 +274,7 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
         When I click on the button labeled "Close survey"
         Then I should see "You may now close this tab/window"
 
-        Given I am still logged in to REDCap with the user "Test_User4"
+        Given I return to the REDCap page I opened the survey from
         ##VERIFY_RSD:
         And I click on the link labeled "Record Status Dashboard"
         Then I should see a table header and rows containing the following values in the record status dashboard table:
@@ -272,12 +282,19 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
             | 4  TestGroup2   |
             | 2-1  TestGroup2 |
 
+        ##ACTION: User from different DAG cannot access another DAG records    
+        And I should NOT see "1-1  TestGroup1"
+        And I should NOT see "3  TestGroup1"
+
         ##VERIFY_FR:
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should see a table header and rows containing the following values in a table:
-            | Record | Survey                               | Survey Completion Time |
-            | 2-1    | Consent (Event Three (Arm 1: Arm 1)) | mm/dd/yyyy hh:mm       |
+            | Record         | Survey Completed                     | File Storage Time |
+            | 2-1 TestGroup2 | Consent (Event Three (Arm 1: Arm 1)) | mm/dd/yyyy hh:mm  |
+
+        ##ACTION: User from different DAG cannot access another DAG records    
+        And I should NOT see "1-1 TestGroup1"
         And I logout
 
         ##ACTION: Another user from same DAG has access to same DAG records
@@ -292,11 +309,18 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
             | 4  TestGroup2   |
             | 2-1  TestGroup2 |
 
+        ##ACTION: User from different DAG cannot access another DAG records    
+        And I should NOT see "1-1  TestGroup1"
+        And I should NOT see "3  TestGroup1"
+
         ##VERIFY_FR:
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should see a table header and rows containing the following values in a table:
-            | Record | Survey                               | Survey Completion Time |
-            | 2-1    | Consent (Event Three (Arm 1: Arm 1)) | mm/dd/yyyy hh:mm       |
+            | Record         | Survey Completed             | File Storage Time |
+            | 2-1    | Consent (Event Three (Arm 1: Arm 1)) | mm/dd/yyyy hh:mm  |
+        
+        ##ACTION: User from different DAG cannot access another DAG records    
+        And I should NOT see "1-1 TestGroup1"
         And I logout
 #End
