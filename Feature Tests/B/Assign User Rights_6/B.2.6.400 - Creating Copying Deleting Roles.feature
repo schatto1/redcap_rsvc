@@ -1,15 +1,15 @@
 Feature: Project Level:  The system shall allow for the creation, copying and deletion of user roles.
 
-    As a REDCap end user
-    I want to see that assign user rights is functioning as expected
+  As a REDCap end user
+  I want to see that assign user rights is functioning as expected
 
-    Scenario: B.2.6.400.100 Create, Copy, & Delete User Roles
-        #SETUP
-        Given I login to REDCap with the user "Test_Admin"
-        #Manual: Append project name with the current version (i.e. "X.X.X.XXX.XXX - LTS X.X.X")
-        And I create a new project named "B.2.6.400.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_1.xml", and clicking the "Create Project" button
+  Scenario: B.2.6.400.100 Create, Copy, & Delete User Roles
+    #SETUP
+    Given I login to REDCap with the user "Test_Admin"
+    #Manual: Append project name with the current version (i.e. "X.X.X.XXX.XXX - LTS X.X.X")
+    And I create a new project named "B.2.6.400.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_1.xml", and clicking the "Create Project" button
 
-     #FUNCTIONAL REQUIREMENT:
+    #FUNCTIONAL REQUIREMENT:
     ##ACTION: User Rights Create role
     Given I click on the link labeled "User Rights"
     And I enter "TestRole2" into the field with the placeholder text of "Enter new role name"
