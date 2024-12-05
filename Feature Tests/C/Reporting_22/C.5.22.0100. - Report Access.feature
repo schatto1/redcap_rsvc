@@ -20,7 +20,7 @@ Feature: User Interface: The system shall support the ability to assign the User
         #SETUP: Assign record 1 to DAG1
         When I click on the link labeled "Record Status Dashboard"
         And I click on the link labeled exactly "1"
-        And I click on the span element labeled "Choose action for record"
+        And I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         When I select "TestGroup1" on the dropdown field labeled "Assign record" on the dialog box
         And I click on the button labeled "Assign to Data Access Group" in the dialog box
@@ -29,7 +29,7 @@ Feature: User Interface: The system shall support the ability to assign the User
         #SETUP: Assign record 2 to DAG2
         When I click on the link labeled "Record Status Dashboard"
         And I click on the link labeled exactly "2"
-        And I click on the span element labeled "Choose action for record"
+        And I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         When I select "TestGroup2" on the dropdown field labeled "Assign record" on the dialog box
         And I click on the button labeled "Assign to Data Access Group" in the dialog box

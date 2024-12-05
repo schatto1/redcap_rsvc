@@ -32,7 +32,7 @@ Feature: User Interface: The system shall not allow data to be changed on locked
     When I click on the link labeled "Record Status Dashboard"
     And I click on the link labeled exactly "1"
     #And I select the dropdown option labeled "Lock entire record" for the dropdown field labeled "Choose action for record"
-    When I click on the span element labeled "Choose action for record"
+    When I click on the button labeled "Choose action for record"
     And I click on the link labeled "Lock entire record"
     And I click on the button labeled "Lock entire record" on the dialog box
     Then I should see a dialog containing the following text: 'Record "1" is now LOCKED'

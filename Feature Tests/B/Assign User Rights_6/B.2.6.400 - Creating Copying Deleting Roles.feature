@@ -11,7 +11,8 @@ Feature: Project Level:  The system shall allow for the creation, copying and de
 
      #FUNCTIONAL REQUIREMENT:
     ##ACTION: User Rights Create role
-    Given I enter "TestRole2" into the field with the placeholder text of "Enter new role name"
+    Given I click on the link labeled "User Rights"
+    And I enter "TestRole2" into the field with the placeholder text of "Enter new role name"
     And I click on the button labeled "Create role"
     Then I should see a dialog containing the following text: "Creating new role"
 

@@ -18,7 +18,7 @@ Feature: User Interface: The system shall provide the DAG unique group names in 
         When I select record ID "3" from arm name "Arm 1: Arm 1" on the Add / Edit record page
         Then I should see "Record Home Page"
 
-        Given I click on the span element labeled "Choose action for record"
+        Given I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         Then I should see a dialog containing the following text: "Assign record to a Data Access Group?"
 
@@ -33,7 +33,7 @@ Feature: User Interface: The system shall provide the DAG unique group names in 
         When I select record ID "4" from arm name "Arm 1: Arm 1" on the Add / Edit record page
         Then I should see "Record Home Page"
 
-        Given I click on the span element labeled "Choose action for record"
+        Given I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         Then I should see a dialog containing the following text: "Assign record to a Data Access Group?"
 

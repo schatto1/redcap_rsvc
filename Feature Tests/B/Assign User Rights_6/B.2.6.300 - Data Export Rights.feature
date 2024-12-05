@@ -36,7 +36,6 @@ Feature: Project Level:  The system shall allow instrument level data export rig
         Given I click on the button labeled "Upload" in the dialog box
         Then I should see a dialog containing the following text: "SUCCESS!"
         And I click on the button labeled "Close" in the dialog box
-
         Then I should see a table header and rows containing the following values in a table:
             | Role name               | Username            |
             | —                       | test_admin          |
@@ -50,10 +49,10 @@ Feature: Project Level:  The system shall allow instrument level data export rig
             | 4_NoAccess_Noexport     | [No users assigned] |
 
         #B.2.6.500.100 Assign User Roles
-        When I click on the link labeled "Test User1"
-        And I click on the button labeled "Assign to role" on the role selector dropdown
-        And I select "1_FullRights" on the dropdown field labeled "Select Role" on the role selector dropdown
-        And I click on the button labeled exactly "Assign"
+        When I enter "Test_User1" into the field with the placeholder text of "Assign new user to role"
+        And I click on the button labeled "Assign to role"
+        Then I select "1_FullRights" on the dropdown field labeled "Select Role" on the role selector dropdown
+        And I click on the button labeled exactly "Assign" on the role selector dropdown
         ##VERIFY
         Then I should see a table header and rows containing the following values in a table:
             | Role name               | Username            |
@@ -66,10 +65,10 @@ Feature: Project Level:  The system shall allow instrument level data export rig
             | 3_ReadOnly_Deidentified | [No users assigned] |
             | 4_NoAccess_Noexport     | [No users assigned] |
 
-        When I click on the link labeled "Test User2"
-        And I click on the button labeled "Assign to role" on the role selector dropdown
-        And I select "2_Edit_RemoveID" on the dropdown field labeled "Select Role" on the role selector dropdown
-        And I click on the button labeled exactly "Assign"
+        When I enter "Test_User2" into the field with the placeholder text of "Assign new user to role"
+        And I click on the button labeled "Assign to role"
+        Then I select "2_Edit_RemoveID" on the dropdown field labeled "Select Role" on the role selector dropdown
+        And I click on the button labeled exactly "Assign" on the role selector dropdown
         ##VERIFY
         Then I should see a table header and rows containing the following values in a table:
             | Role name               | Username            |
@@ -81,10 +80,10 @@ Feature: Project Level:  The system shall allow instrument level data export rig
             | 3_ReadOnly_Deidentified | [No users assigned] |
             | 4_NoAccess_Noexport     | [No users assigned] |
 
-        When I click on the link labeled "Test User3"
-        And I click on the button labeled "Assign to role" on the role selector dropdown
-        And I select "3_ReadOnly_Deidentified" on the dropdown field labeled "Select Role" on the role selector dropdown
-        And I click on the button labeled exactly "Assign"
+        When I enter "Test_User3" into the field with the placeholder text of "Assign new user to role"
+        And I click on the button labeled "Assign to role"
+        Then I select "3_ReadOnly_Deidentified" on the dropdown field labeled "Select Role" on the role selector dropdown
+        And I click on the button labeled exactly "Assign" on the role selector dropdown
         ##VERIFY
         Then I should see a table header and rows containing the following values in a table:
             | Role name               | Username            |
@@ -95,10 +94,10 @@ Feature: Project Level:  The system shall allow instrument level data export rig
             | 3_ReadOnly_Deidentified | test_user3          |
             | 4_NoAccess_Noexport     | [No users assigned] |
 
-        When I click on the link labeled "Test User4"
-        And I click on the button labeled "Assign to role" on the role selector dropdown
-        And I select "4_NoAccess_Noexport" on the dropdown field labeled "Select Role" on the role selector dropdown
-        And I click on the button labeled exactly "Assign"
+        When I enter "Test_User4" into the field with the placeholder text of "Assign new user to role"
+        And I click on the button labeled "Assign to role"
+        Then I select "4_NoAccess_Noexport" on the dropdown field labeled "Select Role" on the role selector dropdown
+        And I click on the button labeled exactly "Assign" on the role selector dropdown
         ##VERIFY
         Then I should see a table header and rows containing the following values in a table:
             | Role name               | Username            |
