@@ -1,4 +1,4 @@
-Feature: Deleting Data: The system shall allow users to delete all data on the current form of a given record.
+Feature: B.3.14.1000. The system shall allow users to delete all data on the current form of a given record from the Record Home Page. 
 
   As a REDCap end user
   I want to see that delete record is functioning as expected

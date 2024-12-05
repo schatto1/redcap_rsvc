@@ -15,11 +15,13 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     ##TEST Add administrator account no privileges
     Given I enter "Test_User1" into the field with the placeholder text of "Search users to add as admin"
+    # The following line is intentionally duplicated to produce the desired behavior per Adam's suggestion on https://github.com/4bbakers/redcap_rsvc/pull/17
+    And I click on the button labeled "Add"
     And I click on the button labeled "Add"
     ##This second add is required to ignore the autocomplete selection that shows up
     And I click on the button labeled "Add"
     Then I should see a dialog containing the following text: "check one or more"
-    And I close the popup
+    And I click on the button labeled "Close" in the dialog box
 
     Given I clear field and enter "Test_User1" into the field with the placeholder text of "Search users to add as admin"
     And I enable the Administrator Privilege "Set administrator privileges" for a new administrator
@@ -29,7 +31,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
     Given  I click on the button labeled "OK"
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | 1                            | 0                                                            | 0                    | 0                                 | 0                                                | 0                       | 0                                   |
+      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  | [ ]                               | [ ]                                              | [ ]                     | [ ]                                 |
 
     Given I logout
     When I login to REDCap with the user "Test_User1"
@@ -38,7 +40,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
     Then I should see "Set administrator privileges"
     And I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | 1                            | 0                                                            | 0                    | 0                                 | 0                                                | 0                       | 0                                   |
+      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  | [ ]                               | [ ]                                              | [ ]                     | [ ]                                 |
 
     #TEST Modify by Enable Administrator Privileges
     When I enable the Administrator Privilege "Set administrator privileges" for the administrator "Test_User1"
@@ -51,7 +53,7 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | 1                            | 1                                                            | 1                    | 1                                 | 1                                                | 1                       | 1                                   |
+      | Test_User1     | [✓]                          | [✓]                                                          | [✓]                  | [✓]                               | [✓]                                              | [✓]                     | [✓]                                 |
 
     #VERIFY
     When I click on the link labeled "Control Center"
@@ -63,8 +65,8 @@ Feature: A.2.3.0200. Assign administrators and account managers
     And I should see "User Settings"
 
     #TEST Disable Administrator Privileges
-    When I click on the link labeled "Control Center"
     When I click on the link labeled "Administrator Privileges"
+    Then I should see "Set administrator privileges"
     When I enable the Administrator Privilege "Set administrator privileges" for the administrator "Test_User1"
     And I disable the Administrator Privilege "Access to all projects and data with maximum user privileges" for the administrator "Test_User1"
     And I disable the Administrator Privilege "Manage user accounts" for the administrator "Test_User1"
@@ -75,22 +77,24 @@ Feature: A.2.3.0200. Assign administrators and account managers
 
     Then I should see a table header and rows containing the following values in the administrators table:
       | Administrators | Set administrator privileges | Access to all projects and data with maximum user privileges | Manage user accounts | Modify system configuration pages | Install, upgrade, and configure External Modules | Perform REDCap upgrades | Access to Control Center dashboards |
-      | Test_User1     | 1                            | 0                                                            | 0                    | 0                                 | 0                                                | 0                       | 0                                   |
+      | Test_User1     | [✓]                          | [ ]                                                          | [ ]                  | [ ]                               | [ ]                                              | [ ]                     | [ ]                                 |
+
+    Given I logout
 
     #VERIFY
+    Given I login to REDCap with the user "Test_User1"
     When I click on the link labeled "Control Center"
     Then I should see "Administrator Privileges"
     And I should see "Browse Projects"
     And I should NOT see "Edit Project Settings"
     And I should NOT see "Add Users"
     And I should see "General Configuration"
-    And I should see "User Settings"
-    ##User Settings is still visible but read only
+    And I click on the link labeled "User Settings"
+    And I should see "Because you have restricted admin privileges, this page is read-only, and no settings can be modified"
+    And I logout
 
   Scenario: A.2.3.0200.100 Remove admin
-    ##Can't remove yourself as an admin, need to login as Test_Admin to remove Test_User1
-    Given I logout
-    When I login to REDCap with the user "Test_Admin"
+    Given I login to REDCap with the user "Test_Admin"
     When I click on the link labeled "Control Center"
     Given I click on the link labeled "Administrator Privileges"
     And I disable the Administrator Privilege "Set administrator privileges" for the administrator "Test_User1"
