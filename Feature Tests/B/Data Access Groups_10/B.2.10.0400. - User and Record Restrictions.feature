@@ -9,17 +9,6 @@ Feature: B.2.10.0400. User Interface: The system shall provide the ability to re
         Given I login to REDCap with the user "Test_Admin"
         And I create a new project named "B.2.10.0400.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_1.xml", and clicking the "Create Project" button
 
-        When I click on the link labeled "Designer"
-        Then I should see "Data Collection Instruments"
-        And I click on the "Enable" button for the instrument row labeled "Consent"
-        And I click on the button labeled "Save Changes"
-        Then I should see the enabled survey icon link for the instrument row labeled "Consent"
-        When I click on the button labeled "e-Consent and  PDF Snapshots"
-        Then I should see "Settings for e-Consent & PDF Snapshots"
-        And I click on the button labeled "Enable the e-Consent Framework for a survey"
-        And I select the survey '"Consent" (consent)' on the dropdown field to enable it as e-Consent
-        Then I click on the button labeled "Save settings"
-        
         When I click on the link labeled "User Rights"
         And I click on the button labeled "Upload or download users, roles, and assignments"
         Then I should see "Upload users (CSV)"
