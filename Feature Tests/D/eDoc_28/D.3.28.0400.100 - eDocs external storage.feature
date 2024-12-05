@@ -2,6 +2,7 @@ Feature: eDocs: The system shall ensure that files uploaded to the file reposito
 
   As a REDCap end user
   I want to see that the system allows file repository uploads to be saved in eDocs external storage.
+   #This feature is to be run completely MANUALLY on the REDCap Shadow instance
 
   Scenario: D.3.28.0400.100 eDocs external storage 
     #SETUP
