@@ -1,26 +1,23 @@
-Feature: API Connections / Internal Connections: The system shall allow the use of Twilio to send SMS 
+Feature: API Connections / Internal Connections: The system shall allow the use of Mosio to send SMS 
 
 As a REDCap end user
-I want to see that the system allows for the use of Twilio.
+I want to see that the system allows for the use of Mosio.
 #This feature is to be run completely MANUALLY on the REDCap Shadow instance
 
-Scenario: D.100.4.0100.100 Twilio
+Scenario: D.100.4.0200.100 Mosio
     #SETUP
     Given I login to REDCap Shadow with an Admin account
-    And I create a new project named "D.100.4.0100.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICTwilioMosioCanonicalProject.xml", and clicking the "Create Project" button
+    And I create a new project named "D.100.4.0200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICTwilioMosioCanonicalProject.xml", and clicking the "Create Project" button
 
-    #SETUP_TWILIO
-    Given I click on the button labeled "Enable" in the "Twilio SMS and Voice Call services for surveys and alerts" row in the "Enable optional modules and customizations" section
-    And I select "Enabled" on the dropdown field labeled "Twilio SMS and Voice Call services" 
-    And I enter (the SID) into the input field labeled "Twilio Account SID" 
-    And I enter (the Auth Token) into the input field labeled "Twilio Auth Token" 
-    And I enter (the phone number) into the input field labeled "Twilio phone number" 
+    #SETUP_Mosio
+    Given I click on the button labeled "Enable" in the " Mosio SMS services for surveys and alert" row in the "Enable optional modules and customizations" section
+    And I select "Mosio SMS services" 
+    And I enter (the Mosio API Key) into the input field labeled "Mosio API Key" 
     And I click on the button labeled "Save"
-    Then I should see "Twilio SMS and Voice Call services have been successfully enabled!"
+    Then I should see "Mosio SMS services have been successfully enabled!"
 
-    Given I click on the button labeled "Configure settings" in the "Twilio SMS and Voice Call services" section
-    And I select "SMS invitation" on the dropdown field labeled "Choose the default invitation preference for new survey participants" 
-    And I select "twilio_mail \"Would you prefer to receive surveys via email or phone?\"" on the dropdown field labeled "Control each participant's invitation preference using a multiple choice field"
+    Given I click on the button labeled "Configure settings" in the "Mosio Two-Way Text Messaging (SMS) Services" section
+    And I select "mosio_mail \"Would you prefer to receive surveys via email or phone?\"" on the dropdown field labeled "Control each participant's invitation preference using a multiple choice field"
     And I select "cell \"Please enter your cell phone number\"" on the dropdown field labeled "Designate a phone number field for survey invitations sent via SMS or voice call (optional)"
     And I click on the button labeled "Save"
     Then I should see "Success! Your changes have been saved."
@@ -54,14 +51,12 @@ Scenario: D.100.4.0100.100 Twilio
     Then I should see "1 matching results"
     And I should see a table header and row containing the following values in the "Email & SMS Logging" table:
     | View msg | Time sent        | Record | Summary email content and attributes                        |
-    |          | mm/dd/yyyy hh:mm | 1      | From: (Twilio phone number), To: (my phone number)          |
+    |          | mm/dd/yyyy hh:mm | 1      | From: (Mosio phone number), To: (my phone number)          |
     
     Given I click on the message icon
     Then I should see "SMS"
-    And I should see "From: (Twilio phone number)"
+    And I should see "From: (Mosio phone number)"
     And I should see "To: (my phone number)"
     And I should see "Please take this survey.  It is an example of how a survey is distributed via SMS Texting to a person's phone"
     And I should see "You may open the survey in your web browser by clicking the link below:"
 #END
-
-
