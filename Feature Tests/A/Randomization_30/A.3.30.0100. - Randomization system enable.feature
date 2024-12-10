@@ -11,8 +11,8 @@ Feature: A.3.30.0100 Control Center: The system shall support enabling or disabl
     #FUNCTIONAL_REQUIREMENT
     When I click on the link labeled "Control Center"
     And I click on the link labeled "Modules/Services Configuration"
-    And I should see "Settings pertaining to the External Module Framework"
-    Then I should see the dropdown field labeled "Randomization" with the option "Enabled" selected
+    Then I should see "Settings pertaining to the External Module Framework"
+    And I should see the dropdown field labeled "Randomization" with the option "Enabled" selected
 
   Scenario: ##VERIFY Randomization Module Enabled
     When I click on the link labeled "My Projects"
