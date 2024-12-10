@@ -8,7 +8,7 @@ Feature: A.3.30.0100 Control Center: The system shall support enabling or disabl
     When I create a new project named "A.3.30.0100.0100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project 3.30 baserand.REDCap.xml", and clicking the "Create Project" button
 
   Scenario: A.3.30.0100.0100: Enabled at system level allows randomization module option at the project level.
-  #FUNCTIONAL_REQUIREMENT
+    #FUNCTIONAL_REQUIREMENT
     When I click on the link labeled "Control Center"
     And I click on the link labeled "Modules/Services Configuration"
     Then I should see "Settings pertaining to the External Module Framework"
@@ -40,6 +40,5 @@ Feature: A.3.30.0100 Control Center: The system shall support enabling or disabl
     Then I should NOT see "Set up a randomization model"
     And I should NOT see a button labeled "Set up randomization"
     And I should NOT see a link labeled "Randomization"
-
     And I logout
 #END
