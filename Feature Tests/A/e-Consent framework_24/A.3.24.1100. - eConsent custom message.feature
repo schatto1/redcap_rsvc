@@ -15,8 +15,6 @@ Feature: Control Center: The system shall allow optional adding of a custom mess
         Then I should see "Your system configuration values have now been changed!"
 
         #SETUP
-        Given I logout
-        When I login to REDCap with the user "Test_Admin"
         #Manual: Append project name with the current version (i.e. "X.X.X.XXX.XXX - LTS X.X.X")
         And I create a new project named "A.3.24.1100.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24EConsentNoSetup.xml", and clicking the "Create Project" button
 
