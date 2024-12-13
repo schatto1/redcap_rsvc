@@ -8,9 +8,6 @@ Feature: Project Level:  The system shall allow data entry form user access to b
     Given I login to REDCap with the user "Test_Admin"
     And I create a new project named "B.2.6.0200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_1.xml", and clicking the "Create Project" button
 
-
-    When I click on the link labeled "My Projects"
-    And I click on the link labeled "B.2.6.0200.100"
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box

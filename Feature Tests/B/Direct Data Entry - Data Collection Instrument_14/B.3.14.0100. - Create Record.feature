@@ -15,14 +15,28 @@ Feature: Creating a Record and Entering Data: The system shall support the abili
         Then I see Project status: "Production"
 
         ##SETUP_USER_RIGHTS
+        # User with create access
         When I click on the link labeled "User Rights"
         And I enter "Test_User1" into the field with the placeholder text of "Add new user"
         And I click on the button labeled "Add with custom rights"
-        And I uncheck the User Right named "Create Records"
+        And I check the User Right named "Create Records"
         And I check the User Right named "Logging"
         And I click on the button labeled "Add user"
         Then I should see "Test User1"
 
+        # User without create access
+        And I enter "Test_User2" into the field with the placeholder text of "Add new user"
+        And I click on the button labeled "Add with custom rights"
+        And I uncheck the User Right named "Create Records"
+        And I check the User Right named "Logging"
+        And I click on the button labeled "Add user"
+        Then I should see "Test User2"
+        And I logout
+
+        ##ACTION: login as user with create record access - and can edit record
+        Given I login to REDCap with the user "Test_User1"
+        When I click on the link labeled "My Projects"
+        And I click on the link labeled "B.3.14.0100.100"
         #FUNCTIONAL REQUIREMENT
         ##ACTION: create record
         When I click on the link labeled "Add / Edit Records"
@@ -37,7 +51,7 @@ Feature: Creating a Record and Entering Data: The system shall support the abili
         When I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
             | Time / Date      | Username   | Action         | List of Data Changes OR Fields Exported |
-            | mm/dd/yyyy hh:mm | test_admin | Create record7 | record_id = '7'                         |
+            | mm/dd/yyyy hh:mm | test_user1 | Create record7 | record_id = '7'                         |
 
         #VERIFY_RSD:
         When I click on the link labeled "Record Status Dashboard"
@@ -54,10 +68,17 @@ Feature: Creating a Record and Entering Data: The system shall support the abili
             | Record ID |
             | 7         |
 
+        ###VERIFY Can edit existing record
+        Given I click on the link labeled "Add / Edit Records"
+        And I select record ID "1" from arm name "Arm 1: Arm 1" on the View / Edit record page
+        And I click the bubble to select a record for the "Text Validation" longitudinal instrument on event "Event 1"
+        And I clear field and enter "EDIT1" into the data entry form field labeled "Name"
+        And I select the submit option labeled "Save & Exit Form" on the Data Collection Instrument
+        Then I should see "Record ID 1 successfully edited"
         And I logout
 
         ##ACTION: login as user without create record access - but can edit record
-        Given I login to REDCap with the user "Test_User1"
+        Given I login to REDCap with the user "Test_User2"
         When I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.0100.100"
         And I click on the link labeled "View / Edit Records"
@@ -67,7 +88,7 @@ Feature: Creating a Record and Entering Data: The system shall support the abili
         ###VERIFY Can edit existing record
         And I select record ID "1" from arm name "Arm 1: Arm 1" on the View / Edit record page
         And I click the bubble to select a record for the "Text Validation" longitudinal instrument on event "Event 1"
-        And I clear field and enter "EDIT" into the data entry form field labeled "Name"
+        And I clear field and enter "EDIT2" into the data entry form field labeled "Name"
         And I select the submit option labeled "Save & Exit Form" on the Data Collection Instrument
         Then I should see "Record ID 1 successfully edited"
 
@@ -75,5 +96,6 @@ Feature: Creating a Record and Entering Data: The system shall support the abili
         And I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
             | Time / Date      | Username   | Action         | List of Data Changes OR Fields Exported |
-            | mm/dd/yyyy hh:mm | test_user1 | Update record 1 | name = 'EDIT'                           |
+            | mm/dd/yyyy hh:mm | test_user2 | Update record 1 | name = 'EDIT2'                         |
+            | mm/dd/yyyy hh:mm | test_user1 | Update record 1 | name = 'EDIT1'                         |
 #END

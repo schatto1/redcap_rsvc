@@ -68,10 +68,12 @@ Feature: User Interface: Survey Project Settings: The system shall delete all su
     Then I should see "Thank you for taking the survey"
 
     Given I click on the button labeled "Close survey"
-    And I click on the button labeled "Leave without saving changes" in the dialog box
-
+    Then I should see "You may now close this tab/window"
+   
     ##VERIFY_DE
     Given I return to the REDCap page I opened the survey from
+    #Manual Only: Surveys open in the same window (by default) in automated tests (automated tests this in B.3.15.500 - Survey Alerts and Prompts)
+    #And I click on the button labeled "Leave without saving changes" in the dialog box
     When I click on the link labeled "Data Exports, Reports, and Stats"
     Then I should see a table row containing the following values in the reports table:
       | A | All data (all records and fields) |
