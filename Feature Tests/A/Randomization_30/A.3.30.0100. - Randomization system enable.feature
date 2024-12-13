@@ -19,8 +19,8 @@ Feature: A.3.30.0100 Control Center: The system shall support enabling or disabl
     Then I should see "Your system configuration values have now been changed!"
     When I click on the link labeled "My Projects"
     And I click on the link labeled "A.3.30.0100"
-    When I click on the link labeled "Project Setup"
-    Then I verify I cannot see “Randomization module”
+    And I click on the link labeled "Project Setup"
+    Then I should NOT see "Randomization module" in the "Enable optional modules and customizations" section
 
   Scenario: A.3.30.0100.0100: Enabled at system level allows randomization module option at the project level.
 #FUNCTIONAL_REQUIREMENT
@@ -35,6 +35,6 @@ Feature: A.3.30.0100 Control Center: The system shall support enabling or disabl
     When I click on the link labeled "My Projects"
     And I click on the link labeled "A.3.30.0100"
     When I click on the link labeled "Project Setup"
-    Then I can see “Randomization module”
+    Then I should see "Randomization module" in the "Enable optional modules and customizations" section
     And I log out
 #END
