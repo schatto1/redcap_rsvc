@@ -46,8 +46,6 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
     And I check the checkbox labeled " E-signature"
     And I select the submit option labeled "Save & Stay" on the Data Collection Instrument
     Then I should see "test_admin"
-    #Needs step definition for Password: only field for e-signature popup
-    # And I enter "Testing123" into the input field labeled "Password:" in the dialog box
     And I enter the password "Testing123" for e-signature
     And I click on the button labeled "Save" in the dialog box
     Then I should see "E-signed by test_admin"
