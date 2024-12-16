@@ -170,6 +170,7 @@ Feature: A.6.4.0400. Manage project creation, deletion, and settings. Control Ce
     Then I should see "The project is now in Draft Mode"
 
     When I click on the link labeled "Data Types"
+    And I click on the button labeled "Dismiss"
     And I click on the Edit image for the field named "Radio Button Manual"
     And I enter Choices of "102, Choice102" into the open "Edit Field" dialog box
     And I click on the button labeled "Save"
