@@ -27,7 +27,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         Then I should see a dialog containing the following text: "Adding new user"
 
         When I uncheck the User Right named "Project Setup & Design"
-        And I select the radio option "No Access" for the field labeled "User Rights" in the dialog box
+        And I check the radio labeled "No Access" in the dialog box
         And I uncheck the User Right named "Data Access Groups"
         And I uncheck the User Right named "Survey Distribution Tools"
         And I uncheck the User Right named "Alerts & Notifications"
@@ -138,7 +138,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         Then I should see a dialog containing the following text: "Editing existing user"
 
         When I check the User Right named "Project Setup & Design"
-        And I select the radio option "Full Access" for the field labeled "User Rights" in the dialog box
+        And I check the radio labeled "Full Access" in the dialog box
         And I check the User Right named "Data Access Groups"
         And I check the User Right named "Survey Distribution Tools"
         And I check the User Right named "Alerts & Notifications"
