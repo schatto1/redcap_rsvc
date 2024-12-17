@@ -34,7 +34,7 @@ Feature: B.3.16.1300. User Interface: The system shall provide the ability to as
         Then I should see Project status: "Production"
 
         Given I click on the link labeled "Data Import Tool"
-        And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Rows.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
+        And I upload a "csv" format file located at "files/import_files/B.3.16.1300_DataImport_Rows.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
         And I click the button labeled "Upload File"
         Then I should see "Your document was uploaded successfully and is ready for review"
 
