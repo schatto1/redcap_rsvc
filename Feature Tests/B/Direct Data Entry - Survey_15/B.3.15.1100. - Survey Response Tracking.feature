@@ -40,9 +40,12 @@ Feature: User Interface: Survey Project Settings: The system shall support track
     And I check the checkbox labeled "I certify that all of my information in the document above is correct"
     And I click on the button labeled "Submit"
     And I click on the button labeled "Close survey"
+    Then I should see "You may now close this tab/window"
 
+    ##VERIFY_RSD
     Given I return to the REDCap page I opened the survey from
-    And I click on the link labeled "Leave without saving changes" in the dialog box
+    #Manual Only: Surveys open in the same window (by default) in automated tests (automated tests this in B.3.15.500 - Survey Alerts and Prompts)
+    #And I click on the button labeled "Leave without saving changes" in the dialog box
     And I click on the link labeled "Survey Distribution Tools"
     When I click on the tab labeled "Participant List"
     Then I should see the dropdown field labeled "Participant List" with the option '"Consent" - Event 1 (Arm 1: Arm 1)' selected
