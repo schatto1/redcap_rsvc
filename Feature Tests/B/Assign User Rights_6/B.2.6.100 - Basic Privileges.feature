@@ -104,7 +104,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I click on the button labeled "Edit user privileges"
         Then I should see a dialog containing the following text: "Editing existing user"
 
-        When I select the radio option "Read Only" for the field labeled "User Rights" in the dialog box
+        And I check the radio labeled "Read Only" in the dialog box
         And I save changes within the context of User Rights
 
         ##VERIFY_LOG: Verify Update user rights
