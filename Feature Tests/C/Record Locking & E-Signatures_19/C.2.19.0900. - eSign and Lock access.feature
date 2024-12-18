@@ -44,7 +44,7 @@ Feature: User Interface: The system shall support the ability to limit access to
         Then I should see a dialog containing the following text: "SUCCESS!"
 
         When I click on the button labeled "Close" in the dialog box
-        Then I should see a table header and rows containing the following values in a table:
+        Then I should see a table header and rows containing the following values in a table in the dialog box:
             | Role name               | Username            |
             | —                       | test_admin          |
             | —                       | test_user1          |
