@@ -18,20 +18,20 @@ Feature: User Interface: The system shall provide the ability for the user impor
         And I click on the dropdown labeled "Import as background process"
         And I upload the file labeled "BigDataTestProjectDATA.csv"
         And I click on the button labeled "Upload"
-        And I click the button labeled "Yes, use background process"
-        And I click the button labeled "Confirm"
+        And I click on the button labeled "Yes, use background process"
+        And I click on the button labeled "Confirm"
         And I click on the button labeled "Upload File"
         Then I should see "Your file is currently being uploaded. Please wait"
         ##M this may take several minutes while the system analyzes for errors
 
         And I Should see "File was uploaded and will be processed soon"
-        And I click the button labeled "Close"
+        And I click on the button labeled "Close"
         And I click the tab labeled "View Background imports"
-        And I click the button labeled "Halt imports"
+        And I click on the button labeled "Halt imports"
         Then I should see "Cancel this background import?"
-        And I click the button labeled "Yes, cancel it now"
+        And I click on the button labeled "Yes, cancel it now"
         Then I should see "Success"
-        And I click the button labeled "Close"
+        And I click on the button labeled "Close"
 
         #VERIFY: LOGGING
         Then I should see a table header and rows containing the following values in the logging table:

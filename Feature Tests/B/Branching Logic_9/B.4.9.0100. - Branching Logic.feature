@@ -35,13 +35,13 @@ Feature: B.4.9.0100. User Interface: The system shall support branching logic fo
 
         #MANUAL: These confirmation windows are automatically accepted on automated side
         Then I should see an alert box with the following text: 'ERASE THE VALUE OF THE FIELD "ptname" ?'
-        #And I click the button labeled "OK" in the alert box
+        #And I click on the button labeled "OK" in the alert box
         Then I should see an alert box with the following text: 'ERASE THE VALUE OF THE FIELD "textbox" ?'
-        #And I click the button labeled "OK" in the alert box
+        #And I click on the button labeled "OK" in the alert box
         Then I should see an alert box with the following text: 'ERASE THE VALUE OF THE FIELD "text2" ?'
-        #And I click the button labeled "OK" in the alert box
+        #And I click on the button labeled "OK" in the alert box
         Then I should see an alert box with the following text: 'ERASE THE VALUE OF THE FIELD "notesbox" ?'
-        #And I click the button labeled "OK" in the alert box
+        #And I click on the button labeled "OK" in the alert box
 
         Then I should NOT see the field labeled "Name"
         And I should NOT see the field labeled "Text2"
