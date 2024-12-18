@@ -20,8 +20,8 @@ Feature: User Interface: The system shall report background process data import 
         When I click on the dropdown labeled "Import as background process"
         And I upload the file labeled "BigDataTestProjectbadDATA.csv"
         And I click on the button labeled "Upload"
-        And I click the button labeled "Yes, use background process"
-        And I click the button labeled "Confirm"
+        And I click on the button labeled "Yes, use background process"
+        And I click on the button labeled "Confirm"
         And I click on the button labeled "Upload"
         Then I should see "Your file is currently being uploaded. Please wait"
         ##M this may take several minutes
@@ -37,20 +37,20 @@ Feature: User Interface: The system shall report background process data import 
         ##M note Records were skipped, user receives email with link to the "View background Imports" where they can click the View details button where they can either Download list of all errors or Download records/data that did not import
 
         #VERIFY
-        When I click the Link labeled "Logging"
+        When I click on the link labeled "Logging"
         Then I should see a table header and rows including the following values in the logging table:
             | Username            | Action             | List of Data Changes OR Fields Exported |
             | SYSTEM (Test_Admin) | Create Record 3000 | record_id='3000'                        |
 
-        When I click the button labeled "View Details"
-        And I click the button labeled "Download list of all errors"
+        When I click on the button labeled "View Details"
+        And I click on the button labeled "Download list of all errors"
         Then I should see a table header and rows including the following values in the logging table:
             | Record | Variable Name | Value        | Error Message                                                                                                   |
             | 2      | field 1       | Not a number | The value you provided could not be validated because it does not follow the expected format. Please try again. |
             | 4      | field 2       | 3            | The value is not a valid category for field_2                                                                   |
             | 7      | field 1       | 99-3         | The value you provided could not be validated because it does not follow the expected format. Please try again. |
 
-        When I click the button labeled "Download records/data that did not import"
+        When I click on the button labeled "Download records/data that did not import"
         Then I should see a table header and rows including the following values in the logging table:
             | record_id | field 1      | field_2 | field_3                    |
             | 2         | not a number | 1       | Lorem ipsum dolor sit amet |

@@ -35,7 +35,7 @@ Feature: B.3.16.1300. User Interface: The system shall provide the ability to as
 
         Given I click on the link labeled "Data Import Tool"
         And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Rows.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click the button labeled "Upload File"
+        And I click on the button labeled "Upload File"
         Then I should see "Your document was uploaded successfully and is ready for review"
 
         When I click on the button labeled "Import Data"
@@ -47,7 +47,7 @@ Feature: B.3.16.1300. User Interface: The system shall provide the ability to as
         And I click on the link labeled "B.3.16.1300.100"
         And I click on the link labeled "Data Import Tool"
         And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Dag.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click the button labeled "Upload File"
+        And I click on the button labeled "Upload File"
 
         Then I should see "ERROR: Illegal use of 'redcap_data_access_group' field!"
         And I logout
@@ -57,7 +57,7 @@ Feature: B.3.16.1300. User Interface: The system shall provide the ability to as
         And I click on the link labeled "B.3.16.1300.100"
         And I click on the link labeled "Data Import Tool"
         And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Dag.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click the button labeled "Upload File"
+        And I click on the button labeled "Upload File"
 
         Then I should see a table header and rows containing the following values in a table:
             | record_id | redcap_data_access_group | name   |

@@ -21,7 +21,7 @@ Feature: User Interface: The system shall provide the ability to create a new re
         And I click on the button labeled "Upload"
         And I click on the button labeled "Upload File"
         Then I should see "Instructions for Data Review"
-        And I Click the Button labeled "Import Data"
+        And I click on the button labeled "Import Data"
         Then I should see "Import Successful! 30 records where created of modified during the import"
 
         #VERIFY
@@ -37,7 +37,7 @@ Feature: User Interface: The system shall provide the ability to create a new re
             | 7         |        |
         And I should see all records are in an unverified status
 
-        When I click the link labeled "Project Setup"
+        When I click on the link labeled "Project Setup"
         And I disable the button labeled "Auto-numbering for Records"
         And I click on the link labeled "Data Import Tool"
 
@@ -61,7 +61,7 @@ Feature: User Interface: The system shall provide the ability to create a new re
             | 7         |        |
         And I should see all records are in an unverified status
         #VERIFY
-        When I click the Link labeled "Logging"
+        When I click on the link labeled "Logging"
         Then I should see a table header and rows including the following values in the logging table:
             | Username    | Action                    | List of Data Changes OR Fields Exported |
             | test_admin) | Create Record (import)900 | record_id='900'                         |

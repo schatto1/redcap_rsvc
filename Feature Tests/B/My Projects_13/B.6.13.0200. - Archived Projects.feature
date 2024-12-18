@@ -10,7 +10,7 @@ Feature: User Interface: The system shall support the ability to show or hide ar
         When I click on the link labeled "Other Functionality"
         And I click on the button labeled "Mark project as Completed"
         And I click on the button labeled "Mark project as Completed" in the dialog box
-        #And I click on the button "OK" in the pop-up box
+        #And I click on the button labeled "OK" in the pop-up box
         Then I should see "My Projects"
         And I should NOT see "B.6.13.0200.100"
 

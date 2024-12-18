@@ -34,7 +34,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         And I select "part_sign Particiant signature" for the field labeled "Signature field #1"
         And I check "Save to a specific field"
         And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
-        And I click the button labeled "Save settings"
+        And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
         Then I should see a table header and rows including the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                      | Location(s) to save the signed consent snapshot    | Custom tag/category | Notes |
@@ -53,7 +53,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         And I select "coo_sign1" for the field labeled "Signature field #1"
         And I check "Save to a specific field"
         And I select "coo_sign" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
-        And I click the button labeled "Save settings"
+        And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Coordinator Signature" is "Active"
 
     Scenario: Combine the PDFs to one combined PDF

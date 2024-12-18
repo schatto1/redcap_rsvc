@@ -47,7 +47,7 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         When I click on the link labeled "Project Home"
         And I click on the link labeled "Edit Project Settings"
         And I select "Disabled" for the option labeled "Store non-e_Consent governed PDF Snapshots on the External Storage server if the snapshot contains a completed e-Consent response"
-        And I click the button labeled "Save Changes"
+        And I click on the button labeled "Save Changes"
         Then I should see "Your changes have been saved!"
 
     ##ACTION: add record to get participant signature

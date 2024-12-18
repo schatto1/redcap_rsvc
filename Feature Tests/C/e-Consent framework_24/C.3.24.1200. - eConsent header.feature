@@ -25,7 +25,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
         And I should see "Primary settings"
 
         When I enter "PID [project-id] - [last_name]" in the field labeled "Custom label for PDF header"
-        And I click the button labeled "Save settings"
+        And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
         Then I should see a table header and rows including the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                      | Location(s) to save the signed consent snapshot    | Custom tag/category | Notes |

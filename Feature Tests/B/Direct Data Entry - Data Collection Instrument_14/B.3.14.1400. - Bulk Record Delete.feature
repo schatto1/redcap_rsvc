@@ -76,7 +76,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         When I login with "test_user2"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.1400.100"
-        And I click the link labeled "Project Setup"
+        And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         Then I should not see "Bulk Record Delete" in the tab labeled "Other Functionality"
         And I log out
@@ -84,19 +84,19 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         When I login with "test_user1"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.1400.100"
-        And I click the link labeled "Project Setup"
+        And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
 
-        When I click the button labeled "Bulk Record Delete"
+        When I click on the button labeled "Bulk Record Delete"
         Then I should see "Bulk Record Delete"
 
         When I click the bubble labeled "Delete entire records"
         And I click the bubble labeled "Enter a custom list of records"
         And I type "3,5" into "Step 3: Enter records to delete"
-        And I click the button labeled "Delete"
+        And I click on the button labeled "Delete"
         And I type "delete"
-        And I click the button labeled "Delete"
+        And I click on the button labeled "Delete"
         Then I should see "Deleted 2 record(s)"
 
     Scenario:  ##ACTION Verify record exist
@@ -118,19 +118,19 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     #END Scenario
 
     Scenario: B.3.14.1400.200: Bulk Delete Records Using Select Records from List
-        When I click the link labeled "Project Setup"
+        When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
 
-        When I click the button labeled "Bulk Record Delete"
+        When I click on the button labeled "Bulk Record Delete"
         Then I should see "Bulk Record Delete"
         And I click the bubble labeled "Delete entire records"
         And I click the bubble labeled "Select records from a list"
         And I select "2"
         And I select "6"
-        And I click the button labeled "Delete"
+        And I click on the button labeled "Delete"
         And I type "delete"
-        And I click the button labeled "Delete"
+        And I click on the button labeled "Delete"
         Then I should see "Deleted 2 record(s)"
 
     Scenario:  ##ACTION Verify record exist ##VERIFY_RSD
@@ -153,7 +153,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     #END Scenario
 
     Scenario: B.3.14.1400.300: Bulk Delete Partial Records Using Custom List
-        When I click the link labeled "Project Setup"
+        When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
 
@@ -161,9 +161,9 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I select "Data Types"
         And I click the bubble labeled "Enter a custom list of records"
         And I type "1" into "Step 3: Enter records to delete"
-        And I click the button labeled "Delete"
+        And I click on the button labeled "Delete"
         And I type "delete"
-        And I click the button labeled "Delete"
+        And I click on the button labeled "Delete"
         Then I should see "Deleted forms [event_1_arm_1] data_types for 1 record(s)"
 
     Scenario:##ACTION Verify record exist ##VERIFY_RSD
@@ -186,7 +186,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     #END Scenario
 
     Scenario: B.3.14.1200.400: Bulk Delete Partial Records Using Select Records from List
-        When I click the link labeled "Project Setup"
+        When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
 
@@ -194,9 +194,9 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I select "Data Types"
         And I click the bubble labeled "Enter a custom list of records"
         And I type "4" into "Step 3: Enter records to delete"
-        And I click the button labeled "Delete"
+        And I click on the button labeled "Delete"
         And I type "delete"
-        And I click the button labeled "Delete"
+        And I click on the button labeled "Delete"
         Then I should see "Deleted forms [event_1_arm_1] text_validation [event_1_arm_1] data_types [event_1_arm_1] consent for 1 record(s)"
 
     Scenario:##ACTION Verify record exist ##VERIFY_RSD

@@ -22,11 +22,11 @@ Feature: User Interface:The system shall provide the ability to display real-tim
         And I click on the button labeled "Upload File"
         Then I should see " File is Large. Consider using the background process"
 
-        When I click the button labeled "No, import in real time"
+        When I click on the button labeled "No, import in real time"
         And I click on the button labeled "Upload File"
         Then I should see "Instructions for Data Review"
 
-        When I Click the Button labeled "Import Data"
+        When I click on the button labeled "Import Data"
         Then I should see "Import successful! 75 records were created or modified during the import"
 
         Given I Click on the "Record Status Dashboard"
@@ -38,7 +38,7 @@ Feature: User Interface:The system shall provide the ability to display real-tim
             | 4         |        |
         And I should see all records are in an unverified status
         #VERIFY
-        When I click the Link labeled "Logging"
+        When I click on the link labeled "Logging"
         Then I should see a table header and rows including the following values in the logging table:
             | Username    | Action                   | List of Data Changes OR Fields Exported |
             | test_admin) | Create Record (import)75 | record_id='75                           |

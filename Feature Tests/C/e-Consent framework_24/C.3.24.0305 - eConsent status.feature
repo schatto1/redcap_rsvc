@@ -30,7 +30,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I select "part_sign Particiant signature" for the field labeled "Signature field #1"
         And I check "Save to a specific field"
         And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
-        And I click the button labeled "Save settings"
+        And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
         Then I should see a table header and rows including the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                      | Location(s) to save the signed consent snapshot | Custom tag/category | Notes |
@@ -133,8 +133,8 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I should NOT see a signature in the field labeled "Participant signature file" on the form labeled "Participant Consent"
         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
         Then I should see "You have partially completed this survey"
-        And I click the button labeled "Start Over"
-        And I Click the button labeled "OK"
+        And I click on the button labeled "Start Over"
+        And I click on the button labeled "OK"
 
         Then I should see "Participant Consent"
 

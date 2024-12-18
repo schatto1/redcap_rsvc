@@ -16,23 +16,23 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the link labeled "C.3.26.200.100"
 
 #         ##SETUP auto-archive
-#         And I click the link labeled "Designer"
-#         And I click the button labeled "Survey Settings" for the instrument "Consent"
+#         And I click on the link labeled "Designer"
+#         And I click on the button labeled "Survey Settings" for the instrument "Consent"
 #         And I click on the button labeled "Auto-Archiver + eConsent enabled"
-#         Then I click the button labeled "Save Changes"
+#         Then I click on the button labeled "Save Changes"
 
 #         ##SETUP File Repository
-#         And I click the link labeled "File Repository"
+#         And I click on the link labeled "File Repository"
 
 #         #Create DAG limited folder
-#         And I click the button labeled "Create Folder"
+#         And I click on the button labeled "Create Folder"
 #         And I type "TestGroup1_Folder" into the field labeled "New folder name"
 #         And I select "TestGroup1" in the dropdown labeled "Limit access by Data Access Group?"
 #         And I click on the button labeled "Create Folder"
 #         Then I should see "TestGroup1_Folder"
 
 #         #Create role limited folder
-#         And I click the button labeled "Create Folder"
+#         And I click on the button labeled "Create Folder"
 #         And I type "Role1_Folder" into the field labeled "New folder name"
 #         And I select "1_FullRights" in the dropdown labeled "Limit access by User Role?"
 #         And I click on the button labeled "Create Folder"
@@ -221,7 +221,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "Role1_Folder"
 #         #Download file previously uploaded by test_user1
-#         And I click the link labeled "user list for project 1.csv"
+#         And I click on the link labeled "user list for project 1.csv"
 #         Then I should have a csv file labeled "user list for project 1.csv"
 
 #         ##ACTION Upload to Role folder

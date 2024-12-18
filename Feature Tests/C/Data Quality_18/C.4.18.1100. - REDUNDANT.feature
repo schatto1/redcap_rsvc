@@ -39,10 +39,10 @@ Feature: User Interface: The system shall support validating the unique event na
 #         And I click on the button labeled "Upload or download Data Quality Rules"
 #         And I click on the link labeled "Upload Data Quality Rule (CSV)"
 #         And I upload a "csv" format file located at "import_files/C418100TEST_DataQualityRules_Upload.csv", by clicking the button labeled "Choose File"
-#         And I click the button labeled "Upload" to upload the file
-#         Then I should see "Upload Data Quality Rule (CSV) - And I click the button labeled "Upload"
+#         And I click on the button labeled "Upload" to upload the file
+#         Then I should see "Upload Data Quality Rule (CSV) - And I click on the button labeled "Upload"
 #         Then I should see Upload Data Quality Rule (CSV) - Confirm
-#         And I click the button labeled Upload"
+#         And I click on the button labeled Upload"
 
 #         When I click on the button labeled "Upload" in the dialog box
 #         Then I should see "SUCCESS!"

@@ -35,7 +35,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     And I click on a button labeled “Cancel” within the open User Rights dialog box
 
   Scenario: C.3.30.0200.0400. Disabling removes randomization module from project setup
-    When I click the link labeled “Project Setup”
+    When I click on the link labeled “Project Setup”
     Then I should see “Disable” in the "Randomization module" row in the "Enable optional modules and customizations" section
     When I click on “Disable” in the "Randomization module" row in the "Enable optional modules and customizations" section
 ##VERIFY Randomization at project level disabled

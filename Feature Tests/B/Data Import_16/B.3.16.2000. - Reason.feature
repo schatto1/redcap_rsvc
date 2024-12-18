@@ -16,9 +16,9 @@ Feature: User Interface: The system shall provide the ability to require a reaso
         Then I should see "Project Status: Production"
 
         #SETUP DRW
-        When I click the button labeled " Additional customization "
+        When I click on the button labeled " Additional customization "
         And I select "Require a 'reason' when making changes to existing records? "
-        And I click the button labeled "Save"
+        And I click on the button labeled "Save"
 
         #FUNCTIONAL REQUIREMENT
         ##ACTION
@@ -34,12 +34,12 @@ Feature: User Interface: The system shall provide the ability to require a reaso
         When I click on the button labeled "Import Data"
         Then I should see "Please supply a reason for the data changes for EACH existing records in the text boxes" in the " Data Display Table "
         And I enter "because I said so"
-        And I click the link labeled "Copy to all "
-        And I click the button labeled "Import Data"
+        And I click on the link labeled "Copy to all "
+        And I click on the button labeled "Import Data"
         Then I should see "Import Successful! "
 
         #VERIFY
-        When I click the Link labeled "Logging"
+        When I click on the link labeled "Logging"
         Then I should see a table header and rows including the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported | Reason for Data Change |
             | test_Admin | Update record | [instance=3]                            | because I said so      |
