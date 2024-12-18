@@ -79,7 +79,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to opt
       Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
 
       #Verify Auto-Save in specified field
-      When And I click on the bubble labeled "PDF And Combined Signatures PDF" for event "Event 1"
+      When I click on the bubble labeled "PDF And Combined Signatures PDF" for event "Event 1"
       Then I should see "Participant Consent file."
 
    Scenario: Verification e-Consent saved and logged correctly

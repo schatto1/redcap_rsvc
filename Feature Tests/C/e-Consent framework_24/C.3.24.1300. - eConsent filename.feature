@@ -83,7 +83,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to cus
       Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Coordinator Signature" for event "Event 1"
       And I should see an Incomplete Survey Response icon for the Data Collection Instrument labeled "PDF And Combined Signatures PDF" for event "Event 1"
 
-      When And I click on the bubble labeled "PDF And Combined Signatures PDF" for event "Event 1"
+      When I click on the bubble labeled "PDF And Combined Signatures PDF" for event "Event 1"
       Then I should see "Participant Consent file."
       And I should see a file uploaded to the field labeled "Coordinator Signature file."
       And I should see a file uploaded to the field labeled "PDF And Combined Signatures PDF."

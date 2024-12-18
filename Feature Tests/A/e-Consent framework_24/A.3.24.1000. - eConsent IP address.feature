@@ -33,7 +33,7 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I should see "Your configuration values have now been changed"
         Then I should see "Your system configuration values have now been changed!"
 
-        When And I click on the link labeled "My Projects"
+        When I click on the link labeled "My Projects"
         And I click on the link labeled "A.3.24.1000.100"
                #Verify IP status
         And I click on the link labeled "File Repository"
@@ -52,7 +52,7 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I should see "Your configuration values have now been changed"
         Then I should see "Your system configuration values have now been changed!"
 
-        When And I click on the link labeled "My Projects"
+        When I click on the link labeled "My Projects"
         And I click on the link labeled "A.3.24.1000.100"
                #Verify IP status
         And I click on the link labeled "File Repository"
