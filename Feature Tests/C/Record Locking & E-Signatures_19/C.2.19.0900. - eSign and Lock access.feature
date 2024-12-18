@@ -107,10 +107,10 @@ Feature: User Interface: The system shall support the ability to limit access to
             | test_admin | Update user   | test_user2                              |
             | test_admin | Update user   | test_user1                              |
             | test_admin | Manage/Design | Upload users (CSV)                      |
-            | test_admin | Add User      | test_user4                              |
-            | test_admin | Add User      | test_user3                              |
-            | test_admin | Add User      | test_user2                              |
-            | test_admin | Add User      | test_user1                              |
+            | test_admin | Add user      | test_user4                              |
+            | test_admin | Add user      | test_user3                              |
+            | test_admin | Add user      | test_user2                              |
+            | test_admin | Add user      | test_user1                              |
 
         Given I logout
 
