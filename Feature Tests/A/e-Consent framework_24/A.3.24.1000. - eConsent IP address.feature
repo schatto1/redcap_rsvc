@@ -21,16 +21,15 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should see "IP Address"
         And I should see a table header and rows containing the following values in a table:
-            | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | IP Address | Version | Type | Size |
+        | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | IP Address | Version | Type | Size |
 
  Scenario: Do capture IP address
         When I click on the link labeled "Control Center"
         And I click on the link labeled "Modules/Services Configuration"
         Then I should see "e-Consent Framework"
 
-        When I select the dropdown option labeled "Do NOT capture IP address" on the dropdown field labeled "Capture the IP address"
+        When I select "Do NOT capture IP address" on the dropdown field labeled "Do NOT capture IP address" 
         And I click on the button labeled "Save Changes"
-        And I should see "Your configuration values have now been changed"
         Then I should see "Your system configuration values have now been changed!"
 
         When I click on the link labeled "My Projects"
@@ -40,16 +39,15 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should NOT see "IP Address"
         And I should see a table header and rows containing the following values in a table:
-            | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | Version | Type | Size |
+        | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | Version | Type | Size |
         
       Scenario: Do NOT capture IP address
         When I click on the link labeled "Control Center"
         And I click on the link labeled "Modules/Services Configuration"
         Then I should see "e-Consent Framework"
 
-        When I select the dropdown option labeled "Capture IP address" on the dropdown field labeled "Capture the IP address"
+        When I select "Capture IP address" on the dropdown field labeled "Capture IP address"
         And I click on the button labeled "Save Changes"
-        And I should see "Your configuration values have now been changed"
         Then I should see "Your system configuration values have now been changed!"
 
         When I click on the link labeled "My Projects"
