@@ -63,14 +63,14 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
         ##VERIFY_FiRe
         ##e-Consent Framework not used, and PDF Snapshot is used
         When I click on the link labeled "File Repository"
-        Then I should see a table header and rows including the following values in the file repository table:
+        Then I should see a table header and rows containing the following values in the file repository table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             |
             | .pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |
 
         ##VERIFY_Logging
         ##e-Consent Framework not used, and PDF Snapshot is used
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action                                     | List of Data Changes OR Fields Exported                                           |
             | [survey respondent] | Save PDF Snapshot 1                        | Save PDF Snapshot to File Upload Field field = "participant_file (event_1_arm_1)" |
             | [survey respondent] | Update Response 1 (Event 1 (Arm 1: Arm 1)) | participant_file =                                                                |
@@ -125,7 +125,7 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
         ##VERIFY_FiRe
         ##e-Consent Framework not used, and PDF Snapshot is used
         When I click on the link labeled "File Repository"
-        Then I should see a table header and rows including the following values in the file repository table:
+        Then I should see a table header and rows containing the following values in the file repository table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             |
             | .pdf | icon                             | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) |
             | .pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |
@@ -140,7 +140,7 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
     Scenario: e-Consent Framework used, and PDF Snapshot is used
         ##e-Consent Framework used, and PDF Snapshot is used
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action                                     | List of Data Changes OR Fields Exported                                           |
             | [survey respondent] | Save PDF Snapshot 2                        | Save PDF Snapshot to File Upload Field field = "participant_file (event_1_arm_1)" |
             | [survey respondent] | Update Response 2 (Event 1 (Arm 1: Arm 1)) | participant_file =                                                                |

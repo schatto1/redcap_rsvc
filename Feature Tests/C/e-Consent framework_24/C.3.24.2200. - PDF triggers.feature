@@ -24,7 +24,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       When I click on the button labeled "PDF Snapshots of Record"
       And I click the button "+Add new trigger"
       And I click "Cancel"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name | Type of trigger | Save snapshot when... | Scope of the snapshot | Location(s) to save the snapshot |
 
    Scenario: New PDF Trigger for survey completion all instruments
@@ -42,7 +42,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "Custom" in the field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
@@ -52,7 +52,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       Then I should see "Do you wish to copy this PDF Snapshot Trigger?"
 
       When I click on the button labeled "Cancel"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
@@ -62,7 +62,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       Then I should see "Do you wish to copy this PDF Snapshot Trigger?"
 
       When I click on the button labeled "Copy trigger"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -73,7 +73,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       Then I should see "Custom Dropdown 1 Form Snapshot" in the field labeled "Name of trigger:"
 
       When I click on the button labeled "Cancel"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -96,14 +96,14 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "Custom" in the field labeled "File name:"
       And I click "Save"
       Then I should see "Saved! Trigger for PDF Snapshot was successfully modified"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Edit trigger name               | Logic-based       | Logic becomes true: [participant_consent_complete]='2... | Selected instruments  | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent"                    | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
       ##VERIFY_Logging
       When I click on the link labeled "Logging"
-      Then I should see a table header and rows including the following values in the logging table:
+      Then I should see a table header and rows containing the following values in the logging table:
          | Username   | Action        | List of Data Changes OR Fields Exported        |
          | test_admin | Manage/Design | Modify trigger for PDF Snapshot (snapshot_id = |
          | test_admin | Manage/Design | Copy PDF Snapshot Trigger (copy snapshot_id =  |
@@ -133,13 +133,13 @@ Feature: User Interface: The system shall support the creation, modification, an
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
          | Name | PDF utilized e-Consent Framework | Record | Survey Completed | Identifier (Name, DOB) | Version | Type |
 
       ##VERIFY_Logging
       ##e-Consent Framework not used, and PDF Snapshot is used
       When I click on the link labeled "Logging"
-      Then I should see a table header and rows including the following values in the logging table:
+      Then I should see a table header and rows containing the following values in the logging table:
          | Username   | Action                                   | List of Data Changes OR Fields Exported |
          | test_admin | Create record 1 (Event 1 (Arm 1: Arm 1)) | record_id = '1'                         |
 
@@ -210,7 +210,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
          | Name       | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB) | Version | Type |
          | Custom.pdf | -                                | 2      | (Event 1 (Arm 1: Arm 1))                     |                        |         |      |
          | Custom.pdf | -                                | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |      |
@@ -218,7 +218,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       ##VERIFY_Logging
       ##e-Consent Framework not used, and PDF Snapshot is used
       When I click on the link labeled "Logging"
-      Then I should see a table header and rows including the following values in the logging table:
+      Then I should see a table header and rows containing the following values in the logging table:
          | Username            | Action                                   | List of Data Changes OR Fields Exported                                                                                                                                 |
          | [survey respondent] | Save PDF Snapshot 2                      | Save PDF Snapshot to File Upload Field field =  "coo_sign (event_1_arm_1)" record = "2" event = "event_1_arm_1" instrument =  "coordinator_signature" snapshot_id =     |
          | [survey respondent] | Save PDF Snapshot 2                      | Save PDF Snapshot to File Repository record = "2" event = "event_1_arm_1" instrument = "coordinator_signature" snapshot_id =                                            |

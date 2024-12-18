@@ -23,8 +23,8 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         And I enter "FirstName" in the field labeled "First Name"
         And I enter "LastName" in the field labeled "Last Name"
         And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "01-01-2000” in the field labeled "DOB"
-        And I enter "MyName” in the field labeled "Participant's Name Typed"
+        And I enter "01-01-2000" in the field labeled "DOB"
+        And I enter "MyName" in the field labeled "Participant's Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
         And I click "Submit"
         Then I should see "Close survey"
@@ -32,8 +32,8 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
         ##VERIFY_RSD
-        Then I should see "Record Home Page”
-        And I should see "Completed Survey Response” icon for the bubble labeled "Participant Consent” for event "Event 1"
+        Then I should see "Record Home Page"
+        And I should see "Completed Survey Response" icon for the bubble labeled "Participant Consent" for event "Event 1"
 
         ##VERIFY_FiRe
         ##e-Consent Framework not used, and PDF Snapshot is used
@@ -47,7 +47,7 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         When I click on the link labeled "Project Home"
         And I click on the link labeled "Edit Project Settings"
         And I select "Disabled" for the option labeled "Store non-e_Consent governed PDF Snapshots on the External Storage server if the snapshot contains a completed e-Consent response"
-        And I click the button labeled "Save Changes"
+        And I click on the button labeled "Save Changes"
         Then I should see "Your changes have been saved!"
 
     ##ACTION: add record to get participant signature
@@ -63,8 +63,8 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         And I enter "FirstName" in the field labeled "First Name"
         And I enter "LastName" in the field labeled "Last Name"
         And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "01-01-2000” in the field labeled "DOB"
-        And I enter "MyName” in the field labeled "Participant's Name Typed"
+        And I enter "01-01-2000" in the field labeled "DOB"
+        And I enter "MyName" in the field labeled "Participant's Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
         And I click "Submit"
         Then I should see "Close survey"
@@ -72,8 +72,8 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
         ##VERIFY_RSD
-        Then I should see "Record Home Page”
-        And I should see "Completed Survey Response” icon for the bubble labeled "Participant Consent” for event "Event 1"
+        Then I should see "Record Home Page"
+        And I should see "Completed Survey Response" icon for the bubble labeled "Participant Consent" for event "Event 1"
 
         ##VERIFY_FiRe
         ##e-Consent Framework not used, and PDF Snapshot is used

@@ -17,7 +17,7 @@ Feature: User Interface: The system shall allow data to be changed only by a use
         ##ACTION: Import data
         When I click on the link labeled "Data Import Tool"
         And I upload a "csv" format file located at "import_files/B.3.16.2000.100data.csv", by clicking the button near "Upload your CSV file:" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click the button labeled "Upload File"
+        And I click on the button labeled "Upload File"
 
         When I click on the button labeled "Import Data"
         Then I should see "Import Successful!"

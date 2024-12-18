@@ -31,8 +31,8 @@ Feature: Control Center: The system shall support enabling or disabling the use 
         And I enter "FirstName" in the field labeled "First Name"
         And I enter "LastName" in the field labeled "Last Name"
         And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "01-01-2000” in the field labeled "DOB"
-        And I enter "MyName” in the field labeled "Participant's Name Typed"
+        And I enter "01-01-2000" in the field labeled "DOB"
+        And I enter "MyName" in the field labeled "Participant's Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
         And I click "Submit"
         Then I should see "Close survey"
@@ -40,13 +40,13 @@ Feature: Control Center: The system shall support enabling or disabling the use 
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
         ##VERIFY_RSD
-        Then I should see "Record Home Page”
-        And I should see "Completed Survey Response” icon for the bubble labeled "Participant Consent” for event "Event 1"
+        Then I should see "Record Home Page"
+        And I should see "Completed Survey Response" icon for the bubble labeled "Participant Consent" for event "Event 1"
 
         ##VERIFY_FiRe
         ##e-Consent Framework not used, and PDF Snapshot is used
         When I click on the link labeled "File Repository"
-        Then I should see a table header and rows including the following values in the file repository table:
+        Then I should see a table header and rows containing the following values in the file repository table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             |
             | .pdf | icon                             | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) |
             | .pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |

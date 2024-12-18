@@ -48,7 +48,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         #VERIFY: view all versions for Test 1
         When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-        Then I should see a table header and rows including the following values in the version table:
+        Then I should see a table header and rows containing the following values in the version table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             | check icon | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 0                           |                   |              | " This is my test 1 consent form "      | "Set as inactive" button     |
@@ -58,7 +58,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         ##VERIFY_Logging
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported                                      |
             | test_admin | Manage/Design | Add new consent form for instrument "participant_consent" (consent_form_id = |
 
@@ -99,7 +99,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB)        | Version | Type |                       |
             | .pdf | YES                              | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |         |      | e-Consent Participant |
 
@@ -150,7 +150,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         # view all versions for Test 1
         When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-        Then I should see a table header and rows including the following values in the version table:
+        Then I should see a table header and rows containing the following values in the version table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |
@@ -161,7 +161,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         ##VERIFY_Logging
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported                                      |
             | test_admin | Manage/Design | Add new consent form for instrument "participant_consent" (consent_form_id = |
 
@@ -202,7 +202,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB)        | Version | Type |                       |
             | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |         |      | e-Consent Participant |
             | .pdf | YES                              | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |         |      | e-Consent Participant |
@@ -220,7 +220,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         # view all versions
         When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-        Then I should see a table header and rows including the following values in the version table:
+        Then I should see a table header and rows containing the following values in the version table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |
@@ -231,7 +231,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         #Cancel inactivation of version
         When I click on the button labeled "Cancel"
-        Then I should see a table header and rows including the following values in the version table:
+        Then I should see a table header and rows containing the following values in the version table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |
@@ -241,7 +241,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         Then I should see "Set consent form as inactive" in the dialog box
         When I click on the button labeled "Set consent form as inactive" in the dialog box
         Then I should see "Consent has successfully been removed"
-        And I should see a table header and rows including the following values in the version table:
+        And I should see a table header and rows containing the following values in the version table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |
@@ -291,7 +291,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB)        | Version | Type                  |
             | .pdf | YES                              | 3      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |         | e-Consent Participant |
             | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |         | e-Consent Participant |

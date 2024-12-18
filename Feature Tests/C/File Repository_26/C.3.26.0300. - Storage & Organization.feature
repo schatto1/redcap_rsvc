@@ -120,7 +120,7 @@ Feature: User Interface: The system shall support the storage, organization, and
 
         ##VERIFY_LOG
         When I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported      |
             | test_admin | Manage/Design | Permanently delete file from File Repository |
             | test_admin | Manage/Design | Delete file from File Repository             |

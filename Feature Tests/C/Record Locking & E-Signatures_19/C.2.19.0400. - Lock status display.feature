@@ -31,7 +31,7 @@ Feature: User Interface: The tool shall display locked status of forms for all r
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action              | List of Data Changes OR Fields Exported |
             | test_admin | Add user test_user1 | user = 'test_user1'                     |
 
@@ -55,7 +55,7 @@ Feature: User Interface: The tool shall display locked status of forms for all r
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action               | List of Data Changes OR Fields Exported                                   |
             | test_user1 | Lock/Unlock Record 3 | Action: Lock instrument, Record: 3, Form: Text Validation, Event: Event 1 |
 
@@ -63,7 +63,7 @@ Feature: User Interface: The tool shall display locked status of forms for all r
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
         And I click on the link labeled "E-signature and Locking Management"
-        Then I should see a table header and rows including the following values in the E-signature and Locking Management table:
+        Then I should see a table header and rows containing the following values in the E-signature and Locking Management table:
             | Record | Form Name       | Locked?    |
             | 3      | Text Validation | lock image |
             | 3      | Consent         |            |
@@ -81,7 +81,7 @@ Feature: User Interface: The tool shall display locked status of forms for all r
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action               | List of Data Changes OR Fields Exported              |
             | test_user1 | Lock/Unlock Record 3 | Action: Lock entire record, Record: 3 - Arm 1: Arm 1 |
 
@@ -89,7 +89,7 @@ Feature: User Interface: The tool shall display locked status of forms for all r
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
         And I click on the link labeled "E-signature and Locking Management"
-        Then I should see a table header and rows including the following values in the E-signature and Locking Management table:
+        Then I should see a table header and rows containing the following values in the E-signature and Locking Management table:
             | Record                           | Form Name | Locked?    |
             | 3 (Arm 1: Arm 1) (entire record) |           | lock image |
 
@@ -106,7 +106,7 @@ Feature: User Interface: The tool shall display locked status of forms for all r
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action               | List of Data Changes OR Fields Exported                |
             | test_user1 | Lock/Unlock Record 3 | Action: Unlock entire record, Record: 3 - Arm 1: Arm 1 |
 
@@ -138,7 +138,7 @@ Feature: User Interface: The tool shall display locked status of forms for all r
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action          | List of Data Changes OR Fields Exported |
             | test_user1 | Update record 3 |                                         |
 

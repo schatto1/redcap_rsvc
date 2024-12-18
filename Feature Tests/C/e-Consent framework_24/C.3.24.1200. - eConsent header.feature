@@ -25,9 +25,9 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
         And I should see "Primary settings"
 
         When I enter "PID [project-id] - [last_name]" in the field labeled "Custom label for PDF header"
-        And I click the button labeled "Save settings"
+        And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
-        Then I should see a table header and rows including the following values in the e-Consent Framework table:
+        Then I should see a table header and rows containing the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                      | Location(s) to save the signed consent snapshot    | Custom tag/category | Notes |
             | Active            | "Participant Consent" (participant_consent) | File Repository Specified field:[participant_file] | Participant         |       |
 
@@ -67,7 +67,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB)        | Version | Type                  |
             | .pdf | YES                              | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |         | e-Consent Participant |
 
@@ -78,7 +78,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
         ##VERIFY_Logging
         ##e-Consent Framework not used, and PDF Snapshot is used
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action                    | List of Data Changes OR Fields Exported                                                          |
             | [survey respondent] | e-Consent Certification 1 | e-Consent Certification record = "1"  event = "event_1_arm_1" instrument = "participant_consent" |
 #END
