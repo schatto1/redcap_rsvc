@@ -26,7 +26,7 @@ Feature: User Interface: The system shall report background process data import 
         Then I should see "Your file is currently being uploaded. Please wait"
         ##M this may take several minutes
 
-        Given I Click on the "Record Status Dashboard"
+        Given I click on the "Record Status Dashboard"
         Then I should see a table header and rows containing the following values in the table:
             | Record ID | Form 1 |
             | 1         |        |
