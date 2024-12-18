@@ -21,7 +21,7 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should see "IP Address"
         And I should see a table header and rows containing the following values in a table:
-        | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | IP Address | Version | Type | Size |
+            | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | IP Address | Version | Type | Size |
 
  Scenario: Do capture IP address
         When I click on the link labeled "Control Center"
@@ -39,7 +39,7 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should NOT see "IP Address"
         And I should see a table header and rows containing the following values in a table:
-        | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | Version | Type | Size |
+            | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | Version | Type | Size |
         
       Scenario: Do NOT capture IP address
         When I click on the link labeled "Control Center"
