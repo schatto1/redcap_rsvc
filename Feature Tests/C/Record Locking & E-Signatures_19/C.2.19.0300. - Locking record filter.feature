@@ -32,7 +32,7 @@ Feature: User Interface: The tool shall support the filtering the record list:
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action               | List of Data Changes OR Fields Exported                                   |
             | test_admin | Lock/Unlock Record 3 | Action: Lock instrument, Record: 3, Form: Text Validation, Event: Event 1 |
 
@@ -40,7 +40,7 @@ Feature: User Interface: The tool shall support the filtering the record list:
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
         And I click on the link labeled "E-signature and Locking Management"
-        Then I should see a table header and rows including the following values in the E-signature and Locking Management table:
+        Then I should see a table header and rows containing the following values in the E-signature and Locking Management table:
             | Record | Form Name       | Locked?    |
             | 3      | Text Validation | lock image |
             | 3      | Consent         |            |
@@ -50,7 +50,7 @@ Feature: User Interface: The tool shall support the filtering the record list:
         And I should see "SHOW ALL ROWS  |  Show timestamp / user  |  Hide timestamp / user  |  Show locked  |  Show not locked  | Show e-signed  |  Show not e-signed (excludes N/A)  |  Show both locked and e-signed  | Show neither locked nor e-signed (excludes N/A)  |  Show locked but not e-signed (excludes N/A)"
 
         When I click on the button labeled "Export all (CSV)"
-        Then I should have a "csv" file with a table header and rows including the following values in the report table:
+        Then I should have a "csv" file with a table header and rows containing the following values in the report table:
             | Record | Event Name             | Form Name       | Repeat Instance | Locked?    | E-signed? |
             | 3      | Event 1 (Arm 1: Arm 1) | Text Validation |                 | MM/DD/YYYY | N/A       |
 #Manual: Close file

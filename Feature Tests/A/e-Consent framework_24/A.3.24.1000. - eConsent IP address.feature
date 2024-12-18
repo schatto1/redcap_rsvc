@@ -20,7 +20,7 @@ Feature: Control Center: The system shall support capturing the IP address of su
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should see "IP Address"
-        And I should see a table header and rows containing the following values in the table:
+        And I should see a table header and rows containing the following values in a table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | IP Address | Version | Type | Size |
 
  Scenario: Do capture IP address
@@ -33,13 +33,13 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I should see "Your configuration values have now been changed"
         Then I should see "Your system configuration values have now been changed!"
 
-        When And I click on the link labeled "My Projects"
+        When I click on the link labeled "My Projects"
         And I click on the link labeled "A.3.24.1000.100"
                #Verify IP status
         And I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should NOT see "IP Address"
-        And I should see a table header and rows containing the following values in the table:
+        And I should see a table header and rows containing the following values in a table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | Version | Type | Size |
         
       Scenario: Do NOT capture IP address
@@ -52,12 +52,12 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I should see "Your configuration values have now been changed"
         Then I should see "Your system configuration values have now been changed!"
 
-        When And I click on the link labeled "My Projects"
+        When I click on the link labeled "My Projects"
         And I click on the link labeled "A.3.24.1000.100"
                #Verify IP status
         And I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
         Then I should see "IP Address"
-        And I should see a table header and rows containing the following values in the table:
+        And I should see a table header and rows containing the following values in a table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed | File Storage Time | Identifier (Name, DOB) | IP Address | Version | Type | Size |
 #END
