@@ -46,7 +46,7 @@ Feature: User Interface: The tool shall display e-signature status of forms for 
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
         And I verify the checkbox on the column labeled "Display the Lock option for this instrument?" for the Data Collection Instrument labeled "Text Validation" is selected
         And I click on the checkbox on the column labeled "Also display E-signature option on instrument?" for the Data Collection Instrument labeled "Text Validation"
-        Then I should see a table header and rows containing the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? |
             | [✓]                                          | Text Validation            | [✓]                                            |
             | [✓]                                          | Consent                    |                                                |

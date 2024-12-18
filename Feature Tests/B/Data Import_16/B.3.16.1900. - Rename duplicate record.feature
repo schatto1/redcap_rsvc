@@ -26,7 +26,7 @@ Feature: User Interface: The system shall provide the ability to create a new re
 
         #VERIFY
         Given I click on the link labeled "Record Status Dashboard"
-        Then I should see a table header and rows containing the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Record ID | Form 1 |
             | 1         |        |
             | 2         |        |
@@ -50,7 +50,7 @@ Feature: User Interface: The system shall provide the ability to create a new re
 
         #VERIFY
         Given I click on the link labeled "Record Status Dashboard"
-        Then I should see a table header and rows containing the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Record ID | Form 1 |
             | 1         |        |
             | 2         |        |

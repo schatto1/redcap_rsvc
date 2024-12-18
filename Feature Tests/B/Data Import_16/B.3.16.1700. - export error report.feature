@@ -27,7 +27,7 @@ Feature: User Interface: The system shall report background process data import 
         ##M this may take several minutes
 
         Given I click on the link labeled "Record Status Dashboard"
-        Then I should see a table header and rows containing the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Record ID | Form 1 |
             | 1         |        |
             | 3         |        |

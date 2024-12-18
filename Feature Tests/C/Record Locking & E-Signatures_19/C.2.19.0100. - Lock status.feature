@@ -20,7 +20,7 @@ Feature: User Interface: The E-signature and Locking Management tool shall displ
         #SETUP
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
-        Then I should see a table header and rows containing the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? |                           |
             | [✓]                                          | Text Validation            | [ ]                                            | Notes Box & "Save" button |
             | [✓]                                          | Data Type                  | [ ]                                            | Notes Box & "Save" button |
@@ -34,7 +34,7 @@ Feature: User Interface: The E-signature and Locking Management tool shall displ
         And I click on the button labeled "Save" for the Data Collection Instrument labeled "Text Validation"
         And I enter "Test custom text" into the Notes Box field for the Data Collection Instrument labeled "Data Types"
         And I click on the button labeled "Save" for the Data Collection Instrument labeled "Data Types"
-        Then I should see a table header and rows containing the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? | Lock Record Custom Text   |
             | [✓]                                          | Text Validation            | checkbox                                       | Test custom text          |
             | [✓]                                          | Data Type                  | checkbox                                       | Test custom text          |
@@ -68,7 +68,7 @@ Feature: User Interface: The E-signature and Locking Management tool shall displ
         And I click on the button labeled "Save" for the Data Collection Instrument labeled "Text Validation"
         And I click on the remove image for the Data Collection Instrument labeled "Data Types"
         And I click on the button labeled "OK" in the pop-up box
-        Then I should see a table header and rows containing the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? | Lock Record Custom Text   |
             | [✓]                                          | Text Validation            | [✓]                                            | New custom text           |
             | [✓]                                          | Data Type                  | [✓]                                            | Notes Box & "Save" button |

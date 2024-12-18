@@ -42,7 +42,7 @@ Feature: User Interface: The system shall limit folder deletion to empty folders
 #         When I click on the link labeled "User Rights"
 #         Given I upload a "csv" format file located at "import_files/user list for project 1.csv", by clicking the button near "Select your CSV" to browse for the file, and clicking the button labeled "Upload" to upload the file
 #         Then I should see a dialog containing the following text: "Upload users (CSV) - Confirm"
-#         And I should see a table header and rows containing the following values in the table:
+#         And I should see a table header and rows containing the following values in a table:
 #             | username   |
 #             | test_user1 |
 #             | test_user2 |
@@ -53,7 +53,7 @@ Feature: User Interface: The system shall limit folder deletion to empty folders
 #         Then I should see a dialog containing the following text: "SUCCESS!"
 #         And I close the popup
 
-#         And I should see a table header and rows containing the following values in the table:
+#         And I should see a table header and rows containing the following values in a table:
 #             | Role name               | Username   |
 #             |                         | test_admin |
 #             |                         | test_user1 |
@@ -89,7 +89,7 @@ Feature: User Interface: The system shall limit folder deletion to empty folders
 #         And I should see the dropdown field labeled "Select Role" with the option "3_ReadOnly_Deidentified" selected
 #         And I click on the button labeled "Assign"
 #         Then I should see "Test_User4" user assigned "3_ReadOnly_Deidentified" role
-#         And I should see a table header and rows containing the following values in the table:
+#         And I should see a table header and rows containing the following values in a table:
 #             | Role name               | Username   |
 #             |                         | test_admin |
 #             | 1_FullRights            | test_user1 |

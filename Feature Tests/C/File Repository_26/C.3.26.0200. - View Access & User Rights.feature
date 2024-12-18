@@ -50,7 +50,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         Then I should see a dialog containing the following text: "SUCCESS!"
         And I close the popup
 
-        And I should see a table header and rows containing the following values in the table:
+        And I should see a table header and rows containing the following values in a table:
             | Role name               | Username   |
             |                         | test_admin |
             |                         | test_user1 |
@@ -86,7 +86,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I should see the dropdown field labeled "Select Role" with the option "3_ReadOnly_Deidentified" selected
         And I click on the button labeled "Assign"
         Then I should see "Test_User4" user assigned "3_ReadOnly_Deidentified" role
-        And I should see a table header and rows containing the following values in the table:
+        And I should see a table header and rows containing the following values in a table:
             | Role name               | Username   |
             |                         | test_admin |
             | 1_FullRights            | test_user1 |
