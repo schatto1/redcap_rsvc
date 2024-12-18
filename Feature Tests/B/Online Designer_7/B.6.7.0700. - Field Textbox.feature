@@ -49,7 +49,7 @@ Feature: Design forms Using Data Dictionary and Online Designer
         And I click on the button labeled "Save" in the "Edit Field" dialog box
 
         #VERIFY
-        Then I should see "Variable: abc"
+        Then I should see "Field Name: abc"
         ##ACTION: Add variable name – Alpha numeric
 
         Given I click on the Add Field input button below the field named "Text Box"
@@ -59,7 +59,7 @@ Feature: Design forms Using Data Dictionary and Online Designer
         And I click on the button labeled "Save" in the "Add New Field" dialog box
 
         #VERIFY
-        Then I should see "Variable: abc_2"
+        Then I should see "Field Name: abc_2"
 
         ##VERIFY_CODEBOOK
         When I click on the link labeled "Codebook"

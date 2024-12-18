@@ -18,8 +18,6 @@ Feature: A.2.3.0200. Assign administrators and account managers
     # The following line is intentionally duplicated to produce the desired behavior per Adam's suggestion on https://github.com/4bbakers/redcap_rsvc/pull/17
     And I click on the button labeled "Add"
     And I click on the button labeled "Add"
-    ##This second add is required to ignore the autocomplete selection that shows up
-    And I click on the button labeled "Add"
     Then I should see a dialog containing the following text: "check one or more"
     And I click on the button labeled "Close" in the dialog box
 
