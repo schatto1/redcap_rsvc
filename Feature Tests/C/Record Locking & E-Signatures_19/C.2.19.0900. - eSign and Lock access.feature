@@ -44,7 +44,7 @@ Feature: User Interface: The system shall support the ability to limit access to
         Then I should see a dialog containing the following text: "SUCCESS!"
 
         When I click on the button labeled "Close" in the dialog box
-        Then I should see a table header and rows containing the following values in a table:
+        Then I should see a table header and rows containing the following values in a table in the dialog box:
             | Role name               | Username            |
             | —                       | test_admin          |
             | —                       | test_user1          |
@@ -100,17 +100,17 @@ Feature: User Interface: The system shall support the ability to limit access to
 
     Scenario: #VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported |
             | test_admin | Update user   | test_user4                              |
             | test_admin | Update user   | test_user3                              |
             | test_admin | Update user   | test_user2                              |
             | test_admin | Update user   | test_user1                              |
             | test_admin | Manage/Design | Upload users (CSV)                      |
-            | test_admin | Add User      | test_user4                              |
-            | test_admin | Add User      | test_user3                              |
-            | test_admin | Add User      | test_user2                              |
-            | test_admin | Add User      | test_user1                              |
+            | test_admin | Add user      | test_user4                              |
+            | test_admin | Add user      | test_user3                              |
+            | test_admin | Add user      | test_user2                              |
+            | test_admin | Add user      | test_user1                              |
 
         Given I logout
 

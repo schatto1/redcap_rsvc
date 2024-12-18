@@ -13,23 +13,23 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I click on the link labeled "C.3.26.200.100"
 
         ##SETUP auto-archive
-        And I click the link labeled "Designer"
-        And I click the button labeled "Survey Settings" for the instrument "Consent"
+        And I click on the link labeled "Designer"
+        And I click on the "Survey settings" button for the instrument row labeled "Consent"
         And I click on the button labeled "Auto-Archiver + eConsent enabled"
-        Then I click the button labeled "Save Changes"
+        Then I click on the button labeled "Save Changes"
 
         ##SETUP File Repository
-        And I click the link labeled "File Repository"
+        And I click on the link labeled "File Repository"
 
         #Create DAG limited folder
-        And I click the button labeled "Create Folder"
+        And I click on the button labeled "Create Folder"
         And I type "TestGroup1_Folder" into the field labeled "New folder name"
         And I select "TestGroup1" in the dropdown labeled "Limit access by Data Access Group?"
         And I click on the button labeled "Create Folder"
         Then I should see "TestGroup1_Folder"
 
         #Create role limited folder
-        And I click the button labeled "Create Folder"
+        And I click on the button labeled "Create Folder"
         And I type "Role1_Folder" into the field labeled "New folder name"
         And I select "1_FullRights" in the dropdown labeled "Limit access by User Role?"
         And I click on the button labeled "Create Folder"
@@ -50,7 +50,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         Then I should see a dialog containing the following text: "SUCCESS!"
         And I close the popup
 
-        And I should see a table header and rows including the following values in the table:
+        And I should see a table header and rows containing the following values in a table:
             | Role name               | Username   |
             |                         | test_admin |
             |                         | test_user1 |
@@ -86,7 +86,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I should see the dropdown field labeled "Select Role" with the option "3_ReadOnly_Deidentified" selected
         And I click on the button labeled "Assign"
         Then I should see "Test_User4" user assigned "3_ReadOnly_Deidentified" role
-        And I should see a table header and rows including the following values in the table:
+        And I should see a table header and rows containing the following values in a table:
             | Role name               | Username   |
             |                         | test_admin |
             | 1_FullRights            | test_user1 |
@@ -177,7 +177,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         ##ACTION Auto-archive file in DAG TestGroup1
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Survey Archive"
-        Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
             | Name              | Record                   |
             | "pdf" format file | (record-name) TestGroup1 |
 
@@ -218,7 +218,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         When I click on the link labeled "File Repository"
         And I click on the link labeled "Role1_Folder"
         #Download file previously uploaded by test_user1
-        And I click the link labeled "user list for project 1.csv"
+        And I click on the link labeled "user list for project 1.csv"
         Then I should have a csv file labeled "user list for project 1.csv"
 
         ##ACTION Upload to Role folder
@@ -235,7 +235,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I click on the link labeled "PDF Survey Archive"
         #See consent just created in testgroup2
         #Don't see consent created by testgroup1
-        Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
             | Name              | Record                   |
             | "pdf" format file | [record-name] TestGroup2 |
 
@@ -272,7 +272,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         ##ACTION Auto-archive file in DAG TestGroup1
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Survey Archive"
-        Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
             | Name              | Record                   |
             | "pdf" format file | [record-name] TestGroup1 |
         #Don't see consent created by testgroup2
@@ -311,7 +311,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         ##ACTION Auto-archive access all file
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Survey Archive"
-        Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
             | Name              | Record                   |
             | "pdf" format file | [record-name] testgroup1 |
             | "pdf" format file | [record-name] testgroup2 |

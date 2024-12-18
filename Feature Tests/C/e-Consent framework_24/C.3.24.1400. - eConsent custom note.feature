@@ -24,9 +24,9 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
       And I should see "Primary settings"
 
       When I enter "My custom note" in the field labeled "Notes:"
-      And I click the button labeled "Save settings"
+      And I click on the button labeled "Save settings"
       Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
-      Then I should see a table header and rows including the following values in the e-Consent Framework table:
+      Then I should see a table header and rows containing the following values in the e-Consent Framework table:
          | e-Consent active? | Survey                                      | Location(s) to save the signed consent snapshot    | Custom tag/category | Notes          |
          | Active            | "Participant Consent" (participant_consent) | File Repository Specified field:[participant_file] | Participant         | My custom note |
 #END

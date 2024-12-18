@@ -25,7 +25,7 @@ Feature: User Interface: The system shall allow data to be uploaded in real-time
         # ##ACTION - Cancel import
         # #B.3.16.0100 CROSSFUNCTIONAL
         When I upload a "csv" format file located at "import_files/B316200100_ImportTemplate_ImportRecord.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload to upload the file"
-        And I click the button labeled "Upload File"
+        And I click on the button labeled "Upload File"
         Then I should see "Your document was uploaded successfully and is ready for review"
         And I click on the link labeled "Cancel"
 
@@ -41,7 +41,7 @@ Feature: User Interface: The system shall allow data to be uploaded in real-time
         ##ACTION - Import (with records in rows)
         Given I click on the link labeled "Data Import Tool"
         When I upload a "csv" format file located at "import_files/B316200100_ImportTemplate_ImportRecord.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click the button labeled "Upload File"
+        And I click on the button labeled "Upload File"
         Then I should see "Your document was uploaded successfully and is ready for review"
 
         When I click on the button labeled "Import Data"

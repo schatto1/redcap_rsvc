@@ -35,7 +35,7 @@ Feature: User Interface: The system shall support the customization of the file 
       And I enter "Custom" in the field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name     | Type of trigger | Save snapshot when...                                  | Scope of the snapshot | Location(s) to save the snapshot                    |
          | Active | Edit Copy     | Snapshot | Logic-based     | Logic becomes true: [participant_consent_complete]='2' | All instruments       | File Repository Specified field: [participant_file] |
 
@@ -71,7 +71,7 @@ Feature: User Interface: The system shall support the customization of the file 
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
          | Name   | PDF utilized e-Consent Framework | Record | Survey Completed         | Identifier (Name, DOB) | Version | Type |
          | custom | -                                | 1      | (Event 1 (Arm 1: Arm 1)) |                        |         |      |
 
@@ -79,7 +79,7 @@ Feature: User Interface: The system shall support the customization of the file 
       ##VERIFY_Logging
       ##e-Consent Framework not used, and PDF Snapshot is used
       When I click on the link labeled "Logging"
-      Then I should see a table header and rows including the following values in the logging table:
+      Then I should see a table header and rows containing the following values in the logging table:
          | Username   | Action              | List of Data Changes OR Fields Exported                                                                                                                               |
          | test_admin | Save PDF Snapshot 1 | Save PDF Snapshot to File Upload Field field = "participant_file (event_1_arm_1)" record = "1" event = "event_1_arm_1" instrument = "participant_consent" snapshot_id |
          | test_admin | Save PDF Snapshot 1 | Save PDF Snapshot to File Repository record = "1" event = "event_1_arm_1" instrument = "participant_consent" snapshot_id =                                            |

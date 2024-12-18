@@ -53,7 +53,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "multi data form same event" in the field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                         | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1' | All instruments       | File Repository                  |
 
@@ -70,7 +70,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "multi data form and survey same event" in the field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event            | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1' | All instruments       | File Repository                  |
          | Active | Edit Copy     | 2 multi data form and survey same event | Logic-based     | Logic becomes true: [trigger1]='2' and [trigger2]='1' | All instruments       | File Repository                  |
@@ -88,7 +88,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "multi data form and survey same event" in the field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event            | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1' | All instruments       | File Repository                  |
          | Active | Edit Copy     | 2 multi data form and survey same event | Logic-based     | Logic becomes true: [trigger1]='2' and [trigger2]='1' | All instruments       | File Repository                  |
@@ -107,7 +107,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "multi data form different event" in the field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event            | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1'    | All instruments       | File Repository                  |
          | Active | Edit Copy     | 2 multi data form and survey same event | Logic-based     | Logic becomes true: [trigger1]='2' and [trigger2]='1'    | All instruments       | File Repository                  |
@@ -387,7 +387,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
          | Name                                 | PDF utilized e-Consent Framework | Record | Survey Completed             | Identifier (Name, DOB) | Version | Type |
          | multidataformandsurveydifferentevent | -                                | 6      | (Event Three (Arm 1: Arm 1)) |                        |         |      |
          | multidataformandsurveydifferentevent | -                                | 5      | (Event Three (Arm 1: Arm 1)) |                        |         |      |

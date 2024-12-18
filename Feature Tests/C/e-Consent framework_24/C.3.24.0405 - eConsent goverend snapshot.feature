@@ -21,13 +21,13 @@ Feature:  C.3.24.0405. User Interface: The system shall support the e-Consent Fr
         When I click on the button labeled "Designer"
         And I click on the button labeled "e-Consent and PDF Snapshots"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
-        Then I should see a table header and rows including the following values in the e-Consent Framework table:
+        Then I should see a table header and rows containing the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                          | Location(s) to save the signed consent snapshot    | Custom tag/category | Notes |
             | Active            | "Coordinator Signature" (coordinator_signature) | File Repository Specified field:[coo_sign]         | Coordinator         |       |
             | Active            | "Participant Consent" (participant_consent)     | File Repository Specified field:[participant_file] | Participant         |       |
 
         When I click on the button labeled "PDF Snapshots of Record"
-        Then I should see a table header and rows including the following values in the PDF snapshot table:
+        Then I should see a table header and rows containing the following values in the PDF snapshot table:
             | Active | Edit settings         | Name | Type of trigger   | Save snapshot when...                   | Scope of the snapshot  | Location(s) to save the snapshot                     |
             | Active | Governed by e-Consent |      | Survey completion | Complete survey "Participant Consent"   | Single survey response | File Repository Specificed field: [participant_file] |
             | Active | Governed by e-Consent |      | Survey completion | Complete survey "Coordinator Signature" | Single survey response | File Repository Specificed field: [coo_sign]         |
@@ -71,7 +71,7 @@ Feature:  C.3.24.0405. User Interface: The system shall support the e-Consent Fr
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB)        | Version | Type                  |
             | .pdf | YES                              | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |         | e-Consent Participant |
 
@@ -84,7 +84,7 @@ Feature:  C.3.24.0405. User Interface: The system shall support the e-Consent Fr
         ##VERIFY_Logging
         ##e-Consent Framework not used, and PDF Snapshot is used
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action                    | List of Data Changes OR Fields Exported                                                          |
             | [survey respondent] | e-Consent Certification 1 | e-Consent Certification record = "1"  event = "event_1_arm_1" instrument = "participant_consent" |
 #END

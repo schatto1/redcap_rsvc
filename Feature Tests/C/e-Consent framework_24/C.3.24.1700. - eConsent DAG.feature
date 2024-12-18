@@ -34,7 +34,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
 
       #VERIFY: view all versions for Test 1
       When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-      Then I should see a table header and rows including the following values in the version table:
+      Then I should see a table header and rows containing the following values in the version table:
          | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
          |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
          | check icon | NO DAG  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 0                           |                   |              | " This is my NO DAG consent form "      | "Set as inactive" button     |
@@ -77,7 +77,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
    Scenario: #VERIFY: view all versions
       #VERIFY: view all versions
       When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-      Then I should see a table header and rows including the following values in the version table:
+      Then I should see a table header and rows containing the following values in the version table:
          | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
          |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
          | check icon | NO DAG  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 0                           |                   |              | " This is my NO DAG consent form "      | "Set as inactive" button     |
@@ -92,7 +92,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
    Scenario:  ##VERIFY_Logging
       ##VERIFY_Logging
       When I click on the link labeled "Logging"
-      Then I should see a table header and rows including the following values in the logging table:
+      Then I should see a table header and rows containing the following values in the logging table:
          | Username   | Action        | List of Data Changes OR Fields Exported                                      |
          | test_admin | Manage/Design | Add new consent form for instrument "participant_consent" (consent_form_id = |
          | test_admin | Manage/Design | Add new consent form for instrument "participant_consent" (consent_form_id = |
@@ -236,7 +236,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
          | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB)        | Version | Type                  |
          | .pdf | YES                              | 3      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 | DAG 2   | e-Consent Participant |
          | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 | DAG 1   | e-Consent Participant |
@@ -244,7 +244,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
 
       ##VERIFY_Logging
       When I click on the link labeled "Logging"
-      Then I should see a table header and rows including the following values in the logging table:
+      Then I should see a table header and rows containing the following values in the logging table:
          | Username            | Action                    | List of Data Changes OR Fields Exported                                                                                                                                   |
          | [survey respondent] | e-Consent Certification 1 | e-Consent Certification record = "3" identifier = "email@test.edu" consent_form_version = "DAG 2" event = "event_1_arm_1" instrument = "participant_consent" snapshot_id  |
          | [survey respondent] | e-Consent Certification 1 | e-Consent Certification record = "2" identifier = "email@test.edu" consent_form_version = "DAG 1" event = "event_1_arm_1" instrument = "participant_consent" snapshot_id  |

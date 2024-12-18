@@ -32,7 +32,7 @@ Feature: User Interface: The tool shall support the ability to navigate directly
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action              | List of Data Changes OR Fields Exported |
             | test_admin | Add user test_user1 | user = 'test_user1'                     |
 
@@ -42,7 +42,7 @@ Feature: User Interface: The tool shall support the ability to navigate directly
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
         And I click on the link labeled "E-signature and Locking Management"
-        Then I should see a table header and rows including the following values in the E-signature and Locking Management table:
+        Then I should see a table header and rows containing the following values in the E-signature and Locking Management table:
             | Record | Form Name       |             |
             | 3      | Text Validation | View record |
 

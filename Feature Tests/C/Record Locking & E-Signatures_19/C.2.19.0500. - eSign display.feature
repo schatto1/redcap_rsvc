@@ -32,7 +32,7 @@ Feature: User Interface: The tool shall display e-signature status of forms for 
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action              | List of Data Changes OR Fields Exported |
             | test_admin | Add user test_user1 | user = 'test_user1'                     |
 
@@ -46,7 +46,7 @@ Feature: User Interface: The tool shall display e-signature status of forms for 
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
         And I verify the checkbox on the column labeled "Display the Lock option for this instrument?" for the Data Collection Instrument labeled "Text Validation" is selected
         And I click on the checkbox on the column labeled "Also display E-signature option on instrument?" for the Data Collection Instrument labeled "Text Validation"
-        Then I should see a table header and rows including the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? |
             | [✓]                                          | Text Validation            | [✓]                                            |
             | [✓]                                          | Consent                    |                                                |
@@ -71,7 +71,7 @@ Feature: User Interface: The tool shall display e-signature status of forms for 
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action               | List of Data Changes OR Fields Exported                                    |
             | test_user1 | E-signature 3        | Action: Save e-signature, Record: 3, Form: Text Validation, Event: Event 1 |
             | test_user1 | Lock/Unlock Record 3 | Action: Lock instrument, Record: 3, Form: Text Validation, Event: Event 1  |
@@ -83,7 +83,7 @@ Feature: User Interface: The tool shall display e-signature status of forms for 
         And I click on the link labeled "E-signature and Locking Management"
 
         ##VERIFY
-        Then I should see a table header and rows including the following values in the E-signature and Locking Management table:
+        Then I should see a table header and rows containing the following values in the E-signature and Locking Management table:
             | Record | Form Name       | Locked?    | E-signed?         |
             | 3      | Text Validation | lock image | e-signature image |
             | 3      | Consent         |            | N/A               |
