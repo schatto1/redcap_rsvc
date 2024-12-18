@@ -25,7 +25,7 @@ Feature: User Interface: The system shall provide the ability to create a new re
         Then I should see "Import Successful! 30 records where created of modified during the import"
 
         #VERIFY
-        Given I click on the "Record Status Dashboard"
+        Given I click on the link labeled "Record Status Dashboard"
         Then I should see a table header and rows containing the following values in the table:
             | Record ID | Form 1 |
             | 1         |        |
@@ -49,7 +49,7 @@ Feature: User Interface: The system shall provide the ability to create a new re
         Then I should see "Import successful! 30 records were created or modified during the import"
 
         #VERIFY
-        Given I click on the "Record Status Dashboard"
+        Given I click on the link labeled "Record Status Dashboard"
         Then I should see a table header and rows containing the following values in the table:
             | Record ID | Form 1 |
             | 1         |        |

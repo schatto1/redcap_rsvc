@@ -29,7 +29,7 @@ Feature: User Interface:The system shall provide the ability to display real-tim
         When I click on the button labeled "Import Data"
         Then I should see "Import successful! 75 records were created or modified during the import"
 
-        Given I click on the "Record Status Dashboard"
+        Given I click on the link labeled "Record Status Dashboard"
         Then I should see a table header and rows containing the following values in the table:
             | Record ID | Form 1 |
             | 1         |        |
