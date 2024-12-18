@@ -32,7 +32,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
         And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
-        Then I should see a table header and rows including the following values in the e-Consent Framework table:
+        Then I should see a table header and rows containing the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                      | Location(s) to save the signed consent snapshot | Custom tag/category | Notes |
             | Active            | "Participant Consent" (participant_consent) | File Repository                                 |                     |       |
 
@@ -165,7 +165,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB) | Version | Type      |
             | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |           |
             | .pdf | YES                              | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         | e-Consent |
@@ -182,7 +182,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         ##VERIFY_Logging
         ##e-Consent Framework not used, and PDF Snapshot is used
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action                    | List of Data Changes OR Fields Exported                                                           |
             | [survey respondent] | e-Consent Certification 2 | e-Consent Certification record = "1" event = "event_1_arm_1" instrument = "coordinator_signature" |
             | [survey respondent] | e-Consent Certification 1 | e-Consent Certification record = "1"  event = "event_1_arm_1" instrument = "participant_consent"  |

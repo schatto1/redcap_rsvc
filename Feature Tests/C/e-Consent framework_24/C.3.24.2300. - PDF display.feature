@@ -25,7 +25,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       And I enter "Custom" in the field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name     | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Enable | Edit Copy     | Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
@@ -36,7 +36,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       Then I should see "Do you wish to copy this PDF Snapshot Trigger?"
 
       When I click on the button labeled "Copy trigger"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name     | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Enable | Edit Copy     | Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Enable | Edit Copy     | Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -48,14 +48,14 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       And I enter "Hide Snapshot" in the box labeled "Name of trigger"
       And I click "Save"
       Then I should see "Saved! Trigger for PDF Snapshot was successfully modified"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Enable | Edit Copy     | Hide Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Enable | Edit Copy     | Snapshot      | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
       ##VERIFY_Logging
       When I click on the link labeled "Logging"
-      Then I should see a table header and rows including the following values in the logging table:
+      Then I should see a table header and rows containing the following values in the logging table:
          | Username   | Action        | List of Data Changes OR Fields Exported        |
          | test_admin | Manage/Design | Modify trigger for PDF Snapshot (snapshot_id = |
          | test_admin | Manage/Design | Copy PDF Snapshot Trigger (copy snapshot_id =  |
@@ -92,7 +92,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
          | Name       | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB) | Version | Type |
          | Custom.pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |      |
          | Custom.pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |      |
@@ -108,7 +108,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       Then I should see "Are you sure you wish to disable this PDF Snapshot Trigger?"
 
       When I click the button "Cancel" in the dialog box
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Enable | Edit Copy     | Hide Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Enable | Edit Copy     | Snapshot      | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -124,13 +124,13 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       Then I should see "Are you sure you wish to disable this PDF Snapshot Trigger?"
 
       When I click the button "Set to inactive" in the dialog box
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name     | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Enable | Edit Copy     | Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
    Scenario: Unhide inactive
       When I "disable" the button labeled "Hide inactive"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active  | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Enable  | Edit Copy     | Snapshot      | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Disable | Edit Copy     | Hide Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -140,7 +140,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       Then I should see "Are you sure you wish to disable this PDF Snapshot Trigger?"
 
       When I click the button "Set to inactive" in the dialog box
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active  | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Disable | Edit Copy     | Snapshot      | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Disable | Edit Copy     | Hide Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -148,7 +148,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
    Scenario: Hide inactive
       When I "enable" the button labeled "Hide inactive"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name | Type of trigger | Save snapshot when... | Scope of the snapshot | Location(s) to save the snapshot |
 
 
@@ -183,7 +183,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
          | Name       | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB) | Version | Type |
          | Custom.pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |      |
          | Custom.pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |      |
@@ -193,14 +193,14 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       When I click on the button lanbeled "Designer"
       And I click on the button labeled "e-Consent and PDF Snapshot"
       And I "disable" the button labeled "Hide inactive"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active  | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Disable | Edit Copy     | Snapshot      | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Disable | Edit Copy     | Hide Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
 
       When I "Enable" the pdf snapshot trigger labeled "Snapshot"
-      Then I should see a table header and rows including the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active  | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Enable  | Edit Copy     | Snapshot      | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Disable | Edit Copy     | Hide Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -236,7 +236,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
          | Name       | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB) | Version | Type |
          | Custom.pdf | -                                | 3      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |      |
          | Custom.pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |      |

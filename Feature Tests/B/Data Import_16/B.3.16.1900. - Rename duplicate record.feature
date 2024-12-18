@@ -62,7 +62,7 @@ Feature: User Interface: The system shall provide the ability to create a new re
         And I should see all records are in an unverified status
         #VERIFY
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username    | Action                    | List of Data Changes OR Fields Exported |
             | test_admin) | Create Record (import)900 | record_id='900'                         |
 #END

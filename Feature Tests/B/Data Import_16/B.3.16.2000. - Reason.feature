@@ -40,7 +40,7 @@ Feature: User Interface: The system shall provide the ability to require a reaso
 
         #VERIFY
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported | Reason for Data Change |
             | test_Admin | Update record | [instance=3]                            | because I said so      |
 #END

@@ -46,7 +46,7 @@ Feature: Control Center: The system shall support the option to configure the st
         ##VERIFY_FiRe
         ##e-Consent Framework not used, and PDF Snapshot is used
         When I click on the link labeled "File Repository"
-        Then I should see a table header and rows including the following values in the file repository table:
+        Then I should see a table header and rows containing the following values in the file repository table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             |
             | .pdf | icon                             | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) |
             | .pdf | -                                | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) |

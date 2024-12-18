@@ -50,7 +50,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         Then I should see a dialog containing the following text: "SUCCESS!"
         And I close the popup
 
-        And I should see a table header and rows including the following values in the table:
+        And I should see a table header and rows containing the following values in the table:
             | Role name               | Username   |
             |                         | test_admin |
             |                         | test_user1 |
@@ -86,7 +86,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I should see the dropdown field labeled "Select Role" with the option "3_ReadOnly_Deidentified" selected
         And I click on the button labeled "Assign"
         Then I should see "Test_User4" user assigned "3_ReadOnly_Deidentified" role
-        And I should see a table header and rows including the following values in the table:
+        And I should see a table header and rows containing the following values in the table:
             | Role name               | Username   |
             |                         | test_admin |
             | 1_FullRights            | test_user1 |
@@ -177,7 +177,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         ##ACTION Auto-archive file in DAG TestGroup1
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Survey Archive"
-        Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
             | Name              | Record                   |
             | "pdf" format file | (record-name) TestGroup1 |
 
@@ -235,7 +235,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I click on the link labeled "PDF Survey Archive"
         #See consent just created in testgroup2
         #Don't see consent created by testgroup1
-        Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
             | Name              | Record                   |
             | "pdf" format file | [record-name] TestGroup2 |
 
@@ -272,7 +272,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         ##ACTION Auto-archive file in DAG TestGroup1
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Survey Archive"
-        Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
             | Name              | Record                   |
             | "pdf" format file | [record-name] TestGroup1 |
         #Don't see consent created by testgroup2
@@ -311,7 +311,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         ##ACTION Auto-archive access all file
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Survey Archive"
-        Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
             | Name              | Record                   |
             | "pdf" format file | [record-name] testgroup1 |
             | "pdf" format file | [record-name] testgroup2 |

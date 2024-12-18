@@ -12,7 +12,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I click on the button labeled "Enable" on the field labeled "Use longitudinal data collection with defined events?"
         And I click on the button labeled "Define My Events"
         And I click on the link labeled "Arm 1"
-        Then I should see a table header and rows including the following values in the Define My Events table:
+        Then I should see a table header and rows containing the following values in the Define My Events table:
             | Event # [event-number] | Days Offset | Offset Range Min / Max | Event Label [event-label] | Custom Event Label | Unique event name  (auto-generated) [event-name] |
             | 1                      | 1           | -0/+0                  | Event 1                   |                    | event_1_arm_1                                    |
             | 2                      | 2           | -0/+0                  | Event 2                   |                    | event_2_arm_1                                    |
@@ -20,13 +20,13 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the link labeled "Arm 2"
         And I click on the link labeled "Arm 1"
-        Then I should see a table header and rows including the following values in the Define My Events table:
+        Then I should see a table header and rows containing the following values in the Define My Events table:
             | Event # [event-number] | Days Offset | Offset Range Min / Max | Event Label [event-label] | Custom Event Label | Unique event name  (auto-generated) [event-name] |
             | 1                      | 1           | -0/+0                  | Event 1                   |                    | event_1_arm_2                                    |
 
         And I click on the button labeled "Designate Instruments for My Events"
         And I click on the link labeled "Arm 1"
-        Then I should see a table header and rows including the following values in the Designate Instruments table:
+        Then I should see a table header and rows containing the following values in the Designate Instruments table:
             | Data Collection Instrument       | Event 1 (1) | Event 2 (2) | Event Three (3) |
             | Participant Consent(survey)      | Check       |             | Check           |
             | Coordinator Signature(survey)    | Check       |             | Check           |
@@ -36,7 +36,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I click on the button labeled "Begin Editing"
         And I enable the Data Collection Instrument named "Participant Consent" for the Event named "Event 1"
         And I click on the button labeled "Save"
-        Then I should see a table header and rows including the following values in the Designate Instruments table:
+        Then I should see a table header and rows containing the following values in the Designate Instruments table:
             | Data Collection Instrument  | Event 1 (1) |
             | Participant Consent(survey) | Check       |
 
@@ -267,7 +267,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                                    | Identifier (Name, DOB) | Version | Type      |
             | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 2: Arm Two)) #2   |                        | 1.0     | e-Consent |
             | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 2: Arm Two)) #1   |                        | 1.0     | e-Consent |
@@ -278,7 +278,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         ##VERIFY_Logging
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action                    | List of Data Changes OR Fields Exported                                                                                                                                       |                                                                                                                                           |
             | [survey respondent] | Save PDF Snapshot 2       | Save PDF Snapshot to File Upload Field                                                                                                                                        | field = "participant_file (event_1_arm_2)" record = "2" event = "event_1_arm_2" instrument = "participant_consent" instance = "2"         |
             | [survey respondent] | e-Consent Certification 2 | e-Consent Certification record = "2" identifier = "email@test.edu" consent_form_version = "1.0" event = "event_1_arm_2" instrument = "participant_consent" instance = "2"     |                                                                                                                                           |

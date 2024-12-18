@@ -47,7 +47,7 @@ Feature: User Interface: The system shall restrict users by DAGs when using the 
         ##VERIFY
 
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action                   | List of Data Changes OR Fields Exported                                      |
             | test_Admin | Update record (import) 4 | Assign record to Data Access Group (redcap_data_access_group = 'testgroup1') |
             | test_Admin | Update record (import) 3 | Assign record to Data Access Group (redcap_data_access_group = 'testgroup2') |

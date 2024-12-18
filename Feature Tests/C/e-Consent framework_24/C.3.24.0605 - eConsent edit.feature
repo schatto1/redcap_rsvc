@@ -30,7 +30,7 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
         And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
         And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
-        Then I should see a table header and rows including the following values in the e-Consent Framework table:
+        Then I should see a table header and rows containing the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                      | Location(s) to save the signed consent snapshot | Custom tag/category | Notes |
             | Active            | "Participant Consent" (participant_consent) | File Repository                                 |                     |       |
 
@@ -87,7 +87,7 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
         And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
         And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
-        Then I should see a table header and rows including the following values in the e-Consent Framework table:
+        Then I should see a table header and rows containing the following values in the e-Consent Framework table:
             | e-Consent active? | Survey                                      | Location(s) to save the signed consent snapshot | Custom tag/category | Notes |
             | Active            | "Participant Consent" (participant_consent) | File Repository                                 |                     |       |
 
@@ -148,7 +148,7 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows including the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB) | Version | Type      |
             | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) | 2000-01-01             |         | e-Consent |
             | .pdf | YES                              | 1      | Participant Consent (Event 1 (Arm 1: Arm 1)) | 2000-01-01             |         | e-Consent |
@@ -164,7 +164,7 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
 
         ##VERIFY_Logging
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action                                     | List of Data Changes OR Fields Exported                                                                                                                    |
             | test_admin          | Update Response 2 (Event 1 (Arm 1: Arm 1)) | first_name = 'NewFirstName'                                                                                                                                |
             | [survey respondent] | Save PDF Snapshot 2                        | Save PDF Snapshot to File Upload Field field = "participant_file (event_1_arm_1)" record = "2" event = "event_1_arm_1" instrument = "participant_consent"  |
