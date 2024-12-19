@@ -18,6 +18,9 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         Then I should see Project status: "Production"
 
     Scenario:  #SET UP_USER_RIGHTS
+        When I click on the link labeled "User Rights"
+        And I click on the button labeled "Upload or download users, roles, and assignments"
+        Then I should see "Upload users (CSV)"
         When I click on the link labeled "Upload users (CSV)"
         Then I should see a dialog containing the following text: "Upload users (CSV)"
 
