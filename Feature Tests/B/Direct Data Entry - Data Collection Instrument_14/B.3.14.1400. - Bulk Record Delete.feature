@@ -81,7 +81,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I click on the link labeled "B.3.14.1400.100"
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should not see "Bulk Record Delete" in the tab labeled "Other Functionality"
+        Then I should NOT see a button labeled "Bulk Record Delete"
         And I logout
 
         When I login with "test_user1"
@@ -89,8 +89,6 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I click on the link labeled "B.3.14.1400.100"
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
-
         When I click on the button labeled "Bulk Record Delete"
         Then I should see "Bulk Record Delete"
 
@@ -123,7 +121,6 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.14.1400.200: Bulk Delete Records Using Select Records from List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
 
         When I click on the button labeled "Bulk Record Delete"
         Then I should see "Bulk Record Delete"
@@ -158,7 +155,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.14.1400.300: Bulk Delete Partial Records Using Custom List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
+        Then I should see a button labeled "Bulk Record Delete"
 
         When I click the bubble labeled "Partial delete (instrument-level data only)"
         And I select "Data Types"
@@ -191,7 +188,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.14.1200.400: Bulk Delete Partial Records Using Select Records from List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
+        Then I should see a button labeled "Bulk Record Delete"
 
         When I click the bubble labeled "Partial delete (instrument-level data only)"
         And I select "Data Types"
