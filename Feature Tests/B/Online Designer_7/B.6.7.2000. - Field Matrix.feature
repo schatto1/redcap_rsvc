@@ -40,7 +40,7 @@ Feature: Field Creation: The system shall support the creation and spliting matr
         And I should see the radio button options "Dislike","Neutral "Love"
 
         ##VERIFY_LOGGING
-        When I click on "Logging"
+        When I click on the link labeled "Logging"
         Then I should see "Create matrix of fields"
 
         #VERIFY: SPLIT OF MATRIX
@@ -54,6 +54,6 @@ Feature: Field Creation: The system shall support the creation and spliting matr
         And I should see a field name  with the variable name " flavor2"
 
         ##VERIFY_LOGGING
-        When I click on "Logging"
+        When I click on the link labeled "Logging"
         Then I should see "Edit matrix of fields"
 #END
