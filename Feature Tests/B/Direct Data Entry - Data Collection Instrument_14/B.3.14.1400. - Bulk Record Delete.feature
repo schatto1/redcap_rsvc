@@ -72,7 +72,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | 4         |
             | 5         |
             | 6         |
-        And I log out
+        And I logout
 
     ##FUNCTIONAL_REQUIREMENT
     Scenario:  ###ACTION Delete multiple records
@@ -82,7 +82,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         Then I should not see "Bulk Record Delete" in the tab labeled "Other Functionality"
-        And I log out
+        And I logout
 
         When I login with "test_user1"
         And I click on the link labeled "My Projects"

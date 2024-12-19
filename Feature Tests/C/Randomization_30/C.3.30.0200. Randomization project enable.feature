@@ -58,5 +58,5 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     And I should NOT see a checkbox labeled "Dashboard"
     And I should NOT see a checkbox labeled "Randomize"
     And I click on a button labeled "Cancel" within the open User Rights dialog box
-    And I log out
+    And I logout
 #END
