@@ -76,7 +76,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
 
     ##FUNCTIONAL_REQUIREMENT
     Scenario:  ###ACTION Delete multiple records
-        When I login with "test_user2"
+        When I login to REDCap with the user "Test_User2"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.1400.100"
         And I click on the link labeled "Project Setup"
@@ -84,7 +84,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         Then I should NOT see a button labeled "Bulk Record Delete"
         And I logout
 
-        When I login with "test_user1"
+        When I login to REDCap with the user "Test_User1"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.1400.100"
         And I click on the link labeled "Project Setup"
