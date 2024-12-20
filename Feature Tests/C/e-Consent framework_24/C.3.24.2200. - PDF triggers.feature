@@ -121,7 +121,13 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "email@test.edu" into the input field labeled "Email"
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
       And I click on the button labeled "Save signature" in the dialog box
       And I select "Complete" from the field labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
@@ -161,7 +167,13 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "email@test.edu" into the input field labeled "Email"
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
       And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."

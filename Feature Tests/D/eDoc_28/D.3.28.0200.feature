@@ -34,7 +34,13 @@ Feature: Control Center: The system shall support enabling or disabling the use 
         And I enter "email@test.edu" into the input field labeled "Email"
         And I enter "01-01-2000" into the input field labeled "DOB"
         And I enter "MyName" into the input field labeled "Participant's Name Typed"
-        And I enter a signature in the field labeled "Participant signature field"
+        
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
         And I click on the button labeled "Submit"
         Then I should see "Close survey"
 
