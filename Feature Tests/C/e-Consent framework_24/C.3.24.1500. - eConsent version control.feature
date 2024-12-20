@@ -48,7 +48,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         #VERIFY: view all versions for Test 1
         When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-        Then I should see a table header and rows containing the following values in the version table:
+        Then I should see a table header and rows containing the following values in a table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             | check icon | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 0                           |                   |              | " This is my test 1 consent form "      | "Set as inactive" button     |
@@ -157,7 +157,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         # view all versions for Test 1
         When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-        Then I should see a table header and rows containing the following values in the version table:
+        Then I should see a table header and rows containing the following values in a table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |
@@ -234,7 +234,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         # view all versions
         When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-        Then I should see a table header and rows containing the following values in the version table:
+        Then I should see a table header and rows containing the following values in a table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |
@@ -245,7 +245,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         #Cancel inactivation of version
         When I click on the button labeled "Cancel"
-        Then I should see a table header and rows containing the following values in the version table:
+        Then I should see a table header and rows containing the following values in a table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |
@@ -255,7 +255,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         Then I should see "Set consent form as inactive" in the dialog box
         When I click on the button labeled "Set consent form as inactive" in the dialog box
         Then I should see "Consent has successfully been removed"
-        And I should see a table header and rows containing the following values in the version table:
+        And I should see a table header and rows containing the following values in a table:
             | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
             |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
             |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |

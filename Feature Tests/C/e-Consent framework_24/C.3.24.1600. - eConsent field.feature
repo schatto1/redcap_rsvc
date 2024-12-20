@@ -33,7 +33,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
 
       #VERIFY: view all versions for Test 1
       When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-      Then I should see a table header and rows containing the following values in the version table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
          |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
          | check icon | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 0                           |                   |              | " This is my test 1 consent form "      | "Set as inactive" button     |
@@ -122,7 +122,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
 
       # view all versions
       When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
-      Then I should see a table header and rows containing the following values in the version table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
          |            | 1.0     |                    |                         | 0                           |                   |              | 20240718153905_Fake_Consent[311203].pdf |                              |
          |            | test 1  | XX/XX/XXXX XX:XXXm | Test_Admin (Admin Test) | 1                           |                   |              | " This is my test 1 consent form "      |                              |

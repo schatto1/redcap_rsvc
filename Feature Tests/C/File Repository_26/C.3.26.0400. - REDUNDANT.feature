@@ -181,7 +181,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive file in DAG TestGroup1
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | (record-name) TestGroup1 |
 
@@ -240,7 +240,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the link labeled "PDF Survey Archive"
 #         #See consent just created in testgroup2
 #         #Don't see consent created by testgroup1
-#         Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] TestGroup2 |
 
@@ -277,7 +277,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive file in DAG TestGroup1
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] TestGroup1 |
 #         #Don't see consent created by testgroup2
@@ -316,7 +316,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive access all file
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] testgroup1 |
 #             | "pdf" format file | [record-name] testgroup2 |

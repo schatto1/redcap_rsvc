@@ -12,7 +12,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I click on the button labeled "Enable" on the field labeled "Use longitudinal data collection with defined events?"
         And I click on the button labeled "Define My Events"
         And I click on the link labeled "Arm 1"
-        Then I should see a table header and rows containing the following values in the Define My Events table:
+        Then I should see a table header and rows containing the following values in a table:
             | Event # [event-number] | Days Offset | Offset Range Min / Max | Event Label [event-label] | Custom Event Label | Unique event name  (auto-generated) [event-name] |
             | 1                      | 1           | -0/+0                  | Event 1                   |                    | event_1_arm_1                                    |
             | 2                      | 2           | -0/+0                  | Event 2                   |                    | event_2_arm_1                                    |
@@ -20,13 +20,13 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the link labeled "Arm 2"
         And I click on the link labeled "Arm 1"
-        Then I should see a table header and rows containing the following values in the Define My Events table:
+        Then I should see a table header and rows containing the following values in a table:
             | Event # [event-number] | Days Offset | Offset Range Min / Max | Event Label [event-label] | Custom Event Label | Unique event name  (auto-generated) [event-name] |
             | 1                      | 1           | -0/+0                  | Event 1                   |                    | event_1_arm_2                                    |
 
         And I click on the button labeled "Designate Instruments for My Events"
         And I click on the link labeled "Arm 1"
-        Then I should see a table header and rows containing the following values in the Designate Instruments table:
+        Then I should see a table header and rows containing the following values in a table:
             | Data Collection Instrument       | Event 1 (1) | Event 2 (2) | Event Three (3) |
             | Participant Consent(survey)      | Check       |             | Check           |
             | Coordinator Signature(survey)    | Check       |             | Check           |
@@ -36,7 +36,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I click on the button labeled "Begin Editing"
         And I enable the Data Collection Instrument named "Participant Consent" for the Event named "Event 1"
         And I click on the button labeled "Save"
-        Then I should see a table header and rows containing the following values in the Designate Instruments table:
+        Then I should see a table header and rows containing the following values in a table:
             | Data Collection Instrument  | Event 1 (1) |
             | Participant Consent(survey) | Check       |
 
