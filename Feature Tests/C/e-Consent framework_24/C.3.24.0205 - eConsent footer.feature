@@ -59,7 +59,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
     Scenario: Combine the PDFs to one combined PDF
         #SETUP Trigger to combine the PDFs to one combined PDF
         When I click on the button labeled "PDF Snapshots of Record"
-        Then I should see a table header and rows containing the following values in the PDF snapshot table:
+        Then I should see a table header and rows containing the following values in a table:
             | Active | Edit settings         | Name | Type of trigger   | Save snapshot when...                   | Scope of the snapshot  | Location(s) to save the snapshot                     |
             | Active | Governed by e-Consent |      | Survey completion | Complete survey "Participant Consent"   | Single survey response | File Repository Specificed field: [participant_file] |
             | Active | Governed by e-Consent |      | Survey completion | Complete survey "Coordinator Signature" | Single survey response | File Repository Specificed field: [coo_sign]         |
@@ -74,7 +74,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         And I select "combo_file" on the event name "Curent event" from the dropdown field labeled "Save to specified field:" in the dialog box
         And I click on the button labeled "Save"
         Then I should see "Saved! Trigger for PDF Snapshot was successfully modified"
-        Then I should see a table header and rows containing the following values in the PDF snapshot table:
+        Then I should see a table header and rows containing the following values in a table:
             | Active | Edit settings         | Name             | Type of trigger   | Save snapshot when...                                    | Scope of the snapshot  | Location(s) to save the snapshot                     |
             | Active | Edit Copy             | Combine PDF file | Logic-based       | Logic becomes true: [participant_consent_complete]='2... | Selected instruments   | File Repository Specified field: [combo_file]        |
             | Active | Governed by e-Consent |                  | Survey completion | Complete survey "Participant Consent"                    | Single survey response | File Repository Specificed field: [participant_file] |

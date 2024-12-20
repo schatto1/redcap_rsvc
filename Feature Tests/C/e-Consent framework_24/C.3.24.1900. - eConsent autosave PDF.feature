@@ -42,7 +42,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to opt
 
    Scenario: eConsent goverend PDF Snapshot
       When I click on the button labeled "PDF Snapshots of Record"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings         | Name | Type of trigger   | Save snapshot when...                 | Scope of the snapshot  | Location(s) to save the snapshot                     |
          | Active | Governed by e-Consent |      | Survey completion | Complete survey "Participant Consent" | Single survey response | File Repository Specificed field: [participant_file] |
 

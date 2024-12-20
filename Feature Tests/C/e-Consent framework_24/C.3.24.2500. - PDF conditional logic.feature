@@ -32,7 +32,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I enter "Snapshot 1" into the input field labeled "File name:"
       And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name       | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | Snapshot 1 | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository                  |
 
@@ -50,7 +50,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I enter "Snapshot 2" into the input field labeled "File name:"
       And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name       | Type of trigger   | Save snapshot when...                                  | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | Snapshot 2 | Logic-based       | Logic becomes true: [participant_consent_complete]='2' | All instruments       | File Repository                  |
          | Active | Edit Copy     | Snapshot 1 | Survey completion | Complete survey "Participant Consent"                  | All instruments       | File Repository                  |
@@ -69,7 +69,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I enter "Snapshot 3" into the input field labeled "File name:"
       And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name       | Type of trigger   | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | Snapshot 3 | Logic-based       | Logic becomes true: [participant_consent_complete]='2... | All instruments       | File Repository                  |
          | Active | Edit Copy     | Snapshot 2 | Logic-based       | Logic becomes true: [participant_consent_complete]='2'   | All instruments       | File Repository                  |

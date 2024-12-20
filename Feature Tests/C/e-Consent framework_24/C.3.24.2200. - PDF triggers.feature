@@ -24,7 +24,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       When I click on the button labeled "PDF Snapshots of Record"
       And I click the button "+Add new trigger"
       And I click on the button labeled "Cancel"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name | Type of trigger | Save snapshot when... | Scope of the snapshot | Location(s) to save the snapshot |
 
    Scenario: New PDF Trigger for survey completion all instruments
@@ -42,7 +42,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "Custom" into the input field labeled "File name:"
       And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
@@ -52,7 +52,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       Then I should see "Do you wish to copy this PDF Snapshot Trigger?"
 
       When I click on the button labeled "Cancel"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
@@ -62,7 +62,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       Then I should see "Do you wish to copy this PDF Snapshot Trigger?"
 
       When I click on the button labeled "Copy trigger"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -73,7 +73,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       Then I should see "Custom Dropdown 1 Form Snapshot" in the field labeled "Name of trigger:"
 
       When I click on the button labeled "Cancel"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -96,7 +96,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "Custom" into the input field labeled "File name:"
       And I click on the button labeled "Save"
       Then I should see "Saved! Trigger for PDF Snapshot was successfully modified"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Edit trigger name               | Logic-based       | Logic becomes true: [participant_consent_complete]='2... | Selected instruments  | File Repository Specified field: [event_1_arm_1][participant_file] |
          | Active | Edit Copy     | Custom Dropdown 1 Form Snapshot | Survey completion | Complete survey "Participant Consent"                    | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |

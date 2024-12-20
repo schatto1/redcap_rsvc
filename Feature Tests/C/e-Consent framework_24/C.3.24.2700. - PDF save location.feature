@@ -35,7 +35,7 @@ Feature: User Interface: The system shall support the saving PDF snapshots to sp
       And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
       And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name     | Type of trigger | Save snapshot when...                                  | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Snapshot | Logic-based     | Logic becomes true: [participant_consent_complete]='2' | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
