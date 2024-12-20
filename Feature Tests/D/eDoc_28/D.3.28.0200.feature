@@ -22,7 +22,7 @@ Feature: Control Center: The system shall support enabling or disabling the use 
     Scenario: Add record to get participant signature
         When I click on the link labeled "Add/Edit Records"
         And I click on the button labeled "Add new record for the arm selected above"
-        And I click on the bubble labeled "Participant Consent" for event "Event 1"
+        And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
         Then I should see "Adding new Record ID 1"
 
         When I click on the button labeled "Save & Stay"

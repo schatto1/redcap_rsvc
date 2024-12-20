@@ -63,7 +63,7 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 1."
 
       When I enter "FirstName" into the input field labeled "First Name"
@@ -83,7 +83,7 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 2."
 
       When I click on the button labeled "Save & Stay"

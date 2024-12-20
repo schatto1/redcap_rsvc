@@ -63,7 +63,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         ##ACTION: add record with consent framework in Arm 1 Event 1  (repeatable event)
         When I click on the link labeled "Add/Edit Records"
         And I click on the button labeled "Add new record for the arm selected above"
-        And I click on the bubble labeled "Participant Consent" for event "Event 1"
+        And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
         Then I should see "Adding new Record ID 1."
 
         When I click on the button labeled "Save & Stay"
@@ -98,7 +98,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
     Scenario:   add instance 2 for record with consent framework in Arm 1 Event 1  (repeatable event)
         ##ACTION: add instance 2 for record with consent framework in Arm 1 Event 1  (repeatable event)
         When I click on the button labeled "Add New" for event "Event 1"
-        And I click on the bubble labeled "Participant Consent" for event "Event 1" instance "2"
+        And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1" and click the repeating instrument bubble for the second instance
 
 
         When I click on the button labeled "Save & Stay"
@@ -201,7 +201,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         When I click on the link labeled "Add/Edit Records"
         And I select "Arm 2: Arm Two" on the dropdown field labeled "Choose an existing Record ID"
         And I click on the button labeled "Add new record for the arm selected above"
-        And I click on the bubble labeled "Participant Consent" for event "Event 1"
+        And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
         Then I should see "Adding new Record ID 1."
 
         When I click on the button labeled "Save & Stay"
@@ -236,7 +236,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
     Scenario:   add instance 2 for record with consent framework in Arm 2 Event 1  (repeatable event)
         ##ACTION: add instance 2 for record with consent framework in Arm 1 Event 1  (repeatable event)
         When I click on the button labeled "Add New" for event "Event 1"
-        And I click on the bubble labeled "Participant Consent" for event "Event 1" instance "2"
+        And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1" instance "2"
 
 
         When I click on the button labeled "Save & Stay"

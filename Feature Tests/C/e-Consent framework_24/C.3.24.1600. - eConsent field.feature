@@ -51,7 +51,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
       ##ACTION: add record to get participant signature
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 1."
       And I should see "This is my test 1 consent form"
 
@@ -135,7 +135,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
       ##ACTION: add record to get participant signature
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 2."
       And I should see "consent.pdf"
 
