@@ -75,9 +75,9 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
       And I click on the button labeled "Save signature" in the dialog box
       And I select "Complete" from the field labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
-      Then I Should see "Record Home Page"
+      Then I should see "Record Home Page"
       And I should see "Complete" status for "Event 1" insturment "Participant Consent"
-      And I Should see "Incomplete (no data saved)" icon for the Data Collection Instrument labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
+      And I should see "Incomplete (no data saved)" icon for the Data Collection Instrument labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
 
    Scenario: Add record for eConsent and snapshot
       #Add record
