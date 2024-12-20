@@ -180,7 +180,7 @@ Feature: User Interface: The system shall support the creation, modification, an
 
       When I click on the button labeled "Close survey"
       And I click on the button labeled "Leave without saving changes" in the dialog box
-      Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+      Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
       And I should see "Incomplete" icon for the Data Collection Instrument labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
 
       When I click on the bubble labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
@@ -205,7 +205,7 @@ Feature: User Interface: The system shall support the creation, modification, an
 
       When I click on the button labeled "Close survey"
       And I click on the button labeled "Leave without saving changes" in the dialog box
-      Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+      Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
       Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Coordinator Signature" for event "Event 1"
       And I should see "Incomplete" icon for the Data Collection Instrument labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
 

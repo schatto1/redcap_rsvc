@@ -133,7 +133,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I click on the button labeled "Submit"
         And I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
         And I should see "TestGroup1"
 
         #FUNCTIONAL_REQUIREMENT
@@ -201,7 +201,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I click on the button labeled "Submit"
         And I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
         And I should see "TestGroup2"
 
         #FUNCTIONAL_REQUIREMENT

@@ -75,7 +75,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
 
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 
     Scenario: Test previous page erase signature
         ##ACTION: Test previous page button on certification page with signature erase
@@ -128,7 +128,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
 
         When I close the browser window.
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 
         Then I should see the button labeled "Submit" is enabled
 
@@ -180,7 +180,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
 
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 
     Scenario: Verification e-Consent saved and logged correctly
         ##VERIFY_FiRe

@@ -99,7 +99,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 
     Scenario:   add instance 2 for record with consent framework in Arm 1 Event 1  (repeatable event)
         ##ACTION: add instance 2 for record with consent framework in Arm 1 Event 1  (repeatable event)
@@ -140,7 +140,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1" instance "2"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1" instance "2"
         And  I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1" instance "1"
 
     Scenario: add instance 1 for record with consent framework in Arm 1 Event Three  (repeatable instance)
@@ -261,7 +261,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 
     Scenario:   add instance 2 for record with consent framework in Arm 2 Event 1  (repeatable event)
         ##ACTION: add instance 2 for record with consent framework in Arm 1 Event 1  (repeatable event)
@@ -302,7 +302,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the button labeled "Close survey"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1" instance "2"
+        Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1" instance "2"
         And  I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1" instance "1"
 
     Scenario: Verification e-Consent saved and logged correctly

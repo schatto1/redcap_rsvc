@@ -85,7 +85,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
 
       When I click on the button labeled "Close survey"
       And I click on the button labeled "Leave without saving changes" in the dialog box
-      Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+      Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 
       # Verification e-Consent saved and logged correctly
       ##VERIFY_FiRe
@@ -175,7 +175,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
 
       When I click on the button labeled "Close survey"
       And I click on the button labeled "Leave without saving changes" in the dialog box
-      Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+      Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 
       # Verification e-Consent saved and logged correctly
       ##VERIFY_FiRe
