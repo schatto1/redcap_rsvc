@@ -24,7 +24,7 @@ Feature: User Interface: The system shall provide the ability for the user impor
         Then I should see "Your file is currently being uploaded. Please wait"
         ##M this may take several minutes while the system analyzes for errors
 
-        And I Should see "File was uploaded and will be processed soon"
+        And I should see "File was uploaded and will be processed soon"
         And I click on the button labeled "Close"
         And I click the tab labeled "View Background imports"
         And I click on the button labeled "Halt imports"
