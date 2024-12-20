@@ -134,7 +134,7 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in a table:
          | Name     | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB)        |
          | Snapshot | YES                              | 2      | (Event 1 (Arm 1: Arm 1))                     |                               |
          | eConsent | YES                              | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) | FirstName LatName, 2000-01-01 |

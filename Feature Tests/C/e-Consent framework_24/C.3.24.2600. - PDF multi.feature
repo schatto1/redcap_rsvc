@@ -446,7 +446,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in a table:
          | Name                                 | PDF utilized e-Consent Framework | Record | Survey Completed             | Identifier (Name, DOB) | Version | Type |
          | multidataformandsurveydifferentevent | -                                | 6      | (Event Three (Arm 1: Arm 1)) |                        |         |      |
          | multidataformandsurveydifferentevent | -                                | 5      | (Event Three (Arm 1: Arm 1)) |                        |         |      |

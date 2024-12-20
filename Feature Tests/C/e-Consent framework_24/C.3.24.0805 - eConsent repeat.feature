@@ -309,7 +309,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         ##VERIFY_FiRe
         When I click on the link labeled "File Repository"
         And I click on the link labeled "PDF Snapshot Archive"
-        Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
+        Then I should see a table header and rows containing the following values in a table:
             | Name | PDF utilized e-Consent Framework | Record | Survey Completed                                    | Identifier (Name, DOB) | Version | Type      |
             | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 2: Arm Two)) #2   |                        | 1.0     | e-Consent |
             | .pdf | YES                              | 2      | Participant Consent (Event 1 (Arm 2: Arm Two)) #1   |                        | 1.0     | e-Consent |

@@ -139,7 +139,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in a table:
          | Name | PDF utilized e-Consent Framework | Record | Survey Completed | Identifier (Name, DOB) | Version | Type |
 
       ##VERIFY_Logging
@@ -224,7 +224,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in a table:
          | Name       | PDF utilized e-Consent Framework | Record | Survey Completed                             | Identifier (Name, DOB) | Version | Type |
          | Custom.pdf | -                                | 2      | (Event 1 (Arm 1: Arm 1))                     |                        |         |      |
          | Custom.pdf | -                                | 2      | Participant Consent (Event 1 (Arm 1: Arm 1)) |                        |         |      |
