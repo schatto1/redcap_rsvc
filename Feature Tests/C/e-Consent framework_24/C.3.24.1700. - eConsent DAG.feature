@@ -108,7 +108,8 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
       And I should see "This is my NO DAG consent form"
 
@@ -142,8 +143,8 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
       And I click on the button labeled "Record ID 2"
-      And I select the dropdown option labeled "Assign to Data Access Group" from the dropdown "Choose action for record"
-      And I select the dropdown option labeled "TestGroup1" from the dropdown with the placeholder text of "[No Assignement]" in the dialog box
+      And I select "Assign to Data Access Group" on the dropdown field labeled "Choose action for record"
+      And I select "TestGroup1" on the dropdown field labeled "[No Assignement]" in the dialog box
       And I click on the button labeled "Assign to Data Access Group" in the dialog box
 
    Scenario: ##VERIFY
@@ -157,7 +158,8 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
       And I should see "DAG1.pdf"
       And I should NOT see "This is my NO DAG consent form"
@@ -193,8 +195,8 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
       And I click on the button labeled "Record ID 3"
-      And I select the dropdown option labeled "Assign to Data Access Group" from the dropdown "Choose action for record"
-      And I select the dropdown option labeled "TestGroup2" from the dropdown with the placeholder text of "[No Assignement]" in the dialog box
+      And I select "Assign to Data Access Group" on the dropdown field labeled "Choose action for record"
+      And I select "TestGroup2" on the dropdown field labeled "[No Assignement]" in the dialog box
       And I click on the button labeled "Assign to Data Access Group" in the dialog box
 
       ##VERIFY
@@ -207,7 +209,8 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
       And I should see "DAG2.pdf"
       And I should NOT see "This is my NO DAG consent form"

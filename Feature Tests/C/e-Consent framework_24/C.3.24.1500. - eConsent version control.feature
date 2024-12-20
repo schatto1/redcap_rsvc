@@ -72,7 +72,8 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
         And I should see "This is my test 1 consent form"
 
@@ -175,7 +176,8 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
         And I should see "consent.pdf"
 
@@ -264,7 +266,8 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
         And I should NOT see "consent.pdf"
 

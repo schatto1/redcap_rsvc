@@ -68,7 +68,8 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
         When I enter "FirstName" in the field labeled "Name"
@@ -102,7 +103,8 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
         When I enter "FirstName" in the field labeled "Name"
@@ -134,7 +136,8 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         When I click on the bubble labeled "Participant Consent" for event "Event Three"
         And I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
         When I enter "FirstName" in the field labeled "Name"
@@ -165,7 +168,8 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         When I click on the button labled "Add a New Instance" for the bubble labeled "Participant Consent" for event "Event Three"
         And I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
         When I enter "FirstName" in the field labeled "Name"
@@ -195,14 +199,15 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
     Scenario: add record in arm 2 with consent framework
         ##ACTION: add record with consent framework in Arm 1 Event 1  (repeatable event)
         When I click on the link labeled "Add/Edit Records"
-        And I select the dropdown option labeled "Arm 2: Arm Two" from the dropdown button labeld "Choose an existing Record ID"
+        And I select "Arm 2: Arm Two" on the dropdown field labeled "Choose an existing Record ID"
         And I click on the button labeled "Add new record for the arm selected above"
         And I click on the bubble labeled "Participant Consent" for event "Event 1"
         Then I should see "Adding new Record ID 1."
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
         When I enter "FirstName" in the field labeled "Name"
@@ -236,7 +241,8 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
         When I enter "FirstName" in the field labeled "Name"

@@ -70,7 +70,8 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I enter "FirstName" in the field labeled "First Name"
@@ -161,7 +162,8 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I enter "FirstName" in the field labeled "First Name"
@@ -214,7 +216,8 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I enter "FirstName" in the field labeled "First Name"

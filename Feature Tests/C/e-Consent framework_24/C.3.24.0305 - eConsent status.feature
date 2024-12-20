@@ -44,7 +44,8 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
         When I enter "FirstName" in the field labeled "First Name"
@@ -79,7 +80,8 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
         When I enter "FirstName" in the field labeled "First Name"
@@ -131,7 +133,8 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I click on the bubble labeled "Participant Consent" for event "Event 1"
         Then I should see "Survey response is editable"
         And I should NOT see a signature in the field labeled "Participant signature file" on the form labeled "Participant Consent"
-        And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         Then I should see "You have partially completed this survey"
         And I click on the button labeled "Start Over"
         And I click on the button labeled "OK"

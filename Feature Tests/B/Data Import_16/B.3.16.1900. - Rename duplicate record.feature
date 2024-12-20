@@ -41,9 +41,8 @@ Feature: User Interface: The system shall provide the ability to create a new re
         And I disable the button labeled "Auto-numbering for Records"
         And I click on the link labeled "Data Import Tool"
 
-        When I click on the dropdown labeled "Import in real time"
-        And I select "Yes, display uploaded data prior to importing"
-        And I select the dropdown labeled "Auto-number/overwrite record IDs?" and I select " Yes, Blank values in the file will overwrite existing values"
+        When I select "Yes, display uploaded data prior to importing" on the dropdown field labeled "Import in real time"
+        And I select "Yes, Blank values in the file will overwrite existing values" on the dropdown field labeled "Auto-number/overwrite record IDs?"
         And I select the dropdown labeled "BigDataTestProjectDATARename2.csv"
         And I click on the button labeled "Upload File"
         Then I should see "Import successful! 30 records were created or modified during the import"

@@ -127,7 +127,8 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         Then I should see "Adding new Record ID"
 
 #         When I click on the button labeled "Save & Stay"
-#         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+#         And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
 #         And I click on the button labeled "Next Page"
 #         Then I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
 
@@ -194,7 +195,8 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         Then I should see "Adding new Record ID"
 
 #         When I click on the button labeled "Save & Stay"
-#         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+#         And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
 #         And I click on the button labeled "Next Page"
 #         Then I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
 

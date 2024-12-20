@@ -194,7 +194,8 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I select "Survey Mode" from the field labeled "Form 1 Trigger"
@@ -230,7 +231,8 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I select "Survey Mode" from the field labeled "Form 1 Trigger"
@@ -248,7 +250,8 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I click on the button labeled "Leave without saving changes" in the dialog box
 
       When I click on the bubble labeled "Coordinator Signature" for event "Event 1"
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       And  I select "Survey Mode" from the field labeled "Form 2 Trigger"
       And I enter "Coordinator" in the field labeled "Coordinator's Name Typed"
       And I enter a signature in the field labeled "Coordinator's Signature"
@@ -306,7 +309,8 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I select "Survey Mode" from the field labeled "Form 1 Trigger"
@@ -348,7 +352,8 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I select "Survey Mode" from the field labeled "Form 1 Trigger"

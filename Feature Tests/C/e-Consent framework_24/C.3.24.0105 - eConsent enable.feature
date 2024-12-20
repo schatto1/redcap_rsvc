@@ -40,7 +40,8 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         And I enter "FirstName" in the field labeled "First Name"
         And I enter "LastName" in the field labeled "Last Name"
         And I enter "email@test.edu" in the field labeled "Email"
@@ -95,7 +96,8 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button "Survey options"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
         And I enter "FirstName" in the field labeled "First Name"
         And I enter "LastName" in the field labeled "Last Name"
         And I enter "email@test.edu" in the field labeled "Email"
