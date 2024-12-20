@@ -39,7 +39,7 @@ Feature: User Interface: The system shall allow data to be uploaded as backgroun
         When I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action             | List of Data Changes OR Fields Exported |
-            | SYSTEM (Test_Admin) | Create Record 3000 | record_id=’3000’                        |
+            | SYSTEM (Test_Admin) | Create Record 3000 | record_id='3000'                        |
 
         When I click on the button labeled "View Details"
         And I click on the button labeled "Download list of all errors"
