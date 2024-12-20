@@ -47,11 +47,11 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
         And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
-        When I enter "FirstName" in the field labeled "Name"
-        And I enter "LastName" in the field labeled "Name"
-        And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "2000-01-01" in the field labeled "DOB"
-        And I enter the "MyName" in the field labeled "Participant’s Name Typed"
+        When I enter "FirstName" into the input field labeled "Name"
+        And I enter "LastName" into the input field labeled "Name"
+        And I enter "email@test.edu" into the input field labeled "Email"
+        And I enter "2000-01-01" into the input field labeled "DOB"
+        And I enter "MyName" into the input field labeled "Participant’s Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
         And I click "Save signature"
 
@@ -105,11 +105,11 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
         And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
-        When I enter "FirstName" in the field labeled "Name"
-        And I enter "LastName" in the field labeled "Name"
-        And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "2000-01-01" in the field labeled "DOB"
-        And I enter the "MyName" in the field labeled "Participant’s Name Typed"
+        When I enter "FirstName" into the input field labeled "Name"
+        And I enter "LastName" into the input field labeled "Name"
+        And I enter "email@test.edu" into the input field labeled "Email"
+        And I enter "2000-01-01" into the input field labeled "DOB"
+        And I enter "MyName" into the input field labeled "Participant’s Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
         And I click "Save signature"
 
@@ -136,14 +136,14 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
         When I click the bubble labeled "Edit response"
         Then I should see "Survey response is editable (now editing)"
 
-        When I enter "NewFirstName" in the field labeled "First Name"
+        When I enter "NewFirstName" into the input field labeled "First Name"
         And I click on the button labeled "Save & Exit Form"
         Then I should see "Record ID 2"
         Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
 
         When I click on the bubble labeled "Participant Consent" for event "Event 1"
         Then I should see "Survey response is editable"
-        And I should see "NewFirstName" in the field labeled "First Name"
+        And I should see "NewFirstName" into the input field labeled "First Name"
 
 
     Scenario: Verification e-Consent saved and logged correctly
@@ -157,10 +157,10 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
 
 
         When I click on the file link for record "1" Survey "Participant Consent (Event 1 (Arm 1: Arm 1))"
-        Then I should have a pdf file with "FirstName" in the field labeled "First Name"
+        Then I should have a pdf file with "FirstName" into the input field labeled "First Name"
 
         When I click on the file link for record "2" Survey "Participant Consent (Event 1 (Arm 1: Arm 1))"
-        Then I should have a pdf file with "FirstName" in the field labeled "First Name"
+        Then I should have a pdf file with "FirstName" into the input field labeled "First Name"
         #NOTE: Edited version with "NewFirstName" is NOT in the file repository.
         #M: Close document
 

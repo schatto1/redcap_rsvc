@@ -28,12 +28,12 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
       And I select "first_name" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "First name field:" in the dialog box
       And I select "last_name" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "Last name field:" in the dialog box
       And I select "dob" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "Date of birth field:" in the dialog box
-      And I enter "Participant" in the field labeled "e-Consent tag/category:"
-      And I enter "PID [project-id] - [last_name]" in the field labeled "Custom label for PDF header"
+      And I enter "Participant" into the input field labeled "e-Consent tag/category:"
+      And I enter "PID [project-id] - [last_name]" into the input field labeled "Custom label for PDF header"
       And I select "part_sign Particiant signature" for the field labeled "Signature field #1"
       And I check "Save to a specific field"
       And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
-      And I enter "eConsent" in the field labeled "File name:"
+      And I enter "eConsent" into the input field labeled "File name:"
       And I click on the button labeled "Save settings"
       Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
       Then I should see a table header and rows containing the following values in the e-Consent Framework table:
@@ -52,7 +52,7 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
       And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
       And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
       And I "Check" the box labeled "Save to File Repository"
-      And I enter "Snapshot" in the field labeled "File name:"
+      And I enter "Snapshot" into the input field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
@@ -66,11 +66,11 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
       And I click on the bubble labeled "Participant Consent" for event "Event 1"
       Then I should see "Adding new Record ID 1."
 
-      When I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
+      When I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant’s Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
       And I click "Save signature"
       And I select "Complete" from the field labeled "Complete?"
@@ -92,11 +92,11 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
       And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
-      When I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
+      When I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant’s Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
       And I click "Save signature"
 

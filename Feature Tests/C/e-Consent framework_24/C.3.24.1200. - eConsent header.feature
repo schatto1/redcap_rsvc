@@ -24,7 +24,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
         Then I should see a dialogue box labeled "Enable e-Consent"
         And I should see "Primary settings"
 
-        When I enter "PID [project-id] - [last_name]" in the field labeled "Custom label for PDF header"
+        When I enter "PID [project-id] - [last_name]" into the input field labeled "Custom label for PDF header"
         And I click on the button labeled "Save settings"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
         Then I should see a table header and rows containing the following values in the e-Consent Framework table:
@@ -44,11 +44,11 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
         And I click on the survey option label containing "Open survey" label
         Then I should see "Participant Consent"
 
-        When I enter "FirstName" in the field labeled "First Name"
-        And I enter "LastName" in the field labeled "Last Name"
-        And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "2000-01-01" in the field labeled "DOB"
-        And I enter the "MyName" in the field labeled "Participant’s Name Typed"
+        When I enter "FirstName" into the input field labeled "First Name"
+        And I enter "LastName" into the input field labeled "Last Name"
+        And I enter "email@test.edu" into the input field labeled "Email"
+        And I enter "2000-01-01" into the input field labeled "DOB"
+        And I enter "MyName" into the input field labeled "Participant’s Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
         And I click "Save signature"
 

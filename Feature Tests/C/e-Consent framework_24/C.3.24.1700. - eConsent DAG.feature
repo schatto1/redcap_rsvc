@@ -23,12 +23,12 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
 
       #Add consent with no DAG
       When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
-      And I enter "No DAG" in the field labeled "Consent form version:" in the dialog box
+      And I enter "No DAG" into the input field labeled "Consent form version:" in the dialog box
       And I select "Consent file" from the dropdown field labeled "Placement of consent form:" in the dialog box
       And I select "When record is not assigned to a DAG (default)" from the dropdown field labeled "Display for specific DAG" in the dialog box
       And I select "No languages defined on MLM page" for the dropdown filed labeled "Display for specific language" in the dialog box
       And I click on the link labeled "Consent Form (Rich Text)" in the dialog box
-      And I enter "This is my NO DAG consent form" in the field labeled "Consent Form (Rich Text)" in the dialog box
+      And I enter "This is my NO DAG consent form" into the input field labeled "Consent Form (Rich Text)" in the dialog box
       And I click on the button labeled "Add new consent form" in the dialog box
       Then I should see "Consent form vNO DAG" for the survey labeled "Participant Consent"
 
@@ -46,7 +46,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
    Scenario: #Add consent with DAG TestGroup1
       #Add consent with DAG TestGroup1
       When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
-      And I enter "DAG 1" in the field labeled "Consent form version:" in the dialog box
+      And I enter "DAG 1" into the input field labeled "Consent form version:" in the dialog box
       And I select "Consent file" from the dropdown field labeled "Placement of consent form:" in the dialog box
       And I select "TestGroup1" from the dropdown field labeled "Display for specific DAG" in the dialog box
       And I select "No languages defined on MLM page" for the dropdown filed labeled "Display for specific language" in the dialog box
@@ -61,7 +61,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
    Scenario: #Add consent with DAG TestGroup2
       #Add consent with DAG TestGroup2
       When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
-      And I enter "DAG 2" in the field labeled "Consent form version:" in the dialog box
+      And I enter "DAG 2" into the input field labeled "Consent form version:" in the dialog box
       And I select "Consent file" from the dropdown field labeled "Placement of consent form:" in the dialog box
       And I select "TestGroup2" from the dropdown field labeled "Display for specific DAG" in the dialog box
       And I select "No languages defined on MLM page" for the dropdown filed labeled "Display for specific language" in the dialog box
@@ -113,10 +113,10 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       Then I should see "Participant Consent"
       And I should see "This is my NO DAG consent form"
 
-      When I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
+      When I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter a signature in the field labeled "Participant signature field"
       And I click "Save signature"
 
@@ -164,10 +164,10 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       And I should see "DAG1.pdf"
       And I should NOT see "This is my NO DAG consent form"
 
-      When I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
+      When I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter a signature in the field labeled "Participant signature field"
       And I click "Save signature"
 
@@ -215,10 +215,10 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       And I should see "DAG2.pdf"
       And I should NOT see "This is my NO DAG consent form"
 
-      When I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
+      When I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter a signature in the field labeled "Participant signature field"
       And I click "Save signature"
 

@@ -23,7 +23,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
       Then I should see a dialogue box labeled "Enable e-Consent"
       And I should see "Primary settings"
 
-      When I enter "My custom note" in the field labeled "Notes:"
+      When I enter "My custom note" into the input field labeled "Notes:"
       And I click on the button labeled "Save settings"
       Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
       Then I should see a table header and rows containing the following values in the e-Consent Framework table:

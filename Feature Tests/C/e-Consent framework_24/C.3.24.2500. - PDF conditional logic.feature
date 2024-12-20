@@ -29,7 +29,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "Snapshot 1" in the field labeled "File name:"
+      And I enter "Snapshot 1" into the input field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
@@ -47,7 +47,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "Snapshot 2" in the field labeled "File name:"
+      And I enter "Snapshot 2" into the input field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
@@ -66,7 +66,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "Snapshot 3" in the field labeled "File name:"
+      And I enter "Snapshot 3" into the input field labeled "File name:"
       And I click "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
@@ -96,11 +96,11 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
-      When I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
+      When I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant’s Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
       And I click "Save signature"
       And I click on the button labeled "Submit"

@@ -21,11 +21,11 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         And I click on the button labeled "Okay" in the dialog box
         And I click on the button labeled "Survey options"
         And I click on the survey option label containing "Open survey" label
-        And I enter "FirstName" in the field labeled "First Name"
-        And I enter "LastName" in the field labeled "Last Name"
-        And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "01-01-2000" in the field labeled "DOB"
-        And I enter "MyName" in the field labeled "Participant's Name Typed"
+        And I enter "FirstName" into the input field labeled "First Name"
+        And I enter "LastName" into the input field labeled "Last Name"
+        And I enter "email@test.edu" into the input field labeled "Email"
+        And I enter "01-01-2000" into the input field labeled "DOB"
+        And I enter "MyName" into the input field labeled "Participant's Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
         And I click "Submit"
         Then I should see "Close survey"
@@ -62,11 +62,11 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         And I click on the button labeled "Okay" in the dialog box
         And I click on the button labeled "Survey options"
         And I click on the survey option label containing "Open survey" label
-        And I enter "FirstName" in the field labeled "First Name"
-        And I enter "LastName" in the field labeled "Last Name"
-        And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "01-01-2000" in the field labeled "DOB"
-        And I enter "MyName" in the field labeled "Participant's Name Typed"
+        And I enter "FirstName" into the input field labeled "First Name"
+        And I enter "LastName" into the input field labeled "Last Name"
+        And I enter "email@test.edu" into the input field labeled "Email"
+        And I enter "01-01-2000" into the input field labeled "DOB"
+        And I enter "MyName" into the input field labeled "Participant's Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
         And I click "Submit"
         Then I should see "Close survey"
