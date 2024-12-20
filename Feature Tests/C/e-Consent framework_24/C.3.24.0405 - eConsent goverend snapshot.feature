@@ -51,7 +51,7 @@ Feature:  C.3.24.0405. User Interface: The system shall support the e-Consent Fr
         And I enter "2000-01-01" into the input field labeled "DOB"
         And I enter "MyName" into the input field labeled "Participant's Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
-        And I click "Save signature"
+        And I click on the button labeled "Save signature" in the dialog box
 
         When I click on the button labeled "Next Page"
         Then I should see "Displayed below is a read-only copy of your survey responses."

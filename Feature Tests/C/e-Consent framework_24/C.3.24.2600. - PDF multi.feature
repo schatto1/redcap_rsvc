@@ -51,7 +51,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
       And I enter "multi data form same event" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                         | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
@@ -68,7 +68,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
       And I enter "multi data form and survey same event" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
@@ -86,7 +86,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
       And I enter "multi data form and survey same event" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
@@ -105,7 +105,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
       And I enter "multi data form different event" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot |
@@ -125,7 +125,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
       And I enter "multi data form and survey different event" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
          | Active | Edit settings | Name                                         | Type of trigger | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event                 | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1'    | All instruments       | File Repository                  |
@@ -145,7 +145,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I "Check" the box labeled "Save to File Repository"
       And I "Uncheck" the box labeled "Save to specified field:"
       And I enter "multi data form and survey different event" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
          | Active | Edit settings | Name                                         | Type of trigger | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event                 | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1'    | All instruments       | File Repository                  |
@@ -169,7 +169,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -178,7 +178,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       When I select "Data Mode" from the field labeled "Form 2 Trigger"
       And I enter "Coordinator" into the input field labeled "Coordinator's Name Typed"
       And I enter a signature in the field labeled "Coordinator's Signature"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -205,7 +205,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -216,7 +216,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       When I select "Data Mode" from the field labeled "Form 2 Trigger"
       And I enter "Coordinator" into the input field labeled "Coordinator's Name Typed"
       And I enter a signature in the field labeled "Coordinator's Signature"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -242,7 +242,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -255,7 +255,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And  I select "Survey Mode" from the field labeled "Form 2 Trigger"
       And I enter "Coordinator" into the input field labeled "Coordinator's Name Typed"
       And I enter a signature in the field labeled "Coordinator's Signature"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -279,7 +279,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -292,7 +292,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -320,7 +320,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -335,7 +335,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -363,7 +363,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -378,7 +378,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 

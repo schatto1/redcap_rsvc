@@ -23,7 +23,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       ##ACTION: New PDF Trigger
       When I click on the button labeled "PDF Snapshots of Record"
       And I click the button "+Add new trigger"
-      And I click "Cancel"
+      And I click on the button labeled "Cancel"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name | Type of trigger | Save snapshot when... | Scope of the snapshot | Location(s) to save the snapshot |
 
@@ -40,7 +40,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I "Check" the box labeled "Save to specified field:"
       And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
       And I enter "Custom" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
@@ -94,7 +94,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I "Check" the box labeled "Save to specified field:"
       And I select "coo_sign" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
       And I enter "Custom" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved! Trigger for PDF Snapshot was successfully modified"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name                            | Type of trigger   | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot                                   |
@@ -122,7 +122,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I select "Complete" from the field labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I Should see "Record Home Page"
@@ -162,7 +162,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -187,7 +187,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I click on the button labeled "Survey options"
       And I click on the survey option label containing "Open survey" label
       And I enter a signature in the field labeled "Coordinator's Signature"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 

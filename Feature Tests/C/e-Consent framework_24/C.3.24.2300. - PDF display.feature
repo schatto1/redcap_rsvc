@@ -23,7 +23,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       And I "Check" the box labeled "Save to specified field:"
       And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
       And I enter "Custom" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name     | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
@@ -46,7 +46,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       ##ACTION: Edit trigger
       When I click on the button labeled "Edit trigger" for the trigger labeled "Snapshot"
       And I enter "Hide Snapshot" in the box labeled "Name of trigger"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved! Trigger for PDF Snapshot was successfully modified"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
@@ -80,7 +80,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -172,7 +172,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -226,7 +226,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 

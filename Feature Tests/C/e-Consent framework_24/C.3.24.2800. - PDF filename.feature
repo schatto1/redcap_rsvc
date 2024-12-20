@@ -33,7 +33,7 @@ Feature: User Interface: The system shall support the customization of the file 
       And I "Check" the box labeled "Save to specified field:"
       And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
       And I enter "Custom" into the input field labeled "File name:"
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
       Then I should see a table header and rows containing the following values in the PDF snapshot table:
          | Active | Edit settings | Name     | Type of trigger | Save snapshot when...                                  | Scope of the snapshot | Location(s) to save the snapshot                    |
@@ -52,7 +52,7 @@ Feature: User Interface: The system shall support the customization of the file 
       And I enter "2000-01-01" into the input field labeled "DOB"
       And I enter "MyName" into the input field labeled "Participant's Name Typed"
       And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I select "Complete" from the field labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I Should see "Record Home Page"

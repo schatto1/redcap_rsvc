@@ -72,7 +72,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         And I check "Save to File Repository"
         And I check "Save to specific field"
         And I select "combo_file" on the event name "Curent event" from the dropdown field labeled "Save to specified field:" in the dialog box
-        And I click "Save"
+        And I click on the button labeled "Save"
         Then I should see "Saved! Trigger for PDF Snapshot was successfully modified"
         Then I should see a table header and rows containing the following values in the PDF snapshot table:
             | Active | Edit settings         | Name             | Type of trigger   | Save snapshot when...                                    | Scope of the snapshot  | Location(s) to save the snapshot                     |
@@ -99,7 +99,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         And I enter "2000-01-01" into the input field labeled "DOB"
         And I enter "MyName" into the input field labeled "Participant's Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
-        And I click "Save signature"
+        And I click on the button labeled "Save signature" in the dialog box
 
         When I click on the button labeled "Next Page"
         Then I should see "Displayed below is a read-only copy of your survey responses."
@@ -122,7 +122,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         Then I should see " Coordinator Signature "
         And I enter "Coordinator Name" into the input field labeled "Coordinator Name Typed"
         And I enter a signature in the field labeled "Coordinator'sSignature"
-        And I click "Save signature"
+        And I click on the button labeled "Save signature" in the dialog box
 
         When I click on the button labeled "Next Page"
         Then I should see "Displayed below is a read-only copy of your survey responses."

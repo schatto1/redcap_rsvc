@@ -82,7 +82,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         And I enter "email@test.edu" into the input field labeled "Email"
         And I enter "2000-01-01" into the input field labeled "DOB"
         And I enter a signature in the field labeled "Participant signature field"
-        And I click "Save signature"
+        And I click on the button labeled "Save signature" in the dialog box
 
         When I click on the button labeled "Next Page"
         Then I should see "Displayed below is a read-only copy of your survey responses."
@@ -186,7 +186,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         And I enter "email@test.edu" into the input field labeled "Email"
         And I enter "2000-01-01" into the input field labeled "DOB"
         And I enter a signature in the field labeled "Participant signature field"
-        And I click "Save signature"
+        And I click on the button labeled "Save signature" in the dialog box
 
         When I click on the button labeled "Next Page"
         Then I should see "Displayed below is a read-only copy of your survey responses."
@@ -276,7 +276,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         And I enter "email@test.edu" into the input field labeled "Email"
         And I enter "2000-01-01" into the input field labeled "DOB"
         And I enter a signature in the field labeled "Participant signature field"
-        And I click "Save signature"
+        And I click on the button labeled "Save signature" in the dialog box
 
         When I click on the button labeled "Next Page"
         Then I should see "Displayed below is a read-only copy of your survey responses."

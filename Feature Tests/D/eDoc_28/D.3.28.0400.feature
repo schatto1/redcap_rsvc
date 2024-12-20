@@ -26,7 +26,7 @@ Feature: User Interface: The system shall allow project level enabling or disabl
         And I enter "01-01-2000" into the input field labeled "DOB"
         And I enter "MyName" into the input field labeled "Participant's Name Typed"
         And I enter a signature in the field labeled "Participant signature field"
-        And I click "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Close survey"
 
         When I click on the button labeled "Close survey"
