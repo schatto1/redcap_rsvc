@@ -35,9 +35,9 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     When I click on the link labeled "User Rights"
     And I click on the link labeled "1_FullRights"
     Then I should see "Randomization"
-    And I should see a checkbox labeled "Setup"
-    And I should see a checkbox labeled "Dashboard"
-    And I should see a checkbox labeled "Randomize"
+    And I should see a checkbox labeled "Setup" that is checked
+    And I should see a checkbox labeled "Dashboard" that is checked
+    And I should see a checkbox labeled "Randomize" that is checked
     And I click on the button labeled "Cancel"
     Then  I should see a link labeled "Randomization"
 
@@ -73,5 +73,5 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     And I should NOT see a checkbox labeled "Dashboard"
     And I should NOT see a checkbox labeled "Randomize"
     And I click on the button labeled "Cancel"
-    And I log out
+    And I logout
 #END
