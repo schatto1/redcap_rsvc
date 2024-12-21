@@ -19,7 +19,7 @@ Feature: Logging Module: Email Logging Module shall provide the ability to searc
     And I click on the button labeled "I understand and agree"
 
     ##VERIFY
-    Then I should see "Search for" 
+    Then I should see "Search all outgoing emails for this project" 
     And I should see the dropdown field labeled "in" with the options below 
       | Subject, body, sender, and recipient                |
       | Subject and body                                    |
@@ -35,6 +35,6 @@ Feature: Logging Module: Email Logging Module shall provide the ability to searc
       | - Survey Invitations (only ASIs)                    |
       | Alerts & Notifications                              |
     And I should see the dropdown field labeled "Pertaining to a specific record:" with the options below 
-      | All Records     |
+      | All records     |
       | 1 Tester 123    |
     And I should see "Search within a window of time from" 
