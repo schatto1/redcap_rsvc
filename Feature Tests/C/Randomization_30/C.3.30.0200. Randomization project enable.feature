@@ -12,6 +12,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
    
   Scenario: ##VERIFY C.3.30.0200.0200. Enabling adds randomization module to application box
     Then I should see a button labeled "Disable" in the "Randomization module" row in the "Enable optional modules and customizations" section
+    #While the "Set up a randomization model" button is visible, it will be disabled (greyed out).
     And I should see "Set up a randomization model"
     And I should NOT see a link labeled "Randomization" 
     #This user's account doesn't have randomization rights.
