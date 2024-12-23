@@ -32,10 +32,10 @@ Feature: User Interface: The system shall support the customization of the file 
       And I "Check" the box labeled "Save to File Repository"
       And I "Check" the box labeled "Save to specified field:"
       And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
-      And I enter "Custom" in the field labeled "File name:"
-      And I click "Save"
+      And I enter "Custom" into the input field labeled "File name:"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name     | Type of trigger | Save snapshot when...                                  | Scope of the snapshot | Location(s) to save the snapshot                    |
          | Active | Edit Copy     | Snapshot | Logic-based     | Logic becomes true: [participant_consent_complete]='2' | All instruments       | File Repository Specified field: [participant_file] |
 
@@ -43,21 +43,27 @@ Feature: User Interface: The system shall support the customization of the file 
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 1."
 
-      When I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      When I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I select "Complete" from the field labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
-      Then I Should see "Record Home Page"
+      Then I should see "Record Home Page"
       And I should see "Complete" status for "Event 1" insturment "Participant Consent"
-      And I Should see "Incomplete (no data saved)" icon for the Data Collection Instrument labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
+      And I should see "Incomplete (no data saved)" icon for the Data Collection Instrument labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
 
    Scenario: Verification pdf saved and logged correctly
       ##VERIFY specified field
@@ -71,7 +77,7 @@ Feature: User Interface: The system shall support the customization of the file 
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in a table:
          | Name   | PDF utilized e-Consent Framework | Record | Survey Completed         | Identifier (Name, DOB) | Version | Type |
          | custom | -                                | 1      | (Event 1 (Arm 1: Arm 1)) |                        |         |      |
 

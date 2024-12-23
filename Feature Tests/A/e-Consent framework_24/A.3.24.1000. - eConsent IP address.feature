@@ -28,7 +28,7 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I click on the link labeled "Modules/Services Configuration"
         Then I should see "e-Consent Framework"
 
-        When I select "Do NOT capture IP address" on the dropdown field labeled "Do NOT capture IP address" 
+        When I select "Do NOT capture IP address" on the dropdown field labeled "Capture the IP address" 
         And I click on the button labeled "Save Changes"
         Then I should see "Your system configuration values have now been changed!"
 
@@ -46,7 +46,7 @@ Feature: Control Center: The system shall support capturing the IP address of su
         And I click on the link labeled "Modules/Services Configuration"
         Then I should see "e-Consent Framework"
 
-        When I select "Capture IP address" on the dropdown field labeled "Capture IP address"
+        When I select "Capture IP address" on the dropdown field labeled "Capture the IP address"
         And I click on the button labeled "Save Changes"
         Then I should see "Your system configuration values have now been changed!"
 
