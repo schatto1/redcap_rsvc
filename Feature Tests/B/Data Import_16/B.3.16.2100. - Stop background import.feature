@@ -15,8 +15,8 @@ Feature: User Interface: The system shall provide the ability for the user impor
         Then I should see Project status: "Production"
 
         Given I click on the link labeled "Data Import Tool"
-        And I click on the dropdown labeled "Import as background process"
-        And I upload the file labeled "BigDataTestProjectDATA.csv"
+        And I select "Import as background process" on the dropdown field labeled "Choose an import option"
+        And I upload a "csv" format file located at "import_files/BigDataTestProjectDATA.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         And I click on the button labeled "Upload"
         And I click on the button labeled "Yes, use background process"
         And I click on the button labeled "Confirm"
@@ -24,7 +24,7 @@ Feature: User Interface: The system shall provide the ability for the user impor
         Then I should see "Your file is currently being uploaded. Please wait"
         ##M this may take several minutes while the system analyzes for errors
 
-        And I Should see "File was uploaded and will be processed soon"
+        And I should see "File was uploaded and will be processed soon"
         And I click on the button labeled "Close"
         And I click the tab labeled "View Background imports"
         And I click on the button labeled "Halt imports"
