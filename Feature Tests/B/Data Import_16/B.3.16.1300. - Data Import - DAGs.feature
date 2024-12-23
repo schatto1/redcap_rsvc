@@ -23,8 +23,8 @@ Feature: B.3.16.1300. User Interface: The system shall provide the ability to as
         And I click on the button labeled "Add user" in the dialog box
         Then I should see a table header and rows containing the following values in a table:
             | Role | Username or users assigned to a role | Expiration | Data Access Group |
-            |      | test_admin                           |            | -                 |
-            |      | test_user1                           |            | Test_Group1       |
+            |   —   | test_admin  (Admin User)                         |   never         | —                 |
+            |   —   | test_user1  (Test User1)                         |   never         | Test_Group1       |
 
         #SETUP_PRODUCTION
         Given I click on the link labeled "Project Setup"
@@ -34,8 +34,7 @@ Feature: B.3.16.1300. User Interface: The system shall provide the ability to as
         Then I should see Project status: "Production"
 
         Given I click on the link labeled "Data Import Tool"
-        And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Rows.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click on the button labeled "Upload File"
+        And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Rows.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         Then I should see "Your document was uploaded successfully and is ready for review"
 
         When I click on the button labeled "Import Data"
@@ -46,9 +45,8 @@ Feature: B.3.16.1300. User Interface: The system shall provide the ability to as
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.16.1300.100"
         And I click on the link labeled "Data Import Tool"
-        And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Dag.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click on the button labeled "Upload File"
-
+        And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Dag.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
+        
         Then I should see "ERROR: Illegal use of 'redcap_data_access_group' field!"
         And I logout
 
@@ -56,8 +54,7 @@ Feature: B.3.16.1300. User Interface: The system shall provide the ability to as
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.16.1300.100"
         And I click on the link labeled "Data Import Tool"
-        And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Dag.csv", by clicking the button near "Choose File" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click on the button labeled "Upload File"
+        And I upload a "csv" format file located at "import_files/B.3.16.1300_DataImport_Dag.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
 
         Then I should see a table header and rows containing the following values in a table:
             | record_id | redcap_data_access_group | name   |

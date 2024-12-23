@@ -17,8 +17,8 @@ Feature: User Interface: The system shall report background process data import 
         Then I should see Project status: "Production"
 
         Given I click on the link labeled "Data Import Tool"
-        When I click on the dropdown labeled "Import as background process"
-        And I upload the file labeled "BigDataTestProjectbadDATA.csv"
+        When I select "Import as background process" on the dropdown field labeled "Choose an import option"
+        And I upload a "csv" format file located at "import_files/BigDataTestProjectbadDATA.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         And I click on the button labeled "Upload"
         And I click on the button labeled "Yes, use background process"
         And I click on the button labeled "Confirm"
@@ -40,7 +40,7 @@ Feature: User Interface: The system shall report background process data import 
         When I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
             | Username            | Action             | List of Data Changes OR Fields Exported |
-            | SYSTEM (Test_Admin) | Create Record 3000 | record_id=’3000’                        |
+            | SYSTEM (Test_Admin) | Create Record 3000 | record_id='3000'                        |
 
         When I click on the button labeled "View Details"
         And I click on the button labeled "Download list of all errors"

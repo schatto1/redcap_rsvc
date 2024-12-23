@@ -15,9 +15,9 @@ Feature: User Interface: The system shall provide the ability to create a new re
         Then I should see Project status: "Production"
 
         Given I click on the link labeled "Data Import Tool"
-        When I click on the dropdown labeled "Import in real time"
-        And I select "Yes, display uploaded data prior to importing"
-        And I select the file labeled "BigDataTestProjectDATARename1.csv"
+        When I select "Import in real time" on the dropdown field labeled "Choose an import option"
+        And I select "Yes, display uploaded data prior to importing" on the dropdown field labeled "Display the data comparison table"
+        And I upload a "csv" format file located at "import_files/BigDataTestProjectDATARename1.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         And I click on the button labeled "Upload"
         And I click on the button labeled "Upload File"
         Then I should see "Instructions for Data Review"
@@ -41,10 +41,10 @@ Feature: User Interface: The system shall provide the ability to create a new re
         And I disable the button labeled "Auto-numbering for Records"
         And I click on the link labeled "Data Import Tool"
 
-        When I click on the dropdown labeled "Import in real time"
-        And I select "Yes, display uploaded data prior to importing"
-        And I select the dropdown labeled "Auto-number/overwrite record IDs?" and I select " Yes, Blank values in the file will overwrite existing values"
-        And I select the dropdown labeled "BigDataTestProjectDATARename2.csv"
+        When I select "Import in real time" on the dropdown field labeled "Choose an import option"
+        And I select "Yes, display uploaded data prior to importing" on the dropdown field labeled "Display the data comparison table"
+        And I select "Yes, Blank values in the file will overwrite existing values" on the dropdown field labeled "Auto-number/overwrite record IDs?"
+        And I upload a "csv" format file located at "import_files/BigDataTestProjectDATARename2.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         And I click on the button labeled "Upload File"
         Then I should see "Import successful! 30 records were created or modified during the import"
 
