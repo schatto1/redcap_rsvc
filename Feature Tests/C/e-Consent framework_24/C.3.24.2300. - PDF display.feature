@@ -107,7 +107,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
    Scenario: Cancel Inactivate triggers
       When I click on the button labeled "PDF Snapshots of Record"
-      Then I should see "Hide inactive" is "Enabled"
+      Then I should see a checkbox labeled "Hide inactive" that is checked
       And I should see the pdf snapshot trigger is "Active" for trigger labeled "Hide Snapshot"
       And I should see the pdf snapshot trigger is "Active" for trigger labeled "Snapshot"
 
@@ -123,7 +123,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
    Scenario: Inactivate triggers
       When I click on the button labeled "PDF Snapshots of Record"
-      Then I should see "Hide inactive" is "Enabled"
+      Then I should see a checkbox labeled "Hide inactive" that is checked
       And I should see the pdf snapshot trigger is "Active" for trigger labeled "Hide Snapshot"
       And I should see the pdf snapshot trigger is "Active" for trigger labeled "Snapshot"
 
