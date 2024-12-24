@@ -24,7 +24,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I click on the button labeled "+Add new trigger"
       And I enter "Snapshot 1" in the box labeled "Name of trigger"
       And I select "'Participant Consent' - Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
-      And I enter "" into the field labeled "[All instruments]"
+      And I enter "" into the input field labeled "[All instruments]"
       And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
       And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
       And I check the checkbox labeled "Save to File Repository"
@@ -42,7 +42,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I enter "Snapshot 2" in the box labeled "Name of trigger"
       And I select "--- select a survey ---" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
       And I enter "[participant_consent_complete]='2'" in the box labeled "When the following logic becomes true"
-      And I enter "" into the field labeled "[All instruments]"
+      And I enter "" into the input field labeled "[All instruments]"
       And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
       And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
       And I check the checkbox labeled "Save to File Repository"
@@ -61,7 +61,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       And I enter "Snapshot 3" in the box labeled "Name of trigger"
       And I select "--- select a survey ---" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
       And I enter "[participant_consent_complete]='2' and [coordinator_signature_complete]='2'" in the box labeled "When the following logic becomes true"
-      And I enter "" into the field labeled "[All instruments]"
+      And I enter "" into the input field labeled "[All instruments]"
       And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
       And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
       And I check the checkbox labeled "Save to File Repository"
