@@ -23,12 +23,12 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
         Then I should see a checkbox labeled "Hide inactive" that is checked
         And I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
 
-        When I "Disable" the "Hide inactive"
+        When I uncheck the checkbox labeled "Hide inactive"
         And I "Inactive" the e-consent framework for survey labeled "Participant Consent"
         And I click on the button labeled "Set as inactive"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Inactive"
 
-        When I "Enable" the "Hide inactive"
+        When I check the checkbox labeled "Hide inactive"
         Then I should NOT see the e-consent framework for survey labeled "Participant Consent" is "Inactive"
 
     ##ACTION: add record to get participant signature
@@ -87,7 +87,7 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
     Scenario: Enable e-Consent
         When I click on the button labeled "Designer"
         And I click on the button labeled "e-Consent"
-        When I "Enable" the "Hide inactive"
+        When I check the checkbox labeled "Hide inactive"
         And I "Active" the e-consent framework for survey labeled "Participant Consent"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
 

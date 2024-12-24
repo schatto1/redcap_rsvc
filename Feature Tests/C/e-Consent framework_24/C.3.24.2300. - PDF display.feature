@@ -136,7 +136,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
          | Enable | Edit Copy     | Snapshot | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
    Scenario: Unhide inactive
-      When I "disable" the button labeled "Hide inactive"
+      When I uncheck the checkbox labeled "Hide inactive"
       Then I should see a table header and rows containing the following values in a table:
          | Active  | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Enable  | Edit Copy     | Snapshot      | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
@@ -154,7 +154,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
 
    Scenario: Hide inactive
-      When I "enable" the button labeled "Hide inactive"
+      When I check the checkbox labeled "Hide inactive"
       Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name | Type of trigger | Save snapshot when... | Scope of the snapshot | Location(s) to save the snapshot |
 
@@ -206,7 +206,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
    Scenario: Reactivate triggers
       When I click on the button lanbeled "Designer"
       And I click on the button labeled "e-Consent and PDF Snapshot"
-      And I "disable" the button labeled "Hide inactive"
+      And I uncheck the checkbox labeled "Hide inactive"
       Then I should see a table header and rows containing the following values in a table:
          | Active  | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Disable | Edit Copy     | Snapshot      | Survey completion | Complete survey "Participant Consent" | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |

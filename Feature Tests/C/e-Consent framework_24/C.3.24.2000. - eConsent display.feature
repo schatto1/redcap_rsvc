@@ -71,7 +71,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to hid
    Scenario: ##ACTION: e-consent survey settings - disabled
       When I click on the button labeled "Designer"
       And I click on the button labeled "e-Consent"
-      And I "Disable" the "Hide inactive"
+      And I uncheck the checkbox labeled "Hide inactive"
       And I "Inactive" the e-consent framework for survey labeled "Participant Consent"
       And I click on the button labeled "Set as inactive"
       Then I should see the e-consent framework for survey labeled "Participant Consent" is "Inactive"
@@ -120,7 +120,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to hid
    Scenario: ##ACTION: e-consent survey settings - enabled
       When I click on the button labeled "Designer"
       And I click on the button labeled "e-Consent"
-      And I "Disable" the "Hide inactive"
+      And I uncheck the checkbox labeled "Hide inactive"
       And I "Active" the e-consent framework for survey labeled "Participant Consent"
       Then I should see "e-Consent successfully"
       And I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
