@@ -34,10 +34,10 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I enter "Custom Dropdown 1 Form Snapshot" in the box labeled "Name of trigger"
       And I select "'Participant Consent' - [Any EVENT]" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
       And I enter "" into the field labeled "[All instruments]"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
       And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Check" the box labeled "Save to specified field:"
+      And I check the checkbox labeled "Save to File Repository"
+      And I check the checkbox labeled "Save to specified field:"
       And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
       And I enter "Custom" into the input field labeled "File name:"
       And I click on the button labeled "Save"
@@ -88,10 +88,10 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I select "--- select a survey ---" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
       And I enter "[participant_consent_complete]='2' and [coordinator_signature_complete]='2'" in the box labeled "When the following logic becomes true"
       And I click "Particpant Consent" and "Coordinator Siganture" from "[Any Event]" located in "Arm 1: Arm 1"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
       And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Check" the box labeled "Save to specified field:"
+      And I check the checkbox labeled "Save to File Repository"
+      And I check the checkbox labeled "Save to specified field:"
       And I select "coo_sign" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
       And I enter "Custom" into the input field labeled "File name:"
       And I click on the button labeled "Save"
