@@ -20,7 +20,7 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
     Scenario: #SETUP_eConsent to NOT allow for edit by users
         ##SETUP Allow e-Consent responses to be edited by users?
         When I click on the button labeled "Designer"
-        And I click on the button labeled "e-Consent and PDF Snapshots"
+        And I click on the button labeled "e-Consent"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
 
         When I edit "Participant Consent"
@@ -84,7 +84,7 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
     Scenario: #SETUP_eConsent to allow for edit by users
         ##SETUP Allow e-Consent responses to be edited by users?
         When I click on the button labeled "Designer"
-        And I click on the button labeled "e-Consent and PDF Snapshots"
+        And I click on the button labeled "e-Consent"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
 
         When I edit "Participant Consent"

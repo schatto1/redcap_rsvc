@@ -20,7 +20,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
     Scenario: #SETUP_eConsent to allow for edit by users
         ##SETUP Allow e-Consent responses to be edited by users?
         When I click on the button labeled "Designer"
-        And I click on the button labeled "e-Consent and PDF Snapshots"
+        And I click on the button labeled "e-Consent"
         And I click on the button labeled "+Enable the e-Consent Framework for a survey"
         And I select "Participant Consent" from the dialogue box labeled "Enable e-Consent for a Survey"
         Then I should see a dialogue box labeled "Enable e-Consent"

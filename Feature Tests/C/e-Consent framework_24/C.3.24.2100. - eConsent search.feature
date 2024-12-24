@@ -18,7 +18,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to sea
       #FUNCTIONAL_REQUIREMENT
       ##ACTION: e-consent search
       When I click on the button labeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshots"
+      And I click on the button labeled "e-Consent"
       Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
       And I should see the e-consent framework for survey labeled "Coordinator Consent" is "Active"
 

@@ -19,7 +19,7 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
     #FUNCTIONAL_REQUIREMENT
     Scenario: ##ACTION: e-consent survey settings - disabled
         When I click on the button labeled "Designer"
-        And I click on the button labeled "e-Consent and PDF Snapshots"
+        And I click on the button labeled "e-Consent"
         Then I should see "Hide inactive" is "Enabled"
         And I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
 
@@ -86,7 +86,7 @@ Feature: User Interface: The system shall support the enabling of the e-Consent 
     ##ACTION: e-consent survey settings - enable
     Scenario: Enable e-Consent
         When I click on the button labeled "Designer"
-        And I click on the button labeled "e-Consent and PDF Snapshots"
+        And I click on the button labeled "e-Consent"
         When I "Enable" the "Hide inactive"
         And I "Active" the e-consent framework for survey labeled "Participant Consent"
         Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"

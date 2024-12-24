@@ -19,7 +19,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to opt
    Scenario: #SETUP_eConsent for participant consent process
       #SETUP_eConsent for participant consent process
       When I click on the button labeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshots"
+      And I click on the button labeled "e-Consent"
       And I click on the button labeled "+Enable the e-Consent Framework for a survey"
       And I select "Participant Consent" from the dialogue box labeled "Enable e-Consent for a Survey"
       Then I should see a dialogue box labeled "Enable e-Consent"

@@ -103,7 +103,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
       #Add consent form version via file upload
       #SETUP_eConsent
       When I click on the button labeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshots"
+      And I click on the button labeled "e-Consent"
       Then I should see "Participant Consent"
 
       When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
