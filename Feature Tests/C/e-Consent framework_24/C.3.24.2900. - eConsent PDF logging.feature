@@ -50,7 +50,7 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
 
       And I enter "" into the field labeled "[All instruments]"
       And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
-      And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
+      And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
       And I check the checkbox labeled "Save to File Repository"
       And I enter "Snapshot" into the input field labeled "File name:"
       And I click on the button labeled "Save"
