@@ -21,7 +21,7 @@ Feature: User Interface: The system shall support conditional logic integration 
       When I click on the button labeled "Designer"
       And I click on the button labeled "e-Consent and PDF Snapshot"
       And I click on the button labeled "PDF Snapshots of Record"
-      And I click the button "+Add new trigger"
+      And I click on the button labeled "+Add new trigger"
       And I enter "Snapshot 1" in the box labeled "Name of trigger"
       And I select "'Participant Consent' - Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
       And I enter "" into the field labeled "[All instruments]"
@@ -38,7 +38,7 @@ Feature: User Interface: The system shall support conditional logic integration 
 
    Scenario: New PDF Trigger testing When the following logic becomes true (only once per record)
       ##ACTION: When the following logic becomes true (only once per record)
-      When I click the button "+Add new trigger"
+      When I click on the button labeled "+Add new trigger"
       And I enter "Snapshot 2" in the box labeled "Name of trigger"
       And I select "--- select a survey ---" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
       And I enter "[participant_consent_complete]='2'" in the box labeled "When the following logic becomes true"
@@ -57,7 +57,7 @@ Feature: User Interface: The system shall support conditional logic integration 
 
    Scenario: New PDF Trigger testing multi-form
       ##ACTION: When the following logic becomes true (only once per record)
-      When I click the button "+Add new trigger"
+      When I click on the button labeled "+Add new trigger"
       And I enter "Snapshot 3" in the box labeled "Name of trigger"
       And I select "--- select a survey ---" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
       And I enter "[participant_consent_complete]='2' and [coordinator_signature_complete]='2'" in the box labeled "When the following logic becomes true"
