@@ -48,7 +48,7 @@ Feature: User Interface: The system shall restrict users by DAGs when using the 
             | test_Admin | Update record (import) 3 | Assign record to Data Access Group (redcap_data_access_group = 'testgroup2') |
             | test_Admin | Update record (import) 2 | Assign record to Data Access Group (redcap_data_access_group = 'testgroup1') |
 
-        Given I login to REDCap with the use "Test_User1"
+        Given I login to REDCap with the user "Test_User1"
         When I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.16.2200.100"
         And I click on the link labeled "Record Status Dashboard"
@@ -58,7 +58,7 @@ Feature: User Interface: The system shall restrict users by DAGs when using the 
             | 4         |
         And I logout
 
-        Given I login to REDCap with the use "Test_User2"
+        Given I login to REDCap with the user "Test_User2"
         When I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.16.2200.100"
         And I click on the link labeled "Record Status Dashboard"
