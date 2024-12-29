@@ -15,7 +15,7 @@ Feature: User Interface: The system shall provide the ability for the user impor
         Then I should see Project status: "Production"
 
         Given I click on the link labeled "Data Import Tool"
-        And I select "Import as background process" on the dropdown field labeled "Choose an import option"
+        And I select "Import as background process (better for large data sets)" on the dropdown field labeled "Choose an import option"
         And I upload a "csv" format file located at "import_files/BigDataTestProjectDATA.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         And I click on the button labeled "Upload"
         And I click on the button labeled "Yes, use background process"

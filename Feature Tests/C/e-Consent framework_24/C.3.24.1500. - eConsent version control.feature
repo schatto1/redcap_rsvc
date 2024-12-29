@@ -9,7 +9,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         And I create a new project named "C.3.24.1500.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24EConsentWithSetup.xml", and clicking the "Create Project" button
 
         #SETUP_PRODUCTION
-        When I click on the button labeled "Project Setup"
+        When I click on the link labeled "Project Setup"
         And I click on the button labeled "Move project to production"
         And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
         And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
@@ -18,7 +18,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
     Scenario: Cancel an add consent form version
         #SETUP_eConsent
         When I click on the button labeled "Designer"
-        And I click on the button labeled "e-Consent and PDF Snapshots"
+        And I click on the button labeled "e-Consent"
         Then I should see "Participant Consent"
 
         When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
@@ -118,7 +118,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         #Add consent form version via file upload
         #SETUP_eConsent
         When I click on the button labeled "Designer"
-        And I click on the button labeled "e-Consent and PDF Snapshots"
+        And I click on the button labeled "e-Consent"
         Then I should see "Participant Consent"
 
         When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
@@ -229,7 +229,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         #Add consent form version via file upload
         #SETUP_eConsent
         When I click on the button labeled "Designer"
-        And I click on the button labeled "e-Consent and PDF Snapshots"
+        And I click on the button labeled "e-Consent"
         Then I should see "Participant Consent"
 
         # view all versions

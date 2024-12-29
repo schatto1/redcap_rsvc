@@ -41,7 +41,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
             | Participant Consent(survey) | Check       |
 
         #Verify Repeatable
-        When I click on the button labeled "Project Setup"
+        When I click on the link labeled "Project Setup"
         And I click on the button labeled "Modify" on the field labeled  "Repeating instruments and events"
         And I select "Repeat Entire Event" on the dropdown field labeled "Event 1 (Arm 1: Arm 1)"
         And I select "Repeat Instruments" on the dropdown field labeled "Event Three (Arm 1: Arm 1)"
@@ -52,7 +52,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I click on the button labeled "Close" in the dialog box
 
         #SETUP_PRODUCTION
-        When I click on the button labeled "Project Setup"
+        When I click on the link labeled "Project Setup"
 
         And I click on the button labeled "Move project to production"
         And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
