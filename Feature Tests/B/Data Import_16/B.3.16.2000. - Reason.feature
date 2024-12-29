@@ -23,12 +23,7 @@ Feature: User Interface: The system shall provide the ability to require a reaso
         #FUNCTIONAL REQUIREMENT
         ##ACTION
         When I click on the link labeled "Data Import Tool"
-        And I click on the tab labeled "CVS import"
-        Then I should see the button labeled "Choose File"
-
-        When I click on the button labeled "Choose File"
-        And I upload the csv file labeled "B3.16.2000.100data.csv"
-        And I click on the button labeled "Upload File"
+        And I upload a "csv" format file located at "import_files/B3.16.2000.100data.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         Then I should see "Your document was uploaded successfully and is ready for review"
 
         When I click on the button labeled "Import Data"

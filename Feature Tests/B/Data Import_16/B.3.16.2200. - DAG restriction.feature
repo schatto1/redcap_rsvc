@@ -36,12 +36,7 @@ Feature: User Interface: The system shall restrict users by DAGs when using the 
         #FUNCTIONAL REQUIREMENT
         ##ACTION
         When I click on the link labeled "Data Import Tool"
-        And I click on the tab labeled "CVS import"
-        Then I should see the button labeled "Choose File"
-
-        When I click on the button labeled "Choose File"
-        And I upload the csv file labeled "B.3.16.2200_DataImport_Dag.csv"
-        And I click on the button labeled "Upload File"
+        And I upload a "csv" format file located at "import_files/B.3.16.2200_DataImport_Dag.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         Then I should see "Your document was uploaded successfully and is ready for review"
 
         ##VERIFY
