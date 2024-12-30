@@ -24,6 +24,7 @@ Feature: User Interface: The system shall report background process data import 
         Then I should see a table header and rows containing the following values in a table:
             | Status     | Original Filename              | Records Provided                  |
             | Queued     | BigDataTestProjectbadDATA.csv  | 75 |
+        And I wait for background processes to finish
         ##M this may take several minutes
 
         Given I click on the link labeled "Record Status Dashboard"

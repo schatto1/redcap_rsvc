@@ -22,6 +22,7 @@ Feature: User Interface: The system shall provide the ability for the user impor
         And I click on the button labeled "Confirm"
         And I click on the button labeled "Upload File"
         Then I should see "Your file is currently being uploaded. Please wait"
+        And I wait for background processes to finish
         ##M this may take several minutes while the system analyzes for errors
 
         And I should see "File was uploaded and will be processed soon"
