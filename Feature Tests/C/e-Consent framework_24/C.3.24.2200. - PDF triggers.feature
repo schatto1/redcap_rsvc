@@ -188,7 +188,7 @@ Feature: User Interface: The system shall support the creation, modification, an
 
       When I click on the file link the field labeled "Participant Consent file"
       Then I should have a pdf file with the following values "Participant Consent"
-      #M: Close document
+      #Manual: Close document
 
       #Add Insturment 2's response
       When I click on the bubble labeled "Coordiantor Signature"
@@ -217,7 +217,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       When I click on the file link the field labeled "Coordinator Signature file"
       Then I should have a pdf file with the following values "Participant Consent"
       And I should have a pdf file with the following values "Coordinator Signature"
-   #M: Close document
+   #Manual: Close document
 
 
    Scenario: Verification pdf saved and logged correctly

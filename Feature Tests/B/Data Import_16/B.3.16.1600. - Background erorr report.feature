@@ -24,7 +24,7 @@ Feature: User Interface: The system shall report background process data import 
         Then I should see a table header and rows containing the following values in a table:
             | Status     | Original Filename              | Records Provided                  |
             | Queued     | BigDataTestProjectbadDATA.csv  | 75 |
-        ##M this may take several minutes
+        #Manual: this may take several minutes
 
         Given I click on the link labeled "Record Status Dashboard"
         Then I should see a table header and rows containing the following values in a table:
@@ -34,7 +34,7 @@ Feature: User Interface: The system shall report background process data import 
             | 5         |        |
             | 6         |        |
         And I should see all records are in an unverified status
-        ##M note Records were skipped, user receives email with link to the "View background Imports" where they can click the View details button where they can either Download list of all errors or Download records/data that did not import
+        #Manual: note Records were skipped, user receives email with link to the "View background Imports" where they can click the View details button where they can either Download list of all errors or Download records/data that did not import
 
         #VERIFY
         When I click on the link labeled "Logging"
