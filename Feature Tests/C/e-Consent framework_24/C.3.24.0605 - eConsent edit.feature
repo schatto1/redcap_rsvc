@@ -170,7 +170,7 @@ Feature: User Interface: The e-Consent framework shall support editing of respon
         When I click on the file link for record "2" Survey "Participant Consent (Event 1 (Arm 1: Arm 1))"
         Then I should have a pdf file with "FirstName" into the input field labeled "First Name"
         #NOTE: Edited version with "NewFirstName" is NOT in the file repository.
-        #M: Close document
+        #Manual: Close document
 
         ##VERIFY_Logging
         When I click on the link labeled "Logging"

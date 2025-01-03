@@ -97,7 +97,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
 
       When I click on the file link for record "1" Survey "(Event 1 (Arm 1: Arm 1))"
       Then I should see "This is my test 1 consent form"
-   #M: Close document
+   #Manual: Close document
 
    Scenario: C.3.24.1600.200 e-Consent create unique version using Inline PDF
       #Add consent form version via file upload
@@ -188,5 +188,5 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
 
       When I click on the file link for record "2" Survey "(Event 1 (Arm 1: Arm 1))"
       Then I should see "consent.pdf"
-#M: Close document
+#Manual: Close document
 #END

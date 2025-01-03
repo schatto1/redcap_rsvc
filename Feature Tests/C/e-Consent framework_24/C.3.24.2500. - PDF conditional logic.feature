@@ -122,7 +122,7 @@ Feature: User Interface: The system shall support conditional logic integration 
 
       When I click on the file link the field labeled "Participant Consent file"
       Then I should have a pdf file with the following values "Participant Consent"
-      #M: Close document
+      #Manual: Close document
 
       #Add Insturment 2's response
       When I click on the bubble labeled "Coordiantor Signature"
