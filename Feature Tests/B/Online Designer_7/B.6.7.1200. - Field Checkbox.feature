@@ -54,8 +54,8 @@ Feature: Field Creation: The system shall support the creation of Checkboxes (mu
         ##VERIFY_CODEBOOK
         When I click on the link labeled "Codebook"
         Then I should see a table header and rows containing the following values in the codebook table:
-            | # | Variable / Field Name | Field Label | Field Attributes |
-            | 2 | [checkbox]            | Checkbox    | checkbox         |
+            | Variable / Field Name | Field Label | Field Attributes |
+            | [checkbox]            | Checkbox    | checkbox         |
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
