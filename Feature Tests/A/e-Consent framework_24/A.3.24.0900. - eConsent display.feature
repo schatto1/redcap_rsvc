@@ -25,7 +25,7 @@ Feature: Control Center: The system shall support the option to display or hide 
               And I click on the link labeled "Modules/Services Configuration"
               Then I should see "e-Consent Framework"
 
-              When I select "Hide e-Consent Framework option" on the dropdown field labeled "Hide e-Consent Framework option" 
+              When I select "Hide e-Consent Framework option" on the dropdown field labeled "Display 'e-Consent Framework' option for ALL surveys?" 
               And I click on the button labeled "Save Changes"
               Then I should see "Your system configuration values have now been changed!"
 
