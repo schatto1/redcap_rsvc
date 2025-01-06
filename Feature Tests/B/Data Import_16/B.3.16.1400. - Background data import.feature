@@ -23,6 +23,7 @@ Feature: User Interface: The system shall allow data to be uploaded as backgroun
         Then I should see a table header and rows containing the following values in a table:
             | Status     | Original Filename              | Records Provided                  |
             | Queued     | BigDataTestProjectbadDATA.csv  | 75 |
+        And I wait for background processes to finish
         #Manual: this may take several minutes
 
         Given I click on the link labeled "Record Status Dashboard"

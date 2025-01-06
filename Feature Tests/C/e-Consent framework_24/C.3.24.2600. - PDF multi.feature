@@ -12,7 +12,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       #SETUP_DESIGNER
       When I click on the button labeled "Designer"
       And I click on the link labeled "Participant Consent"
-      And I click on the button labeled "Add Field" at the bottom of the instrument
+      And I click on the last button labeled "Add Field"
       And I click on the dropdown field labeled "Select a Type of Field"
       And I add a new Multiple Choice - Radio Buttons (Single Answer) field labeled "Form 1 Trigger" with the variable name "trigger1"
       And I enter "1, Data Mode" on the first row of the input field labeled "Choices (one choice per line)"
@@ -22,7 +22,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the button labeled "Designer"
       And I click on the link labeled "Coordinator Signature"
-      And I click on the button labeled "Add Field" at the bottom of the instrument
+      And I click on the last button labeled "Add Field"
       And I click on the dropdown field labeled "Select a Type of Field"
       And I add a new Multiple Choice - Radio Buttons (Single Answer) field labeled "Form 2 Trigger" with the variable name "trigger2"
       And I enter "1, Data Mode" on the first row of the input field labeled "Choices (one choice per line)"
