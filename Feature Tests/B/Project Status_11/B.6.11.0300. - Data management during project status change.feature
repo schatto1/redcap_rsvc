@@ -49,6 +49,6 @@ Feature: User Interface: The system shall support the ability for a user to keep
         When I click on the link labeled "Record Status Dashboard"
         Then I should see "No records exist yet"
         ##VERIFY_LOGGING
-        When I click on "Logging"
+        When I click on the link labeled "Logging"
         Then I should see "Move project to Production status (delete all records)"
 #END

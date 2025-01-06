@@ -61,7 +61,7 @@ Feature: User Interface: The system shall restrict users by DAGs when using the 
             | Record ID |
             | 2         |
             | 4         |
-        And I log out
+        And I logout
 
         Given I login to REDCap with the use "Test_User2"
         When I click on the link labeled "My Projects"
@@ -70,5 +70,5 @@ Feature: User Interface: The system shall restrict users by DAGs when using the 
         Then I should see a table header and rows containing the following values in the record status dashboard table:
             | Record ID |
             | 3         |
-        And I log out
+        And I logout
 #END

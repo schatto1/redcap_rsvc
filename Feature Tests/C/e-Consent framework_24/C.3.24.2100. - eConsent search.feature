@@ -22,12 +22,12 @@ Feature: User Interface: The system shall support the e-Consent Framework to sea
       Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
       And I should see the e-consent framework for survey labeled "Coordinator Consent" is "Active"
 
-      When I enter "Participant Consent" in the field labeled "Search"
+      When I enter "Participant Consent" into the input field labeled "Search"
       Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
       And I should NOT see the e-consent framework for survey labeled "Coordinator Consent" is "Active"
 
       ##ACTION: clear search
-      When I enter "" in the field labeled "Search"
+      When I enter "" into the input field labeled "Search"
       Then I should see the e-consent framework for survey labeled "Participant Consent" is "Active"
       And I should see the e-consent framework for survey labeled "Coordinator Consent" is "Active"
 #END

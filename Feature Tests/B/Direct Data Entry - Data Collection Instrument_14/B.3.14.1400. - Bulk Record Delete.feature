@@ -18,6 +18,9 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         Then I should see Project status: "Production"
 
     Scenario:  #SET UP_USER_RIGHTS
+        When I click on the link labeled "User Rights"
+        And I click on the button labeled "Upload or download users, roles, and assignments"
+        Then I should see "Upload users (CSV)"
         When I click on the link labeled "Upload users (CSV)"
         Then I should see a dialog containing the following text: "Upload users (CSV)"
 
@@ -69,25 +72,23 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | 4         |
             | 5         |
             | 6         |
-        And I log out
+        And I logout
 
     ##FUNCTIONAL_REQUIREMENT
     Scenario:  ###ACTION Delete multiple records
-        When I login with "test_user2"
+        When I login to REDCap with the user "Test_User2"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.1400.100"
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should not see "Bulk Record Delete" in the tab labeled "Other Functionality"
-        And I log out
+        Then I should NOT see a button labeled "Bulk Record Delete"
+        And I logout
 
-        When I login with "test_user1"
+        When I login to REDCap with the user "Test_User1"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.1400.100"
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
-
         When I click on the button labeled "Bulk Record Delete"
         Then I should see "Bulk Record Delete"
 
@@ -120,7 +121,6 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.14.1400.200: Bulk Delete Records Using Select Records from List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
 
         When I click on the button labeled "Bulk Record Delete"
         Then I should see "Bulk Record Delete"
@@ -155,7 +155,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.14.1400.300: Bulk Delete Partial Records Using Custom List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
+        Then I should see a button labeled "Bulk Record Delete"
 
         When I click the bubble labeled "Partial delete (instrument-level data only)"
         And I select "Data Types"
@@ -188,7 +188,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.14.1200.400: Bulk Delete Partial Records Using Select Records from List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
+        Then I should see a button labeled "Bulk Record Delete"
 
         When I click the bubble labeled "Partial delete (instrument-level data only)"
         And I select "Data Types"

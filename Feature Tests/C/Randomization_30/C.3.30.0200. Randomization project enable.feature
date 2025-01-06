@@ -16,7 +16,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     And I should see a link labeled "Randomization" in the "Applications" section
 
   Scenario: ##VERIFY_log Randomization at project level enabled recorded in logging table
-    When I click on "Logging"
+    When I click on the link labeled "Logging"
     Then I should see a table row containing the following values in the logging table : "test_user1", "Manage/Design", "Modify Project Settings"
 
   Scenario: #FUNCTIONAL_REQUIREMENT Randomization module opens
@@ -46,7 +46,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     Then I should NOT see a link labeled "Randomization" in the "Applications" section
 
   Scenario: ##VERIFY_log Randomization at project level enabled recorded in logging table
-    When I click on "Logging"
+    When I click on the link labeled "Logging"
     Then I should see a table row containing the following values in the logging table : "test_user1", "Manage/Design", "Modify Project Settings"
 
   Scenario: C.3.30.0200.0600. Disabling removes randomization module options Setup, Dashboard, and Randomize to user rights privilege setup page.
@@ -58,5 +58,5 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     And I should NOT see a checkbox labeled "Dashboard"
     And I should NOT see a checkbox labeled "Randomize"
     And I click on a button labeled "Cancel" within the open User Rights dialog box
-    And I log out
+    And I logout
 #END

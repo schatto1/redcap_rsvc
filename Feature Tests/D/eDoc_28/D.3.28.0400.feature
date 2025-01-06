@@ -13,19 +13,26 @@ Feature: User Interface: The system shall allow project level enabling or disabl
     Scenario: Add record to get participant signature
         When I click on the link labeled "Add/Edit Records"
         And I click on the button labeled "Add new record for the arm selected above"
-        And I click on the bubble labeled "Participant Consent" for event "Event 1"
+        And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
         Then I should see "Adding new Record ID 1"
 
         When I click on the button labeled "Save & Stay"
         And I click on the button labeled "Okay" in the dialog box
-        And I select the dropdown option labeled "Open survey" from the dropdown button "Survey options"
-        And I enter "FirstName" in the field labeled "First Name"
-        And I enter "LastName" in the field labeled "Last Name"
-        And I enter "email@test.edu" in the field labeled "Email"
-        And I enter "01-01-2000" in the field labeled "DOB"
-        And I enter "MyName" in the field labeled "Participant's Name Typed"
-        And I enter a signature in the field labeled "Participant signature field"
-        And I click "Submit"
+        And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
+        And I enter "FirstName" into the input field labeled "First Name"
+        And I enter "LastName" into the input field labeled "Last Name"
+        And I enter "email@test.edu" into the input field labeled "Email"
+        And I enter "01-01-2000" into the input field labeled "DOB"
+        And I enter "MyName" into the input field labeled "Participant's Name Typed"
+        
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+        And I click on the button labeled "Submit"
         Then I should see "Close survey"
 
         When I click on the button labeled "Close survey"
