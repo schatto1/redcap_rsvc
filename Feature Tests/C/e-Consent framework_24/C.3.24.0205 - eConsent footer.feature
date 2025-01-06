@@ -167,7 +167,7 @@ Feature: User Interface: The system shall support the e-Consent Framework abilit
         When I click on the file link for record "1" Survey "Participant Consent (Event 1 (Arm 1: Arm 1))"
         Then I should have a pdf file with the following values in the header: "PID xxxx - LastName"
         And I should have a pdf file with the following values in the footer: "Type: Participant"
-        #M: Close document
+        #Manual: Close document
 
 
         ##VERIFY_Logging

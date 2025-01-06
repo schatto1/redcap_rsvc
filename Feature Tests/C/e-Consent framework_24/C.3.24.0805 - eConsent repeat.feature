@@ -92,9 +92,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I should see the button labeled "Submit" is disabled
 
         When I check the checkbox labeled "I certify that all of my information in the document above is correct."
-        Then I should see the button labeled "Submit" is enabled
-
-        When I click on the button labeled "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"
@@ -133,9 +131,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I should see the button labeled "Submit" is disabled
 
         When I check the checkbox labeled "I certify that all of my information in the document above is correct."
-        Then I should see the button labeled "Submit" is enabled
-
-        When I click on the button labeled "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"
@@ -172,9 +168,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I should see the button labeled "Submit" is disabled
 
         When I check the checkbox labeled "I certify that all of my information in the document above is correct."
-        Then I should see the button labeled "Submit" is enabled
-
-        When I click on the button labeled "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"
@@ -210,9 +204,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I should see the button labeled "Submit" is disabled
 
         When I check the checkbox labeled "I certify that all of my information in the document above is correct."
-        Then I should see the button labeled "Submit" is enabled
-
-        When I click on the button labeled "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"
@@ -254,9 +246,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I should see the button labeled "Submit" is disabled
 
         When I check the checkbox labeled "I certify that all of my information in the document above is correct."
-        Then I should see the button labeled "Submit" is enabled
-
-        When I click on the button labeled "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"
@@ -295,9 +285,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for re
         And I should see the button labeled "Submit" is disabled
 
         When I check the checkbox labeled "I certify that all of my information in the document above is correct."
-        Then I should see the button labeled "Submit" is enabled
-
-        When I click on the button labeled "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"

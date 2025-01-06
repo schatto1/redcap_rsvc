@@ -112,7 +112,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         When I click on the file link for record "1" Survey "(Event 1 (Arm 1: Arm 1))"
         Then I should see "This is my test 1 consent form"
-    #M: Close document
+    #Manual: Close document
 
     Scenario: C.3.24.1500.200 e-Consent create unique version using Inline PDF
         #Add consent form version via file upload
@@ -223,7 +223,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         When I click on the file link for record "2" Survey "(Event 1 (Arm 1: Arm 1))"
         Then I should see "consent.pdf"
-    #M: Close document
+    #Manual: Close document
 
     Scenario: C.3.24.1500.300 Disable version
         #Add consent form version via file upload
@@ -264,7 +264,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
     Scenario: C.3.24.1500.400 View historical version
         When I click on the file link "consent.pdf" in the dialog box
         Then I should see "consent.pdf"
-        #M: Close document
+        #Manual: Close document
 
         When I click on the button labeled "Close" in the dialog box
         Then I should NOT see "Consent form vtest 2" for the survey labeled "Participant Consent"
@@ -320,5 +320,5 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
 
         When I click on the file link for record "3" Survey "(Event 1 (Arm 1: Arm 1))"
         Then I should NOT see "consent.pdf"
-#M: Close document
+#Manual: Close document
 #END

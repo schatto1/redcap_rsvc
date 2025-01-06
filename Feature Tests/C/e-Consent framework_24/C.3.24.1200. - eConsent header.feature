@@ -80,7 +80,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to cre
 
         When I click on the file link for record "1" Survey "(Event 1 (Arm 1: Arm 1))"
         Then I should have a pdf file with the following values in the header: "PID xxxx - LastName"
-        #M: Close document
+        #Manual: Close document
 
         ##VERIFY_Logging
         ##e-Consent Framework not used, and PDF Snapshot is used

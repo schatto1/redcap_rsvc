@@ -20,7 +20,7 @@ Feature: User Interface: The system shall provide the ability for the user impor
         Then I should see "File was uploaded and will be processed soon"
         And I click on the button labeled "Close"
         And I wait for background processes to finish
-        ##M this may take several minutes while the system analyzes for errors
+        #Manual: this may take several minutes while the system analyzes for errors
 
         And I click on the button labeled "Halt import"
         Then I should see "Halt this background import?"

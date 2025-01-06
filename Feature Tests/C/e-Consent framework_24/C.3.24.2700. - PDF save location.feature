@@ -72,7 +72,7 @@ Feature: User Interface: The system shall support the saving PDF snapshots to sp
 
       When I click on the file link the field labeled "Participant Consent file"
       Then I should have a pdf file with the following values "Participant Consent"
-      #M: Close document
+      #Manual: Close document
 
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"

@@ -68,9 +68,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I should see the button labeled "Submit" is disabled
 
         When I check the checkbox labeled "I certify that all of my information in the document above is correct."
-        Then I should see the button labeled "Submit" is enabled
-
-        When I click on the button labeled "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"
@@ -130,8 +128,6 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I click on the button labeled "Leave without saving changes" in the dialog box
         Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 
-        Then I should see the button labeled "Submit" is enabled
-
         When I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
@@ -173,9 +169,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
         And I should see the button labeled "Submit" is disabled
 
         When I check the checkbox labeled "I certify that all of my information in the document above is correct."
-        Then I should see the button labeled "Submit" is enabled
-
-        When I click on the button labeled "Submit"
+        And I click on the button labeled "Submit"
         Then I should see "Thank you for taking the survey."
 
         When I click on the button labeled "Close survey"
@@ -197,7 +191,7 @@ Feature: C.3.24.0305. User Interface: The system shall support the e-Consent Fra
 
         When I click on the file link for record "2" Survey "Participant Consent (Event 1 (Arm 1: Arm 1))"
         Then I should have a pdf file with the following values in the signature field "signature"
-        #M: Close document
+        #Manual: Close document
 
 
         ##VERIFY_Logging

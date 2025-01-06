@@ -165,7 +165,7 @@ Feature: Project Level:  The system shall allow instrument level data export rig
         # And I should NOT see "ptname"
         # And I should NOT see "identifier"
         # And I should NOT see "identifier2"
-        #M: Close csv file
+        #Manual: Close csv file
 
         And I logout
 
@@ -194,7 +194,7 @@ Feature: Project Level:  The system shall allow instrument level data export rig
         # And I should NOT see "ptname"
         # And I should NOT see "identifier"
         # And I should NOT see "identifier2"
-        #M: Close csv file
+        #Manual: Close csv file
         And I logout
 
         #SETUP
