@@ -27,14 +27,14 @@ Feature: User Interface: The system shall provide the ability to require a reaso
         Then I should see "Your document was uploaded successfully and is ready for review"
         Then I should see "Please supply a reason for the data changes for EACH existing record in the text boxes"
 
-        And I enter "because I said so"
-        And I click on the link labeled "Copy to all "
+        And I enter "because I said so" into the first textarea field labeled "Please supply a reason for the data changes for EACH existing record in the text boxes"
+        And I click on the first link labeled "Copy to all"
         And I click on the button labeled "Import Data"
-        Then I should see "Import Successful! "
+        Then I should see "Import Successful!"
 
         #VERIFY
         When I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported | Reason for Data Change |
-            | test_Admin | Update record | [instance=3]                            | because I said so      |
+            | test_admin | Update record | [instance = 3]                          | because I said so      |
 #END
