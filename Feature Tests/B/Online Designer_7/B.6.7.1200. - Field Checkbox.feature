@@ -78,6 +78,11 @@ Feature: Field Creation: The system shall support the creation of Checkboxes (mu
         When I click on the button labeled "Commit Changes"
         Then I should see "Changes to the DRAFT have been made successfully!"
 
+        When I click on the button labeled "Submit Changes for Review"
+        And I click on the button labeled "Submit" in the dialog box
+        Then I should see "Changes Were Made Automatically"
+        When I click on the button labeled "Close" in the dialog box
+
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
