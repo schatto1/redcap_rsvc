@@ -64,6 +64,10 @@ Feature: Field Creation: The system shall support the ability to add, edit, copy
         #ACTION: move field within instrument
         And I drag the field variable named "add" below the field variable named "identifier"
 
+        # Note: REDCap requires user reload the Online Designer before MOVING a newly added field
+        Given I click on the link labeled "Project Setup"
+        When I click on the button labeled "Online Designer"
+        And I click on the instrument labeled "Data Types"
         ##VERIFY
         Then I should see the field named "Add Field" before field named "Identifier"
 
@@ -71,16 +75,17 @@ Feature: Field Creation: The system shall support the ability to add, edit, copy
         ##ACTION: move field to another instrument
         And I click on the Move image for the field named "Required"
 
-
         #Then I should see "Move field to another location"
-        When I select "name" on the dropdown field labeled "Move the field above so that it will be located immediately *AFTER* the following field:" in the dialog box
+        And I select "name" in the dropdown field labeled "Move the field(s) so that it will be located immediately after the following field:" in the dialog box
         And I click on the button labeled "Move field" in the dialog box
         ##VERIFY
-        Then I should see "Successfully moved" in the dialog box
-        And I should see 'The field was successfully moved to a new location on another data collection instrument named "Text Validation"' in the dialog box
+        Then I should see "SUCCESSFULLY MOVED" in the dialog box
+        And I should see 'Successfully moved the field(s) to a new location on another data collection instrument' in the dialog box
         And I click on the button labeled "Close" in the dialog box
 
-        Given I click on the button labeled "Return to list of instruments"
+        #The following button is covering the "Return to list of instruments" button
+        Given I click on the button labeled "Dismiss"
+        When I click on the button labeled "Return to list of instruments"
         And I click on the instrument labeled "Text Validation"
         Then I should see the field labeled "Required"
 
@@ -107,14 +112,9 @@ Feature: Field Creation: The system shall support the ability to add, edit, copy
         ##ACTION: copy field
         Given I see the field labeled "Notes box"
         And I click on the Copy image for the field named "Notes box"
-        And I click on the button labeled "Cancel" in the dialog box
-        Then I should NOT see "notesbox_2"
 
-        Given I see the field labeled "Notes box"
-        And I click on the Copy image for the field named "Notes box"
-        And I click on the button labeled "Copy field" in the dialog box
         ##VERIFY
-        Then I should see "notesbox_2"
+        Then I should see a field named "notesbox_2"
 
         #FUNCTIONAL_REQUIREMENT
         ##ACTION: delete field
@@ -155,6 +155,8 @@ Feature: Field Creation: The system shall support the ability to add, edit, copy
         Then I should see "Project Modification Module"
 
         When I click on the button labeled "Project Modification Module"
+        And I click on the button labeled "COMMIT CHANGES"
+        Then I should see a dialog containing the following text: "COMMIT CHANGES TO PROJECT?"
         And I click on the button labeled "COMMIT CHANGES" in the dialog box
         Then I should see "Project Changes Committed / User Notified"
 
