@@ -19,49 +19,54 @@ Feature: Field Creation: The system shall support the creation and spliting matr
         And I click on the link labeled "B.6.7.2000.100"
         And I click on the button labeled "Online Designer"
 
-
         #FUNCTIONAL_REQUIREMENT
         ##ACTION: matrix fields creation
         When I click on the instrument labeled "Form 1"
         And I click on the button labeled "Add Matrix of Fields"
-        And I enter "Vanilla" into the input field labeled "Field Label"
-        And I enter "flavor1" into the input field labeled "Variable Name"
-        And I click on the button labeled "Add another row"
-        And I enter "Chocolate" into the input field labeled "Field Label"
-        And I enter "flavor2" into the input field labeled "Variable Name"
-        And I click on the button labeled "Add another row"
-        And I enter "Strawberry" into the input field labeled "Field Label"
-        And I enter "flavor3" into the input field labeled "Variable Name"
-        And I click on the button labeled "Add another row"
 
-        And I click on the first button labeled "Add Matrix of Fields"
-        And I enter Choices of "1, Checkbox1" into the open "Add New Field" dialog box
-        And I enter Choices of "2, Checkbox2" into the open "Add New Field" dialog box
-        And I enter Choices of "3, Checkbox3" into the open "Add New Field" dialog box
-        And I enter Choices of "1, Dislike" into the open "Add New Field" dialog box
-        And I enter Choices of "2, Neutral" into the open "Add New Field" dialog box
-        And I enter Choices of "3, Love" into the open "Add New Field" dialog box
-        And I enter "ice_cream" into the input field labeled "Matrix group name"
-        And I click on the button labeled "Save"
-        Then I should see the field labeled "Matrix Group: ice_cream"
-        And I should see a table header and rows containing the following values in the browse users table:
+        And I enter "Vanilla" into the last input field in the Matrix column labeled exactly "Field Label" in the dialog box
+        And I enter "flavor1" into the last input field in the Matrix column labeled exactly "Variable Name" in the dialog box
+        And I click on the button labeled "Add another row" in the dialog box
+
+        And I enter "Chocolate" into the last input field in the Matrix column labeled exactly "Field Label" in the dialog box
+        And I enter "flavor2" into the last input field in the Matrix column labeled exactly "Variable Name" in the dialog box
+        And I click on the button labeled "Add another row" in the dialog box
+
+        And I enter "Strawberry" into the last input field in the Matrix column labeled exactly "Field Label" in the dialog box
+        And I enter "flavor3" into the last input field in the Matrix column labeled exactly "Variable Name" in the dialog box
+
+        And I enter "1, Dislike {enter} 2, Neutral {enter} 3, Love" into the textarea field labeled "Matrix Column Choices" in the dialog box
+        And I enter "ice_cream" into the input field labeled "Matrix group name" in the dialog box
+
+        And I click on the button labeled "Save" in the dialog box
+
+        Then I should see the field labeled "Matrix Group:  ice_cream"
+        And I should see a table row containing the following values in a table:
             | Dislike | Neutral | Love |
 
         ##VERIFY_LOGGING
         When I click on the link labeled "Logging"
-        Then I should see "Create matrix of fields"
+        Then I should see a table header and rows containing the following values in the logging table:
+            | Time / Date      | Username   | Action        | List of Data Changes OR Fields Exported               |
+            | mm/dd/yyyy hh:mm | test_admin | Manage/Design | Create matrix of fields                               |
 
         #VERIFY: SPLIT OF MATRIX
         When I click on the link labeled "Designer"  
         And I click on the instrument labeled "Form 1"
-        When I click on the icon labeled "Edit Matrix" on the field labeled "Matrix Group: ice_cream"
-        And I click on the button labeled "Save & split into separate fields"
-        And I click on the button labeled "Split matrix"
+        And I click on the Edit Matrix image for the field named "ice_cream"
+
+        Given I see "Edit Matrix of Fields" in the dialog box
+        And I click on the button labeled "Save & split matrix into separate fields" in the dialog box
+        And I click on the button labeled "Split matrix" in the dialog box
+
         Then I should see the field labeled "Vanilla"
         And I should see the field labeled "Chocolate"
         And I should see the field labeled "Strawberry"
+        And I should NOT see the field labeled "Matrix Group:  ice_cream"
 
         ##VERIFY_LOGGING
         When I click on the link labeled "Logging"
-        Then I should see "Edit matrix of fields"
+        Then I should see a table header and rows containing the following values in the logging table:
+            | Time / Date      | Username   | Action        | List of Data Changes OR Fields Exported               |
+            | mm/dd/yyyy hh:mm | test_admin | Manage/Design | Edit matrix of fields                                 |
 #END
