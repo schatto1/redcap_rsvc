@@ -51,7 +51,7 @@ Feature: User Interface: The tool shall only display forms that are designated t
 
         ##VERIFY: custom text in record
         When I click on the link labeled "Record Status Dashboard"
-        And I click the bubble for the instrument labeled "Text Validation" for record "1" for event "Event 1"
+        And I locate the bubble for the "Text Validation" instrument on event "Event 1" for record ID "1" and click on the bubble
         Then I should see "Text Validation"
         And I should see "Test custom text"
 
@@ -88,7 +88,7 @@ Feature: User Interface: The tool shall only display forms that are designated t
 
         ##VERIFY: custom text in record and revert back to template
         When I click on the link labeled "Record Status Dashboard"
-        And I click the bubble for the instrument labeled "Text Validation" for record "1" for event "Event 1"
+        And I locate the bubble for the "Text Validation" instrument on event "Event 1" for record ID "1" and click on the bubble
         Then I should see "Text Validation"
         And I should see "New custom text"
 

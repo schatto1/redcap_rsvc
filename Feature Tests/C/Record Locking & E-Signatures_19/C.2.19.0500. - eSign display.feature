@@ -44,8 +44,8 @@ Feature: User Interface: The tool shall display e-signature status of forms for 
         #SETUP
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
-        And I verify the checkbox on the column labeled "Display the Lock option for this instrument?" for the Data Collection Instrument labeled "Text Validation" is selected
-        And I click on the checkbox on the column labeled "Also display E-signature option on instrument?" for the Data Collection Instrument labeled "Text Validation"
+        And for the Column Name "Display the Lock option for this instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Text Validation"
+        And for the Column Name "Also display E-signature option on instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Text Validation"
         Then I should see a table header and rows containing the following values in a table:
             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? |
             | [✓]                                          | Text Validation            | [✓]                                            |
@@ -54,20 +54,22 @@ Feature: User Interface: The tool shall display e-signature status of forms for 
 
         ##ACTION
         When I click on the link labeled "Record Status Dashboard"
-        And I click the bubble for the instrument labeled "Text Validation" for record "3" for event "Event 1"
+        And I locate the bubble for the "Text Validation" instrument on event "Event 1" for record ID "3" and click on the bubble
         Then I should see "Text Validation"
-        And I should see the checkbox for the field labeled "Lock this instrument?"
-        And I should see the checkbox for the field labeled "E-signature"
+        And I should see a checkbox labeled "Lock this instrument?" that is unchecked
+        And I should see a checkbox labeled "E-signature" that is unchecked
 
         When I click on the checkbox for the field labeled "Lock this instrument?"
         And I click on the checkbox labeled "E-signature"
         And I click on the button labeled "Save & Exit Form"
-        Then I should see "E-signature: Username/password verification" in a dialog box
+        Then I should see a dialog containing the following text: "E-signature: Username/password verification"
 
         Given I enter Test_User login credentials
         Then I should see "Record Home Page"
-        And I should see a lock image for the Data Collection Instrument labeled "Text Validation" for event "Event 1"
-        And I should see an e-signature image for the Data Collection Instrument labeled "Text Validation" for event "Event 1"
+        And I should see a table header and rows containing the following values in the record home page table:
+            | Data Collection Instrument | Event 1         |
+            | Text Validation            | [lock icon]     |
+            | Text Validation            | [e-signed icon] |
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
@@ -83,8 +85,8 @@ Feature: User Interface: The tool shall display e-signature status of forms for 
         And I click on the link labeled "E-signature and Locking Management"
 
         ##VERIFY
-        Then I should see a table header and rows containing the following values in the E-signature and Locking Management table:
-            | Record | Form Name       | Locked?    | E-signed?         |
-            | 3      | Text Validation | lock image | e-signature image |
-            | 3      | Consent         |            | N/A               |
+        Then I should see a table header and rows containing the following values in a table:
+            | Record | Form Name       | Locked?     | E-signed?       |
+            | 3      | Text Validation | [lock icon] | [e-signed icon] |
+            | 3      | Consent         |             | N/A             |
 #END
