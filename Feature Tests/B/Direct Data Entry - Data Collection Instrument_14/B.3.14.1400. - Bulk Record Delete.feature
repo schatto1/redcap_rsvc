@@ -218,9 +218,10 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
 
         When I click on the radio labeled "Partial delete (instrument-level data only)"
         Then I should see "Arm 1: Arm 1"
+
         Given the Event Name "Event 1", I click on the checkbox labeled "Text Validation"
-        Given the Event Name "Event 1", I click on the checkbox labeled "Data Types"
-        Given the Event Name "Event 1", I click on the checkbox labeled "Consent"
+        And the Event Name "Event 1", I click on the checkbox labeled "Data Types"
+        And the Event Name "Event 1", I click on the checkbox labeled "Consent"
         When I click on the radio labeled exactly "Enter a custom list of records"
         And I wait for 2 seconds
         And I enter "4" into the textarea field labeled "Step 3: Enter records to delete"
