@@ -69,7 +69,9 @@ Feature: Design forms Using Data Dictionary and Online Designer
         ##VERIFY
         Then I should see "Errors found in your Data Dictionary:"
         And I click on the button labeled "RETURN TO PREVIOUS PAGE"
-        Then I should see "Steps for making project changes"
+        Then I should see "STEP 1"
+        And I should see "STEP 2"
+        And I should see "STEP 3"
 
         #VERIFY_LOG
         When I click on the link labeled "Logging"
