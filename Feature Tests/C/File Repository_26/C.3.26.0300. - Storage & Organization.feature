@@ -164,7 +164,7 @@ Feature: User Interface: The system shall support the storage, organization, and
 
     ##VERIFY file deleted in recycle folder
         When I click on the link labeled "Recycle Bin"
-        Then I should see "No files or sub-folders exist in this folder."
+        Then I should see "No files or subfolders exist in this folder."
 
     #VERIFY_LOG
         When I click on the link labeled "Logging"
