@@ -264,7 +264,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         Then I should see "All Files/TestGroup1_Folder" in the File Repository breadcrumb
         And I should see "DAG-Restricted:TestGroup1" in the File Repository breadcrumb
         And I should see a table row containing the following values in the file repository table:
-            | No files or sub-folders exist in this folder |
+            | No files or subfolders exist in this folder |
 
         When I click the button labeled "Select files to upload" to select and upload the following file to the File Repository:
             | /import_files/testusers_bulk_upload.csv |
@@ -291,7 +291,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         And I click on the link labeled "Role1_Folder" in the File Repository table
         Then I should see "All Files/Role1_Folder" in the File Repository breadcrumb
         And I should see a table row containing the following values in the file repository table:
-            | No files or sub-folders exist in this folder |
+            | No files or subfolders exist in this folder |
 
     #C.3.26.400.100 #Upload more than one file at the same time using the select files to upload button
         When I click the button labeled "Select files to upload" to select and upload the following file to the File Repository:
@@ -568,7 +568,7 @@ Feature: User Interface: The system shall support limiting file repository user 
         Then I should see a dialog containing the following text: "SUCCESS!"
         And I click on the button labeled "Close" in the dialog box
         Then I should see a table row containing the following values in the file repository table:
-            | No files or sub-folders exist in this folder |
+            | No files or subfolders exist in this folder |
 
     ##ACTION C.3.26.500.100 Delete folders - Cancel deletion
         When I click on the link labeled "File Repository"
