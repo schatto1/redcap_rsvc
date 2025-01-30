@@ -4,8 +4,8 @@ const { exec } = require('child_process')
 
 /**
  * This tool fetches the results of the latest cloud run
- * This will facilitate uploading the video results to the VUMC REDCap project via REDCap API
- * Ultimate goal is to have the videos push to the File Repo when a feature has been marked as passed
+ * Facilitates uploading the video results to REDCap project via REDCap API
+ * Videos push to the File Repo when a feature has been marked as passed
  */
 class UploadVideosToREDCapProject {
     constructor() {
@@ -18,6 +18,12 @@ class UploadVideosToREDCapProject {
         const project_id = process.argv[3]
         if(!project_id){
             console.log('No Project ID found.')
+            return
+        }
+
+        this.redcap_api_url = process.argv[4]
+        if(!this.redcap_api_url){
+            console.log('No REDCap API URL found.')
             return
         }
 
@@ -119,7 +125,7 @@ class UploadVideosToREDCapProject {
                                     }
 
                                     //Run the import of video to REDCAP VUMC
-                                    exec(`sh import_video_to_vumc_project.sh "${file_path}" "${filename}" ${folder_id}`,
+                                    exec(`sh import_video.sh "${file_path}" "${filename}" ${folder_id}`,
                                         (error, stdout, stderr) => {
                                             if (error) {
                                                 console.error(`Error executing script: ${error.message}`)
@@ -157,7 +163,7 @@ class UploadVideosToREDCapProject {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json',
     }) {
-        return  fetch('https://redcap.vumc.org/api/', {
+        return  fetch(this.redcap_api_url, {
             method: 'POST',
             headers: headers,
             body: payload

@@ -23,4 +23,4 @@ $CURL -H "Accept: application/json" \
       -F "folder_id=$FOLDER_ID" \
       -F "filename=$FILENAME" \
       -F "file=@\"$VIDEO_FILE\"" \
-      https://redcap.vumc.org/api/
+      $REDCAP_API_URL
