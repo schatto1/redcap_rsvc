@@ -12,7 +12,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       #SETUP_DESIGNER
       When I click on the button labeled "Designer"
       And I click on the link labeled "Participant Consent"
-      And I click on the button labeled "Add Field" at the bottom of the instrument
+      And I click on the last button labeled "Add Field"
       And I click on the dropdown field labeled "Select a Type of Field"
       And I add a new Multiple Choice - Radio Buttons (Single Answer) field labeled "Form 1 Trigger" with the variable name "trigger1"
       And I enter "1, Data Mode" on the first row of the input field labeled "Choices (one choice per line)"
@@ -22,7 +22,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the button labeled "Designer"
       And I click on the link labeled "Coordinator Signature"
-      And I click on the button labeled "Add Field" at the bottom of the instrument
+      And I click on the last button labeled "Add Field"
       And I click on the dropdown field labeled "Select a Type of Field"
       And I add a new Multiple Choice - Radio Buttons (Single Answer) field labeled "Form 2 Trigger" with the variable name "trigger2"
       And I enter "1, Data Mode" on the first row of the input field labeled "Choices (one choice per line)"
@@ -31,7 +31,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       Then I should see the field labeled "Form 2 Trigger"
 
       #SETUP_PRODUCTION
-      When I click on the button labeled "Project Setup"
+      When I click on the link labeled "Project Setup"
       And I click on the button labeled "Move project to production"
       And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
       And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
@@ -42,53 +42,53 @@ Feature: User Interface: The system shall support the capture and storage of mul
       When I click on the button labeled "Designer"
       And I click on the button labeled "e-Consent and PDF Snapshot"
       And I click on the button labeled "PDF Snapshots of Record"
-      And I click the button "+Add new trigger"
+      And I click on the button labeled "+Add new trigger"
       And I enter "1 multi data form same event" in the box labeled "Name of trigger"
       And I enter "[trigger1]='1' and [trigger2]='1'" in the box labeled "When the following logic becomes true"
-      And I enter "" into the field labeled "[All instruments]"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
-      And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "multi data form same event" in the field labeled "File name:"
-      And I click "Save"
+      And I enter "" into the input field labeled "[All instruments]"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
+      And I check the checkbox labeled "Save to File Repository"
+      And I uncheck the checkbox labeled "Save to specified field:"
+      And I enter "multi data form same event" into the input field labeled "File name:"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                         | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1' | All instruments       | File Repository                  |
 
    Scenario: New mixed multi data form and survey same event PDF Trigger
       ##ACTION: New PDF Trigger
-      When I click the button "+Add new trigger"
+      When I click on the button labeled "+Add new trigger"
       And I enter "2 multi data form and survey same event" in the box labeled "Name of trigger"
       And I enter "[trigger1]='2' and [trigger2]='1'" in the box labeled "When the following logic becomes true"
-      And I enter "" into the field labeled "[All instruments]"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
-      And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "multi data form and survey same event" in the field labeled "File name:"
-      And I click "Save"
+      And I enter "" into the input field labeled "[All instruments]"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
+      And I check the checkbox labeled "Save to File Repository"
+      And I uncheck the checkbox labeled "Save to specified field:"
+      And I enter "multi data form and survey same event" into the input field labeled "File name:"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event            | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1' | All instruments       | File Repository                  |
          | Active | Edit Copy     | 2 multi data form and survey same event | Logic-based     | Logic becomes true: [trigger1]='2' and [trigger2]='1' | All instruments       | File Repository                  |
 
    Scenario: New multi survey same event PDF Trigger
       ##ACTION: New PDF Trigger
-      When I click the button "+Add new trigger"
+      When I click on the button labeled "+Add new trigger"
       And I enter "3 multi survey same event" in the box labeled "Name of trigger"
       And I enter "[trigger1]='2' and [trigger2]='2'" in the box labeled "When the following logic becomes true"
-      And I enter "" into the field labeled "[All instruments]"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
-      And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "multi data form and survey same event" in the field labeled "File name:"
-      And I click "Save"
+      And I enter "" into the input field labeled "[All instruments]"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
+      And I check the checkbox labeled "Save to File Repository"
+      And I uncheck the checkbox labeled "Save to specified field:"
+      And I enter "multi data form and survey same event" into the input field labeled "File name:"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                 | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event            | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1' | All instruments       | File Repository                  |
          | Active | Edit Copy     | 2 multi data form and survey same event | Logic-based     | Logic becomes true: [trigger1]='2' and [trigger2]='1' | All instruments       | File Repository                  |
@@ -96,18 +96,18 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
    Scenario: New multi data form different event PDF Trigger
       ##ACTION: New PDF Trigger
-      When I click the button "+Add new trigger"
+      When I click on the button labeled "+Add new trigger"
       And I enter "4 multi data form different event" in the box labeled "Name of trigger"
       And I enter "[event_1_arm_1][trigger1]='1' and [event_three_arm_1][trigger1]='1'" in the box labeled "When the following logic becomes true"
-      And I enter "" into the field labeled "[All instruments]"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
-      And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "multi data form different event" in the field labeled "File name:"
-      And I click "Save"
+      And I enter "" into the input field labeled "[All instruments]"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
+      And I check the checkbox labeled "Save to File Repository"
+      And I uncheck the checkbox labeled "Save to specified field:"
+      And I enter "multi data form different event" into the input field labeled "File name:"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name                                    | Type of trigger | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event            | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1'    | All instruments       | File Repository                  |
          | Active | Edit Copy     | 2 multi data form and survey same event | Logic-based     | Logic becomes true: [trigger1]='2' and [trigger2]='1'    | All instruments       | File Repository                  |
@@ -116,16 +116,16 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
    Scenario: New mixed multi data form and survey different event PDF Trigger
       ##ACTION: New PDF Trigger
-      When I click the button "+Add new trigger"
+      When I click on the button labeled "+Add new trigger"
       And I enter "5 multi data form and survey different event" in the box labeled "Name of trigger"
       And I enter "[event_1_arm_1][trigger1]='1' and [event_three_arm_1][trigger1]='2'" in the box labeled "When the following logic becomes true"
-      And I enter "" into the field labeled "[All instruments]"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
-      And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "multi data form and survey different event" in the field labeled "File name:"
-      And I click "Save"
+      And I enter "" into the input field labeled "[All instruments]"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
+      And I check the checkbox labeled "Save to File Repository"
+      And I uncheck the checkbox labeled "Save to specified field:"
+      And I enter "multi data form and survey different event" into the input field labeled "File name:"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
          | Active | Edit settings | Name                                         | Type of trigger | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event                 | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1'    | All instruments       | File Repository                  |
@@ -136,16 +136,16 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
    Scenario: New multi survey different event PDF Trigger
       ##ACTION: New PDF Trigger
-      When I click the button "+Add new trigger"
+      When I click on the button labeled "+Add new trigger"
       And I enter "6 multi survey different event" in the box labeled "Name of trigger"
       And I enter "[event_1_arm_1][trigger1]='2' and [event_three_arm_1][trigger1]='2'" in the box labeled "When the following logic becomes true"
-      And I enter "" into the field labeled "[All instruments]"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
-      And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Uncheck" the box labeled "Save to specified field:"
-      And I enter "multi data form and survey different event" in the field labeled "File name:"
-      And I click "Save"
+      And I enter "" into the input field labeled "[All instruments]"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
+      And I check the checkbox labeled "Save to File Repository"
+      And I uncheck the checkbox labeled "Save to specified field:"
+      And I enter "multi data form and survey different event" into the input field labeled "File name:"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
          | Active | Edit settings | Name                                         | Type of trigger | Save snapshot when...                                    | Scope of the snapshot | Location(s) to save the snapshot |
          | Active | Edit Copy     | 1 multi data form same event                 | Logic-based     | Logic becomes true: [trigger1]='1' and [trigger2]='1'    | All instruments       | File Repository                  |
@@ -159,26 +159,32 @@ Feature: User Interface: The system shall support the capture and storage of mul
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 1."
 
       When I select "Data Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
 
       When I click on the bubble labeled "Coordinator Signature" for event "Event 1"
       When I select "Data Mode" from the field labeled "Form 2 Trigger"
-      And I enter "Coordinator" in the field labeled "Coordinator's Name Typed"
+      And I enter "Coordinator" into the input field labeled "Coordinator's Name Typed"
       And I enter a signature in the field labeled "Coordinator's Signature"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -189,22 +195,29 @@ Feature: User Interface: The system shall support the capture and storage of mul
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 2."
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I select "Survey Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -213,9 +226,9 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the bubble labeled "Coordinator Signature" for event "Event 1"
       When I select "Data Mode" from the field labeled "Form 2 Trigger"
-      And I enter "Coordinator" in the field labeled "Coordinator's Name Typed"
+      And I enter "Coordinator" into the input field labeled "Coordinator's Name Typed"
       And I enter a signature in the field labeled "Coordinator's Signature"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -225,22 +238,29 @@ Feature: User Interface: The system shall support the capture and storage of mul
    Scenario: Add record -3 multi survey same event
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 3."
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I select "Survey Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -248,11 +268,12 @@ Feature: User Interface: The system shall support the capture and storage of mul
       And I click on the button labeled "Leave without saving changes" in the dialog box
 
       When I click on the bubble labeled "Coordinator Signature" for event "Event 1"
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       And  I select "Survey Mode" from the field labeled "Form 2 Trigger"
-      And I enter "Coordinator" in the field labeled "Coordinator's Name Typed"
+      And I enter "Coordinator" into the input field labeled "Coordinator's Name Typed"
       And I enter a signature in the field labeled "Coordinator's Signature"
-      And I click "Save signature"
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -266,30 +287,42 @@ Feature: User Interface: The system shall support the capture and storage of mul
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 4."
 
       When I select "Data Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
 
       When I click on the bubble labeled "Participant Consent" for event "Event 2"
       And I select "Data Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -300,23 +333,30 @@ Feature: User Interface: The system shall support the capture and storage of mul
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 5."
 
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I select "Survey Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -325,13 +365,19 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the bubble labeled "Participant Consent" for event "Event 2"
       And I select "Data Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I slect "Complete" from the drowpown labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -342,23 +388,30 @@ Feature: User Interface: The system shall support the capture and storage of mul
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 6."
 
 
       When I click on the button labeled "Save & Stay"
       And I click on the button labeled "Okay" in the dialog box
-      And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+      And I click on the button labeled "Survey options"
+      And I click on the survey option label containing "Open survey" label
       Then I should see "Participant Consent"
 
       When I select "Survey Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -367,13 +420,19 @@ Feature: User Interface: The system shall support the capture and storage of mul
 
       When I click on the bubble labeled "Participant Consent" for event "Event 2"
       And I select "Survey Mode" from the field labeled "Form 1 Trigger"
-      And I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      And I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
@@ -387,7 +446,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in a table:
          | Name                                 | PDF utilized e-Consent Framework | Record | Survey Completed             | Identifier (Name, DOB) | Version | Type |
          | multidataformandsurveydifferentevent | -                                | 6      | (Event Three (Arm 1: Arm 1)) |                        |         |      |
          | multidataformandsurveydifferentevent | -                                | 5      | (Event Three (Arm 1: Arm 1)) |                        |         |      |

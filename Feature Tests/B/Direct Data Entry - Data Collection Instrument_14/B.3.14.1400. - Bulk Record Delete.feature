@@ -18,6 +18,9 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         Then I should see Project status: "Production"
 
     Scenario:  #SET UP_USER_RIGHTS
+        When I click on the link labeled "User Rights"
+        And I click on the button labeled "Upload or download users, roles, and assignments"
+        Then I should see "Upload users (CSV)"
         When I click on the link labeled "Upload users (CSV)"
         Then I should see a dialog containing the following text: "Upload users (CSV)"
 
@@ -69,34 +72,39 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | 4         |
             | 5         |
             | 6         |
-        And I log out
+        And I logout
 
     ##FUNCTIONAL_REQUIREMENT
     Scenario:  ###ACTION Delete multiple records
-        When I login with "test_user2"
+        When I login to REDCap with the user "Test_User2"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.1400.100"
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should not see "Bulk Record Delete" in the tab labeled "Other Functionality"
-        And I log out
+        Then I should NOT see a button labeled "Bulk Record Delete"
+        And I logout
 
-        When I login with "test_user1"
+        When I login to REDCap with the user "Test_User1"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.14.1400.100"
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
-
         When I click on the button labeled "Bulk Record Delete"
         Then I should see "Bulk Record Delete"
 
-        When I click the bubble labeled "Delete entire records"
-        And I click the bubble labeled "Enter a custom list of records"
-        And I type "3,5" into "Step 3: Enter records to delete"
-        And I click on the button labeled "Delete"
-        And I type "delete"
-        And I click on the button labeled "Delete"
+        And I wait for 2 seconds
+        When I click on the radio labeled exactly "Delete entire records"
+        When I click on the radio labeled exactly "Enter a custom list of records"
+        And I wait for 2 seconds
+        And I enter "3,5" into the textarea field labeled "Step 3: Enter records to delete"
+        Then I should see "Valid list entered"
+
+        #Automated: JavaScript does not fire for the alert box unless clicked again ..
+        When I click on the radio labeled exactly "Delete entire records"
+        And I click on the button labeled exactly " Delete "
+
+        And I enter "delete" into the input field labeled 'TYPE "DELETE" BELOW' in the dialog box
+        And I click on the button labeled "Delete" in the dialog box
         Then I should see "Deleted 2 record(s)"
 
     Scenario:  ##ACTION Verify record exist
@@ -120,18 +128,24 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.14.1400.200: Bulk Delete Records Using Select Records from List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
 
         When I click on the button labeled "Bulk Record Delete"
         Then I should see "Bulk Record Delete"
-        And I click the bubble labeled "Delete entire records"
-        And I click the bubble labeled "Select records from a list"
-        And I select "2"
-        And I select "6"
-        And I click on the button labeled "Delete"
-        And I type "delete"
-        And I click on the button labeled "Delete"
+
+        And I wait for 2 seconds
+        When I click on the radio labeled exactly "Delete entire records"
+        And I click on the radio labeled exactly "Select records from a list"
+        Then I should see "Step 3: Select records to delete"
+
+        #Note: We need the space before the digits because REDCap has them in the label
+        Given I click on the checkbox labeled exactly " 2"
+        And I click on the checkbox labeled exactly " 6"
+        And I click on the button labeled exactly " Delete "
+
+        And I enter "delete" into the input field labeled 'TYPE "DELETE" BELOW' in the dialog box
+        And I click on the button labeled "Delete" in the dialog box
         Then I should see "Deleted 2 record(s)"
+
 
     Scenario:  ##ACTION Verify record exist ##VERIFY_RSD
         When I click on the link labeled "Record Status Dashboard"
@@ -139,8 +153,6 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | Record ID |
             | 1         |
             | 4         |
-            | 6         |
-        And I logout
 
     Scenario: ##VERIFY_LOG
         When I click on the link labeled "Logging"
@@ -155,16 +167,28 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.14.1400.300: Bulk Delete Partial Records Using Custom List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
 
-        When I click the bubble labeled "Partial delete (instrument-level data only)"
-        And I select "Data Types"
-        And I click the bubble labeled "Enter a custom list of records"
-        And I type "1" into "Step 3: Enter records to delete"
-        And I click on the button labeled "Delete"
-        And I type "delete"
-        And I click on the button labeled "Delete"
-        Then I should see "Deleted forms [event_1_arm_1] data_types for 1 record(s)"
+        When I click on the button labeled "Bulk Record Delete"
+        Then I should see "Bulk Record Delete"
+
+        When I click on the radio labeled "Partial delete (instrument-level data only)"
+        Then I should see "Arm 1: Arm 1"
+
+        Given the Event Name "Event 1", I click on the checkbox labeled "Data Types"
+        When I click on the radio labeled exactly "Enter a custom list of records"
+        And I wait for 2 seconds
+        And I enter "1" into the textarea field labeled "Step 3: Enter records to delete"
+        Then I should see "Valid list entered"
+
+        #Automated: JavaScript does not fire for the alert box unless clicked again ..
+        When I click on the radio labeled "Partial delete (instrument-level data only)"
+
+        And I click on the button labeled exactly " Delete "
+        And I enter "delete" into the input field labeled 'TYPE "DELETE" BELOW' in the dialog box
+        And I click on the button labeled "Delete" in the dialog box
+        Then I should see "Deleted forms"
+        And I should see "[event_1_arm_1] data_types"
+        And I should see "for 1 record(s)"
 
     Scenario:##ACTION Verify record exist ##VERIFY_RSD
         When I click on the link labeled "Record Status Dashboard"
@@ -172,32 +196,48 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | Record ID |
             | 1         |
             | 4         |
-        And I should see "incomplete (no data saved)" for Record 1
+        And I should see the "Incomplete (no data saved)" icon for the "Data Types" instrument on event "Event 1" for record "1"
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
             | Time / Date      | Username   | Action          | List of Data Changes OR Fields Exported   |
-            | mm/dd/yyyy hh:mm | test_user1 | Update record 1 | calc_text = '' , data_types_complete = '' |
+            | mm/dd/yyyy hh:mm | test_user1 | Update record 1 | calc_test = '', data_types_complete = ''                         |
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 6 | record_id = '6'                           |
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 2 | record_id = '2'                           |
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 5 | record_id = '5'                           |
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 3 | record_id = '3'                           |
+
     #END Scenario
 
     Scenario: B.3.14.1200.400: Bulk Delete Partial Records Using Select Records from List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
-        Then I should see "Bulk Record Delete" in the tab labeled "Other Functionality"
+        When I click on the button labeled "Bulk Record Delete"
+        Then I should see "Bulk Record Delete"
 
-        When I click the bubble labeled "Partial delete (instrument-level data only)"
-        And I select "Data Types"
-        And I click the bubble labeled "Enter a custom list of records"
-        And I type "4" into "Step 3: Enter records to delete"
-        And I click on the button labeled "Delete"
-        And I type "delete"
-        And I click on the button labeled "Delete"
-        Then I should see "Deleted forms [event_1_arm_1] text_validation [event_1_arm_1] data_types [event_1_arm_1] consent for 1 record(s)"
+        When I click on the radio labeled "Partial delete (instrument-level data only)"
+        Then I should see "Arm 1: Arm 1"
+
+        Given the Event Name "Event 1", I click on the checkbox labeled "Text Validation"
+        And the Event Name "Event 1", I click on the checkbox labeled "Data Types"
+        And the Event Name "Event 1", I click on the checkbox labeled "Consent"
+        When I click on the radio labeled exactly "Enter a custom list of records"
+        And I wait for 2 seconds
+        And I enter "4" into the textarea field labeled "Step 3: Enter records to delete"
+        Then I should see "Valid list entered"
+
+        #Automated: JavaScript does not fire for the alert box unless clicked again ..
+        When I click on the radio labeled "Partial delete (instrument-level data only)"
+
+        And I click on the button labeled exactly " Delete "
+        And I enter "delete" into the input field labeled 'TYPE "DELETE" BELOW' in the dialog box
+        And I click on the button labeled "Delete" in the dialog box
+        Then I should see "Deleted forms"
+        And I should see "[event_1_arm_1] text_validation"
+        And I should see "[event_1_arm_1] data_types"
+        And I should see "[event_1_arm_1] consent"
+        And I should see "for 1 record(s)"
 
     Scenario:##ACTION Verify record exist ##VERIFY_RSD
         When I click on the link labeled "Record Status Dashboard"
@@ -205,7 +245,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | Record ID |
             | 1         |
             | 4         |
-        And I should see "incomplete (no data saved)" for Record 4
+        And I should see the "Incomplete (no data saved)" icon for the "Data Types" instrument on event "Event 1" for record "4"
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
@@ -214,7 +254,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | mm/dd/yyyy hh:mm | test_user1 | Update record 4 | [instance = 3], checkbox(1) = unchecked, checkbox(2) = unchecked, checkbox(3) = unchecked, data_types_complete = '', required = '', date_ymd = '', datetime_ymd_hmss = '', calc_test = |
             | mm/dd/yyyy hh:mm | test_user1 | Update record 4 | [instance = 2], checkbox(1) = unchecked, checkbox(2) = unchecked, checkbox(3) = unchecked, data_types_complete = '', required = '', date_ymd = '', datetime_ymd_hmss = '', calc_test = |
             | mm/dd/yyyy hh:mm | test_user1 | Update record 4 | checkbox(1) = unchecked, checkbox(2) = unchecked, checkbox(3) = unchecked, data_types_complete = '', required = '', date_ymd = '', datetime_ymd_hmss = '', calc_test =                 |
-            | mm/dd/yyyy hh:mm | test_user1 | Update record 1 | calc_text = '' , data_types_complete = ''                                                                                                                                              |
+            | mm/dd/yyyy hh:mm | test_user1 | Update record 1 | calc_test = '', data_types_complete = ''                           |
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 6 | record_id = '6'                                                                                                                                                                        |
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 2 | record_id = '2'                                                                                                                                                                        |
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 5 | record_id = '5'                                                                                                                                                                        |

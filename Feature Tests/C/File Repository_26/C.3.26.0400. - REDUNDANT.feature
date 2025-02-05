@@ -26,14 +26,14 @@ Feature: User Interface: The system shall support multiple file upload through t
 
 #         #Create DAG limited folder
 #         And I click on the button labeled "Create Folder"
-#         And I type "TestGroup1_Folder" into the field labeled "New folder name"
+#         And I enter "TestGroup1_Folder" into the input field labeled "New folder name"
 #         And I select "TestGroup1" in the dropdown labeled "Limit access by Data Access Group?"
 #         And I click on the button labeled "Create Folder"
 #         Then I should see "TestGroup1_Folder"
 
 #         #Create role limited folder
 #         And I click on the button labeled "Create Folder"
-#         And I type "Role1_Folder" into the field labeled "New folder name"
+#         And I enter "Role1_Folder" into the input field labeled "New folder name"
 #         And I select "1_FullRights" in the dropdown labeled "Limit access by User Role?"
 #         And I click on the button labeled "Create Folder"
 #         Then I should see "Role1_Folder"
@@ -127,7 +127,8 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         Then I should see "Adding new Record ID"
 
 #         When I click on the button labeled "Save & Stay"
-#         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+#         And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
 #         And I click on the button labeled "Next Page"
 #         Then I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
 
@@ -135,7 +136,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the button labeled "Submit"
 #         And I click on the button labeled "Close survey"
 #         And I click on the button labeled "Leave without saving changes" in the dialog box
-#         Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+#         Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 #         And I should see "TestGroup1"
 
 #         #FUNCTIONAL_REQUIREMENT
@@ -180,7 +181,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive file in DAG TestGroup1
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | (record-name) TestGroup1 |
 
@@ -194,7 +195,8 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         Then I should see "Adding new Record ID"
 
 #         When I click on the button labeled "Save & Stay"
-#         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+#         And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
 #         And I click on the button labeled "Next Page"
 #         Then I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
 
@@ -202,7 +204,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the button labeled "Submit"
 #         And I click on the button labeled "Close survey"
 #         And I click on the button labeled "Leave without saving changes" in the dialog box
-#         Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+#         Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 #         And I should see "TestGroup2"
 
 #         #FUNCTIONAL_REQUIREMENT
@@ -238,7 +240,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the link labeled "PDF Survey Archive"
 #         #See consent just created in testgroup2
 #         #Don't see consent created by testgroup1
-#         Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] TestGroup2 |
 
@@ -275,7 +277,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive file in DAG TestGroup1
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] TestGroup1 |
 #         #Don't see consent created by testgroup2
@@ -314,7 +316,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive access all file
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows containing the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] testgroup1 |
 #             | "pdf" format file | [record-name] testgroup2 |

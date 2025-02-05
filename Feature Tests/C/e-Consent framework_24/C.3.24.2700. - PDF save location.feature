@@ -10,7 +10,7 @@ Feature: User Interface: The system shall support the saving PDF snapshots to sp
       And I create a new project named "C.3.24.2700.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24EConsentNoSetup.xml", and clicking the "Create Project" button
 
       #SETUP_PRODUCTION
-      When I click on the button labeled "Project Setup"
+      When I click on the link labeled "Project Setup"
       And I click on the button labeled "Move project to production"
       And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
       And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
@@ -22,20 +22,20 @@ Feature: User Interface: The system shall support the saving PDF snapshots to sp
    Scenario: New PDF Trigger for survey completion all instruments
       ##ACTION: New PDF Trigger
       When I click on the button labeled "PDF Snapshots of Record"
-      And I click the button "+Add new trigger"
+      And I click on the button labeled "+Add new trigger"
       And I enter "Snapshot" in the box labeled "Name of trigger"
       And I select "--- select a survey ---" from the dropdown field labeled "Every time the following survey is completed:" in the dialog box
       And I enter "[participant_consent_complete]='2'" in the box labeled "When the following logic becomes true"
 
-      And I enter "" into the field labeled "[All instruments]"
-      And I "Check" the box labeled "Save as Compact PDF (includes only fields with saved data)"
-      And I "Uncheck" the box labeled "Store the translated version of the PDF(if using Multi-language Management)"
-      And I "Check" the box labeled "Save to File Repository"
-      And I "Check" the box labeled "Save to specified field:"
+      And I enter "" into the input field labeled "[All instruments]"
+      And I check the checkbox labeled "Save as Compact PDF (includes only fields with saved data)"
+      And I uncheck the checkbox labeled "Store the translated version of the PDF(if using Multi-language Management)"
+      And I check the checkbox labeled "Save to File Repository"
+      And I check the checkbox labeled "Save to specified field:"
       And I select "participant_file" on the event name "Event 1 (Arm 1: Arm 1)" from the dropdown field labeled "select a File Upload field" in the dialog box
-      And I click "Save"
+      And I click on the button labeled "Save"
       Then I should see "Saved!"
-      Then I should see a table header and rows containing the following values in the PDF snapshot table:
+      Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings | Name     | Type of trigger | Save snapshot when...                                  | Scope of the snapshot | Location(s) to save the snapshot                                   |
          | Active | Edit Copy     | Snapshot | Logic-based     | Logic becomes true: [participant_consent_complete]='2' | All instruments       | File Repository Specified field: [event_1_arm_1][participant_file] |
 
@@ -43,21 +43,27 @@ Feature: User Interface: The system shall support the saving PDF snapshots to sp
       #Add record
       When I click on the link labeled "Add/Edit Records"
       And I click on the button labeled "Add new record for the arm selected above"
-      And I click on the bubble labeled "Participant Consent" for event "Event 1"
+      And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
       Then I should see "Adding new Record ID 1."
 
-      When I enter "FirstName" in the field labeled "First Name"
-      And I enter "LastName" in the field labeled "Last Name"
-      And I enter "email@test.edu" in the field labeled "Email"
-      And I enter "2000-01-01" in the field labeled "DOB"
-      And I enter the "MyName" in the field labeled "Participant’s Name Typed"
-      And I enter a signature in the field labeled "Participant signature field"
-      And I click "Save signature"
+      When I enter "FirstName" into the input field labeled "First Name"
+      And I enter "LastName" into the input field labeled "Last Name"
+      And I enter "email@test.edu" into the input field labeled "Email"
+      And I enter "2000-01-01" into the input field labeled "DOB"
+      And I enter "MyName" into the input field labeled "Participant's Name Typed"
+      
+        Given I click on the link labeled "Add signature"
+        And I see a dialog containing the following text: "Add signature"
+        And I draw a signature in the signature field area
+        When I click on the button labeled "Save signature" in the dialog box
+        Then I should see a link labeled "Remove signature"
+
+      And I click on the button labeled "Save signature" in the dialog box
       And I select "Complete" from the field labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
-      Then I Should see "Record Home Page"
+      Then I should see "Record Home Page"
       And I should see "Complete" status for "Event 1" insturment "Participant Consent"
-      And I Should see "Incomplete (no data saved)" icon for the Data Collection Instrument labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
+      And I should see "Incomplete (no data saved)" icon for the Data Collection Instrument labeled "Pdfs And Combined Signatures Pdf" for event "Event 1"
 
    Scenario: Verification pdf saved and logged correctly
       ##VERIFY specified field
@@ -66,12 +72,12 @@ Feature: User Interface: The system shall support the saving PDF snapshots to sp
 
       When I click on the file link the field labeled "Participant Consent file"
       Then I should have a pdf file with the following values "Participant Consent"
-      #M: Close document
+      #Manual: Close document
 
       ##VERIFY_FiRe
       When I click on the link labeled "File Repository"
       And I click on the link labeled "PDF Snapshot Archive"
-      Then I should see a table header and rows containing the following values in the PDF Snapshot Archive table:
+      Then I should see a table header and rows containing the following values in a table:
          | Name | PDF utilized e-Consent Framework | Record | Survey Completed         | Identifier (Name, DOB) | Version | Type |
          | .pdf | -                                | 1      | (Event 1 (Arm 1: Arm 1)) |                        |         |      |
 
