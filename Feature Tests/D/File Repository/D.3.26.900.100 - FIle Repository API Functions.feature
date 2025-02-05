@@ -61,6 +61,6 @@ Feature: User Interface: The system shall interface with API functions create ne
     ##VERIFY
     Then I should see "HTTP Status: 200"
     And I click on the link labeled "File Repository"
-    Then I should not see "File_Upload.png"
+    Then I should NOT see "File_Upload.png"
     
 #END

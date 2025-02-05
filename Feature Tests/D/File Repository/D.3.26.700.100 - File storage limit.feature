@@ -29,7 +29,7 @@ Feature: File Repository: The system shall support file storage limit. Includes 
 
     #REMOVE PROJECT SETTINGS
     ##ACTION: Remove project file upload limit setting
-    Given I click the button labeled "Close"
+    Given I click on the button labeled "Close"
     And I click on the link labeled "Project Setup"
     And I click on the link labeled "Edit Project Settings"
     #Need step definition for field below
