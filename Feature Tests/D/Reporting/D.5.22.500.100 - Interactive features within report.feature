@@ -25,7 +25,7 @@ Feature: Reporting: The system shall support the ability for reports to link wit
     And I click on the button labeled "Save Report"
     And I click on the button labeled "Return to My Reports & Exports"
     Then I should see a table row containing the following values in the reports table:
-        | 1 | D.5.22.500.100 REPORT |
+        | 5 | D.5.22.500.100 REPORT |
     
     ##VERIFY: stats & charts
     When I click on the "Stats & Charts" button for the "D.5.22.500.100 REPORT" report in the My Reports & Exports table 
@@ -79,6 +79,6 @@ Feature: Reporting: The system shall support the ability for reports to link wit
     Then I should see "Your report has been saved!" in the dialog box
     And I click on the button labeled "Return to My Reports & Exports"
     Then I should see a table row containing the following values in the reports table:
-        | 1 | D.5.22.500.100 REPORT |
+        | 5 | D.5.22.500.100 REPORT |
 
 #END

@@ -59,7 +59,7 @@ Feature: e-Consent Framework and PDF Snapshot: The system shall support the stor
     ##VERIFY: check external storage
     Given I open a new terminal window
     And I SSH to "redwood.chpc.utah.edu"
-    And I SSH to "redwood.chpc.utah.edu"
+    And I SSH to "redcap-c7.ccts.utah.edu"
     And I CD to "/uufs/chpc.utah.edu/common/HIPAA/proj_redcap_vault/shadow/"
     And I run the command "ls -Art | tail -n 3"
     Then I should see a row containing "Prescreening_ICF_2"

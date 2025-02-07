@@ -33,7 +33,7 @@ Feature: File Repository: The system shall support file storage limit. Includes 
     And I click on the link labeled "Project Setup"
     And I click on the link labeled "Edit Project Settings"
     #Need step definition for field below
-    And I enter "0" into the textarea field labeled "File Repository: File storage limit (in MB)" 
+    And I clear the field labeled "File Repository: File storage limit (in MB)" 
     And I click on the button labeled "Save Changes"
     Then I should see "Your changes have been saved!"
 
