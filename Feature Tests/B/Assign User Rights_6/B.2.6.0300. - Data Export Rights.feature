@@ -3,11 +3,11 @@ Feature: Project Level:  The system shall allow instrument level data export rig
     As a REDCap end user
     I want to see that data export rights is functioning as expected
 
-    Scenario: B.2.6.300.100 Data Export Rights
+    Scenario: B.2.6.0300.100 Data Export Rights
         #SETUP_PRODUCTION
         Given I login to REDCap with the user "Test_Admin"
         #Manual: Append project name with the current version (i.e. "X.X.X.XXX.XXX - LTS X.X.X")
-        And I create a new project named "B.2.6.300.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_1.xml", and clicking the "Create Project" button
+        And I create a new project named "B.2.6.0300.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_1.xml", and clicking the "Create Project" button
 
         When I click on the link labeled "Project Setup"
         And I click on the button labeled "Move project to production"
@@ -113,7 +113,7 @@ Feature: Project Level:  The system shall allow instrument level data export rig
 
         #FUNCTIONAL REQUIREMENT #B.5.21.300.100 Export Full Data Set
         When I click on the link labeled "My Projects"
-        And I click on the link labeled "B.2.6.300.100"
+        And I click on the link labeled "B.2.6.0300.100"
         And I click on the link labeled "Data Exports, Reports, and Stats"
         Then I should see "All data (all records and fields)"
 
@@ -145,7 +145,7 @@ Feature: Project Level:  The system shall allow instrument level data export rig
 
         #FUNCTIONAL REQUIREMENT Export remove all identifier fields
         When I click on the link labeled "My Projects"
-        And I click on the link labeled "B.2.6.300.100"
+        And I click on the link labeled "B.2.6.0300.100"
         And I click on the link labeled "Data Exports, Reports, and Stats"
         Then I should see "All data (all records and fields)"
 
@@ -175,7 +175,7 @@ Feature: Project Level:  The system shall allow instrument level data export rig
 
         #FUNCTIONAL REQUIREMENT: Export Deidentified
         When I click on the link labeled "My Projects"
-        And I click on the link labeled "B.2.6.300.100"
+        And I click on the link labeled "B.2.6.0300.100"
         And I click on the link labeled "Data Exports, Reports, and Stats"
         Then I should see "All data (all records and fields)"
 
@@ -203,7 +203,7 @@ Feature: Project Level:  The system shall allow instrument level data export rig
 
         #FUNCTIONAL REQUIREMENT: Export No Access
         When I click on the link labeled "My Projects"
-        And I click on the link labeled "B.2.6.300.100"
+        And I click on the link labeled "B.2.6.0300.100"
         ##ACTION:
         And I click on the link labeled "Data Exports, Reports, and Stats"
         ##VERIFY
