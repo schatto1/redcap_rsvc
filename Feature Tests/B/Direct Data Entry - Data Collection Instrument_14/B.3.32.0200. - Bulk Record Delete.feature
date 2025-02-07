@@ -3,12 +3,12 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     As a REDCap end user
     I want to see that Bulk Record Delete is functioning as expected
 
-    Scenario: B.3.14.1400.100: Bulk Delete Records Using Custom List
+    Scenario: B.3.32.0200100: Bulk Delete Records Using Custom List
     Scenario: #SETUP
         Given I login to REDCap with the user "Test_Admin"
-        And I create a new project named " B.3.14.1400.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_3.14.xml", and clicking the "Create Project" button
+        And I create a new project named "B.3.32.0200100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_3.14.xml", and clicking the "Create Project" button
         And I click on the link labeled "My Projects"
-        And I click on the link labeled "B.3.14.1400.100"
+        And I click on the link labeled "B.3.32.0200100"
 
     Scenario: #SETUP_PRODUCTION
         When I click on the link labeled "Project Setup"
@@ -78,7 +78,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario:  ###ACTION Delete multiple records
         When I login to REDCap with the user "Test_User2"
         And I click on the link labeled "My Projects"
-        And I click on the link labeled "B.3.14.1400.100"
+        And I click on the link labeled "B.3.32.0200100"
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         Then I should NOT see a button labeled "Bulk Record Delete"
@@ -86,7 +86,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
 
         When I login to REDCap with the user "Test_User1"
         And I click on the link labeled "My Projects"
-        And I click on the link labeled "B.3.14.1400.100"
+        And I click on the link labeled "B.3.32.0200100"
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         When I click on the button labeled "Bulk Record Delete"
@@ -125,7 +125,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 3 | record_id = '3'                         |
     #END Scenario
 
-    Scenario: B.3.14.1400.200: Bulk Delete Records Using Select Records from List
+    Scenario: B.3.32.0200200: Bulk Delete Records Using Select Records from List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
 
@@ -138,8 +138,8 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         Then I should see "Step 3: Select records to delete"
 
         #Note: We need the space before the digits because REDCap has them in the label
-        Given I click on the checkbox labeled exactly " 2"
-        And I click on the checkbox labeled exactly " 6"
+        Given I click on the checkbox labeled exactly "2"
+        And I click on the checkbox labeled exactly "6"
         And I click on the button labeled exactly " Delete "
 
         And I enter "delete" into the input field labeled 'TYPE "DELETE" BELOW' in the dialog box
@@ -164,7 +164,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 3 | record_id = '3'                         |
     #END Scenario
 
-    Scenario: B.3.14.1400.300: Bulk Delete Partial Records Using Custom List
+    Scenario: B.3.32.0200300: Bulk Delete Partial Records Using Custom List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
 
@@ -180,7 +180,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I enter "1" into the textarea field labeled "Step 3: Enter records to delete"
         Then I should see "Valid list entered"
 
-        #Automated: JavaScript does not fire for the alert box unless clicked again ..
+        #Automated: JavaScript does not fire for the alert box unless clicked again .
         When I click on the radio labeled "Partial delete (instrument-level data only)"
 
         And I click on the button labeled exactly " Delete "
@@ -227,7 +227,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I enter "4" into the textarea field labeled "Step 3: Enter records to delete"
         Then I should see "Valid list entered"
 
-        #Automated: JavaScript does not fire for the alert box unless clicked again ..
+        #Automated: JavaScript does not fire for the alert box unless clicked again .
         When I click on the radio labeled "Partial delete (instrument-level data only)"
 
         And I click on the button labeled exactly " Delete "
