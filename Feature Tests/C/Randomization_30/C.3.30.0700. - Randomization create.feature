@@ -234,7 +234,7 @@ And I click on link labeled "Randomization"
 Then I should see a "will_survey" within the "5" row of the column labeled "Target" 
 
 
-C.3.30.0700.1100: Erase randomization model.
+Scenario: C.3.30.0700.1100: Erase randomization model.
 When I click on the icon labeled "Setup" in the row labeled "5"
 And I click on the link labeled "Erase randomization model" and deny the confirmation window
 Then I should NOT see a dialog containing "Success! Your randomization setup and all allocations have now been erased."

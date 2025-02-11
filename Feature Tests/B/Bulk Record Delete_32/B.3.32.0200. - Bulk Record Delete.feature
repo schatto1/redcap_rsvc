@@ -6,7 +6,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario: B.3.32.0200.100: Bulk Delete Records Using Custom List
     Scenario: #SETUP
         Given I login to REDCap with the user "Test_Admin"
-        And I create a new project named " B.3.32.0200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_3.14.xml", and clicking the "Create Project" button
+        And I create a new project named "B.3.32.0200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_3.14.xml", and clicking the "Create Project" button
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.32.0200.100"
 
@@ -180,7 +180,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I enter "1" into the textarea field labeled "Step 3: Enter records to delete"
         Then I should see "Valid list entered"
 
-        #Automated: JavaScript does not fire for the alert box unless clicked again ..
+        #Automated: JavaScript does not fire for the alert box unless clicked again .
         When I click on the radio labeled "Partial delete (instrument-level data only)"
 
         And I click on the button labeled exactly " Delete "
@@ -227,7 +227,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         And I enter "4" into the textarea field labeled "Step 3: Enter records to delete"
         Then I should see "Valid list entered"
 
-        #Automated: JavaScript does not fire for the alert box unless clicked again ..
+        #Automated: JavaScript does not fire for the alert box unless clicked again .
         When I click on the radio labeled "Partial delete (instrument-level data only)"
 
         And I click on the button labeled exactly " Delete "
