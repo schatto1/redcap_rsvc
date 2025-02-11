@@ -35,7 +35,8 @@ Feature: User Interface: The system shall not allow data to be changed on locked
     And I click on the link labeled "Lock entire record"
     And I click on the button labeled "Lock entire record" on the dialog box
     Then I should see a dialog containing the following text: 'Record "1" is now LOCKED'
-    And I click on the button labeled "OK" in the dialog box
+    # The previous step should likely wait for the page to refresh to prevent interference with the link click below.  For now, we wait:
+    And I wait for 10 seconds
 
     #VERIFY_DI
     When I click on the link labeled "Data Import Tool"

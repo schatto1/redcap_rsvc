@@ -23,7 +23,7 @@ Feature: User Interface: The Record Locking Customization module shall provide t
 #         #FUNCTIONAL REQUIREMENT
 #         ##ACTION Lock Record Custom Text
 #         When I click on the link labeled "Customize & Manage Locking/E-signatures"
-#         And I select the button labeled "I understand. Let me make changes" in the dialog box
+#         And I click on the button labeled "I understand. Let me make changes" in the dialog box
 #         Then I should see "Record Locking Customization"
 
 #         When I deselect the checkbox labeled "Display the Lock option for this instrument?" for the instrument labeled "Survey"
@@ -81,7 +81,7 @@ Feature: User Interface: The Record Locking Customization module shall provide t
 #         #FUNCTIONAL REQUIREMENT
 #         ##ACTION Edit and Delete Lock Record Custom Text
 #         When I click on the link labeled "Customize & Manage Locking/E-signatures"
-#         And I select the button labeled "I understand. Let me make changes" in the dialog box
+#         And I click on the button labeled "I understand. Let me make changes" in the dialog box
 #         Then I should see "Record Locking Customization"
 
 #         When I click on the edit image for the Data Collection Instrument labeled "Text Validation"

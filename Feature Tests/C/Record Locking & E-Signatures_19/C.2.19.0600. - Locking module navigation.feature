@@ -42,12 +42,15 @@ Feature: User Interface: The tool shall support the ability to navigate directly
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
         And I click on the link labeled "E-signature and Locking Management"
-        Then I should see a table header and rows containing the following values in the E-signature and Locking Management table:
-            | Record | Form Name       |             |
-            | 3      | Text Validation | View record |
+        Then I should see a table header and rows containing the following values in a table:
+            | Record | Event Name             | Form Name       | Repeat Instance | Locked? | E-signed |             |
+            | 3      | Event 1 (Arm 1: Arm 1) | Text Validation |                 |         | N/A      | View record |
 
-        When I click on the link labeled "View record" for the form labeled "Text Validation" for record "3"
+        When I click on the "View record" link within the e-signature and locking management table in the following row:
+            | Record | Event Name             | Form Name       |
+            | 3      | Event 1 (Arm 1: Arm 1) | Text Validation |
+      
         ##VERIFY
         Then I should see "Text Validation"
-        And I should see the checkbox for the field labeled "Lock this instrument?"
+        And I should see a checkbox labeled "Lock this instrument?" that is unchecked
 #END
