@@ -3,12 +3,21 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     As a REDCap end user
     I want to see that Bulk Record Delete is functioning as expected
 
+<<<<<<<< HEAD:Feature Tests/B/Direct Data Entry - Data Collection Instrument_14/B.3.32.0200. - Bulk Record Delete.feature
     Scenario: B.3.32.0200100: Bulk Delete Records Using Custom List
     Scenario: #SETUP
         Given I login to REDCap with the user "Test_Admin"
         And I create a new project named "B.3.32.0200100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_3.14.xml", and clicking the "Create Project" button
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.3.32.0200100"
+========
+    Scenario: B.3.32.0200.100: Bulk Delete Records Using Custom List
+    Scenario: #SETUP
+        Given I login to REDCap with the user "Test_Admin"
+        And I create a new project named " B.3.32.0200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_3.14.xml", and clicking the "Create Project" button
+        And I click on the link labeled "My Projects"
+        And I click on the link labeled "B.3.32.0200.100"
+>>>>>>>> 4bbakers/v15.0.9:Feature Tests/B/Bulk Record Delete_32/B.3.32.0200. - Bulk Record Delete.feature
 
     Scenario: #SETUP_PRODUCTION
         When I click on the link labeled "Project Setup"
@@ -78,7 +87,11 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
     Scenario:  ###ACTION Delete multiple records
         When I login to REDCap with the user "Test_User2"
         And I click on the link labeled "My Projects"
+<<<<<<<< HEAD:Feature Tests/B/Direct Data Entry - Data Collection Instrument_14/B.3.32.0200. - Bulk Record Delete.feature
         And I click on the link labeled "B.3.32.0200100"
+========
+        And I click on the link labeled "B.3.32.0200.100"
+>>>>>>>> 4bbakers/v15.0.9:Feature Tests/B/Bulk Record Delete_32/B.3.32.0200. - Bulk Record Delete.feature
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         Then I should NOT see a button labeled "Bulk Record Delete"
@@ -86,7 +99,11 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
 
         When I login to REDCap with the user "Test_User1"
         And I click on the link labeled "My Projects"
+<<<<<<<< HEAD:Feature Tests/B/Direct Data Entry - Data Collection Instrument_14/B.3.32.0200. - Bulk Record Delete.feature
         And I click on the link labeled "B.3.32.0200100"
+========
+        And I click on the link labeled "B.3.32.0200.100"
+>>>>>>>> 4bbakers/v15.0.9:Feature Tests/B/Bulk Record Delete_32/B.3.32.0200. - Bulk Record Delete.feature
         And I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         When I click on the button labeled "Bulk Record Delete"
@@ -125,7 +142,11 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 3 | record_id = '3'                         |
     #END Scenario
 
+<<<<<<<< HEAD:Feature Tests/B/Direct Data Entry - Data Collection Instrument_14/B.3.32.0200. - Bulk Record Delete.feature
     Scenario: B.3.32.0200200: Bulk Delete Records Using Select Records from List
+========
+    Scenario: B.3.32.0200.200: Bulk Delete Records Using Select Records from List
+>>>>>>>> 4bbakers/v15.0.9:Feature Tests/B/Bulk Record Delete_32/B.3.32.0200. - Bulk Record Delete.feature
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
 
@@ -164,7 +185,11 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
             | mm/dd/yyyy hh:mm | test_user1 | Delete record 3 | record_id = '3'                         |
     #END Scenario
 
+<<<<<<<< HEAD:Feature Tests/B/Direct Data Entry - Data Collection Instrument_14/B.3.32.0200. - Bulk Record Delete.feature
     Scenario: B.3.32.0200300: Bulk Delete Partial Records Using Custom List
+========
+    Scenario: B.3.32.0200.300: Bulk Delete Partial Records Using Custom List
+>>>>>>>> 4bbakers/v15.0.9:Feature Tests/B/Bulk Record Delete_32/B.3.32.0200. - Bulk Record Delete.feature
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
 
