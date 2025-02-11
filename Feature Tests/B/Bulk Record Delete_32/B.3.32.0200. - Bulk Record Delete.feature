@@ -210,7 +210,7 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
 
     #END Scenario
 
-    Scenario: B.3.14.1200.400: Bulk Delete Partial Records Using Select Records from List
+    Scenario: B.3.32.0200.400: Bulk Delete Partial Records Using Select Records from List
         When I click on the link labeled "Project Setup"
         And I click on the link labeled "Other Functionality"
         When I click on the button labeled "Bulk Record Delete"
