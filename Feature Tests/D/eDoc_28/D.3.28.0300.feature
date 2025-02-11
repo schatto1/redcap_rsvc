@@ -3,7 +3,7 @@ Feature: User Interface: The system shall allow project level enabling or disabl
     As a REDCap end user
     I want to see that external storage is functioning as expected
 
-    Scenario: D..3.28.0300.100 Project Level: The system shall allow project level enabling or disabling to store non-e-Consent governed PDF Snapshots on the External Storage server if the snapshot contains a completed e-Consent response.
+    Scenario: D.3.28.0300.100 Project Level: The system shall allow project level enabling or disabling to store non-e-Consent governed PDF Snapshots on the External Storage server if the snapshot contains a completed e-Consent response.
 
 
         #SETUP
