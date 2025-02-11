@@ -1,15 +1,15 @@
-Feature: A.3.14.1300. The system shall allow REDCap administrators to enable or disable the Bulk Record Delete feature at the system level in the Control Center.
+Feature: A.3.32.0100. The system shall allow REDCap administrators to enable or disable the Bulk Record Delete feature at the system level in the Control Center.
 
     As a REDCap end user
     I want to see that Bulk Record Delete is functioning as expected
 
-    Scenario: A.3.14.1300.100 Enable/Disable file repository public links via Control Center
+    Scenario: A.3.32.0100.100 Enable/Disable file repository public links via Control Center
 
         #SETUP
         Given I login to REDCap with the user "Test_Admin"
-        And I create a new project named "A.3.14.1300.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_3.14.xml", and clicking the "Create Project" button
+        And I create a new project named "A.3.32.0100.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project_3.14.xml", and clicking the "Create Project" button
         And I click on the link labeled "My Projects"
-        And I click on the link labeled "A.3.14.1300.100"
+        And I click on the link labeled "A.3.32.0100.100"
 
         #SETUP_PRODUCTION
         When I click on the link labeled "Project Setup"
@@ -34,7 +34,7 @@ Feature: A.3.14.1300. The system shall allow REDCap administrators to enable or 
 
         ##VERIFY Bulk Record Delete is disabled
         When I click on the link labeled "My Projects"
-        And I click on the link labeled "A.3.14.1300.100"
+        And I click on the link labeled "A.3.32.0100.100"
 
         When I click on the link labeled "Other Functionality"
         Then I should NOT see a button labeled "Bulk Record Delete"
