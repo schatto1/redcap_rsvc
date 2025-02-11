@@ -75,14 +75,13 @@ And I should see "Group 1" in the data entry form field "Automatic Randomization
 When I click on the link labeled "Add / Edit Records"
 And I click on the dropdown field labeled "Choose an existing Record ID"
 Then I should see the radio field labeled "Choose an existing Record ID" with the options below
-"1"
-"1-1"
+| "1"   |
+| "1-1" |
 And I should see the radio field labeled "Choose an existing Record ID" WITHOUT the options below
-"2"
-"3"
-"4"
-"5"
-
+| "2" |
+| "3" |
+| "4" |
+| "5" |
 
 Scenario: C.3.30.0600.0200. The randomization model shall support stratification by DAG, allowing independent randomization assignments within each DAG.
 
