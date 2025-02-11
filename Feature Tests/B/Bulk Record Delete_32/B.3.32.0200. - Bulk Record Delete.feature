@@ -138,8 +138,8 @@ Feature: The system shall support Bulk Delete functionality, allowing users to d
         Then I should see "Step 3: Select records to delete"
 
         #Note: We need the space before the digits because REDCap has them in the label
-        Given I click on the checkbox labeled exactly "2"
-        And I click on the checkbox labeled exactly "6"
+        Given I click on the checkbox labeled exactly " 2"
+        And I click on the checkbox labeled exactly " 6"
         And I click on the button labeled exactly " Delete "
 
         And I enter "delete" into the input field labeled 'TYPE "DELETE" BELOW' in the dialog box
