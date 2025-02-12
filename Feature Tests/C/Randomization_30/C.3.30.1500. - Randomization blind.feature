@@ -9,3 +9,5 @@ Scenario: C.3.30.1500.0200. For an open model, users without setup rights can vi
 Scenario: C.3.30.1500.0300. All users with export rights can export randomized records, seeing the allocation assigned to each record as displayed in the record view.  
 
 Scenario: C.3.30.1500.0400. Only users with setup rights or admin privileges can access and export the full allocation table directly from the setup interface, regardless of model type.
+
+Given The above scenarios are completed before removing this line, which causes this feature to correctly fail automation until it is complete

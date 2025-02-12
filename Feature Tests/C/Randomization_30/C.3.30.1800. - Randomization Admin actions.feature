@@ -11,3 +11,5 @@ Scenario: C.3.30.1800.0300. Admin can manually randomize a record with reason.
 Scenario: C.3.30.1800.0400. Admin can mark a sequence as unavailable with reason.  
 
 Scenario: C.3.30.1800.0500. Admin can restore allocation with reason.
+
+Given The above scenarios are completed before removing this line, which causes this feature to correctly fail automation until it is complete
