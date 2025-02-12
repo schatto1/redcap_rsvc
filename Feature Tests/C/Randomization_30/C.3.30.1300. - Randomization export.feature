@@ -5,3 +5,5 @@ Feature: User Interface: The system shall support inclusion of randomization val
 Scenario: C.3.30.1300.0100. Export data with randomized values is accurate to allocation table
 
 Scenario: 
+
+Given The above scenarios are completed before removing this line, which causes this feature to correctly fail automation until it is complete
