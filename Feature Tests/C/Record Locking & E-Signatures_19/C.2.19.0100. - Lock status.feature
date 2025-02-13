@@ -110,3 +110,5 @@ Feature: User Interface: The E-signature and Locking Management tool shall displ
         When I click on the link labeled "Data Types"
         Then I should see "Data Types"
         And I should see "Lock this instrument?"
+        
+        #END
