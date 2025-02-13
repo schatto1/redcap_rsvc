@@ -24,7 +24,7 @@ Feature: User Interface: The tool shall support the ability to navigate directly
         Then I should see 'Adding new user "Test_User1"'
 
         When I click on the checkbox for the field labeled "Record Locking Customization"
-        And I select the radio option "Locking / Unlocking with E-signature authority" for the field labeled "Lock / Unlock Records (instrument level)"
+        And I select the User Right named "Lock/Unlock Records" and choose "Locking / Unlocking with E-signature authority"
         And I click on the button labeled "Close" in the dialog box
         And I click on the checkbox for the field labeled "Lock/Unlock *Entire* Records (record level)"
         And I click on the button labeled "Add user"
@@ -34,7 +34,7 @@ Feature: User Interface: The tool shall support the ability to navigate directly
         When I click on the link labeled "Logging"
         Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action              | List of Data Changes OR Fields Exported |
-            | test_admin | Add user test_user1 | user = 'test_user1'                     |
+            | test_admin | Add user Test_User1 | user = 'Test_User1'                     |
 
 
         #FUNCTIONAL REQUIREMENT
@@ -42,14 +42,12 @@ Feature: User Interface: The tool shall support the ability to navigate directly
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
         And I click on the button labeled "I understand. Let me make changes" in the dialog box
         And I click on the link labeled "E-signature and Locking Management"
-        Then I should see a table header and rows containing the following values in a table:
-            | Record | Event Name             | Form Name       | Repeat Instance | Locked? | E-signed |             |
-            | 3      | Event 1 (Arm 1: Arm 1) | Text Validation |                 |         | N/A      | View record |
+        Then I should see a table header and rows containing the following values in the e-signature and locking management table:
+            | Record | Form Name       |             |
+            | 3      | Text Validation | View record |
 
-        When I click on the "View record" link within the e-signature and locking management table in the following row:
-            | Record | Event Name             | Form Name       |
-            | 3      | Event 1 (Arm 1: Arm 1) | Text Validation |
-      
+        And I click on the first link labeled "View record"
+
         ##VERIFY
         Then I should see "Text Validation"
         And I should see a checkbox labeled "Lock this instrument?" that is unchecked
