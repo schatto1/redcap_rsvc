@@ -5,3 +5,5 @@ Feature: Project Interface Administrator Access: The system shall support admini
 Scenario: C.3.30.1700.0100. Admin accesses View Allocation Table page.  
 
 Scenario: C.3.30.1700.0200. User with dashboard rights cannot access View Allocation Table.
+
+Given The above scenarios are completed before removing this line, which causes this feature to correctly fail automation until it is complete

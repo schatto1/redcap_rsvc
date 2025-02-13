@@ -7,3 +7,5 @@ Scenario: C.3.30.0900.0100. Normal user cannot modify setup in production.  C.3.
 Scenario:  C.3.30.0900.0300. Admin cannot modify setup in production.  C.3.30.0900.0400. Admin can download existing allocation table in production.  C.3.30.0900.0500. Admin cannot modify existing allocation table in production.  
 
 Scenario: C.3.30.0900.0600. Admin can upload additional allocations to existing table in production.
+
+Given The above scenarios are completed before removing this line, which causes this feature to correctly fail automation until it is complete
