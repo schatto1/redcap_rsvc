@@ -23,9 +23,9 @@ Feature: User Interface: The tool shall only display forms that are designated t
     Then I should see a table header and rows containing the following values in a table:
       | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? |                           |
       | [✓]                                          | Text Validation            | [ ]                                            | Notes Box & "Save" button |
-      | checkbox                                     | Data Type                  | [ ]                                            | Notes Box & "Save" button |
+      | [✓]                                          | Data Type                  | [ ]                                            | Notes Box & "Save" button |
       | [✓]                                          | Survey                     | [ ]                                            | Notes Box & "Save" button |
-      | checkbox                                     | Consent                    | [ ]                                            | Notes Box & "Save" button |
+      | [✓]                                          | Consent                    | [ ]                                            | Notes Box & "Save" button |
 
   Scenario: ##VERIFY: form display lock function
     When I click on the link labeled "Record Status Dashboard"
@@ -34,7 +34,7 @@ Feature: User Interface: The tool shall only display forms that are designated t
     And I should see a checkbox labeled "Lock this instrument?" that is unchecked
     When I click on the checkbox for the field labeled "Lock this instrument?"
     And I click on the button labeled "Save & Exit Form"
-    Then I should see "Record HomeS Page"
+    Then I should see "Record Home Page"
 
   Scenario: ##VERIFY: form NOT display lock function
     When I click on the link labeled "Record Status Dashboard"
