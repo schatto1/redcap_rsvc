@@ -3,7 +3,7 @@ Feature: C.3.30.0300 	User Interface: The system shall allow user rights configu
   I want to see that Randomization is functioning as expected
 
   Scenario: #SETUP project with no randomization enabled - "Project 3.30 norand.xml"
-    Given I login to REDCap with the user "test_User1"
+    Given I login to REDCap with the user "Test_User1"
     And I create a new project named "C.3.30.0300" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project 3.30 norand.xml", and clicking the "Create Project" button
 
   Scenario: #SETUP Randomization
@@ -13,15 +13,15 @@ Feature: C.3.30.0300 	User Interface: The system shall allow user rights configu
 
   Scenario:  #USER_RIGHTS User Rights (Give User all Rand Rights)
     When I click on the link labeled "User Rights"
-    And I click on the link labeled "test_User1"
+    And I click on the link labeled "Test_User1"
     And I click on the button labeled "Edit User Privileges"
-    Then I should see 'Editing existing user "test_User1"'
+    Then I should see 'Editing existing user "test_user1"'
 
     When I check a checkbox labeled "Setup"
     And I check a checkbox labeled "Dashboard"
     And I check a checkbox labeled "Randomize"
     And I save changes within the context of User Rights
-    Then I should see 'User "test_User1" was successfully edited'
+    Then I should see 'User "test_user1" was successfully edited'
   #refresh browser
 
   Scenario: C.3.30.0300.0100. User with Randomization Setup rights can use Randomization Module Setup Configuration page.
@@ -35,13 +35,13 @@ Feature: C.3.30.0300 	User Interface: The system shall allow user rights configu
 
   Scenario: #SETUP User Rights (Takeaway User Rand - Setup Rights)
     When I click on the link labeled "User Rights"
-    And I click on the link labeled "test_User1"
+    And I click on the link labeled "Test_User1"
     And I click on the button labeled "Edit User Privileges"
-    Then I should see 'Editing existing user "test_User1"'
+    Then I should see 'Editing existing user "test_user1"'
 
     When I uncheck a checkbox labeled "Setup"
     And I save changes within the context of User Rights
-    Then I should see 'User "test_User1" was successfully edited'
+    Then I should see 'User "test_user1" was successfully edited'
   #refresh browser
 
   Scenario: C.3.30.0300.0200. User without Randomization Setup rights cannot use Randomization Module Setup Configuration page.
