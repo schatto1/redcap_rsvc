@@ -3,7 +3,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
   I want to see that Randomization is functioning as expected
 
   Scenario: #SETUP project with randomization enabled
-    Given I login to REDCap with the user "Test_User1"
+    Given I login to REDCap with the user "test_User1"
     And I create a new project named "C.3.30.0200.0100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project 3.30 norand.REDCap.xml", and clicking the "Create Project" button
 
   Scenario: #FUNCTIONAL_REQUIREMENT C.3.30.0200.0100. Enabling adds randomization module to project setup
@@ -21,15 +21,15 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     When I click on the link labeled "Logging"
     Then I should see a table header and rows containing the following values in the logging table:
       | Time / Date      | Username   | Action        | List of Data Changes OR Fields Exported |
-      | mm/dd/yyyy hh:mm | test_user1 | Manage/Design | Modify project settings                 |
+      | mm/dd/yyyy hh:mm | test_User1 | Manage/Design | Modify project settings                 |
 
   Scenario: C.3.30.0200.0300. Enabling adds randomization module options Setup, Dashboard, and Randomize to user rights privilege setup page.
     When I click on the link labeled "User Rights"
-    And I enter "Test_User1" into the field with the placeholder text of "Assign new user to role"
+    And I enter "test_User1" into the field with the placeholder text of "Assign new user to role"
     And I click on the button labeled "Assign to role"
     And I select "1_FullRights" on the dropdown field labeled "Select Role" on the role selector dropdown
     When I click on the button labeled exactly "Assign" on the role selector dropdown
-    Then I should see "Test User1" within the "1_FullRights" row of the column labeled "Username" of the User Rights table
+    Then I should see "test_User1" within the "1_FullRights" row of the column labeled "Username" of the User Rights table
 
   Scenario: ##VERIFY options Setup, Dashboard, and Randomize in user rights privilege setup page.
     When I click on the link labeled "User Rights"
@@ -61,7 +61,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     When I click on the link labeled "Logging"
     Then I should see a table header and rows containing the following values in the logging table:
       | Time / Date      | Username   | Action        | List of Data Changes OR Fields Exported |
-      | mm/dd/yyyy hh:mm | test_user1 | Manage/Design | Modify project settings                 |
+      | mm/dd/yyyy hh:mm | test_User1 | Manage/Design | Modify project settings                 |
 
   Scenario: C.3.30.0200.0600. Disabling removes randomization module options Setup, Dashboard, and Randomize to user rights privilege setup page.
     When I click on the link labeled "User Rights"
