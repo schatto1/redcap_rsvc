@@ -15,11 +15,11 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
       And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
       Then I should see Project status: "Production"
 
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       Then I should see "Consent form version"
 
    Scenario: Add consent form version via rich text
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       Then I should see "Consent form version"
 
       When I enter "test 1" into the input field labeled "Consent form version:" in the dialog box
@@ -106,7 +106,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
       And I click on the button labeled "e-Consent"
       Then I should see "Participant Consent"
 
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       Then I should see "Consent form version"
 
       When I enter "test 2" into the input field labeled "Consent form version:" in the dialog box
