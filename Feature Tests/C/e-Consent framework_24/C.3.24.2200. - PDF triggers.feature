@@ -128,7 +128,6 @@ Feature: User Interface: The system shall support the creation, modification, an
         When I click on the button labeled "Save signature" in the dialog box
         Then I should see a link labeled "Remove signature"
 
-      And I click on the button labeled "Save signature" in the dialog box
       And I select "Complete" from the field labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -174,7 +173,6 @@ Feature: User Interface: The system shall support the creation, modification, an
         When I click on the button labeled "Save signature" in the dialog box
         Then I should see a link labeled "Remove signature"
 
-      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 

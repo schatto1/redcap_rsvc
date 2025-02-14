@@ -57,8 +57,6 @@ Feature: User Interface: The system shall support the e-Consent Framework to cus
         When I click on the button labeled "Save signature" in the dialog box
         Then I should see a link labeled "Remove signature"
 
-      And I click on the button labeled "Save signature" in the dialog box
-
       When I click on the button labeled "Next Page"
       Then I should see "Displayed below is a read-only copy of your survey responses."
       And I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
