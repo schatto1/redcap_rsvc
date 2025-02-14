@@ -78,7 +78,6 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
         When I click on the button labeled "Save signature" in the dialog box
         Then I should see a link labeled "Remove signature"
 
-      And I click on the button labeled "Save signature" in the dialog box
       And I select "Complete" from the field labeled "Complete?"
       And I click on the button labeled "Save & Exit Form"
       Then I should see "Record Home Page"
@@ -109,8 +108,6 @@ Feature: User Interface: The system shall support audit trails for e-Consent Cer
         And I draw a signature in the signature field area
         When I click on the button labeled "Save signature" in the dialog box
         Then I should see a link labeled "Remove signature"
-
-      And I click on the button labeled "Save signature" in the dialog box
 
       When I click on the button labeled "Next Page"
       Then I should see "Displayed below is a read-only copy of your survey responses."
