@@ -22,7 +22,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       Then I should see "Participant Consent"
 
       #Add consent with no DAG
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       And I enter "No DAG" into the input field labeled "Consent form version:" in the dialog box
       And I select "Consent file" from the dropdown field labeled "Placement of consent form:" in the dialog box
       And I select "When record is not assigned to a DAG (default)" from the dropdown field labeled "Display for specific DAG" in the dialog box
@@ -45,7 +45,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
 
    Scenario: #Add consent with DAG TestGroup1
       #Add consent with DAG TestGroup1
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       And I enter "DAG 1" into the input field labeled "Consent form version:" in the dialog box
       And I select "Consent file" from the dropdown field labeled "Placement of consent form:" in the dialog box
       And I select "TestGroup1" from the dropdown field labeled "Display for specific DAG" in the dialog box
@@ -60,7 +60,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
 
    Scenario: #Add consent with DAG TestGroup2
       #Add consent with DAG TestGroup2
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       And I enter "DAG 2" into the input field labeled "Consent form version:" in the dialog box
       And I select "Consent file" from the dropdown field labeled "Placement of consent form:" in the dialog box
       And I select "TestGroup2" from the dropdown field labeled "Display for specific DAG" in the dialog box

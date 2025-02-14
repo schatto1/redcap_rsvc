@@ -21,7 +21,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         And I click on the button labeled "e-Consent"
         Then I should see "Participant Consent"
 
-        When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+        When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
         Then I should see "Consent form version"
 
         When I enter "test 1" into the input field labeled "Consent form version:" in the dialog box
@@ -34,7 +34,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         Then I should see "Consent form v1.0" for the survey labeled "Participant Consent"
 
     Scenario: Add consent form version via rich text
-        When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+        When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
         Then I should see "Consent form version"
 
         When I enter "test 1" into the input field labeled "Consent form version:" in the dialog box
@@ -119,7 +119,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
         And I click on the button labeled "e-Consent"
         Then I should see "Participant Consent"
 
-        When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+        When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
         Then I should see "Consent form version"
         # Unable to add an existing version name
 
