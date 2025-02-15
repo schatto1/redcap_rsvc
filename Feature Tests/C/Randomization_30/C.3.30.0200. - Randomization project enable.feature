@@ -43,7 +43,8 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     #refresh
     Then I should see a link labeled "Randomization"
 
-  Scenario: #SETUP Randomization
+  Scenario: #SETUP Randomization 
+  #C.3.30.0300.0100. User with Randomization Setup rights can use Randomization Module Setup Configuration page. 
     When I click on the link labeled "Randomization"
     ##VERIFY User with Randomization Setup rights can use Randomization Module Setup Configuration page.
     When I click on a button labeled "Add new randomization model"
@@ -76,6 +77,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     And I should NOT see "Dashboard"
 
   Scenario: Disable Randomization Setup
+ #C.3.30.0300.0200. User without Randomization Setup rights cannot use Randomization Module Setup Configuration page.
     When I click on the link labeled "User Rights"
     And I click on the link labeled "Test User1"
     And I click on the button labeled "Edit user privileges"
