@@ -17,7 +17,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       Then I should see Project status: "Production"
 
       When I click on the button lanbeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshot"
+      And I click on the button labeled "PDF Snapshot"
 
    Scenario: Cancel New PDF Trigger
       ##ACTION: New PDF Trigger
@@ -196,6 +196,7 @@ Feature: User Interface: The system shall support the creation, modification, an
       And I click on the button labeled "Okay" in the dialog box
       And I click on the button labeled "Survey options"
       And I click on the survey option label containing "Open survey" label
+      And I type "Coo" in the field labeled "Coordinator's name Typed"
       And I enter a signature in the field labeled "Coordinator's Signature"
       And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
