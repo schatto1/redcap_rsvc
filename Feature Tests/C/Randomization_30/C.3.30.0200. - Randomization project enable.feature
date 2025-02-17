@@ -107,3 +107,4 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     And I should NOT see "Set up a randomization model"
     And I logout
 #END
+
