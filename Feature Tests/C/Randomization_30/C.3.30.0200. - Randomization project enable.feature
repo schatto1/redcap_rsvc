@@ -43,8 +43,9 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     #refresh
     Then I should see a link labeled "Randomization"
 
-  Scenario: #SETUP Randomization 
-  #C.3.30.0300.0100. User with Randomization Setup rights can use Randomization Module Setup Configuration page. 
+  Scenario: #SETUP Randomization
+    #C.3.30.0300.0100. User with Randomization Setup rights can use Randomization Module Setup Configuration page.
+    #C.3.30.0400.0100. User with Randomization Dashboard rights can use Randomization Module Dashboard page.
     When I click on the link labeled "Randomization"
     ##VERIFY User with Randomization Setup rights can use Randomization Module Setup Configuration page.
     When I click on a button labeled "Add new randomization model"
@@ -60,8 +61,9 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     When I click the link labeled "Dashboard"
     Then I should see "table below displays the allocation dashboard"
 
-  #C.3.30.0200.0600. Disabling removes randomization module options Setup, Dashboard, and Randomize to user rights privilege setup page.
   Scenario: Disable Randomization Dashboard
+    #C.3.30.0200.0600. Disabling removes randomization module options Setup, Dashboard, and Randomize to user rights privilege setup page.
+    #C.3.30.0400.0200. User without Randomization Dashboard rights cannot use Randomization Module Dashboard page.
     When I click on the link labeled "User Rights"
     And I click on the link labeled "Test User1"
     And I click on the button labeled "Edit user privileges"
@@ -77,7 +79,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
     And I should NOT see "Dashboard"
 
   Scenario: Disable Randomization Setup
- #C.3.30.0300.0200. User without Randomization Setup rights cannot use Randomization Module Setup Configuration page.
+    #C.3.30.0300.0200. User without Randomization Setup rights cannot use Randomization Module Setup Configuration page.
     When I click on the link labeled "User Rights"
     And I click on the link labeled "Test User1"
     And I click on the button labeled "Edit user privileges"
