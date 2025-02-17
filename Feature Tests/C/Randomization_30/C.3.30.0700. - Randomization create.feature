@@ -49,7 +49,7 @@ And I create a new project named "C.3.30.0700A" by clicking on "New Project" in 
 #SETUP User Rights
 Scenario: 
 When I click on the link labeled "User Rights"
-And I click on the link labeled "Test_User1"
+And I click on the link labeled "Test User1"
 And I click on the button labeled "Assign to role" on the tooltip
 And I select "1_FullRights" on the dropdown field labeled "Select Role"
 And I click on the button labeled exactly "Assign"
@@ -88,7 +88,7 @@ Then I should see a "strat_var1" with the "simple_rand" row of the column labele
 
 ##VERIFY audit trail
 When I click on “Logging”
-Then I should see a table row containing the following values in the logging table : “Test_User1”, “Manage/Design”, “Save randomization model”
+Then I should see a table row containing the following values in the logging table : “test_user1”, “Manage/Design”, “Save randomization model”
 
 #FUNCTIONAL_REQUIREMENT C.3.30.0700.0300: Enable stratified randomization with up to 14 strata (test all 14).
 Scenario:
@@ -162,7 +162,7 @@ And I create a new project named "C.3.30.0700B" by clicking on "New Project" in 
 #SETUP User Rights
 Scenario: 
 When I click on the link labeled "User Rights"
-And I click on the link labeled "Test_User1"
+And I click on the link labeled "Test User1"
 And I click on the button labeled "Assign to role" on the tooltip
 And I select "1_FullRights" on the dropdown field labeled "Select Role"
 And I click on the button labeled exactly "Assign"
@@ -216,7 +216,7 @@ And I create a new project named "C.3.30.0700.D" by clicking on "New Project" in
 
 #SETUP Randomization User Rights (Give User all Rand Rights)
 When I click on the link labeled "User Rights"
-And I click on the link labeled "Test_User1"
+And I click on the link labeled "Test User1"
 And I click on the button labeled "Edit User Privileges"
 And I check a checkbox labeled "Setup"
 And I check a checkbox labeled "Dashboard"

@@ -6,17 +6,16 @@ Feature: C.3.30.0500. User Interface: The system shall allow user rights configu
     Given I login to REDCap with the user "Test_User1"
     And I create a new project named "C.3.30.0500" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "Project 3.30 randAM.xml", and clicking the "Create Project" button
 
-  Scenario: #SETUP Randomization User Rights (Give User all Rand Rights)
-    When I click on the link labeled "Project Setup"
-    And I click on the link labeled "User Rights"
-    And I click on the link labeled "Test_User1"
-    And I click on the button labeled "Edit User Privileges"
-    When I check the checkbox labeled "Setup"
-    And I check the checkbox labeled "Dashboard"
-    And I check the checkbox labeled "Randomize"
-    And I save changes within the context of User Rights
-    #refresh
-    Then I should see a link labeled "Randomization"
+Scenario: #SETUP Randomization User Rights (Give User all Rand Rights)
+When I click on the link labeled "Project Setup"
+And I click on the link labeled "User Rights"
+And I click on the link labeled "Test_User1"
+And I click on the button labeled "Edit User Privileges"
+And I check a checkbox labeled "Setup"
+And I check a checkbox labeled "Dashboard"
+And I check a checkbox labeled "Randomize"
+And I save changes within the context of User Rights
+And I click on the link labeled "Randomization"
 
   Scenario: #SETUP Randomization (Setup project with simple Randomization)
     When I click on the link labeled "Randomization"
@@ -43,13 +42,12 @@ Feature: C.3.30.0500. User Interface: The system shall allow user rights configu
     When I click on the button labeled "Close"
     Then I should see the radio labeled "Randomization group" with option "Drug A" selected
 
-  Scenario: #SETUP User Rights (Takeaway User Rand - Setup Rights)
-    When I click on the link labeled "User Rights"
-    And I click on the link labeled "Test_User1"
-    And I click on the button labeled "Edit User Privileges"
-    And I uncheck a checkbox labeled "Randomize"
-    And I save changes within the context of User Rights
-    Then I should see "User "test_user1" was successfully edited"
+Scenario: #SETUP User Rights (Takeaway User Rand - Setup Rights)
+When I click on the link labeled "User Rights"
+And I click on the link labeled "Test_User1"
+And I click on the button labeled "Edit User Privileges"
+And I uncheck a checkbox labeled "Randomize"
+And I save changes within the context of User Rights
 
   Scenario: C.3.30.0500.0200. User without Randomization Randomize rights cannot Randomize.
 #FUNCTIONAL_REQUIREMENT C.3.30.0500.200: User without Randomization Randomize rights cannot Randomize.
