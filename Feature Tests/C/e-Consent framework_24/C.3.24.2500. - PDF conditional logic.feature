@@ -108,7 +108,6 @@ Feature: User Interface: The system shall support conditional logic integration 
         When I click on the button labeled "Save signature" in the dialog box
         Then I should see a link labeled "Remove signature"
 
-      And I click on the button labeled "Save signature" in the dialog box
       And I click on the button labeled "Submit"
       Then I should see "Thank you for taking the survey."
 
