@@ -24,7 +24,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
     When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
     Then I should see "Consent form version"
 
-  Scenario:
+  Scenario: #CROSS-REF ##C.3.24.1600.100 Add consent form version via rich text
     When I enter "test 1" into the input field labeled "Consent form version:" in the dialog box
     And I select "Consent file" from the dropdown field labeled "Placement of consent form:" in the dialog box
     And I select "When record is not assigned to a DAG (default)" from the dropdown field labeled "Display for specific DAG" in the dialog box
@@ -119,8 +119,9 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
     #Manual: Close document
 
   Scenario: C.3.24.1500.200 e-Consent create unique version using Inline PDF
+  #CROSS-REF ##C.3.24.1600.200 e-Consent create unique version using Inline PDF
         #Add consent form version via file upload
-        #SETUP_eConsent
+        #SETUP_eConsentF
     When I click on the button labeled "Designer"
     And I click on the button labeled "e-Consent"
     Then I should see "Participant Consent"
@@ -164,7 +165,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
     And I click on the button labeled "Add new consent form" in the dialog box
     Then I should see "Consent form vtest 2" for the survey labeled "Participant Consent"
 
-  Scenario: # view all versions for Test 1
+  Scenario: #view all versions for Test 1
     When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
     Then I should see a table header and rows containing the following values in a table:
       | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
