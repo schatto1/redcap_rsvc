@@ -9,7 +9,7 @@ Feature: C.3.30.0500. User Interface: The system shall allow user rights configu
   Scenario: #SETUP Randomization User Rights (Give User all Rand Rights)
     When I click on the link labeled "Project Setup"
     And I click on the link labeled "User Rights"
-    And I click on the link labeled "Test_User1"
+    And I click on the link labeled "Test User1"
     And I click on the button labeled "Edit User Privileges"
     When I check the checkbox labeled "Setup"
     And I check the checkbox labeled "Dashboard"
@@ -45,7 +45,7 @@ Feature: C.3.30.0500. User Interface: The system shall allow user rights configu
 
   Scenario: #SETUP User Rights (Takeaway User Rand - Setup Rights)
     When I click on the link labeled "User Rights"
-    And I click on the link labeled "Test_User1"
+    And I click on the link labeled "Test User1"
     And I click on the button labeled "Edit User Privileges"
     And I uncheck a checkbox labeled "Randomize"
     And I save changes within the context of User Rights
