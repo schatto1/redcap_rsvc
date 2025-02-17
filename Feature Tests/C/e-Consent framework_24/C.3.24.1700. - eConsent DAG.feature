@@ -32,7 +32,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       And I click on the button labeled "Add new consent form" in the dialog box
       Then I should see "Consent form vNO DAG" for the survey labeled "Participant Consent"
 
-      #VERIFY: view all versions for Test 1
+    #VERIFY: view all versions for No DAG
       When I click on the button labeled "View all versions" for the survey labeled "Participant Consent"
       Then I should see a table header and rows containing the following values in a table:
          | Active?    | Version | Time added         | Uploaded by             | Number of records consented | Data Access Group | MLM Language | Consent form text or file               | Set consent form as inactive |
@@ -67,7 +67,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to lim
       And I select "No languages defined on MLM page" for the dropdown filed labeled "Display for specific language" in the dialog box
       And I click on the link labeled "Consent Form (Inline PDF)" in the dialog box
       And I click on the button labeled "Choose File" in the dialog box
-      And I select the file labeled "DAG1.pdf" in the dialog box
+      And I select the file labeled "DAG2.pdf" in the dialog box
       And I click on the button labeled "Upload File" in the dialog box
       And I click on the button labeled "Add new consent form" in the dialog box
       Then I should see "Consent form vDAG 2" for the survey labeled "Participant Consent"
