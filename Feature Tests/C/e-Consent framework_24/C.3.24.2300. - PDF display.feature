@@ -11,7 +11,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
       ##ACTION: New Active PDF Trigger
       When I click on the button labeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshot"
+      And I click on the button labeled "PDF Snapshot"
       And I click on the button labeled "PDF Snapshots of Record"
       And I click on the button labeled "+Add new trigger"
       And I enter "Snapshot" in the box labeled "Name of trigger"
@@ -203,7 +203,7 @@ Feature: User Interface: The system shall support the hide/unhide active and ina
 
    Scenario: Reactivate triggers
       When I click on the button lanbeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshot"
+      And I click on the button labeled "PDF Snapshot"
       And I uncheck the checkbox labeled "Hide inactive"
       Then I should see a table header and rows containing the following values in a table:
          | Active  | Edit settings | Name          | Type of trigger   | Save snapshot when...                 | Scope of the snapshot | Location(s) to save the snapshot                                   |
