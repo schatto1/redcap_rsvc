@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs')
-const { exec } = require('child_process')
+const { execSync } = require('child_process')
 
 /**
  * This tool fetches the results of the latest cloud run
@@ -125,7 +125,7 @@ class UploadVideosToREDCapProject {
                                     }
 
                                     //Run the import of video to REDCAP VUMC
-                                    exec(`sh import_video.sh "${file_path}" "${filename}" ${folder_id}`,
+                                    execSync(`sh import_video.sh "${file_path}" "${filename}" ${folder_id}`,
                                         (error, stdout, stderr) => {
                                             if (error) {
                                                 console.error(`Error executing script: ${error.message}`)
