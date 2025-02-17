@@ -15,11 +15,11 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
       And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
       Then I should see Project status: "Production"
 
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       Then I should see "Consent form version"
 
    Scenario: Add consent form version via rich text
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       Then I should see "Consent form version"
 
       When I enter "test 1" into the input field labeled "Consent form version:" in the dialog box
@@ -73,8 +73,6 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
         When I click on the button labeled "Save signature" in the dialog box
         Then I should see a link labeled "Remove signature"
 
-      And I click on the button labeled "Save signature" in the dialog box
-
       When I click on the button labeled "Next Page"
       Then I should see "Displayed below is a read-only copy of your survey responses."
       And I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
@@ -106,7 +104,7 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
       And I click on the button labeled "e-Consent"
       Then I should see "Participant Consent"
 
-      When I click on the button labeled "+Add consent from" for the survey labeled "Participant Consent"
+      When I click on the button labeled "+Add consent form" for the survey labeled "Participant Consent"
       Then I should see "Consent form version"
 
       When I enter "test 2" into the input field labeled "Consent form version:" in the dialog box
@@ -162,8 +160,6 @@ Feature: User Interface: The system shall support the e-Consent Framework to pla
         And I draw a signature in the signature field area
         When I click on the button labeled "Save signature" in the dialog box
         Then I should see a link labeled "Remove signature"
-
-      And I click on the button labeled "Save signature" in the dialog box
 
       When I click on the button labeled "Next Page"
       Then I should see "Displayed below is a read-only copy of your survey responses."
