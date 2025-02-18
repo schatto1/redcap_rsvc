@@ -13,7 +13,7 @@ Feature: User Interface: The system shall support the search function within PDF
 
       ##ACTION: Search function
       When I click on the button labeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshot"
+      And I click on the button labeled "PDF Snapshot"
       And I click on the button labeled "PDF Snapshots of Record"
       Then I should see a table header and rows containing the following values in a table:
          | Active | Edit settings         | Name       | Type of trigger   | Save snapshot when...                                    | Scope of the snapshot  | Location(s) to save the snapshot                     |

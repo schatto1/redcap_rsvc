@@ -40,7 +40,7 @@ Feature: User Interface: The system shall support the capture and storage of mul
    Scenario: New multi data form same event PDF Trigger
       ##ACTION: New PDF Trigger
       When I click on the button labeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshot"
+      And I click on the button labeled "PDF Snapshot"
       And I click on the button labeled "PDF Snapshots of Record"
       And I click on the button labeled "+Add new trigger"
       And I enter "1 multi data form same event" in the box labeled "Name of trigger"

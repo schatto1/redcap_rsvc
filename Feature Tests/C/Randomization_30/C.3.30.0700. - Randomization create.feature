@@ -248,8 +248,8 @@ Then I should NOT see a "will_survey" within the "5" row of the column labeled "
 When I click on the link labeled "Logging"
 Then I should see a table header and rows containing the following values in the logging table:
   | Username   | Action        | List of Data Changes OR Fields Exported      |
-  | Test_User1 | Manage/Design | Save Randomization Model |
-  | Test_User1 | Manage/Design | Erase randomization model and allocations |
+  | test_user1 | Manage/Design | Save Randomization Model |
+  | test_user1 | Manage/Design | Erase randomization model and allocations |
 And I logout
 #END
 

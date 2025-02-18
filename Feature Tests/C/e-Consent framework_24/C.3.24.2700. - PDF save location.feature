@@ -17,7 +17,7 @@ Feature: User Interface: The system shall support the saving PDF snapshots to sp
       Then I should see Project status: "Production"
 
       When I click on the button lanbeled "Designer"
-      And I click on the button labeled "e-Consent and PDF Snapshot"
+      And I click on the button labeled "PDF Snapshot"
 
    Scenario: New PDF Trigger for survey completion all instruments
       ##ACTION: New PDF Trigger
