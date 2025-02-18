@@ -5,7 +5,7 @@ Feature: User Interface: The system shall restrict users to randomizing records 
 
 #SETUP project with no randomization enabled - "C.3.30 AllRandOptions.xml"
 Scenario:
-Given I login to REDCap with the user "Test_User1"
+Given I login to REDCap with the user "Test User1"
 And I create a new project named "C.3.30.0600" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "C.3.30 AllRandOptions.xml", and clicking the "Create Project" button
 
 #SETUP Randomization User Rights (Give User all Rand Rights and Add User 2)
@@ -100,7 +100,7 @@ And I should see "Already Randomized" near the radio field labeled "Stratified b
 And I logout
 
 #Log in as Test User 1 and Randomize two records to DAG 2 (First Group 3 then Group 2 is expected)
-Given I login to REDCap with the user "Test_User1"
+Given I login to REDCap with the user "Test User1"
 And I click "My Projects" on the menu bar
 And I click the link labeled "C.3.30.0600"
 And I click on the link labeled "Add / Edit Records"
