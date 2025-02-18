@@ -121,7 +121,7 @@ Feature: User Interface: The system shall support the e-Consent Framework for ve
   Scenario: C.3.24.1500.200 e-Consent create unique version using Inline PDF
   #CROSS-REF ##C.3.24.1600.200 e-Consent create unique version using Inline PDF
         #Add consent form version via file upload
-        #SETUP_eConsentF
+        #SETUP_eConsent
     When I click on the button labeled "Designer"
     And I click on the button labeled "e-Consent"
     Then I should see "Participant Consent"

@@ -4,7 +4,7 @@ Feature: C.3.30.0200 User Interface: The system shall allow enabling/disabling R
 
   Scenario: Randomization enabled
     #SETUP
-    Given I login to REDCap with the user "Test User1"
+    Given I login to REDCap with the user "Test_User1"
     And I create a new project named "C.3.30.0200.0100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "cdisc_files/Project 3.30 norand.REDCap.xml", and clicking the "Create Project" button
     #FUNCTIONAL_REQUIREMENT
     And I click on the button labeled "Enable" in the "Randomization module" row in the "Enable optional modules and customizations" section
