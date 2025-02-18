@@ -1,6 +1,6 @@
-Feature: Project Settings: The system shall support the ability for administrators to enable or disable the option allowing users to edit e-Consent responses within the Project Settings.
+Feature: A.3.24.3000. The system shall support the ability for administrators to enable or disable the option allowing users to edit e-Consent responses within the Project Settings.
     As a REDCap end user
-    I want to see that eConsent is functioning as expected
+    I want to see that the e-Consent Framework is functioning as expected
 
   Scenario: A.3.24.3000.100 Show/Hide the e-Consent Framework via Control Center
         #SETUP
@@ -16,7 +16,8 @@ Feature: Project Settings: The system shall support the ability for administrato
     And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
     Then I should see Project status: "Production"
 
-  Scenario: #FUNCTIONAL_REQUIREMENT ##ACTION: Hide e-Consent Framework option
+  Scenario: #FUNCTIONAL_REQUIREMENT
+        ##ACTION: Hide e-Consent Framework option
     When I click on the link labeled "Control Center"
     And I click on the link labeled "Modules/Services Configuration"
     Then I should see "Settings pertaining to the External Module Framework"
@@ -31,11 +32,12 @@ Feature: Project Settings: The system shall support the ability for administrato
     When I click on the link labeled "Online Designer"
     Then I should NOT see a button labeled "e-Consent"
 
-  Scenario: #FUNCTIONAL_REQUIREMENT ##ACTION: Show e-Consent Framework option
+  Scenario: #FUNCTIONAL_REQUIREMENT
+        ##ACTION: Show e-Consent Framework option
     When I click on the link labeled "Control Center"
     And I click on the link labeled "Modules/Services Configuration"
     Then I should see "Settings pertaining to the External Module Framework"
-    When I select "Show e-Consent Framework option (recommended)" on the dropdown field labeled "Display "e-Consent Framework" option for ALL Surveys?"
+    When I select " Show e-Consent Framework option (recommended) " on the dropdown field labeled " Display "e-Consent Framework" option for ALL Surveys?"
     And I click on the button labeled "Save Changes"
         ##VERIFY e-Consent Framework is showing
     Then I should see "Your system configuration values have now been changed!"
@@ -62,18 +64,18 @@ Feature: Project Settings: The system shall support the ability for administrato
     And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
     Then I should see Project status: "Production"
 
-  Scenario: #FUNCTIONAL_REQUIREMENT Do NOT capture IP Address ##ACTION: Do not capture the IP Address in the e-Consent Framework option
+  Scenario: #FUNCTIONAL_REQUIREMENT Do NOT capture IP Address
+        ##ACTION: Do not capture the IP Address in the e-Consent Framework option
     When I click on the link labeled "Control Center"
     And I click on the link labeled "Modules/Services Configuration"
     Then I should see "Settings pertaining to the External Module Framework"
-
-  Scenario:
     When I select "Do NOT capture IP Address" on the dropdown field labeled " Capture the IP address of survey participants that certify the e-Consent process, and store their IP in the File Repository table."
     And I click on the button labeled "Save Changes"
         ##VERIFY IP Address is not being Captured via the e-Consent Framework
     Then I should see "Your system configuration values have now been changed!"
 
-  Scenario: ##ACTION: add record with consent framework
+  Scenario: Add record
+        ##ACTION: add record with consent framework
     When I click on the link labeled "Add/Edit Records"
     And I click on the button labeled "Add new record for the arm selected above"
     And I click the bubble to select a record for the "Participant Consent" instrument on event "Event 1"
@@ -108,6 +110,8 @@ Feature: Project Settings: The system shall support the ability for administrato
     When I check the checkbox labeled "I certify that all of my information in the document above is correct."
     And I click on the button labeled "Submit"
     Then I should see "Thank you for taking the survey."
+
+  Scenario:
     When I click on the button labeled "Close survey"
     And I click on the button labeled "Leave without saving changes" in the dialog box
     Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
@@ -141,16 +145,31 @@ Feature: Project Settings: The system shall support the ability for administrato
 #END
 
   Scenario: A.3.24.3000.300 Add a custom message via e-Consent Framework in the Control Center
-        #FUNCTIONAL_REQUIREMENT Custom Message on e-Consent Framework
+        #SETUP
+    Given I login to REDCap with the user "Test_Admin"
+    And I create a new project named "A.3.24.3000.300" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "24EConsenrWithSetup-2.xml", and clicking the "Create Project" button
+    And I click on the link labeled "My Projects"
+    And I click on the link labeled "A.3.24.3000.300"
+
+  Scenario: #SETUP_PRODUCTION
+    When I click on the link labeled "Project Setup"
+    And I click on the button labeled "Move project to production"
+    And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
+    And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
+    Then I should see Project status: "Production"
+
+  Scenario: #FUNCTIONAL_REQUIREMENT Custom Message on e-Consent Framework
         ##ACTION: Add a Custom Message in the e-Consent Framework option
     When I click on the link labeled "Control Center"
     And I click on the link labeled "Modules/Services Configuration"
     Then I should see "Settings pertaining to the External Module Framework"
-    When I type "This is a special message from RVP." in the box labeled "Custom message for e-Consent Framework settings (optional)"
+    When I type "If you are using the e-Consent Framework, the IRB must see you final version and you must use the stamped version of the IRB Approval" in the box labeled " Custom message for e-Consent Framework settings (optional)
     And I click on the button labeled "Save Changes"
-    Then I should see "Your system configuration values have now been changed!"
 
-  Scenario: ##VERIFY custom message
-    And I click on the button labeled "New Project"
-    Then I should see "This is a special message from RVP."
+  Scenario: ##VERIFY I Custom message appears at the bottom of the Modify Setting window  in the e-Consent Framework
+    Then I should see "Your system configuration values have now been changed!"
+    When I click on the button labeled "Designer"
+    And I click on the button labeled "e-Consent"
+    And I click on the icon to edit the "Participant Consent"
+    Then I should see " If you are using the e-Consent Framework, the IRB must see you final version and you must use the stamped version of the IRB Approval"
 #END
