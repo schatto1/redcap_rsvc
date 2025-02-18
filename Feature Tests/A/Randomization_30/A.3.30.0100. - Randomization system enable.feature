@@ -35,6 +35,6 @@ Feature: A.3.30.0100 Control Center: The system shall support enabling or disabl
     #SETUP
     When I click on the link labeled "My Projects"
     And I click on the link labeled "A.3.30.0100."
-    And I should see "Randomization Module"
+    And I should NOT see "Randomization Module"
     And I logout
 #END
