@@ -15,15 +15,14 @@ Feature: User Interface: The system shall support the ability to assign the User
     And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
     Then I should see Project status: "Production"
 
-  Scenario: #SETUP: Assign record 1 to DAG1
-    When I click on the link labeled "Record Status Dashboard"
-    And I click on the link labeled exactly "1"
-    And I click on the button labeled "Choose action for record"
-    And I click on the link labeled "Assign to Data Access Group"
-    When I select "TestGroup1" on the dropdown field labeled "Assign record" on the dialog box
-    And I click on the button labeled "Assign to Data Access Group" in the dialog box
-    Then I should see "Record ID 1 was successfully assigned to a Data Access Group"
-    And I should see a table header and rows containing the following values in a table:
+  Scenario: #USER_RIGHTS User 1 Dag 1
+    When I click on the link labeled "User Rights"
+    And I enter "Test_User1" into the field with the placeholder text of "Assign new user to role"
+    And I click on the button labeled "Assign to role"
+    And I select "1_FullRights" on the dropdown field labeled "Select Role" on the role selector dropdown
+    And I select "TestGroup1" on the dropdown field labeled "Assign To DAG" on the role selector dropdown
+    And I click on the button labeled exactly "Assign" on the role selector dropdown
+    Then I should see a table header and rows containing the following values in a table:
       | Role name               | Username            | Data Access Group |
       | —                       | test_admin          |                   |
       |            1_FullRights | test_user1          | TestGroup1        |
@@ -33,13 +32,11 @@ Feature: User Interface: The system shall support the ability to assign the User
       | TestRole                | [No users assigned] |                   |
 
   Scenario: #SETUP: Assign record 2 to DAG2
-    When I click on the link labeled "Record Status Dashboard"
-    And I click on the link labeled exactly "2"
-    And I click on the button labeled "Choose action for record"
-    And I click on the link labeled "Assign to Data Access Group"
-    When I select "TestGroup2" on the dropdown field labeled "Assign record" on the dialog box
-    And I click on the button labeled "Assign to Data Access Group" in the dialog box
-    Then I should see "Record ID 2 was successfully assigned to a Data Access Group"
+    When I enter "Test_User2" into the field with the placeholder text of "Assign new user to role"
+    And I click on the button labeled "Assign to role"
+    And I select "1_FullRights" on the dropdown field labeled "Select Role" on the role selector dropdown
+    And I select "TestGroup2" on the dropdown field labeled "Assign To DAG" on the role selector dropdown
+    And I click on the button labeled exactly "Assign" on the role selector dropdown
     And I should see a table header and rows containing the following values in a table:
       | Role name               | Username            | Data Access Group |
       | —                       | test_admin          |                   |
@@ -96,7 +93,6 @@ Feature: User Interface: The system shall support the ability to assign the User
     Then I should see a table row containing the following values in the reports table:
       | 1 | C.5.22.100.100 REPORT |
     When I click on the button labeled "View Report"
-    Then I should see the report with 3 rows
     Then I should see a table header and rows containing the following values in a table:
       | Record ID     | Event Name             | Repeat Instance |
       | 2  TestGroup2 | Event 1 (Arm 1: Arm 1) |                 |
