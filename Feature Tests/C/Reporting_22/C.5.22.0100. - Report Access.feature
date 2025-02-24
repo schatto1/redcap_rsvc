@@ -34,7 +34,7 @@ Feature: User Interface: The system shall support the ability to assign the User
   Scenario: #SETUP: Assign record 2 to DAG2
     When I enter "Test_User2" into the field with the placeholder text of "Assign new user to role"
     And I click on the button labeled "Assign to role"
-    And I select "1_FullRights" on the dropdown field labeled "Select Role" on the role selector dropdown
+    And I select "2_Edit_RemoveID" on the dropdown field labeled "Select Role" on the role selector dropdown
     And I select "TestGroup2" on the dropdown field labeled "Assign To DAG" on the role selector dropdown
     And I click on the button labeled exactly "Assign" on the role selector dropdown
     And I should see a table header and rows containing the following values in a table:
