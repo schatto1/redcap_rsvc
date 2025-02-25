@@ -23,7 +23,7 @@ Feature: User Interface: The Record Locking Customization module shall provide t
 #         #FUNCTIONAL REQUIREMENT
 #         ##ACTION Lock Record Custom Text
 #         When I click on the link labeled "Customize & Manage Locking/E-signatures"
-#         And I select the button labeled "I understand. Let me make changes" in the dialog box
+#         And I click on the button labeled "I understand. Let me make changes" in the dialog box
 #         Then I should see "Record Locking Customization"
 
 #         When I deselect the checkbox labeled "Display the Lock option for this instrument?" for the instrument labeled "Survey"
@@ -37,7 +37,7 @@ Feature: User Interface: The Record Locking Customization module shall provide t
 
 #         #FUNCTIONAL REQUIREMENT
 #         ##ACTION Display E-Signature or Lock option
-#         Then I should see a table header and rows including the following values in the table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? | Lock Record Custom Text |
 #             | [✓]                                          | Text Validation            | [✓]                                            | Test custom text        |
 #             | [✓]                                          | Data Types                 |                                                | Test custom text        |
@@ -45,7 +45,7 @@ Feature: User Interface: The Record Locking Customization module shall provide t
 
 #         ##VERIFY_LOG
 #         When I click on the link labeled "Logging"
-#         Then I should see a table header and rows including the following values in the logging table:
+#         Then I should see a table header and rows containing the following values in the logging table:
 #             | Username   | Action        | List of Data Changes OR Fields Exported |
 #             | test_admin | Manage/Design | Customize record locking                |
 #             | test_admin | Manage/Design | Customize record locking                |
@@ -81,7 +81,7 @@ Feature: User Interface: The Record Locking Customization module shall provide t
 #         #FUNCTIONAL REQUIREMENT
 #         ##ACTION Edit and Delete Lock Record Custom Text
 #         When I click on the link labeled "Customize & Manage Locking/E-signatures"
-#         And I select the button labeled "I understand. Let me make changes" in the dialog box
+#         And I click on the button labeled "I understand. Let me make changes" in the dialog box
 #         Then I should see "Record Locking Customization"
 
 #         When I click on the edit image for the Data Collection Instrument labeled "Text Validation"
@@ -90,7 +90,7 @@ Feature: User Interface: The Record Locking Customization module shall provide t
 #         And I click on the edit image for the Data Collection Instrument labeled "Data Types"
 #         And I clear the notes box field for the Data Collection Instrument labeled "Data Types"
 #         And click on the button labeled "Save"
-#         Then I should see a table header and rows including the following values in the table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? | Lock Record Custom Text |
 #             | [✓]                                          | Text Validation            | [✓]                                            | Edit Test custom text   |
 #             | [✓]                                          | Data Types                 |                                                | [blank]                 |
@@ -98,7 +98,7 @@ Feature: User Interface: The Record Locking Customization module shall provide t
 
 #         ##VERIFY_LOG
 #         When I click on the link labeled "Logging"
-#         Then I should see a table header and rows including the following values in the logging table:
+#         Then I should see a table header and rows containing the following values in the logging table:
 #             | Username   | Action        | List of Data Changes OR Fields Exported |
 #             | test_admin | Manage/Design | Customize record locking                |
 

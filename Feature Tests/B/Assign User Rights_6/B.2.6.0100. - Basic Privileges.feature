@@ -27,7 +27,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         Then I should see a dialog containing the following text: "Adding new user"
 
         When I uncheck the User Right named "Project Setup & Design"
-        And I select the radio option "No Access" for the field labeled "User Rights"
+        And I check the radio labeled "No Access" in the dialog box
         And I uncheck the User Right named "Data Access Groups"
         And I uncheck the User Right named "Survey Distribution Tools"
         And I uncheck the User Right named "Alerts & Notifications"
@@ -43,32 +43,32 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I uncheck the User Right named "API Export"
         And I uncheck the User Right named "API Import/Update"
         And I uncheck the User Right named "REDCap Mobile App - Allow users to collect data offline in the mobile app"
-        And I uncheck the User Right named "Allow user to download data for all records to the app?"
+        And I uncheck the User Right named "REDCap Mobile App - Allow user to download data for all records to the app?"
         And I uncheck the User Right named "Create Records"
         And I uncheck the User Right named "Rename Records"
         And I uncheck the User Right named "Delete Records"
         And I uncheck the User Right named "Record Locking Customization"
         And I select the User Right named "Lock/Unlock Records" and choose "Disabled"
         And I uncheck the User Right named "Lock/Unlock *Entire* Records (record level)"
-        And I click on the link labeled "Add User" in the dialog box
+        And I click on the button labeled "Add user"
 
         ##VERIFY_LOG: Verify Update user rights
-        And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        And I click on the link labeled "Logging"
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
-            | test_admin | Add User | test_user1                              |
+            | test_admin | Add User | Test_User1                     |
 
         ##ACTION #CROSS-FEATURE B.2.23.100: Verify Logging Filter by user name
-        When I select the "test_admin" on the dropdown field labeled "Filter by username"
+        When I select the "test_admin" option from the Filter by username dropdown field
         ##VERIFY_LOG #CROSS-FEATURE: Verify Logging Filter by user name
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
-            | test_admin | Add User | test_user1                              |
+            | test_admin | Add User | Test_User1                     |
         Given I logout
 
         ##VERIFY: Verify User with Basic custom rights
         Given I login to REDCap with the user "Test_User1"
-        Then I should see "Logged in as test_user1"
+        Then I should see "test_user1"
 
         When I click on the link labeled "My Projects"
         And I click on the link labeled "B.2.6.0100.100"
@@ -101,26 +101,28 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I click on the link labeled "B.2.6.0100.100"
         And I click on the link labeled "User Rights"
         And I click on the link labeled "Test User1"
-        And I click on the button labeled "Edit user privileges" on the tooltip
+        And I click on the button labeled "Edit user privileges"
         Then I should see a dialog containing the following text: "Editing existing user"
 
-        When I select the radio option "Read Only" for the field labeled "User Rights"
+        And I check the radio labeled "Read Only" in the dialog box
         And I save changes within the context of User Rights
 
         ##VERIFY_LOG: Verify Update user rights
-        And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        And I click on the link labeled "Logging"
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action      | List of Data Changes OR Fields Exported |
             | test_admin | Update user | test_user1                              |
         Given I logout
 
         ##VERIFY: Verify User with full custom rights
-
         Given I login to REDCap with the user "Test_User1"
-        Then I should see "Logged in as test_user1"
+        Then I should see "test_user1"
+
+        When I click on the link labeled "My Projects"
+        And I click on the link labeled "B.2.6.0100.100"
         And I should see a link labeled "Record Status Dashboard"
-        And I should see a link labeled "Add / Edit Records"
-        And I should see a link labeled "User Rights "
+        And I should see a link labeled "View / Edit Records"
+        And I should see a link labeled "User Rights"
 
         When I click on the link labeled "User Rights"
         Then I should see "This page may be used for viewing the user privileges of users in this project. Since you have read-only privileges to this page, you may not add users, modify user privileges, add/edit roles, or other actions."
@@ -132,11 +134,11 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I click on the link labeled "B.2.6.0100.100"
         And I click on the link labeled "User Rights"
         And I click on the link labeled "Test User1"
-        And I click on the button labeled "Edit user privileges" on the tooltip
+        And I click on the button labeled "Edit user privileges"
         Then I should see a dialog containing the following text: "Editing existing user"
 
         When I check the User Right named "Project Setup & Design"
-        And I select the radio option "Full Access" for the field labeled "User Rights"
+        And I check the radio labeled "Full Access" in the dialog box
         And I check the User Right named "Data Access Groups"
         And I check the User Right named "Survey Distribution Tools"
         And I check the User Right named "Alerts & Notifications"
@@ -161,12 +163,12 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I check the User Right named "Delete Records"
         And I check the User Right named "Record Locking Customization"
         And I select the User Right named "Lock/Unlock Records" and choose "Locking / Unlocking"
-        And I check the User Right named "Lock/Unlock *Entire* Records (record level) "
+        And I check the User Right named "Lock/Unlock *Entire* Records (record level)"
         And I save changes within the context of User Rights
 
         ##VERIFY_LOG: Verify Update user rights
-        And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        And I click on the link labeled "Logging"
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action      | List of Data Changes OR Fields Exported |
             | test_admin | Update user | test_user1                              |
         Given I logout
@@ -174,7 +176,9 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         ##VERIFY: Verify User with full custom rights
 
         Given I login to REDCap with the user "Test_User1"
-        Then I should see "Logged in as test_user1"
+        Then I should see "test_user1"
+        When I click on the link labeled "My Projects"
+        And I click on the link labeled "B.2.6.0100.100"
         And I should see a link labeled "Project Setup"
         And I should see a link labeled "Designer"
         And I should see a link labeled "Dictionary"
@@ -195,7 +199,7 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I should see a link labeled "Field Comment Log"
         And I should see a link labeled "File Repository"
         And I should see a link labeled "Data Comparison Tool"
-        And I should see a link labeled "User Rights "
+        And I should see a link labeled "User Rights"
         And I should see a link labeled "DAGs"
         And I should see a link labeled "Customize & Manage Locking/E-signatures"
         And I should see a link labeled "Data Quality"
@@ -211,14 +215,16 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I click on the link labeled "User Rights"
         And I assign an expired expiration date to user "Test User1" with username of "test_user1"
         ##VERIFY_LOG: Verify Expire User
-        And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
-            | Username   | Action                  | List of Data Changes OR Fields Exported |
-            | test_admin | Updated User Expiration | test_user1                              |
+        And I click on the link labeled "Logging"
+        Then I should see a table header and rows containing the following values in the logging table:
+            | Username   | Action      | List of Data Changes OR Fields Exported |
+            | test_admin | Update user | test_user1                              |
         Given I logout
 
         ##VERIFY: Verify User access to project
         Given I login to REDCap with the user "Test_User1"
+        And I click on the link labeled "My Projects"
+        And I click on the link labeled "B.2.6.0100.100"
         Then I should see "ACCESS DENIED!"
         And I should see "Your access to this particular REDCap project has expired"
         When I click on the link labeled "Return to My Projects page"
@@ -233,15 +239,15 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I remove the expiration date to user "Test User1" with username of "test_user1"
         #The Expiration column shows 'never' for "Test_User1"
         ##VERIFY_LOG: Verify Update user Expiration
-        And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
-            | Username   | Action                  | List of Data Changes OR Fields Exported |
-            | test_admin | Updated User Expiration | test_user1                              |
+        And I click on the link labeled "Logging"
+        Then I should see a table header and rows containing the following values in the logging table:
+            | Username   | Action      | List of Data Changes OR Fields Exported |
+            | test_admin | Update user | test_user1                              |
         Given I logout
 
         ##VERIFY: Verify User access to project
         Given I login to REDCap with the user "Test_User1"
-        Then I should see "Logged in as test_user1"
+        Then I should see "test_user1"
         And I click on the link labeled "My Projects"
         And I click on the link labeled "B.2.6.0100.100"
         Then I should see a link labeled "Project Home"
@@ -253,19 +259,19 @@ Feature: Project Level: The system shall allow the ability to add, edit or delet
         And I click on the link labeled "B.2.6.0100.100"
         And I click on the link labeled "User Rights"
         And I click on the link labeled "Test User1"
-        And I click on the button labeled "Edit user privileges" on the tooltip
+        And I click on the button labeled "Edit user privileges"
         Then I should see a dialog containing the following text: "Editing existing user"
 
-        When I click on a button labeled "Remove User"
+        When I click on a button labeled "Remove user"
         Then I should see a dialog containing the following text: "Remove user?"
         And I click on the button labeled "Remove user" in the dialog box
 
         ##VERIFY_LOG: Verify Logging of Delete user
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
-            | Username   | Action                  | List of Data Changes OR Fields Exported |
-            | test_admin | Delete user             | test_user1                              |
-            | test_admin | Updated User Expiration | test_user1                              |
+        Then I should see a table header and rows containing the following values in the logging table:
+            | Username   | Action      | List of Data Changes OR Fields Exported |
+            | test_admin | Delete user | test_user1                              |
+            | test_admin | Update user | test_user1                              |
         Given I logout
 
         ##VERIFY: Verify User has no access to project

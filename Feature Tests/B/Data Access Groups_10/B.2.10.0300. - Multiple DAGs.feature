@@ -18,7 +18,7 @@ Feature: B.2.10.0300. User Interface: The system shall allow a user to be added 
 
         Given I upload a "csv" format file located at "import_files/user list for project 1.csv", by clicking the button near "Select your CSV" to browse for the file, and clicking the button labeled "Upload" to upload the file
         Then I should see a dialog containing the following text: "Upload users (CSV) - Confirm"
-        And I should see a table header and rows containing the following values in a table:
+        And I should see a table header and rows containing the following values in a table in the dialog box:
             | username   |
             | test_user1 |
             | test_user2 |
@@ -78,7 +78,7 @@ Feature: B.2.10.0300. User Interface: The system shall allow a user to be added 
         And I select "3" on the dropdown field labeled "Choose an existing Record ID"
         Then I should see "Record ID 3"
 
-        Given I click on the span element labeled "Choose action for record"
+        Given I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         Then I should see a dialog containing the following text: "Assign record to a Data Access Group?"
 
@@ -91,7 +91,7 @@ Feature: B.2.10.0300. User Interface: The system shall allow a user to be added 
         And I select "4" on the dropdown field labeled "Choose an existing Record ID"
         Then I should see "Record ID 4"
 
-        Given I click on the span element labeled "Choose action for record"
+        Given I click on the button labeled "Choose action for record"
         And I click on the link labeled "Assign to Data Access Group"
         Then I should see a dialog containing the following text: "Assign record to a Data Access Group?"
 

@@ -16,9 +16,7 @@ Feature: User Interface: The system shall allow data to be changed only by a use
 
         ##ACTION: Import data
         When I click on the link labeled "Data Import Tool"
-        And I upload a "csv" format file located at "import_files/B.3.16.2000.100data.csv", by clicking the button near "Upload your CSV file:" to browse for the file, and clicking the button labeled "Upload" to upload the file
-        And I click the button labeled "Upload File"
-
+        And I upload a "csv" format file located at "import_files/B3161200100_ACCURATE.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
         When I click on the button labeled "Import Data"
         Then I should see "Import Successful!"
 
@@ -33,14 +31,15 @@ Feature: User Interface: The system shall allow data to be changed only by a use
         Then I should see a dialog containing the following text: "Adding new user"
 
         When I uncheck the User Right named "Data Import Tool"
-        And I uheck the User Right named "Logging"
-        And I click on the link labeled "Add User" in the dialog box
+        And I uncheck the User Right named "Logging"
+        And I click on the button labeled "Add user"
 
         ##VERIFY_LOG: Verify Update user rights
-        And I click on the button labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        And I click on the link labeled "Logging"
+         Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action   | List of Data Changes OR Fields Exported |
-            | test_admin | Add User | test_user1                              |
+            | test_admin | Add User | Test_User1                              |
+            
         Given I logout
 
         Given I login to REDCap with the user "Test_User1"

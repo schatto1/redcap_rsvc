@@ -1,4 +1,4 @@
-Feature: Deleting Data: The system shall allow users to delete all data on the current form of a given record.
+Feature: B.3.14.1000. The system shall allow users to delete all data on the current form of a given record from the Record Home Page. 
 
   As a REDCap end user
   I want to see that delete record is functioning as expected
@@ -35,33 +35,29 @@ Feature: Deleting Data: The system shall allow users to delete all data on the c
 
     ##ACTION
     When I click on the link labeled "Record Status Dashboard"
-    And I locate the bubble for the "Survey" instrument on event "Event Three" for record ID "1" and click on the bubble
+    And I locate the bubble for the "Text Validation" instrument on event "Event 1" for record ID "2" and click on the bubble
     Then I should see "Name" in the data entry form field "Name"
+    And I should see "email@test.edu" in the data entry form field "Email"
     And I should see a button labeled "Delete data for THIS FORM only"
 
     #FUNCTIONAL_REQUIREMENT
     When I click on the button labeled "Delete data for THIS FORM only"
     And I click on the button labeled "Delete data for THIS FORM only" in the dialog box
-    Then I should see "Record ID 1 successfully edited."
+    Then I should see "Record ID 2 successfully edited."
 
     Given I click on the link labeled "Record Status Dashboard"
-    Then I should see the "Incomplete (no data saved)" icon for the "Survey" longitudinal instrument on event "Event Three" for record "1"
+    Then I should see the "Incomplete (no data saved)" icon for the "Text Validation" longitudinal instrument on event "Event 1" for record "2"
+    
+    #VERIFY_DE
+    When I locate the bubble for the "Text Validation" instrument on event "Event 1" for record ID "2" and click on the bubble
+    Then I should see "" in the data entry form field "Name"
+    And I should see "" in the data entry form field "Email"
+    And I click on the button labeled "Cancel"
 
     ##VERIFY_LOG
     When I click on the link labeled "Logging"
     Then I should see a table header and rows containing the following values in the logging table:
-      | Username   | Action         | List of Data Changes OR Fields Exported |
-      | test_user1 | Update record1 | email_survey = ''                       |
-      | test_user1 | Update record1 | name_survey = ''                        |
-      | test_user1 | Update record1 | survey_complete = ''                    |
-
-    ##VERIFY_DE
-    When I click on the link labeled "Data Exports, Reports, and Stats"
-    Then I should see a table row containing the following values in the reports table:
-      | A | All data (all records and fields) |
-
-    When I click on the button labeled "View Report"
-    Then I should see a table header and rows containing the following values in the report data table:
-      | Record ID | email_survey | name_survey | survey_complete |
-      | 1         |              |             | Incomplete (0)  |
+      | Username   | Action          | List of Data Changes OR Fields Exported |
+      | test_user1 | Update record 2 | email = ''                              |
+      | test_user1 | Update record 2 | text_validation_complete = ''           |
 #END

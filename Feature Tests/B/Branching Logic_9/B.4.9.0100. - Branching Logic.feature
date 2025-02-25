@@ -25,7 +25,7 @@ Feature: B.4.9.0100. User Interface: The system shall support branching logic fo
         And I should see the field labeled "Calculated Field"
         And I should see the field labeled "Multiple Choice dropdown Auto"
         And I should see the field labeled "Multiple Choice Dropdown Manual"
-        #M: Close the survey page
+        #Manual: Close the survey page
 
         #FUNCTIONAL_REQUIREMENT: data entry mode
         Given I return to the REDCap page I opened the survey from
@@ -33,15 +33,15 @@ Feature: B.4.9.0100. User Interface: The system shall support branching logic fo
         And I click on the button labeled "Add new record for the arm selected above"
         And I click the bubble to add a record for the "Data Types" longitudinal instrument on event "Event 1"
 
-        #MANUAL: These confirmation windows are automatically accepted on automated side
+        #Manual: These confirmation windows are automatically accepted on automated side
         Then I should see an alert box with the following text: 'ERASE THE VALUE OF THE FIELD "ptname" ?'
-        #And I click the button labeled "OK" in the alert box
+        #And I click on the button labeled "OK" in the alert box
         Then I should see an alert box with the following text: 'ERASE THE VALUE OF THE FIELD "textbox" ?'
-        #And I click the button labeled "OK" in the alert box
+        #And I click on the button labeled "OK" in the alert box
         Then I should see an alert box with the following text: 'ERASE THE VALUE OF THE FIELD "text2" ?'
-        #And I click the button labeled "OK" in the alert box
+        #And I click on the button labeled "OK" in the alert box
         Then I should see an alert box with the following text: 'ERASE THE VALUE OF THE FIELD "notesbox" ?'
-        #And I click the button labeled "OK" in the alert box
+        #And I click on the button labeled "OK" in the alert box
 
         Then I should NOT see the field labeled "Name"
         And I should NOT see the field labeled "Text2"
@@ -72,8 +72,9 @@ Feature: B.4.9.0100. User Interface: The system shall support branching logic fo
         And I click on the button labeled "Save" in the dialog box
         Then I should see a dialog containing the following text: "Also edit Branching Logic for OTHER fields?"
         And I click on the button labeled "Yes" in the dialog box
+        Then I should NOT see "Add/Edit Branching Logic"
         Then I should see "Branching logic: [record_id] <> '999'" within the field with variable name "text2"
-        And I should see "Branching logic: [record_id] <> '999'" on the field with variable name "Notes"
+        And I should see "Branching logic: [record_id] <> '999'" within the field with variable name "notesbox"
 
         #FUNCTIONAL_REQUIREMENT: survey mode
         When I click on the link labeled "Survey Distribution Tools"
@@ -86,7 +87,7 @@ Feature: B.4.9.0100. User Interface: The system shall support branching logic fo
         And I should see the field labeled "Calculated Field"
         And I should see the field labeled "Multiple Choice dropdown Auto"
         And I should see the field labeled "Multiple Choice Dropdown Manual"
-        #M: Close tab
+        #Manual: Close tab
 
         #FUNCTIONAL_REQUIREMENT: data entry mode
         Given I return to the REDCap page I opened the survey from
@@ -135,7 +136,7 @@ Feature: B.4.9.0100. User Interface: The system shall support branching logic fo
 
         When I uncheck the checkbox labeled "Checkbox3"
         Then I should NOT see the field labeled "Required"
-        #M: Close the survey page
+        #Manual: Close the survey page
 
         ##VERIFY_LOG
         Given I return to the REDCap page I opened the survey from

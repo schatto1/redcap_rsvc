@@ -39,10 +39,10 @@ Feature: User Interface: The system shall support the deletion of a user defined
 #     And I click on the button labeled "Upload or download Data Quality Rules"
 #     And I click on the link labeled "Upload Data Quality Rule (CSV)"
 #     And I upload a "csv" format file located at "import_files/C418100TEST_DataQualityRules_Upload.csv", by clicking the button labeled "Choose File"
-#     And I click the button labeled "Upload" to upload the file
-#     Then I should see "Upload Data Quality Rule (CSV) - And I click the button labeled "Upload"
+#     And I click on the button labeled "Upload" to upload the file
+#     Then I should see "Upload Data Quality Rule (CSV) - And I click on the button labeled "Upload"
 #     Then I should see Upload Data Quality Rule (CSV) - Confirm
-#     And I click the button labeled Upload"
+#     And I click on the button labeled Upload"
 
 #     When I click on the button labeled "Upload" in the dialog box
 #     Then I should see "SUCCESS!"
@@ -102,7 +102,7 @@ Feature: User Interface: The system shall support the deletion of a user defined
 #     Then I should see a table header and rows containing the following values in a table:
 #       | Rule # | Rule Name | Rule Logic (Show discrepancy only if...) |
 #       | 4      | Integer   | [integer]='1'                            |
-#     #M: refresh browser page
+#     #Manual: refresh browser page
 
 #     #VERIFY
 #     And I click on the link labeled "Data Quality"
@@ -115,7 +115,7 @@ Feature: User Interface: The system shall support the deletion of a user defined
 
 #     ##ACTION: delete rule
 #     When I click on the Delete icon for Data Quality Rule # "4"
-#     #MANUAL: confirmation windows are automatically accepted on automated side
+#     #Manual: confirmation windows are automatically accepted on automated side
 #     #And I click on the button labeled "OK" in the dialog box
 #     Then I should see a table header and rows containing the following values in a table:
 #       | Rule # | Rule Name | Rule Logic (Show discrepancy only if...) | Total Discrepancies |

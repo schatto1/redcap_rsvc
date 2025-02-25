@@ -19,21 +19,29 @@ Feature: User Interface: The Record Locking Customization module shall allow the
         #FUNCTIONAL REQUIREMENT
         ##ACTION Lock Record Custom Text
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
-        And I select the button labeled "I understand. Let me make changes" in the dialog box
+        And I click on the button labeled "I understand. Let me make changes" in the dialog box
         Then I should see "Record Locking Customization"
 
-        When I deselect the checkbox labeled "Display the Lock option for this instrument?" for the instrument labeled "Survey"
-        And I verify the checkbox labeled "Display the Lock option for this instrument?" is selected for the instrument labeled "Text Validation"
-        And I check the checkbox labeled "Also display E-signature option on instrument?" for the instrument labeled "Text Validation"
-        And I enter "Test custom text" in the notes box field for the Data Collection Instrument labeled "Text Validation"
-        And click on the button labeled "Save"
-        And I verify the checkbox labeled "Display the Lock option for this instrument?" is selected for the instrument labeled "Data Types"
-        And I enter "Test custom text" in the notes box field for the Data Collection Instrument labeled "Data Types"
-        And click on the button labeled "Save"
+        Given the Column Name "Display the Lock option for this instrument?", I uncheck the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Survey"
+        And for the Column Name "Also display E-signature option on instrument?", I uncheck the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Survey"
+        And for the Column Name "Display the Lock option for this instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Text Validation"
+        And for the Column Name "Also display E-signature option on instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Text Validation"
+        And I enter "Test custom text" into the textarea field within the Record Locking Customization table for the Data Collection Instrument named "Text Validation"
+
+        And I click on the "Save" button within the Record Locking Customization table for the Data Collection Instrument named "Text Validation"
+        Then I should see a table header and rows containing the following values in a table:
+            | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? | Lock Record Custom Text |
+            | [✓]                                          | Text Validation            | [✓]                                            | Test custom text        |
+            | [✓]                                          | Data Types                 | [ ]                                            |                         |
+            | [ ]                                          | Survey                     | [ ]                                            |                         |
+            | [✓]                                          | Consent                    | [ ]                                            |                         |
+
+        Given I enter "Test custom text" into the textarea field within the Record Locking Customization table for the Data Collection Instrument named "Data Types"
+        And I click on the "Save" button within the Record Locking Customization table for the Data Collection Instrument named "Data Types"
 
         #FUNCTIONAL REQUIREMENT
         ##ACTION Display E-Signature or Lock option
-        Then I should see a table header and rows including the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? | Lock Record Custom Text |
             | [✓]                                          | Text Validation            | [✓]                                            | Test custom text        |
             | [✓]                                          | Data Types                 |                                                | Test custom text        |
@@ -41,14 +49,14 @@ Feature: User Interface: The Record Locking Customization module shall allow the
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported |
             | test_admin | Manage/Design | Customize record locking                |
             | test_admin | Manage/Design | Customize record locking                |
 
         ##VERIFY_RECORD
         When I click on the link labeled "Record Status Dashboard"
-        And I click the bubble for the instrument labeled "Text Validation" for record "1" for event "Event 1"
+        And I locate the bubble for the "Text Validation" instrument on event "Event 1" for record ID "1" and click on the bubble
         Then I should see "Text Validation"
         And I should see "Test custom text"
         And I should see a checkbox for the field labeled "E-signature"
@@ -68,7 +76,7 @@ Feature: User Interface: The Record Locking Customization module shall allow the
         And I should NOT see a checkbox for the field labeled "E-signature"
 
         When I click on the link labeled "Record Status Dashboard"
-        And I click the bubble for the instrument labeled "Survey" for event "Event Three" for record "1"
+        And I locate the bubble for the "Survey" instrument on event "Event Three" for record ID "1" and click on the bubble
         Then I should NOT see the checkbox for the field labeled "Lock this instrument?"
         And I should NOT see a checkbox for the field labeled "E-signature"
         And I should NOT see a signature field
@@ -77,7 +85,7 @@ Feature: User Interface: The Record Locking Customization module shall allow the
         #FUNCTIONAL REQUIREMENT
         ##ACTION Edit and Delete Lock Record Custom Text
         When I click on the link labeled "Customize & Manage Locking/E-signatures"
-        And I select the button labeled "I understand. Let me make changes" in the dialog box
+        And I click on the button labeled "I understand. Let me make changes" in the dialog box
         Then I should see "Record Locking Customization"
 
         When I click on the edit image for the Data Collection Instrument labeled "Text Validation"
@@ -86,7 +94,7 @@ Feature: User Interface: The Record Locking Customization module shall allow the
         And I click on the edit image for the Data Collection Instrument labeled "Data Types"
         And I clear the notes box field for the Data Collection Instrument labeled "Data Types"
         And click on the button labeled "Save"
-        Then I should see a table header and rows including the following values in the table:
+        Then I should see a table header and rows containing the following values in a table:
             | Display the Lock option for this instrument? | Data Collection Instrument | Also display E-signature option on instrument? | Lock Record Custom Text |
             | [✓]                                          | Text Validation            | [✓]                                            | Edit Test custom text   |
             | [✓]                                          | Data Types                 |                                                | [blank]                 |
@@ -94,13 +102,13 @@ Feature: User Interface: The Record Locking Customization module shall allow the
 
         ##VERIFY_LOG
         When I click on the link labeled "Logging"
-        Then I should see a table header and rows including the following values in the logging table:
+        Then I should see a table header and rows containing the following values in the logging table:
             | Username   | Action        | List of Data Changes OR Fields Exported |
             | test_admin | Manage/Design | Customize record locking                |
 
         ##VERIFY_RECORD
         When I click on the link labeled "Record Status Dashboard"
-        And I click the bubble for the instrument labeled "Text Validation" for record "3" for event "Event 1"
+        And I locate the bubble for the "Text Validation" instrument on event "Event 1" for record ID "3" and click on the bubble
         Then I should see "Text Validation"
         And I should see "Edit Test custom text"
         And I should see a checkbox for the field labeled "E-signature"
@@ -121,7 +129,7 @@ Feature: User Interface: The Record Locking Customization module shall allow the
 
         When I click on the link labeled "Record Status Dashboard"
         And I click on the button labeled "Leave without saving changes" in the dialog box
-        And I click the bubble for the instrument labeled "Survey" for event "Event Three" for record "1"
+        And I locate the bubble for the "Survey" instrument on event "Event Three" for record ID "1" and click on the bubble
         Then I should NOT see the checkbox for the field labeled "Lock this instrument?"
         And I should NOT see a checkbox for the field labeled "E-signature"
         And I should NOT see a signature field

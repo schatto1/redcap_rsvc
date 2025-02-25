@@ -25,17 +25,14 @@ Feature: User Interface: The system shall provide the option to allow blank valu
     Then I should see a table header and rows containing the following values in the report data table:
       | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name | Email          |
       | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |      | email@test.edu |
+      | 4         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |      |                |
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Import new data, ignoring blank values
     When I click on the link labeled "Data Import Tool"
-    Then I should see the button labeled "Choose File"
+    Then I should see "Choose an import option"
 
-    When I click on the button labeled "Choose File"
-    And I select the file labeled "B3161200100_ACCURATE"
-    And I click on the button labeled "Upload "
-    And I click on the button labeled "Upload File"
-
+    When I upload a "csv" format file located at "import_files/B3161200100_ACCURATE.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
 
     ##VERIFY
     Then I should see "Your document was uploaded successfully"
@@ -50,20 +47,18 @@ Feature: User Interface: The system shall provide the option to allow blank valu
 
     When I click on the button labeled "View Report"
     Then I should see a table header and rows containing the following values in the report data table:
-      | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name | Email          |
-      | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |      | email@test.edu |
+      | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name     | Email          |
+      | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |          | email@test.edu |
+      | 4         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   | New Name |                |
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Import new data, overwrite blank values
     When I click on the link labeled "Data Import Tool"
-    Then I should see the button labeled "Choose File"
+    Then I should see "Choose an import option"
 
-    When I click on the button labeled "Choose File"
     And I select "Yes, blank values in the file will overwrite existing values" on the dropdown field labeled "Overwrite data with blank values?"
     And I click on the button labeled "Yes, I understand" in the dialog box
-    And I select the file labeled "B3161200100_ACCURATE"
-    And I click on the button labeled "Upload "
-    And I click on the button labeled "Upload File"
+    When I upload a "csv" format file located at "import_files/B3161200100_ACCURATE.csv", by clicking the button near "Select your CSV data file" to browse for the file, and clicking the button labeled "Upload File" to upload the file
 
     ##VERIFY
     Then I should see "Your document was uploaded successfully"
@@ -78,6 +73,7 @@ Feature: User Interface: The system shall provide the option to allow blank valu
 
     When I click on the button labeled "View Report"
     Then I should see a table header and rows containing the following values in the report data table:
-      | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name | Email |
-      | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |      |       |
+      | Record ID | Event Name             | Repeat Instrument | Repeat Instance | Data Access Group | Survey Identifier | Name     | Email |
+      | 1         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   |          |       |
+      | 4         | Event 1 (Arm 1: Arm 1) |                   |                 |                   |                   | New Name |       |
 #End

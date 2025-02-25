@@ -52,8 +52,10 @@ Feature: Control Center: The system shall support the enabling/disabling of fiel
     And I click on the link labeled "A.4.8.0100.100"
     And I click on the link labeled "Designer"
     And I click on the button labeled "Enter Draft Mode"
+    And I click on the button labeled "Dismiss"
     Then I should see "The project is now in Draft Mode."
     When I click on the instrument labeled "Data Types"
+    And I click on the button labeled "Dismiss"
     And I click on the first button labeled "Add Field"
 
     # MANUAL NOTE : You should NOT see the following options in the "Validation?" dropdown (because we disabled them in steps above):

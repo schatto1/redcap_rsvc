@@ -17,6 +17,10 @@ Within this repository, you will find a collection of validation test scripts me
 
 We welcome contributions and collaboration from the REDCap community and regulatory compliance enthusiasts. If you have expertise in regulatory compliance, validation, or REDCap, feel free to join our efforts by contributing to this repository.
 
+## Managing Outstanding Issues
+
+We use standard GitHub issues to track individual items that need to be addressed.  These issues are managed as a whole via [this GitHub Project](https://github.com/orgs/vanderbilt-redcap/projects/2).  Issues are added by placing their test IDs (e.g. A.3.14.1300.) one per line in `features.csv` and running the `create_issues.sh`.
+
 ## More Information
 
 For more information about the Regulatory & Software Validation Committee (RSVC) and our initiatives, including regulatory compliance resources and feature tests, please refer to our [main page](link-to-main-page).

@@ -18,6 +18,7 @@ Feature: Design forms Using Data Dictionary and Online Designer
 
         When I click on the button labeled "Online Designer"
         And I click on the button labeled "Enter Draft Mode"
+        And I click on the button labeled "Dismiss"
         Then I should see "The project is now in Draft Mode"
 
         Then I should see a table header and rows containing the following values in a table:
@@ -48,9 +49,10 @@ Feature: Design forms Using Data Dictionary and Online Designer
 
         ##VERIFY INSTRUMENT
         When I click on the link labeled "Text Validation 2"
+        And I click on the button labeled "Dismiss"
         Then I should see "Text Validation 2"
-        And I should see "Variable: name_v2"
-        And I should see "Variable: email_v2"
+        And I should see "Field Name: name_v2"
+        And I should see "Field Name: email_v2"
 
         When I click on the button labeled "Return to list of instruments"
         And I should see "Data Collection Instruments"

@@ -16,24 +16,24 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the link labeled "C.3.26.200.100"
 
 #         ##SETUP auto-archive
-#         And I click the link labeled "Designer"
-#         And I click the button labeled "Survey Settings" for the instrument "Consent"
+#         And I click on the link labeled "Designer"
+#         And I click on the button labeled "Survey Settings" for the instrument "Consent"
 #         And I click on the button labeled "Auto-Archiver + eConsent enabled"
-#         Then I click the button labeled "Save Changes"
+#         Then I click on the button labeled "Save Changes"
 
 #         ##SETUP File Repository
-#         And I click the link labeled "File Repository"
+#         And I click on the link labeled "File Repository"
 
 #         #Create DAG limited folder
-#         And I click the button labeled "Create Folder"
-#         And I type "TestGroup1_Folder" into the field labeled "New folder name"
+#         And I click on the button labeled "Create Folder"
+#         And I enter "TestGroup1_Folder" into the input field labeled "New folder name"
 #         And I select "TestGroup1" in the dropdown labeled "Limit access by Data Access Group?"
 #         And I click on the button labeled "Create Folder"
 #         Then I should see "TestGroup1_Folder"
 
 #         #Create role limited folder
-#         And I click the button labeled "Create Folder"
-#         And I type "Role1_Folder" into the field labeled "New folder name"
+#         And I click on the button labeled "Create Folder"
+#         And I enter "Role1_Folder" into the input field labeled "New folder name"
 #         And I select "1_FullRights" in the dropdown labeled "Limit access by User Role?"
 #         And I click on the button labeled "Create Folder"
 #         Then I should see "Role1_Folder"
@@ -42,7 +42,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         When I click on the link labeled "User Rights"
 #         Given I upload a "csv" format file located at "import_files/user list for project 1.csv", by clicking the button near "Select your CSV" to browse for the file, and clicking the button labeled "Upload" to upload the file
 #         Then I should see a dialog containing the following text: "Upload users (CSV) - Confirm"
-#         And I should see a table header and rows containing the following values in the table:
+#         And I should see a table header and rows containing the following values in a table:
 #             | username   |
 #             | test_user1 |
 #             | test_user2 |
@@ -53,7 +53,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         Then I should see a dialog containing the following text: "SUCCESS!"
 #         And I close the popup
 
-#         And I should see a table header and rows including the following values in the table:
+#         And I should see a table header and rows containing the following values in a table:
 #             | Role name               | Username   |
 #             |                         | test_admin |
 #             |                         | test_user1 |
@@ -89,7 +89,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I should see the dropdown field labeled "Select Role" with the option "3_ReadOnly_Deidentified" selected
 #         And I click on the button labeled "Assign"
 #         Then I should see "Test_User4" user assigned "3_ReadOnly_Deidentified" role
-#         And I should see a table header and rows including the following values in the table:
+#         And I should see a table header and rows containing the following values in a table:
 #             | Role name               | Username   |
 #             |                         | test_admin |
 #             | 1_FullRights            | test_user1 |
@@ -127,7 +127,8 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         Then I should see "Adding new Record ID"
 
 #         When I click on the button labeled "Save & Stay"
-#         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+#         And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
 #         And I click on the button labeled "Next Page"
 #         Then I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
 
@@ -135,7 +136,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the button labeled "Submit"
 #         And I click on the button labeled "Close survey"
 #         And I click on the button labeled "Leave without saving changes" in the dialog box
-#         Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+#         Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 #         And I should see "TestGroup1"
 
 #         #FUNCTIONAL_REQUIREMENT
@@ -180,7 +181,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive file in DAG TestGroup1
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | (record-name) TestGroup1 |
 
@@ -194,7 +195,8 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         Then I should see "Adding new Record ID"
 
 #         When I click on the button labeled "Save & Stay"
-#         And I select the dropdown option labeled "Open survey" from the dropdown button with the placeholder text of "Survey options"
+#         And I click on the button labeled "Survey options"
+        And I click on the survey option label containing "Open survey" label
 #         And I click on the button labeled "Next Page"
 #         Then I should see a checkbox for the field labeled "I certify that all of my information in the document above is correct."
 
@@ -202,7 +204,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the button labeled "Submit"
 #         And I click on the button labeled "Close survey"
 #         And I click on the button labeled "Leave without saving changes" in the dialog box
-#         Then I should see a Completed Survey Response icon for the Data Collection Instrument labeled "Consent" for event "Event 1"
+#         Then I should see the "Completed Survey Response" icon for the "Consent" longitudinal instrument on event "Event 1"
 #         And I should see "TestGroup2"
 
 #         #FUNCTIONAL_REQUIREMENT
@@ -221,7 +223,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "Role1_Folder"
 #         #Download file previously uploaded by test_user1
-#         And I click the link labeled "user list for project 1.csv"
+#         And I click on the link labeled "user list for project 1.csv"
 #         Then I should have a csv file labeled "user list for project 1.csv"
 
 #         ##ACTION Upload to Role folder
@@ -238,7 +240,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         And I click on the link labeled "PDF Survey Archive"
 #         #See consent just created in testgroup2
 #         #Don't see consent created by testgroup1
-#         Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] TestGroup2 |
 
@@ -275,7 +277,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive file in DAG TestGroup1
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] TestGroup1 |
 #         #Don't see consent created by testgroup2
@@ -314,7 +316,7 @@ Feature: User Interface: The system shall support multiple file upload through t
 #         ##ACTION Auto-archive access all file
 #         When I click on the link labeled "File Repository"
 #         And I click on the link labeled "PDF Survey Archive"
-#         Then I should see a table header and rows including the following values in the PDF Survey Archive table:
+#         Then I should see a table header and rows containing the following values in a table:
 #             | Name              | Record                   |
 #             | "pdf" format file | [record-name] testgroup1 |
 #             | "pdf" format file | [record-name] testgroup2 |
