@@ -27,7 +27,7 @@ Feature: User Interface: The system shall restrict users to randomizing records 
     Then I should see a table header and rows containing the following values in a table:
       | Role name | Username   | Data Access Group |
       | —         | test_user1 |                   |
-      | —         | test_user2 | DAG 1             |
+      | —         | test_user2 |                   |
 
   Scenario: #SETUP DAG with user 2
     When I click on the link labeled "DAGs"
