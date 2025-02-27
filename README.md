@@ -15,7 +15,7 @@ Within this repository, you will find a collection of validation test scripts me
 
 ## Contribution
 
-We welcome contributions and collaboration from the REDCap community and regulatory compliance enthusiasts. If you have expertise in regulatory compliance, validation, or REDCap, feel free to join our efforts by contributing to this repository.  The stable version of the scripts used to validate the last LTS package can be found in the `main` branch.  The `staging` branch contains changes being actively developed for staging the next LTS package.
+We welcome contributions and collaboration from the REDCap community and regulatory compliance enthusiasts. If you have expertise in regulatory compliance, validation, or REDCap, feel free to join our efforts by contributing to this repository.  The stable version of the scripts used to validate the last LTS package can be found in the `main` branch.  Pull requests should be made against the `staging` branch, as it contains the changes being actively developed for staging the next LTS package.
 
 ## Managing Outstanding Issues
 
