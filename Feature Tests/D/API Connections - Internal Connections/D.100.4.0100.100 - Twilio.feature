@@ -28,6 +28,7 @@ Scenario: D.100.4.0100.100 Twilio
     Given I click on the link labeled "Designer"
     And I click on the button labeled "Automated Invitations" for the instrument named "Visit preference" 
     And I click on the radio labeled "Active" 
+    And I select "Use participant\'s preference" on the drop down field labeled "STEP 1: Invitation type – How the participant is invited"
     And I click on the button labeled "Save"
     Then I should see "Settings for automated invitations were successfully saved!"
     And I click on the button labeled "Close" on the dialog box
