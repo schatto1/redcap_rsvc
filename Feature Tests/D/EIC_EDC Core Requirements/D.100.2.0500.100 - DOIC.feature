@@ -1,4 +1,4 @@
-Feature: EIC / EDC Core Requirements: The System shall allow the approved version of EIC will be made available for use on the project/study.
+Feature: EIC Approval and Versioning: The System shall allow the approved version of EIC will be made available for use on the project/study.
 
   As a REDCap end user
   I want to see that the system allows an approved EIC version to be available and documented in a project.
