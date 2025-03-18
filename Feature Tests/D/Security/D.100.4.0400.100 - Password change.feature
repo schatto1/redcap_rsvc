@@ -20,7 +20,9 @@ Feature: Security: REDCap application shall allow a table-based user to change t
     And I enter "Test_User1" into the input field labeled "Username"
     And I enter "Testing123" into the input field labeled "Password"
     And I click on the button labeled "Log In"
-    Then I should see "Welcome to REDCap!"
+    Then I should see "Home"
+    And I should see "My Projects"
+    And I should see "Log out"
 #END
 
 
