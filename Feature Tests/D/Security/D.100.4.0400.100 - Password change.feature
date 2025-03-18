@@ -13,7 +13,9 @@ Feature: Security: REDCap application shall allow a table-based user to change t
     And I enter "Testing123" into the input field labeled "Password"
     And I enter "Testing123" into the input field labeled "Re-type password"
     And I click on the button labeled "Submit"
-    Then I should see "Welcome to REDCap!"
+    Then I should see "Home"
+    And I should see "My Projects"
+    And I should see "Log out"
     
     #VERIFY
     Given I logout

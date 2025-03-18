@@ -22,7 +22,9 @@ Feature: Security: The system will provide the ability to activate and deactivat
     
     #VERIFY
     Given I login to REDCap with the user "Test_User1"
-    Then I should see "Welcome to REDCap!"
+    Then I should see "Home"
+    And I should see "My Projects"
+    And I should see "Log out"
 #END
 
 
