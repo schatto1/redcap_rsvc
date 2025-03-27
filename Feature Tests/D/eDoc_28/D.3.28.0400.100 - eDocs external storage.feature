@@ -16,7 +16,7 @@ Feature: eDocs: The system shall ensure that files uploaded to the file reposito
     ##VERIFY: Check external eDocs storage location
     Given I open a new terminal window
     And I SSH to "redwood.chpc.utah.edu"
-    And I SSH to "redcap-c7.ccts.utah.edu"
+    And I SSH to "redcap-r9.ctsi.utah.edu"
     And I CD to "/var/www/redcap_uploads/shadow/edocs"
     And I run the command "ls -Art | tail -n 2"
     Then I should see a row containing the file upload timestamp and the PID of D.3.28.0400.100 ending in .docx

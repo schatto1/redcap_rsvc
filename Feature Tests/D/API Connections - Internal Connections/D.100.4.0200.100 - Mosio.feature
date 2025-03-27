@@ -17,7 +17,7 @@ Scenario: D.100.4.0200.100 Mosio
     Then I should see "Mosio SMS services have been successfully enabled!"
 
     Given I click on the button labeled "Configure settings" in the "Mosio Two-Way Text Messaging (SMS) Services" section
-    And I select "mosio_mail \"Would you prefer to receive surveys via email or phone?\"" on the dropdown field labeled "Control each participant's invitation preference using a multiple choice field"
+    And I select "twilio_mail \"Would you prefer to receive surveys via email or phone?\"" on the dropdown field labeled "Control each participant's invitation preference using a multiple choice field"
     And I select "cell \"Please enter your cell phone number\"" on the dropdown field labeled "Designate a phone number field for survey invitations sent via SMS or voice call (optional)"
     And I click on the button labeled "Save"
     Then I should see "Success! Your changes have been saved."
@@ -25,6 +25,7 @@ Scenario: D.100.4.0200.100 Mosio
     Given I click on the link labeled "Designer"
     And I click on the button labeled "Automated Invitations" for the instrument named "Visit preference" 
     And I click on the radio labeled "Active" 
+    And I select "Use participant\'s preference" on the drop down field labeled "STEP 1: Invitation type – How the participant is invited"
     And I click on the button labeled "Save"
     Then I should see "Settings for automated invitations were successfully saved!"
     And I click on the button labeled "Close" on the dialog box
@@ -50,12 +51,12 @@ Scenario: D.100.4.0200.100 Mosio
     And I click on the button labeled "Search emails and SMS messages"
     Then I should see "1 matching results"
     And I should see a table header and row containing the following values in the "Email & SMS Logging" table:
-    | View msg | Time sent        | Record | Summary email content and attributes                        |
-    |          | mm/dd/yyyy hh:mm | 1      | From: (Mosio phone number), To: (my phone number)          |
+    | View msg | Time sent        | Record | Summary email content and attributes       |
+    |          | mm/dd/yyyy hh:mm | 1      | From: , To: (my phone number)              |
     
     Given I click on the message icon
     Then I should see "SMS"
-    And I should see "From: (Mosio phone number)"
+    And I should see "From: "
     And I should see "To: (my phone number)"
     And I should see "Please take this survey.  It is an example of how a survey is distributed via SMS Texting to a person's phone"
     And I should see "You may open the survey in your web browser by clicking the link below:"

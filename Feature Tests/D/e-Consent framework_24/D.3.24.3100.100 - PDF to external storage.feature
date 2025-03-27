@@ -11,8 +11,7 @@ Feature: e-Consent Framework and PDF Snapshot: The system shall support the stor
 
     #SETUP_PRODUCTION
     Given I click on the link labeled "Designer"
-    And I click on the button labeled "e-Consent and PDF Snapshots"
-    And I click on the link labeled "PDF Snapshots of Records"
+    And I click on the button labeled "PDF Snapshots"
     And I click on the button labeled "Add new trigger"
     And I enter "Non-consent Test" into the field with the placeholder text of "Add optional title" 
     And I select "\"eConsent - ICF\" - [Any Event]" on the dropdown field labeled "---select a survey---" in Step 1
@@ -59,7 +58,7 @@ Feature: e-Consent Framework and PDF Snapshot: The system shall support the stor
     ##VERIFY: check external storage
     Given I open a new terminal window
     And I SSH to "redwood.chpc.utah.edu"
-    And I SSH to "redcap-c7.ccts.utah.edu"
+    And I SSH to "redcap-r9.ctsi.utah.edu"
     And I CD to "/uufs/chpc.utah.edu/common/HIPAA/proj_redcap_vault/shadow/"
     And I run the command "ls -Art | tail -n 3"
     Then I should see a row containing "Prescreening_ICF_2"

@@ -24,5 +24,6 @@ Scenario: D.100.4.0800.100 Duo 2FA
     And I click on the button labeled "Approve" 
     ##VERIFY
     Then I should see "Sucess! Logging you in..." 
-    And I should see "Welcome to REDCap!"
+    And I should see "Home"
+    And I should see "My Projects"
 #END

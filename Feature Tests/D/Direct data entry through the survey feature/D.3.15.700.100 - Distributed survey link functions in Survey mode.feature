@@ -21,13 +21,14 @@ Feature: The system shall support the ability for a participant to enter data in
     And I click on the link in the column labeled "Link"
     Then I should see "Please complete the survey below."
     
-    When I enter "test@test.com" into the input field labeled "Email Address for eConsent" 
+    When I click on the button labeled "Submit"
+    And I enter "test@test.com" into the input field labeled "Email Address for eConsent" 
     And I select the radio option "English" for the field labeled "Preferred Language for Consent"
     And I select the radio option "Email invitation" for the field labeled "Preferred Contact Method" 
 
     Given I click on the button labeled "Submit"
+    Then I should see "Thank you for taking the survey."
     And I click on the button labeled "Close survey"
-    Then I should see "You may now close this tab/window"
 
     #VERIFY_LOG
     Given I return to the REDCap page I opened the survey from

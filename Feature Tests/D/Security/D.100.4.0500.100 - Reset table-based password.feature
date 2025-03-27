@@ -31,7 +31,8 @@ Feature: Security: The REDCap Application will allow to ability to reset a user'
     And I enter "Testing123" into the input field labeled "Password"
     And I enter "Testing123" into the input field labeled "Re-type password"
     And I click on the button labeled "Submit"
-    Then I should see "Welcome to REDCap!"
+    Then I should see "Home"
+    And I should see "My Projects"
 #END
 
 

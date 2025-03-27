@@ -12,8 +12,7 @@ Feature: eDocs: The system shall allow project level enabling or disabling to st
     #SETUP_PRODUCTION
     ##REDUNDANT: D.3.24.3100.100
     Given I click on the link labeled "Designer"
-    And I click on the button labeled "e-Consent and PDF Snapshots"
-    And I click on the link labeled "PDF Snapshots of Records"
+    And I click on the button labeled "PDF Snapshots"
     And I click on the button labeled "Add new trigger"
     And I enter "Non-consent Test" into the field with the placeholder text of "Add optional title" 
     And I select "\"eConsent - ICF\" - [Any Event]" on the dropdown field labeled "---select a survey---" in Step 1
@@ -51,7 +50,7 @@ Feature: eDocs: The system shall allow project level enabling or disabling to st
     ##VERIFY: check external storage
     Given I open a new terminal window
     And I SSH to "redwood.chpc.utah.edu"
-    And I SSH to "redcap-c7.ccts.utah.edu"
+    And I SSH to "redcap-r9.ctsi.utah.edu"
     And I CD to "/uufs/chpc.utah.edu/common/HIPAA/proj_redcap_vault/shadow/"
     And I run the command "ls -Art | tail -n 3"
     Then I should see a row containing "Prescreening_ICF_2"
@@ -92,7 +91,7 @@ Feature: eDocs: The system shall allow project level enabling or disabling to st
     ##VERIFY: check external storage
     Given I open a new terminal window
     And I SSH to "redwood.chpc.utah.edu"
-    And I SSH to "redcap-c7.ccts.utah.edu"
+    And I SSH to "redcap-r9.ctsi.utah.edu"
     And I CD to "/uufs/chpc.utah.edu/common/HIPAA/proj_redcap_vault/shadow/"
     And I run the command "ls -Art | tail -n 3"
     Then I should NOT see a row containing "Prescreening_ICF_3"

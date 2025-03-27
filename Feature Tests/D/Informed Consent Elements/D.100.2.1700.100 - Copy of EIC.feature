@@ -50,7 +50,7 @@ Feature: Informed Consent Elements: A copy of the informed consent must be provi
 
     #FUNCTIONAL REQUIREMENT
     ##VERIFY
-    Given I enter "test@test.com" into the field with the placeholder text of "Enter email address"
+    Given I enter (my email) into the field with the placeholder text of "Enter email address"
     And I click on the button labeled "Send confirmation email"
     Then I should see "Email successfully sent!"
     Given I open the confirmation email

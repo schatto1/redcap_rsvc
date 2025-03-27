@@ -11,6 +11,7 @@ Feature: Project status: While using the randomization module, the system shall 
         #SETUP_RANDOMIZATION
         Given I click on the button labeled "Enable" in the "Randomization module" row in the "Enable optional modules and customizations" section
         And I click on the link labeled "Randomization"
+        And I click on the button labeled "+ Add new randomization model"
         And I select "rand_group (Randomization Group Assigned)" on the dropdown field labeled "C) Choose your randomization field" 
         And I click on the button labeled "Save randomization model"
         And I upload a "csv" format file located at "import_files/RandomizationAllocationTable_Dev.csv", by clicking the button near "Upload allocation table (CSV file) for use in DEVELOPMENT status" to browse for the file, and clicking the button labeled "Upload File" to upload the file
