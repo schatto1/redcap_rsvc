@@ -25,7 +25,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall assign Reviewer rig
 
     #FUNCTIONAL REQUIREMENT    
     ##ACTION: ADD DATA ENTRY PERSONS
-    When  I click on the link labeled "D.4.17.400.100"
+    When I click on the link labeled "D.4.17.400.100"
     And I click on the link labeled "User Rights"
     And I enter "Test_User2" into the field with the placeholder text of "Add new user"
     And I click on the button labeled "Add with custom rights"

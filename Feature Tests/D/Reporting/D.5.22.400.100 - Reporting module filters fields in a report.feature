@@ -22,7 +22,7 @@ Feature: Reporting: The system shall support the ability to limit filter/live fi
     And I enter "D.5.22.400.100 REPORT" into the input field labeled "Name of Report:"
 
     ##VERIFY: included field
-    And I enter "prefname" into the input field labeled "Field 2"
+    And I enter "prefname" into the textarea field labeled "Field 2" 
     And I click on the button labeled "Save Report"
     And I enter "prefname" into the input field labeled "Filter 1"
     And I select "prescreening_complete \"Complete?\"" on the dropdown field labeled "Live Filter 1" 

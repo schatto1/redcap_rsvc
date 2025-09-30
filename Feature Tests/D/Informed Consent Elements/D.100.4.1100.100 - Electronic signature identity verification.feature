@@ -11,7 +11,7 @@ Feature: Informed Consent Elements: Compliance with the requirements in Part 11 
     And I click on the link labeled "Customize & Manage Locking/E-signatures"
     Then I should see "Customize and Manage the Record Locking and E-signature Functionality"
     And for the Column Name "Also display E-signature option on instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Attestation Data Entry"
-    And I click on the link labeled "Project Setup"
+    And I click on the link labeled "Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I click on the button labeled "YES, Move to Production Status" in the dialog box
@@ -27,7 +27,7 @@ Feature: Informed Consent Elements: Compliance with the requirements in Part 11 
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
     And I click on the button labeled "Save signature" in the dialog box
-    And I check the checkbox labeled "Lock this instrument?"
+    And I check the checkbox labeled "Lock"
     And I check the checkbox labeled " E-signature"
     And I select the submit option labeled "Save & Stay" on the Data Collection Instrument
     And I enter the Username: "Test_Admin" and password "Testing123" for e-signature

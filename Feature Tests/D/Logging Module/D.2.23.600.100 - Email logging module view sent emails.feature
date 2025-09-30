@@ -33,5 +33,5 @@ Feature: Logging Module: Email Logging Module shall record outgoing emails
     And I should see "Record"
     And I should see "Summary email content and attributes" 
     And I should see "1"
-    And I should see "From: mary.irion@utah.edu, To: ashley.oconnor@utah.edu"
+    And I should see "From: test_admin@test.edu, To: ashley.oconnor@utah.edu"
     And I should see "Subject: A participant has completed the prescreening survey"
