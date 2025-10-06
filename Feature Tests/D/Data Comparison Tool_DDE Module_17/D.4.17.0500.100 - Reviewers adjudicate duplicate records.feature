@@ -5,19 +5,17 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow Reviewers to 
 
   Scenario: D.4.17.500.100 Reviewers adjudicate duplicate records
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.4.17.500.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
-    And I click on the link labeled "Project Setup"
     And I click on the "Disable" button labeled "Use surveys in this project?" in the "Main project settings" section 
     And I click on the button labeled "Disable" in the dialog box 
-    And I click on the link labeled "Project Setup"
+    And I wait for another 3 seconds
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I click on the button labeled "YES, Move to Production Status" in the dialog box
     Then I see Project status: "Production"
 
     ##ACTION: ENABLE DDE
-    When I click on the link labeled "Project Setup"
     And I click on the link labeled "Edit Project Settings"
     And I select "Enabled" on the dropdown field labeled "Double Data Entry module"
     And I click on the button labeled "Save Changes"
@@ -50,12 +48,13 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow Reviewers to 
     #FUNCTIONAL REQUIREMENT 
     #REDUNDANT - D.4.17.0300.100   
     ##ACTION: ADD RECORD AS TEST USER2
-    Given I login to REDCap with the user "Test_User2"
+    Given I successfully login to REDCap with the user "Test_User2"
     And I click on the link labeled "My Projects"
     And I click on the link labeled "D.4.17.500.100"
     And I click on the link labeled "Record Status Dashboard"
     And I enter "2" into the field with the placeholder text of "Enter new record name" 
     And I click on the button labeled "Create"
+    And I wait for another 2 seconds
     And I click the bubble to add a record for the "Prescreening" longitudinal instrument on event "Screening"
     And I enter "test@test.com" into the input field labeled "Please provide your email address:"
     And I enter "Jon Snow" into the input field labeled "Preferred Name"
@@ -65,7 +64,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow Reviewers to 
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: VIEW RECORDS AS TEST USER3
-    Given I login to REDCap with the user "Test_User3"
+    Given I successfully login to REDCap with the user "Test_User3"
     And I click on the link labeled "My Projects"
     And I click on the link labeled "D.4.17.500.100"
     And I click on the link labeled "Record Status Dashboard"
@@ -74,6 +73,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow Reviewers to 
     ##ACTION: ADD RECORD AS TEST USER3
     And I enter "2" into the field with the placeholder text of "Enter new record name" 
     And I click on the button labeled "Create"
+    And I wait for another 2 seconds
     And I click the bubble to add a record for the "Prescreening" longitudinal instrument on event "Screening"
     And I enter "error@test.com" into the input field labeled "Please provide your email address:"
     And I enter "Jon Snow" into the input field labeled "Preferred Name"
@@ -83,11 +83,12 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow Reviewers to 
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: AJUDICATE RECORDS AS TEST USER4
-    Given I login to REDCap with the user "Test_User4"
+    Given I successfully login to REDCap with the user "Test_User4"
     And I click on the link labeled "My Projects"
     And I click on the link labeled "D.4.17.500.100"
     And I click on the link labeled "Data Comparison Tool"
     And I select "2 - Screening" on the dropdown field labeled "--- Choose a record ---"
+    And I wait for another 2 seconds
     And I click on the button labeled "Compare selected record"
 
     ##VERIFY

@@ -6,7 +6,7 @@ Feature: Informed Consent Elements: Compliance with the requirements in Part 11 
   Scenario: D.100.4.1100.100 Electronic signature identity verification 
     #FUNCTIONAL REQUIREMENT
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.100.4.1100.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Customize & Manage Locking/E-signatures"
     Then I should see "Customize and Manage the Record Locking and E-signature Functionality"

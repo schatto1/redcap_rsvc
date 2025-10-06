@@ -5,7 +5,7 @@ Feature: Post Signature Form Actions: The system shall be able to complete the a
 
   Scenario: D.100.2.0900.100 Attestation after EIC
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.100.2.0900.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
@@ -30,7 +30,7 @@ Feature: Post Signature Form Actions: The system shall be able to complete the a
 
     #FUNCTIONAL REQUIREMENT
     ##VERIFY
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I click on the link labeled "My Projects"
     And I click on the link labeled "D.100.2.0900.100"
     And I click on the link labeled "Record Status Dashboard"

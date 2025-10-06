@@ -7,7 +7,7 @@ Feature: Security: A user cannot log in to the system if their account has been 
     #FUNCTIONAL REQUIREMENT
     #REDUNDANT: D.100.4.0600.100
     ##ACTION: Deactivate Account
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I click on the link labeled "Control Center"
     And I click on the link labeled "Browse Users"
     And I click on the link labeled "View User List By Criteria"

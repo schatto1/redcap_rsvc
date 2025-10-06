@@ -5,7 +5,7 @@ Feature: Reporting: The system shall support the ability to limit filter/live fi
 
   Scenario: D.5.22.400.100 Reporting module filters fields in a report 
     #SETUP
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.5.22.400.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
 
     #SETUP_PRODUCTION
@@ -22,7 +22,7 @@ Feature: Reporting: The system shall support the ability to limit filter/live fi
     And I enter "D.5.22.400.100 REPORT" into the input field labeled "Name of Report:"
 
     ##VERIFY: included field
-    And I enter "prefname" into the textarea field labeled "Field 2" 
+    And I enter "prefname" into the input field labeled "Field 2" 
     And I click on the button labeled "Save Report"
     And I enter "prefname" into the input field labeled "Filter 1"
     And I select "prescreening_complete \"Complete?\"" on the dropdown field labeled "Live Filter 1" 

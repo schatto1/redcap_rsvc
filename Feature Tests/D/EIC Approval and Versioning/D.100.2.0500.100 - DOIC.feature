@@ -5,7 +5,7 @@ Feature: EIC Approval and Versioning: The System shall allow the approved versio
 
   Scenario: D.100.2.0500.100 DOIC
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.100.2.0500.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
@@ -33,7 +33,7 @@ Feature: EIC Approval and Versioning: The System shall allow the approved versio
     Given I enter "EP" into the data entry form field labeled "Subject Initials:"
     And I enter "01-01-2001" into the data entry form field labeled "IRB Approval Date:"
     And I enter "01-01-2001" into the data entry form field labeled "Date Subject/LAR signed:"
-    And I check the checkbox labeled "Please select the applicable consent(s) for this participant and populate the version name/number for each:"
+    And I select the checkbox option "Consent" for the field labeled "Please select the applicable consent(s) for this participant and populate the version name/number for each:"
     And I enter "V1" into the data entry form field labeled "Consent Version/name"
     And I select the radio option "Yes" for the field labeled "Is this the most recent version of the IRB approved Informed Consent / Assent / Permission?" 
     And I enter "Straff" into the data entry form field labeled "First Name of person obtaining consent:"

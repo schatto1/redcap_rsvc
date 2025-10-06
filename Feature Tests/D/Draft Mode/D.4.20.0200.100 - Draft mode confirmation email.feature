@@ -5,12 +5,12 @@ Feature: Draft mode: The system shall allow for a confirmation email to be sent 
 
   Scenario: D.4.20.0200.100 Draft mode confirmation email 
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.4.20.0200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
+    And I click on the button labeled "YES, Move to Production Status" in the dialog box
     Then I see Project status: "Production"
 
     #FUNCTIONAL REQUIREMENT
@@ -49,7 +49,6 @@ Feature: Draft mode: The system shall allow for a confirmation email to be sent 
     And I should see "These changes MIGHT modify and/or delete existing data. So we ask 2 things of you:" in the dialog box
     And I should see "Send Email" in the dialog box
     And I should see "Cancel" in the dialog box
-    And I enter " -Testing edit email message" into the textarea field labeled "Compose confirmation email" 
     And I click on the button labeled "Send Email" in the dialog box
     Then I should see "EMAIL SENT!" in the dialog box
 #END

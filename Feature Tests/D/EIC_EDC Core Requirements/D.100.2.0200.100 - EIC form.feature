@@ -5,7 +5,7 @@ Feature: EIC / EDC Core Requirements: An IRB-approved EIC project form will be p
 
   Scenario: D.100.2.0200.100 EIC form
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.100.2.0200.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
@@ -31,7 +31,7 @@ Feature: EIC / EDC Core Requirements: An IRB-approved EIC project form will be p
     And I check the checkbox labeled "I certify that all of my information in the document above is correct."
     And I click on the button labeled "Submit"
     Then I should see "Thank you for taking the survey."
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I click on the link labeled "My Projects"
     And I click on the link labeled "D.100.2.0200.100"
     And I click on the link labeled "Record Status Dashboard"

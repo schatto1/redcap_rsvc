@@ -5,12 +5,11 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow the designati
 
   Scenario: D.4.17.300.100 Restrict view of independent data entry users 
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.4.17.300.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
-    And I click on the link labeled "Project Setup"
     And I click on the "Disable" button labeled "Use surveys in this project?" in the "Main project settings" section 
     And I click on the button labeled "Disable" in the dialog box 
-    And I click on the link labeled "Project Setup"
+    And I wait for another 3 seconds
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I click on the button labeled "YES, Move to Production Status" in the dialog box
@@ -42,7 +41,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow the designati
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: VIEW RECORDS AS TEST USER2
-    Given I login to REDCap with the user "Test_User2"
+    Given I successfully login to REDCap with the user "Test_User2"
     And I click on the link labeled "My Projects"
     And I click on the link labeled "D.4.17.300.100"
     And I click on the link labeled "Record Status Dashboard"
@@ -51,6 +50,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow the designati
     ##ACTION: ADD RECORD AS TEST USER2
     And I enter "2" into the field with the placeholder text of "Enter new record name" 
     And I click on the button labeled "Create"
+    And I wait for another 2 seconds
     And I click the bubble to add a record for the "Prescreening" longitudinal instrument on event "Screening"
     And I enter "Jon Snow" into the input field labeled "Preferred Name"
     And I select the submit option labeled "Save & Exit Form" on the Data Collection Instrument
@@ -59,7 +59,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow the designati
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: VIEW RECORDS AS TEST USER3
-    Given I login to REDCap with the user "Test_User3"
+    Given I successfully login to REDCap with the user "Test_User3"
     And I click on the link labeled "My Projects"
     And I click on the link labeled "D.4.17.300.100"
     And I click on the link labeled "Record Status Dashboard"
@@ -68,6 +68,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow the designati
     ##ACTION: ADD RECORD AS TEST USER3
     And I enter "2" into the field with the placeholder text of "Enter new record name" 
     And I click on the button labeled "Create"
+    And I wait for another 2 seconds
     And I click the bubble to add a record for the "Prescreening" longitudinal instrument on event "Screening"
     And I enter "Daenerys Targaryen" into the input field labeled "Preferred Name"
     And I select the submit option labeled "Save & Exit Form" on the Data Collection Instrument
@@ -76,7 +77,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow the designati
 
     #VERIFY
     ##ACTION: VIEW RECORDS AS TEST USER3
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I click on the link labeled "My Projects"
     And I click on the link labeled "D.4.17.300.100"
     And I click on the link labeled "Record Status Dashboard"

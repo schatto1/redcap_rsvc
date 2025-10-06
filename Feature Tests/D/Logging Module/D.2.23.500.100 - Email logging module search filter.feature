@@ -5,7 +5,7 @@ Feature: Logging Module: Email Logging Module shall provide the ability to searc
 
   Scenario: D.2.23.500.100 Email logging module search/filter
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.2.23.500.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Project Setup"
     And I click on the button labeled "Move project to production"
