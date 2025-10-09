@@ -2,11 +2,12 @@ Feature: Infrastructure Requirements: The New Project Functionality is available
 
   As a REDCap administrator
   I want to see that the REDCap new project creation funcationality is available.
+  #This feature is to be run completely MANUALLY on the REDCap Shadow instance
 
   Scenario: D.100.1.1100.100 New project functionality
     #FUNCTIONAL REQUIREMENT
     #ACTION
-    Given I successfully login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap shadow with an Admin account
     And I click on the link labeled "My Projects"
     Then I should see "New Project"
     
