@@ -17,10 +17,14 @@ Feature: EIC Signature Application: The system should not allow the submission o
     ##VERIFY
     When I click on the link labeled "Record Status Dashboard"
     And I click on the link labeled "1"
+    And I click the bubble to add a record for the "Screening" longitudinal instrument on event "Screening"
+    And I enter "test@test.com" into the data entry form field labeled "Email Address for eConsent"
+    And I select the radio option "English" for the field labeled "Preferred Language for Consent"
+    And I select the radio option "Email invitation" for the field labeled "Preferred Contact Method"
+    And I select the submit option labeled "Save & Exit Form" on the Data Collection Instrument
     And I click the bubble to add a record for the "eConsent - ICF" longitudinal instrument on event "Screening"
     And I click on the button labeled "Survey options"
     And I click on the survey option label containing "Log out+ Open survey" label
-    And I click on the button labeled "English"
     Then I should see "Consent example English"
 
     #ACTION

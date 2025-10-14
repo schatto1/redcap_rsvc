@@ -5,15 +5,16 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
 
   Scenario: D.100.4.0900.100 Electronic signature identification multiple document
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.100.4.0900.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Customize & Manage Locking/E-signatures"
     And for the Column Name "Also display E-signature option on instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Attestation Data Entry"
     And for the Column Name "Also display E-signature option on instrument?", I check the checkbox within the Record Locking Customization table for the Data Collection Instrument named "Documentation of Informed Consent"
-    And I click on the link labeled "Project Setup"
+    And I click on the link labeled "Setup"
+    And I wait for another 2 seconds
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
+    And I click on the button labeled "YES, Move to Production Status" in the dialog box
     Then I see Project status: "Production"
 
     #FUNCTIONAL REQUIREMENT
@@ -26,7 +27,7 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
     And I click on the button labeled "Save signature" in the dialog box
-    And I check the checkbox labeled "Lock this instrument?"
+    And I check the checkbox labeled "Lock"
     And I check the checkbox labeled " E-signature"
     And I select the submit option labeled "Save & Stay" on the Data Collection Instrument
     And I enter the Username: "Test_Admin" and password "Testing123" for e-signature
@@ -42,7 +43,7 @@ Feature: Electronic Signature: The system shall require the user to confirm thei
     And I click on the link labeled "Add signature"
     And I draw a signature in the signature field area
     And I click on the button labeled "Save signature" in the dialog box
-    And I check the checkbox labeled "Lock this instrument?"
+    And I check the checkbox labeled "Lock"
     And I check the checkbox labeled " E-signature"
     And I select the submit option labeled "Save & Stay" on the Data Collection Instrument
     Then I should see "test_admin"

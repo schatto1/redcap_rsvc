@@ -89,7 +89,8 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow Reviewers to 
     And I click on the link labeled "D.4.17.600.100"
     And I click on the link labeled "Data Comparison Tool"
     And I select "2 - Screening" on the dropdown field labeled "--- Choose a record ---"
-    And I click on the button labeled "Compare selected record"
+    And I click on the input button labeled "Compare selected record"
+    And I wait for another 2 seconds
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: MERGE RECORDS AS TEST USER4
@@ -107,6 +108,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow Reviewers to 
     And I should see "Prescreening"
     And I should see "test@test.com"
     And I should see "error@test.com"
+    And I wait for another 2 seconds
     And I click on the button labeled "Merge Records"
     Then I should see "RECORD CREATED!"
 #END

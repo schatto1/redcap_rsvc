@@ -89,7 +89,7 @@ Feature: Data Comparison Tool / DDE Module: The system shall allow Reviewers to 
     And I click on the link labeled "Data Comparison Tool"
     And I select "2 - Screening" on the dropdown field labeled "--- Choose a record ---"
     And I wait for another 2 seconds
-    And I click on the button labeled "Compare selected record"
+    And I click on the input button labeled "Compare selected record"
 
     ##VERIFY
     Then I should see "Differences were found between the two records"

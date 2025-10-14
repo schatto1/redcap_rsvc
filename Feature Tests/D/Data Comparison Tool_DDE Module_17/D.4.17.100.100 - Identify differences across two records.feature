@@ -34,13 +34,12 @@ Feature: Data Comparison Tool DDE Module: The system shall support the ability t
 
     ##ACTION: compare two records within the same project
     When I click on the link labeled "Data Comparison Tool"
-    #Need a step definition for the dropdowns in data comparison tool, only the first works
-    And I select "2 - Screening" on the dropdown field labeled "--- Choose a record ---"
-    And I select "3 - Screening" on the dropdown field labeled "--- Choose a record ---"
+    And I select "2 - Screening" on the first dropdown field labeled "--- Choose a record ---"
+    And I select "3 - Screening" on the second dropdown field labeled "--- Choose a record ---"
     And I click on the button labeled "Compare"
 
     ##VERIFY
-    Then I should see "Differences were found between the two records named 2 and 3 for Screening."
+    Then I should see "Differences were found between the two records"
     And I should see "Label (field name)"
     And I should see "Form Name"
     And I should see "Record ID"

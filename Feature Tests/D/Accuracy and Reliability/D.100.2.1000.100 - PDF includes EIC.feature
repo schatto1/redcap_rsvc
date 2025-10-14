@@ -28,5 +28,5 @@ Feature: Accuracy and Reliability: The first pages of the printable pdf shall in
     #FUNCTIONAL REQUIREMENT
     ##VERIFY
     And I wait for another 5 seconds
-    Then I see "Consent example English" 
+    Then I should see a PDF containing the following text: "Consent example English" 
 #END

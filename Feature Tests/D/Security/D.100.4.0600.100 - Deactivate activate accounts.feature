@@ -6,7 +6,7 @@ Feature: Security: The system will provide the ability to activate and deactivat
   Scenario: D.100.4.0600.100 Deactivate activate accounts 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Deactivate Account
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I click on the link labeled "Control Center"
     And I click on the link labeled "Browse Users"
     And I click on the link labeled "View User List By Criteria"
@@ -21,7 +21,7 @@ Feature: Security: The system will provide the ability to activate and deactivat
     And I logout
     
     #VERIFY
-    Given I login to REDCap with the user "Test_User1"
+    Given I successfully login to REDCap with the user "Test_User1"
     Then I should see "Home"
     And I should see "My Projects"
     And I should see "Log out"

@@ -5,14 +5,15 @@ Feature: Reporting: The system shall support the ability for reports to link wit
 
   Scenario: D.5.22.500.100 Interactive features within report 
     #SETUP
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.5.22.500.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
 
     #SETUP_PRODUCTION
     When I click on the link labeled "Project Setup"
+    And I wait for another 3 seconds
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
+    And I click on the button labeled "YES, Move to Production Status" in the dialog box
     Then I should see Project status: "Production"
 
     #FUNCTIONAL_REQUIREMENT
@@ -20,7 +21,7 @@ Feature: Reporting: The system shall support the ability for reports to link wit
     When I click on the link labeled "Data Exports, Reports, and Stats"
     And I click on the button labeled "Create New Report"
     And I enter "D.5.22.500.100 REPORT" into the input field labeled "Name of Report:"
-    And I enter "prefname" into the input field labeled "Field 2"
+    And I enter "prefname" into the field identified by "input.x-form-text.x-form-field.field-dropdown" labeled "Field 2"
     And I click on the button labeled "Save Report"
     And I click on the button labeled "Save Report"
     And I click on the button labeled "Return to My Reports & Exports"
@@ -64,11 +65,8 @@ Feature: Reporting: The system shall support the ability for reports to link wit
     And I should see "Export Data" in the dialog box
     And I click on the button labeled "Cancel"
 
-    ##VERIFY: print report
-    When I click on the button labeled "Print Page"
-    #Needs step definition for print dialog window
-    Then I should see "Print"
-    And I click on the button labeled "Cancel"
+    ##VERIFY: print report option
+    Then I should see "Print Page"
 
     ##VERIFY: edit report
     When I click on the button labeled "Edit Report"

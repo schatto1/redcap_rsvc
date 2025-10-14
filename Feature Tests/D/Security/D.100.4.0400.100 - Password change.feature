@@ -6,7 +6,7 @@ Feature: Security: REDCap application shall allow a table-based user to change t
   Scenario: D.100.4.0400.100 Password change 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Change password
-    Given I login to REDCap with the user "Test_User1"
+    Given I successfully login to REDCap with the user "Test_User1"
     And I click on the link labeled "Profile"
     And I click on the button labeled "Reset password"
     And I click on the button labeled "Reset" in the dialog box
