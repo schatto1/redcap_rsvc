@@ -5,15 +5,8 @@ Feature: User Interface: The system shall interface with API functions create ne
 
   Scenario: D.3.26.900.100 File Repository API Functions 
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.3.26.900.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
-
-    # following moves the project to production, but disables some API functions. Commented out for now.
-    # And I click on the link labeled "Project Setup"
-    # And I click on the button labeled "Move project to production"
-    # And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
-    # And I click on the button labeled "YES, Move to Production Status" in the dialog box to request a change in project status
-    # Then I see Project status: "Production"
 
     #FUNCTIONAL REQUIREMENT
     ##ACTION: Simulate the user creating a new folder in the File Repository using the API
@@ -22,7 +15,8 @@ Feature: User Interface: The system shall interface with API functions create ne
     And I select "Create a New Folder in the File Repository" on the dropdown field labeled "API Method"
     And I enter "Test Folder" into the input field labeled "Name of new folder"
     And I click on the button labeled "Execute Request"
-    And I wait for 1 second
+    And I wait for another 1 second
+    And I click on the button labeled "Execute Request"
     ##VERIFY
     And I click on the link labeled "File Repository"
     Then I should see "Test Folder"

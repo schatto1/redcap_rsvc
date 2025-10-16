@@ -5,9 +5,10 @@ Feature: The system shall support the ability for a participant to enter data in
 
   Scenario: D.3.15.700.100 Distributed survey link functions in Survey mode
     #SETUP_PRODUCTION
-    Given I login to REDCap with the user "Test_Admin"
+    Given I successfully login to REDCap with the user "Test_Admin"
     And I create a new project named "D.3.15.700.100" by clicking on "New Project" in the menu bar, selecting "Practice / Just for fun" from the dropdown, choosing file "CTSIBMICCanonicalProject.xml", and clicking the "Create Project" button
     And I click on the link labeled "Project Setup"
+    And I wait for another 2 seconds
     And I click on the button labeled "Move project to production"
     And I click on the radio labeled "Keep ALL data saved so far" in the dialog box
     And I click on the button labeled "YES, Move to Production Status" in the dialog box
@@ -18,7 +19,9 @@ Feature: The system shall support the ability for a participant to enter data in
     When I click on the link labeled "Survey Distribution Tools"
     And I click on the link labeled "Participant List"
     #Need a step definition for the 'link' below
-    And I click on the link in the column labeled "Link"
+    #And I click on the link in the column labeled "Link"
+    #And I click on the link icon in the participant list
+    And I click on the ".partLink" icon in the participant list
     Then I should see "Please complete the survey below."
     
     When I click on the button labeled "Submit"
@@ -31,7 +34,9 @@ Feature: The system shall support the ability for a participant to enter data in
     And I click on the button labeled "Close survey"
 
     #VERIFY_LOG
-    Given I return to the REDCap page I opened the survey from
+    Given I successfully login to REDCap with the user "Test_Admin"
+    And I click on the link labeled "My Projects"
+    And I click on the link labeled "D.3.15.700.100"
     When I click on the link labeled "Logging"
     Then I should see a table header and rows containing the following values in the logging table:
       | Time / Date      | Username            | Action          |
