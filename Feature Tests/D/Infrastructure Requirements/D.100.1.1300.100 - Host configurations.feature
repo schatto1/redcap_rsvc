@@ -12,6 +12,14 @@ Feature: Infrastructure Requirements: REDCap shall be hosted on Chip: x86 64 AMD
     And I SSH to "redcap-r9.ctsi.utah.edu"
     And I CD to "/var/www/html/redcap01.brisc.utah.edu/ccts/redcap"
     And I run the command "cat /proc/cpuinfo"
-    Then I should see "Chip: x86 64 AMD EPYC 7502 32-CORE 2.5 Ghz"
-    And I should see "Memory: 32 GB"
+    Then I should see "vendor_id       : AuthenticAMD"
+    And I should see  "cpu family      : 23"
+    And I should see  "model           : 49"
+    And I should see  "model name      : AMD EPYC 7502 32-Core Processor"
+    And I should see  "microcode       : 0x830107a"
+    And I should see  "cpu MHz         : 2499.999"
+    And I should see  "cache size      : 512 KB"
+
+    Given I run the command "cat /proc/meminfo"
+    Then I should see "MemTotal:       32864232 kB"
     
