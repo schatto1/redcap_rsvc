@@ -1,4 +1,4 @@
-Feature: Availability and Recovery: The backup storage location will have write and read configurations for the System (Bareos) and read-only rights for system-level admins.
+Feature: Executed EIC Form Storage: The backup storage location will have write and read configurations for the System (Bareos) and read-only rights for system-level admins.
 CS:
 FileSet {
     Name = "redcap-c9.ctsi.utah.edu"
