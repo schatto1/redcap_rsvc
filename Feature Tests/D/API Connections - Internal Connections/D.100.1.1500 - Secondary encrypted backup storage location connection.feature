@@ -29,7 +29,7 @@ Feature: API Connections / Internal Connections: REDCap storage is connected wit
     And I navigate to the folder "BMIC Operations > REDCap > Part11-Validation > Validation Documentation > Transition to RSVC > Utah Tier D Release > Installation Qualification Testing (IQ) > IQ evidence and documents"
     And I open the file "REDCap validation updates.eml" in an email client
     Then I should see "Subject: RE: REDCap validation updates"
-    And I should see the following:
+    Then I should have a latest downloaded "eml" file that contains the contents below
         # proj_redcap
         *show schedule=proj_redcap
         Schedule {
@@ -40,7 +40,6 @@ Feature: API Connections / Internal Connections: REDCap storage is connected wit
         Run = Full 1 Oct at 20:30
         Run = Incremental Mon-Fri at 20:05
         }
-    And I should see the following:
         # proj_redcap_vault
         *show schedule=proj_redcap_vault
         Schedule {
@@ -51,7 +50,6 @@ Feature: API Connections / Internal Connections: REDCap storage is connected wit
         Run = Full 1 Oct at 20:30
         Run = Incremental Mon-Fri at 20:05
         }
-    And I should see the following:
         # proj_redcap_edocs
         *show schedule=proj_redcap_edocs
         Schedule {
@@ -62,7 +60,6 @@ Feature: API Connections / Internal Connections: REDCap storage is connected wit
         Run = Full 1 Oct at 20:30
         Run = Incremental Tue at 20:05
         }
-    And I should see the following:
         # redcap-r9.ctsi.utah.edu
         *show schedule=srv-redcap-r9.ctsi.utah.edu
         Schedule {
@@ -70,7 +67,6 @@ Feature: API Connections / Internal Connections: REDCap storage is connected wit
         Run = Full 1st Sat at 19:00
         Run = Incremental Mon-Fri at 20:00
         }
-    And I should see the following:
         # rc-prod-db-r8.ctsi.utah.edu
         *show schedule=srv-rc-prod-db-r8.ctsi.utah.edu
         Schedule {
