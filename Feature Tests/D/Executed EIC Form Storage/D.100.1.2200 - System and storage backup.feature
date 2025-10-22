@@ -57,5 +57,6 @@ Schedule {
   I want to see that the REDCap System and storage
 location shall be backed up daily.
 
-  #This feature test is REDUNDANT and can be viewed in Feature: D.100.1.2000 - Access permissions
-  #Scenario: D.100.1.2000.100 - Access permissions for backup storage location
+  #This feature test is REDUNDANT and can be viewed in Feature: D.100.1.1500 - Secondary encrypted backup storage location connection
+  #Scenario: D.100.1.1500.100 REDCap data files back up
+  #Scenario: D.100.1.1500.200 REDCap production environment back up
