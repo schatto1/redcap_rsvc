@@ -51,3 +51,13 @@ Feature: Control Center: The following functionalities shall be accessed through
     And I should see "Dynamic Data Pull (DDP) - Custom"
     And I should see "Custom Application Links"
     And I should see "Publication Matching"
+
+    #VERIFY
+    ##D.100.1.1800.100
+    #ACTION
+    And I click on the link labeled "Database Query Tool"
+    #FUNCTIONAL REQUIREMENT
+    ##VERIFY
+    Then I see "This page allows administrators to directly query REDCap's MySQL/MariaDB database."
+    Then I see "SQL Query:"
+    Then I see "Execute"

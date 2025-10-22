@@ -92,3 +92,26 @@ Feature: API Connections / Internal Connections: REDCap storage is connected wit
     And I should see "Data Entry Analyst"
     And I should see "Principle Investigator"
     And I should see "Study Coordinator"
+
+  Scenario: D.100.1.1500.400 REDCap project instruments
+    #FUNCTIONAL REQUIREMENT
+    #This seems out of place here, but will keep here for this validation
+    #ACTION
+    Given I successfully login to REDCap shadow with an Admin account
+    And I click on the link labeled "Designer"
+    Then I see "Prescreening"
+    Then I see "Screening"
+    Then I see "Inclusion/Exclusion"
+    Then I see "eConsent - ICF"
+    Then I see "eConsent - Assent"
+    Then I see "eConsent - PPF"
+    Then I see "Attestation Data Entry"
+    Then I see "Manual Consent Upload"
+    Then I see "Documentation of Informed Consent"
+    Then I see "Randomization"
+    Then I see "Withdraw"
+    Then I see "Adverse Events"
+    Then I see "Medication"
+    Then I see "PROMIS SF v1.0 - Anxiety 4a"
+    Then I see "PROMIS Bank v1.1 - Anger"
+    Then I see "Follow Up"
