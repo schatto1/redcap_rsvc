@@ -37,3 +37,15 @@ Feature: Data Archiving / Storage: Standard encryption will be employed for the 
     And I open the file "PE_CHPC-Protected_Environment-Network.pdf"
     Then I should see "Protected Environment - Instrument"
     And I should see "Firewall"
+
+  Scenario: D.100.1.1700.300 SSL certificates for data transmission
+    #FUNCTIONAL REQUIREMENT
+    #ACTION
+    Given I open a new browser window
+    And I navigate to "https://www.ssllabs.com/ssltest/"
+    And in the hostname field I enter "https://redcap01.brisc.utah.edu/"
+    And I click on the "Submit" button
+    Then I should see "SSL Report: redcap01.brisc.utah.edu"
+    Then I should see "Overall Rating: A-
+    Then I should see "TLS 1.3 Yes"
+    Then I should see "TLS 1.2 Yes"
