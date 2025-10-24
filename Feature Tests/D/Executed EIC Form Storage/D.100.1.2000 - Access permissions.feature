@@ -26,7 +26,7 @@ CS: Archival object backup storage for database exports and for virtual machine 
     Given I access Box
     And I navigate to the folder "BMIC Operations > REDCap > Part11-Validation > Validation Documentation > Transition to RSVC > Utah Tier D Release > Installation Qualification Testing (IQ) > IQ evidence and documents"
     And I open the file "REDCap Business Risk Assessment Memo - signed.pdf"
-    Then I should have a latest downloaded "pdf" file that contains the contrent below:
+    Then I should have a latest downloaded "pdf" file that contains the content below:
     ```
     REDCap Business Risk Assessment Memo
 
