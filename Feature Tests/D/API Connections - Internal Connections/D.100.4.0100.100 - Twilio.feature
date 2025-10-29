@@ -19,6 +19,7 @@ Scenario: D.100.4.0100.100 Twilio
     Then I should see "Twilio SMS and Voice Call services have been successfully enabled!"
 
     Given I click on the button labeled "Configure settings" in the "Twilio SMS and Voice Call services" section
+    And I select the checkbox option "Send survey invitation with survey link via SMS" on the field labeled "Choose Survey invitation Type to use"
     And I select "SMS invitation" on the dropdown field labeled "Choose the default invitation preference for new survey participants" 
     And I select "twilio_mail \"Would you prefer to receive surveys via email or phone?\"" on the dropdown field labeled "Control each participant's invitation preference using a multiple choice field"
     And I select "cell \"Please enter your cell phone number\"" on the dropdown field labeled "Designate a phone number field for survey invitations sent via SMS or voice call (optional)"

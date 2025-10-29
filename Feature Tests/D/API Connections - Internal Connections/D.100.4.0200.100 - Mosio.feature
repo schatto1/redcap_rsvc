@@ -17,6 +17,7 @@ Scenario: D.100.4.0200.100 Mosio
     Then I should see "Mosio SMS services have been successfully enabled!"
 
     Given I click on the button labeled "Configure settings" in the "Mosio Two-Way Text Messaging (SMS) Services" section
+    And I select the checkbox option "Send survey invitation with survey link via SMS" on the field labeled "Choose Survey invitation Type to use"
     And I select "twilio_mail \"Would you prefer to receive surveys via email or phone?\"" on the dropdown field labeled "Control each participant's invitation preference using a multiple choice field"
     And I select "cell \"Please enter your cell phone number\"" on the dropdown field labeled "Designate a phone number field for survey invitations sent via SMS or voice call (optional)"
     And I click on the button labeled "Save"

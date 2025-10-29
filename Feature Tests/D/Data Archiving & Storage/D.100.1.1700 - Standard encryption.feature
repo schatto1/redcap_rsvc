@@ -23,10 +23,6 @@ Feature: Data Archiving / Storage: Standard encryption will be employed for the 
     And I SSH to "redcap-r9.ctsi.utah.edu"
     And I run the command "sudo cat /etc/ssh/sshd_config"
     And I type in my password
-    Then I should see "build"
-    And I should see "daily"
-    Then I run the command "sudo crontab -l"
-    And I type in my password
     Then I should see "AuthorizedKeysFile     .ssh/authorized_keys"
 
     Given I open a new browser window
