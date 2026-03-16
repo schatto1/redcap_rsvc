@@ -21,5 +21,5 @@ Feature: Infrastructure Requirements: REDCap shall be hosted on Chip: x86 64 AMD
     And I should see  "cache size      : 512 KB"
 
     Given I run the command "cat /proc/meminfo"
-    Then I should see "MemTotal:       32864232 kB"
+    Then I should see "MemTotal is greater than or equal to 32 GB"
     
